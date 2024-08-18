@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "@/layouts/Page.astro"
+import { Offcourse } from "@/offcourse"
+import  { BaseHead, OGType  }from "@/components/BaseHead";
+import { ArticleContent} from "@/components/ArticleContent";
+import { ArticleHeading } from "@/components/ArticleHeading";
+import  { getPostsWithCourse } from '@/helpers/pages';
+
+export async function getStaticPaths() {
+  const blogEntries = await getPostsWithCourse()
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { 
+  order, 
+  series, 
+  title, 
+  bannerImageURL, 
+  publishedAt,
+  updatedAt,
+  author,
+  tags,
+  excerpt, 
+  course
+} = entry.data;
+---
+<Layout {title}>
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.ARTICLE} 
+    url={Astro.url}
+    description={excerpt}
+    {author}
+    {publishedAt}
+    {updatedAt}
+    {tags}
+    {title}
+  />
+  <Image 
+    slot="hero" 
+    class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto mt-20" 
+    src={bannerImageURL} 
+    widths={[240, 540, 720, 1024, 1280]}
+    alt={title} />
+  <div class="container flex flex-col lg:flex-row px-5 sm:px-8 
+    py-12 gap-x-5 gap-y-12 lg:gap-x-10 xl:gap-x-12 lg:py-20" 
+    transition:name="content" >
+    <article class="flex flex-col gap-y-8"> 
+      <ArticleHeading order={order} series={series} title={title}/>
+      <ArticleContent>
+        <Content/>
+      </ArticleContent>
+    </article>
+    { course && <Offcourse data={course} client:load/>}
+  </div>
+</Layout>

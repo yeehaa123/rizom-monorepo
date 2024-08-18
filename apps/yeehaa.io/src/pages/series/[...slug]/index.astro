@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import  { BaseHead, OGType  }from "@/components/BaseHead";
+import Layout from "@/layouts/Page.astro"
+import { SeriesHero } from "@/components/SeriesHero"
+import { PostListing } from "@/components/Postlisting"
+import { getCollection, getEntries } from 'astro:content';
+
+export async function getStaticPaths() {
+  const series = await getCollection('Series');
+  const  promises = series.map(async entry => {
+    const articles = await getEntries(entry.data.articles)
+    return {
+      params: { slug: entry.id }, props: { entry, articles },
+    }});
+  return await Promise.all(promises)
+}
+
+const { entry, articles } = Astro.props;
+const { data } = entry
+const { title, summary, bannerImageURL}  = data;
+---
+<Layout {title}>
+  <BaseHead 
+    slot="og:data" 
+    url={Astro.url}
+    type={OGType.WEBSITE} 
+    description={summary}
+    {...data}
+
+  />
+  <SeriesHero slot="hero" title={title} summary={summary}>
+    <Image class="w-full" 
+      widths={[240, 540, 720, 1024, 1280]}
+      src={bannerImageURL} alt={title} />
+  </SeriesHero>
+  <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { articles.map(({slug, data} ) => <PostListing {...data} {slug}/>)}
+  </div>
+</Layout>
