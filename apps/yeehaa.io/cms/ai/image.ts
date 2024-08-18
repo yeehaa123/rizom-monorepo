@@ -9,7 +9,7 @@ const styleAddition = `
 Try to use the following primary color: '${primary}' and secondary color: '${secondary}' in the image`;
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || "XYZ"
 });
 
 type AIImageProps = {
