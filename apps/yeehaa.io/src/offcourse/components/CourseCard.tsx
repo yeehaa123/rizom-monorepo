@@ -2,8 +2,9 @@ import type {
   Course,
   CourseQuery,
   CheckpointQuery,
-  AuthState
-} from "@/offcourse/types";
+  AuthState,
+  Note
+} from "@offcourse/schema";
 import type { CardState } from "../container/cardState"
 import { Overlay } from "./Overlay"
 import CardChrome from "./CardChrome";
@@ -23,7 +24,6 @@ import {
   Checkpoint,
   Tags
 } from "./";
-import type { Note } from "../schema";
 
 export type CardActions = {
   signIn: () => void,

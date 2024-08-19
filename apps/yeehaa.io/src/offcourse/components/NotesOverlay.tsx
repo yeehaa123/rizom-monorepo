@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { NoteForm } from "./NoteForm";
-import type { Note } from "../schema";
+import type { Note } from "@offcourse/schema";
 import type { CourseCardState } from "./CourseCard";
 
 export function NotesOverlay(

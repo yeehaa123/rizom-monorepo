@@ -1,4 +1,4 @@
-import type { Curator } from "@/offcourse/types";
+import type { Curator } from "@offcourse/schema";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { CardDescription } from "@/components/ui/card"
 import { Socials } from "./Socials";

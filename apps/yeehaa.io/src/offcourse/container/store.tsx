@@ -1,6 +1,5 @@
-import type { AuthState } from "../types";
 import type { CourseCardState } from "@/offcourse/components/CourseCard"
-import type { Course, CourseQuery, CheckpointQuery } from "../types";
+import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
 import { ActionType } from "./action"
 import { reducer } from "./reducer"
 import { initialize } from "./cardState"
@@ -10,7 +9,6 @@ import { QueryType } from "../query";
 import { responder } from "./responder";
 import { authenticate, getAuthData, logout } from "./auth";
 import { useEffect } from "react";
-import type { Note } from "../schema";
 
 export type StoreCardState = Omit<CourseCardState, "actions">
 export type OffcourseState = {

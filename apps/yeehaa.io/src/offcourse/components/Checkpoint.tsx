@@ -1,4 +1,4 @@
-import type { Checkpoint } from "@/offcourse/types";
+import type { Checkpoint } from "@offcourse/schema";
 
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/offcourse/components"

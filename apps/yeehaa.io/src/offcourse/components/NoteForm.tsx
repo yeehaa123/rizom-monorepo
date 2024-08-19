@@ -1,3 +1,5 @@
+import type { Note } from "@offcourse/schema"
+
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -9,7 +11,6 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
-import type { Note } from "../schema"
 
 const noteFormSchema = z.object({
   note: z.string().min(10).max(500),

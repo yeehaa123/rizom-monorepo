@@ -1,4 +1,4 @@
-import type { Curator } from "@/offcourse/types";
+import type { Curator } from "@offcourse/schema";
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,

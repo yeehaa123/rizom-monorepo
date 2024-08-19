@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import type { Course } from "../types"
+import type { Course } from "@offcourse/schema"
 import type { Affordances } from "../container/cardState"
 import { Logo } from "./Logo";
 import {

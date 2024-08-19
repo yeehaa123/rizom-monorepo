@@ -1,4 +1,4 @@
-import type { CheckpointQuery } from "../../schema";
+import type { CheckpointQuery } from "@offcourse/schema";
 import { db } from "../";
 import { eq, and } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';

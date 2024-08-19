@@ -1,5 +1,5 @@
 import { RESPONSE_TYPE, responseSchema } from "../response";
-import type { AuthState } from "../schema";
+import type { AuthState } from "@offcourse/schema";
 
 export async function authenticate(authData: AuthState) {
   sessionStorage.setItem("auth", JSON.stringify(authData));
