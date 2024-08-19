@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@offcourse/schema": "workspace:*",
-    "@offcourse/typescript-config": "workspace:*",
+    "@rizom/typescript-config": "workspace:*",
     "@types/node": "^20.14.2",
     "typescript": "latest"
   },

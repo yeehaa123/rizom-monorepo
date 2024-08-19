@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { colorSchemes } from "@offcourse/styles";
+import { colorSchemes } from "@rizom/styles";
 import OpenAI from "openai";
 import * as cache from '../cache';
 

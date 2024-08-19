@@ -1,0 +1,14 @@
+{
+  "name": "@rizom/tailwind-config",
+  "version": "0.0.2",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "@rizom/typescript-config": "workspace:*",
+    "typescript": "latest",
+    "tailwindcss": "^3.4.10"
+  }
+}

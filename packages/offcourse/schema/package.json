@@ -1,5 +1,5 @@
 {
-  "name": "@offcourse/ui",
+  "name": "@offcourse/schema",
   "version": "0.0.1",
   "author": "Yeehaa",
   "license": "MIT",
@@ -8,13 +8,15 @@
     "build": "tsc"
   },
   "exports": {
-    "./add": {
+    "default": {
       "types": "./src/index.ts",
       "default": "./dist/index.js"
     }
   },
   "devDependencies": {
-    "@offcourse/typescript-config": "workspace:*",
+    "@rizom/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "zod": "^3.23.8",
     "typescript": "latest"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "name": "Offcourse",
+  "name": "Rizom",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint"
+    "check": "turbo run check"
   },
   "devDependencies": {
     "turbo": "latest"

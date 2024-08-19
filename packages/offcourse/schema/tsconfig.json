@@ -1,5 +1,5 @@
 {
-  "extends": "@offcourse/typescript-config/base.json",
+  "extends": "@rizom/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"

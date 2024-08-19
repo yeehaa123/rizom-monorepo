@@ -1,5 +1,5 @@
 {
-  "name": "@offcourse/cms",
+  "name": "@yeehaa/cms",
   "type": "module",
   "version": "0.0.1",
   "author": "Yeehaa",
@@ -16,8 +16,8 @@
   "devDependencies": {
     "@ai-sdk/anthropic": "^0.0.30",
     "@offcourse/schema": "workspace:*",
-    "@offcourse/styles": "workspace:*",
-    "@offcourse/typescript-config": "workspace:*",
+    "@rizom/styles": "workspace:*",
+    "@rizom/typescript-config": "workspace:*",
     "@types/node": "^20.14.2",
     "@types/voca": "^1.4.6",
     "ai": "^3.1.30",
