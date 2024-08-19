@@ -1,27 +1,26 @@
-checksum: 6706f45f4598825c90e86b2487ff6696
-summary: Ecosystem Architecture explores the evolution of ecosystems from
-  biological concepts to complex digital networks. It introduces a new approach
-  to designing decentralized organizations that transcend traditional
-  boundaries. The series emphasizes innovation, sustainability, and regenerative
-  design to address global challenges. By focusing on interconnectedness and
-  renewal, it aims to transform fragmented systems into resilient, harmonious
-  ecosystems that benefit both human communities and the environment.
-excerpt: Ecosystem Architecture examines the evolution of ecosystems from
-  biology to digital networks, proposing innovative approaches for designing
-  decentralized organizations. It emphasizes sustainability, regenerative
-  design, and interconnectedness to create resilient systems benefiting
-  communities and the environment.
+checksum: ab9533907a8c8abe71f214b34fc0121e
+summary: The 'Ecosystem Architecture' series explores the evolution of
+  ecosystems from biological concepts to digital networks. It introduces a new
+  approach for designing decentralized organizations, embracing internet
+  fragmentation, and combining regenerative design with innovation. The series
+  emphasizes creating sustainable, equitable solutions that transcend
+  traditional boundaries and foster resilient, harmonious ecosystems benefiting
+  both humanity and the environment.
+excerpt: Ecosystem Architecture explores the transformation of ecosystems from
+  biology to digital realms, proposing innovative approaches for decentralized
+  organizations. It embraces internet fragmentation and combines regenerative
+  design with innovation to create sustainable, harmonious systems.
 tags:
   - eco
-  - future
   - tech
+  - future
   - design
-  - renew
+  - web
   - invent
-  - net
-  - org
-bannerImageURL: ./6706f45f4598825c90e86b2487ff6696-banner.png
+  - renew
+bannerImageURL: ./ab9533907a8c8abe71f214b34fc0121e-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
+  - align-the-misaligned
 title: Ecosystem Architecture

@@ -35,7 +35,7 @@ const {
   articles,
 } = data;
 
-const posts = await getEntries(articles)
+const posts = (await getEntries(articles)).sort((a,b) => a.data.order - b.data.order);
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 ---
 <Layout {logoLink}  {...data}>

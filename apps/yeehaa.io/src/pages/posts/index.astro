@@ -6,7 +6,7 @@ import { PostListing } from "@/components/Postlisting"
 
 const title = "YEEHAA";
 import { getEntry } from "astro:content";
-const articles = await getCollection('Posts')
+const articles = (await getCollection('Posts')).sort((a,b) => a.data.order - b.data.order);
 const series = await getEntry("Series", "ecosystem-architecture");
 const description = series.data.summary;
 

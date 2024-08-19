@@ -17,11 +17,17 @@
   {
     "id": "f3cfbafaad1760bf949d001d58e0e648",
     "author": "yeehaa",
+    "order": 2,
     "title": "Align The Misaligned",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "37d9078f25d51a2ad2b1419243b5981a"
+    "checksum": "37d9078f25d51a2ad2b1419243b5981a",
+    "publicationData": {
+      "createdAt": "2024-08-19T09:17:01.023Z",
+      "updatedAt": "2024-08-19T09:17:01.023Z",
+      "publishedAt": "2024-08-19T09:17:01.023Z"
+    }
   },
   {
     "id": "dab57a97b73c41955321d0f6def877ae",
@@ -79,9 +85,14 @@
     "author": "yeehaa",
     "title": "Keep The Web Weird",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
     "checksum": "f73a0dad773adccb86ce02345b460404",
+    "publicationData": {
+      "createdAt": "2024-08-19T09:17:01.023Z",
+      "updatedAt": "2024-08-19T09:17:01.023Z",
+      "publishedAt": "2024-08-19T09:17:01.023Z"
+    },
     "habitat": "Align The Misaligned"
   },
   {

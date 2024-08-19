@@ -2,11 +2,17 @@
   {
     "id": "0db33aef6608b5824a9c5d98c9e259e6",
     "author": "yeehaa",
+    "order": 0,
     "title": "Across Space And Time",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "e313b97a9498621b924d013f77f66dc3"
+    "checksum": "e313b97a9498621b924d013f77f66dc3",
+    "publicationData": {
+      "createdAt": "2024-08-19T09:13:53.991Z",
+      "updatedAt": "2024-08-19T09:13:53.991Z",
+      "publishedAt": "2024-08-19T09:13:53.991Z"
+    }
   },
   {
     "id": "f3cfbafaad1760bf949d001d58e0e648",

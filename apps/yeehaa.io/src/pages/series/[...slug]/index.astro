@@ -9,7 +9,7 @@ import { getCollection, getEntries } from 'astro:content';
 export async function getStaticPaths() {
   const series = await getCollection('Series');
   const  promises = series.map(async entry => {
-    const articles = await getEntries(entry.data.articles)
+    const articles = (await getEntries(entry.data.articles)).sort((a,b) => a.data.order - b.data.order);
     return {
       params: { slug: entry.id }, props: { entry, articles },
     }});
