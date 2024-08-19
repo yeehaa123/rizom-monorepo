@@ -1,0 +1,37 @@
+{
+  "name": "@offcourse/cms",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsx src/index.ts"
+  },
+  "exports": {
+    "./add": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@ai-sdk/anthropic": "^0.0.30",
+    "@offcourse/schema": "workspace:*",
+    "@offcourse/styles": "workspace:*",
+    "@offcourse/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "@types/voca": "^1.4.6",
+    "ai": "^3.1.30",
+    "dotenv": "^16.4.5",
+    "gray-matter": "^4.0.3",
+    "openai": "^4.49.1",
+    "p-limit": "^6.1.0",
+    "tsx": "^4.11.0",
+    "typescript": "latest",
+    "voca": "^1.4.1",
+    "yaml": "^2.4.3",
+    "zod": "^3.23.8"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "^0.4.0"
+  }
+}

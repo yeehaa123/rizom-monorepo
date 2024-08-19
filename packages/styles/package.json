@@ -1,0 +1,21 @@
+{
+  "name": "@offcourse/styles",
+  "version": "0.0.2",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "default": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@offcourse/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "typescript": "latest"
+  }
+}

@@ -12,8 +12,6 @@ import * as tags from "./tag";
 import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
-console.log(yeehaa);
-
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './yeehaa';
 const CMS_PATH = path.join(OUTPUT_BASE, "CMS");
