@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { authState, userRecord } from "./schema";
+import { authState, userRecord } from "@offcourse/schema";
 
 export enum RESPONSE_TYPE {
   AUTHENTICATED = "AUTHENTICATED",

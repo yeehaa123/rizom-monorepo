@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { coursesQuery } from "./schema";
+import { coursesQuery } from "@offcourse/schema";
 
 export enum QueryType {
   FETCH_USER_RECORDS = "FETCH_USER_RECORDS"

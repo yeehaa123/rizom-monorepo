@@ -4,7 +4,7 @@ import type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile } fr
 import type { BaseCourse, AssociatedCourse, AnalyzedCourse, FinalCourse } from "../course";
 import type { AnalyzedSeries, AssociatedSeries, BaseSeries, FinalSeries, } from "../series/schema";
 import type { BaseTag, AnalyzedTag, AssociatedTag, FinalTag } from "../tag/schema";
-import { curatorSchema } from "@/offcourse/schema";
+import { curatorSchema } from "@offcourse/schema";
 import { rawCourseSchema } from "cms/course/schema";
 import { landingContentSchema } from "cms/landing/schema";
 import { ContentType } from "cms/meta/schema";

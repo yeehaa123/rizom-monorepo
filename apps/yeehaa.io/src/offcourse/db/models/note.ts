@@ -1,4 +1,4 @@
-import type { CourseQuery, Note } from "@/offcourse/schema";
+import type { CourseQuery, Note } from "@offcourse/schema";
 import { noteTable } from "../schema"
 import { db } from "../";
 import { createInsertSchema } from 'drizzle-zod';

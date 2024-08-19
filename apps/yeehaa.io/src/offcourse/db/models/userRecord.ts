@@ -1,4 +1,4 @@
-import type { UserRecord, CoursesQuery } from "@/offcourse/schema";
+import type { UserRecord, CoursesQuery } from "@offcourse/schema";
 import { db } from "../";
 import { bookmarkTable, completionTable, courseTable, noteTable } from "../schema";
 import { eq, inArray } from "drizzle-orm";

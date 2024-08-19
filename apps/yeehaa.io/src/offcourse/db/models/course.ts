@@ -1,4 +1,4 @@
-import type { Course } from "@/offcourse/schema";
+import type { Course } from "@offcourse/schema";
 import { courseTable } from "../schema"
 import { db } from "../";
 import { createInsertSchema } from 'drizzle-zod';

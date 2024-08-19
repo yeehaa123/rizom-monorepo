@@ -1,4 +1,4 @@
-import type { CourseQuery, CoursesQuery } from "@/offcourse/schema";
+import type { CourseQuery, CoursesQuery } from "@offcourse/schema";
 import { db } from "../";
 import { eq, inArray } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';

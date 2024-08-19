@@ -1,4 +1,4 @@
-import { curatorSchema } from '@/offcourse/schema';
+import { curatorSchema } from '@offcourse/schema';
 import * as m from "../meta/schema"
 import * as as from "../association"
 import { z } from 'zod';

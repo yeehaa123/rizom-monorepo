@@ -15,6 +15,7 @@ async function base64_encode(imageResult: string) {
 export const GET: APIRoute = async function get() {
   const entry = await getEntry("LandingPage", "index")
   const imageData = entry.data.bannerImageURL;
+  // @ts-ignore
   const image = await base64_encode(imageData.fsPath);
   return new Response(image, {
     headers: {

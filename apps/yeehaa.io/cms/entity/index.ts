@@ -8,7 +8,7 @@ import type {
   FinalEntity,
   Entity
 } from "./schema";
-import { ContentType } from "cms/meta/schema";
+import { ContentType } from "../meta/schema";
 import * as article from "../article";
 import * as course from "../course";
 import * as profile from "../profile";
@@ -23,7 +23,7 @@ import {
   isTag,
   isLanding,
 } from "./filters";
-import type { Curator } from "@/offcourse/schema";
+import type { Curator } from "@offcourse/schema";
 import type { LandingContent } from "cms/landing/schema";
 
 

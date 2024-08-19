@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { authState, checkpointQuery, courseQuery, courseSchema, userRecord, noteSchema } from "../schema";
+import { authState, checkpointQuery, courseQuery, courseSchema, userRecord, noteSchema } from "@offcourse/schema";
 
 export enum ActionType {
   ADD_AUTH_DATA = "AUTHENTICATE",

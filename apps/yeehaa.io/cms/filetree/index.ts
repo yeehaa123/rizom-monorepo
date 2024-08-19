@@ -10,7 +10,7 @@ import * as yaml from "yaml";
 import type { RawCourse } from "cms/course";
 import { ContentType } from "cms/meta/schema";
 import { isMarkdownFile, isOffcourseFile, isProfileFile, isLandingFile } from "./filters";
-import type { Curator } from "@/offcourse/schema";
+import type { Curator } from "@offcourse/schema";
 import type { LandingContent } from "cms/landing/schema";
 
 
