@@ -1,6 +1,6 @@
 export const prerender = false;
 
-import { handleQuery } from '@/offcourse/db/query';
+import { handleQuery } from '@offcourse/db/query';
 import type { APIRoute } from 'astro';
 
 export const POST: APIRoute = async ({ request }) => {

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@offcourse/schema": "workspace:*",
+    "@offcourse/db": "workspace:*",
     "@ai-sdk/anthropic": "^0.0.30",
     "@ai-sdk/openai": "^0.0.24",
     "@astrojs/alpinejs": "^0.4.0",

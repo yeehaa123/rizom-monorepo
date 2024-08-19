@@ -1,6 +1,6 @@
 export const prerender = false;
 import type { APIRoute } from 'astro';
-import { handleCommand } from '@/offcourse/db/command';
+import { handleCommand } from '@offcourse/db/command';
 
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get("Content-Type") === "application/json") {

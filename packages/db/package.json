@@ -8,9 +8,13 @@
     "build": "tsc"
   },
   "exports": {
-    "default": {
-      "types": "./src/index.ts",
-      "default": "./dist/index.js"
+    "./command": {
+      "types": "./src/command.ts",
+      "default": "./dist/command.js"
+    },
+    "./query": {
+      "types": "./src/query.ts",
+      "default": "./dist/query.js"
     }
   },
   "devDependencies": {
