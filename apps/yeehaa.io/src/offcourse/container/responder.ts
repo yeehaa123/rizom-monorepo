@@ -1,7 +1,8 @@
 import type { Dispatch } from "react";
 import type { Response } from "../response";
+import type { Action } from "@offcourse/schema";
 import { responseSchema, RESPONSE_TYPE } from "../response";
-import { ActionType, type Action } from "./action";
+import { ActionType } from "@offcourse/schema";
 
 export function responder(dispatch: Dispatch<Action>) {
   return (response: Response) => {

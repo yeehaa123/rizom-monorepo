@@ -1,0 +1,27 @@
+{
+  "name": "@offcourse/db",
+  "version": "0.0.1",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "default": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@offcourse/schema": "workspace:*",
+    "@offcourse/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.7.0",
+    "drizzle-orm": "^0.32.0",
+    "drizzle-zod": "^0.5.1"
+  }
+}

@@ -1,6 +1,6 @@
 import type { CourseCardState } from "@/offcourse/components/CourseCard"
 import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
-import { ActionType } from "./action"
+import { ActionType } from "@offcourse/schema"
 import { reducer } from "./reducer"
 import { initialize } from "./cardState"
 import { useImmerReducer } from 'use-immer';
