@@ -18,6 +18,7 @@ courses:
 articles:
   - across-space-and-time
   - align-the-misaligned
+  - global-village-people
   - practice-innovation
 tags:
   - edu
@@ -26,8 +27,8 @@ tags:
   - eco
   - web
   - future
-  - design
   - invent
+  - global
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -64,21 +65,21 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 243afa5e72ba82d4b68a622ba073de13
+checksum: fcdd5d73aa0681151364a25a3696bfdd
 description: Yeehaa is an ecosystem architect with a PhD in Philosophy,
-  passionate about transforming education and knowledge sharing. As an
-  entrepreneur, thinker, and coder, he founded Offcourse and created the
-  Superconnectors event format. Based in Taipei, he focuses on bringing people
-  together around common values and translating shared visions into effective
-  ecosystems. His work explores the evolution of 'ecosystem' from biology to
-  metaphor, introducing 'ecosystem architecture' as an approach to designing
-  modern, decentralized organizations. Yeehaa advocates for embracing internet
-  fragmentation as an opportunity for innovation and diversity, while also
-  emphasizing the importance of sustainable, equitable solutions that enhance
-  both human communities and the environment.
-blurb: Yeehaa, an ecosystem architect with a PhD, combines education
-  transformation, entrepreneurship, and coding. Based in Taipei, he explores
-  decentralized organizations, internet fragmentation, and sustainable digital
-  ecosystems through his writings and courses.
-profileImageURL: ./243afa5e72ba82d4b68a622ba073de13-profile.png
+  passionate about transforming education and knowledge sharing. As the founder
+  of Offcourse and creator of Superconnectors, he combines entrepreneurship,
+  thinking, and coding. Based in Taipei, he focuses on bringing people together
+  around common values and translating shared visions into effective ecosystems.
+  His work explores the evolution of 'ecosystem' from biology to metaphor,
+  introducing 'ecosystem architecture' as an approach to designing modern,
+  decentralized organizations. Yeehaa advocates for impactful and inclusive
+  internet, addressing fragmentation and embracing diversity in digital
+  landscapes. His courses cover topics like nurturing ecosystems, preserving
+  internet freedom, and practicing innovation through strategic thinking and
+  unconventional tools.
+blurb: "Yeehaa: Ecosystem architect, PhD, entrepreneur. Transforming education,
+  advocating inclusive internet. Explores 'ecosystem architecture' for modern
+  organizations. Courses on nurturing digital ecosystems and innovation."
+profileImageURL: ./fcdd5d73aa0681151364a25a3696bfdd-profile.png
 title: Yeehaa

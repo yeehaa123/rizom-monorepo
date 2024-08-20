@@ -1,20 +1,19 @@
-checksum: 7cee03cf594659c90b4090de7c9e6a49
-summary: Global encompasses a wide range of topics related to worldwide digital
-  landscapes and the internet's evolution. It explores the fragmentation of the
-  web, comparing it to tectonic shifts, and discusses ecosystem architecture as
-  a way to view these complex systems. The concept embraces diversity and
-  innovation in digital realms, encouraging a user-driven web that resists
-  uniformity. It touches on internet advocacy, open-source principles, digital
-  fabrication, and guerrilla-style creativity as means to preserve internet
-  freedom and foster unconventional thinking. Global perspectives in this
-  context aim to champion digital ownership and promote a diverse, innovative
-  online ecosystem.
-excerpt: The internet has fragmented like tectonic shifts, and attempts to
-  reunify it are futile. Ecosystem architecture views this as an opportunity,
-  embracing diversity in digital landscapes. The article explores types of
-  fragmentation, historical context, and stakeholder perspectives.
+checksum: 4cd90e5e0a12569adc9473df1eb40ed7
+summary: Global encompasses themes of interconnectedness, technological impact,
+  and worldwide perspectives. It explores how digital landscapes shape our
+  modern world, from internet fragmentation to the concept of a global village.
+  This theme delves into the complexities of our interconnected existence,
+  examining social media echo chambers, online communities, and the need for
+  value pluralism. It also touches on preserving internet freedom, fostering
+  innovation, and promoting a diverse web ecosystem that resists uniformity and
+  corporate control.
+excerpt: The internet has fragmented like tectonic shifts, creating diverse
+  digital landscapes. Meanwhile, McLuhan's global village concept manifests in
+  social media echo chambers and online communities, highlighting the complexity
+  of our interconnected world.
 title: global
 articles:
   - align-the-misaligned
+  - global-village-people
 courses:
   - keep-the-web-weird

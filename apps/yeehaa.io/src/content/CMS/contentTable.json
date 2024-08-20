@@ -59,11 +59,17 @@
   {
     "id": "d1095d6044b09f646e508eaaf1856b2e",
     "author": "yeehaa",
+    "order": 3,
     "title": "Global Village People",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "d2fce2619175620794d26e1428882362"
+    "checksum": "8c10f5fb038add90f79a8c19ed4cd8a1",
+    "publicationData": {
+      "createdAt": "2024-08-20T06:11:34.183Z",
+      "updatedAt": "2024-08-20T06:11:34.183Z",
+      "publishedAt": "2024-08-20T06:11:34.183Z"
+    }
   },
   {
     "id": "6369a837b862a83f2aac27ebec2c742c",
