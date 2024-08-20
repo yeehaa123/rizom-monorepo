@@ -389,18 +389,6 @@ importers:
 
   packages/typescript-config: {}
 
-  packages/ui:
-    devDependencies:
-      '@rizom/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@types/node':
-        specifier: ^20.14.2
-        version: 20.16.0
-      typescript:
-        specifier: latest
-        version: 5.5.4
-
 packages:
 
   /@ai-sdk/anthropic@0.0.30(zod@3.23.8):
