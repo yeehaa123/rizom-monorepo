@@ -8,7 +8,7 @@ import * as article from "./article";
 import * as course from "./course";
 import * as landing from "./landing";
 import * as profile from "./profile";
-import * as tags from "./tag";
+import * as tag from "./tag";
 import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
@@ -21,7 +21,7 @@ export const PATH_SUFFIXES = [
   course.PATH_SUFFIX,
   profile.PATH_SUFFIX,
   series.PATH_SUFFIX,
-  tags.PATH_SUFFIX,
+  tag.PATH_SUFFIX,
   landing.PATH_SUFFIX,
 ];
 
@@ -48,3 +48,5 @@ async function main() {
 }
 
 main();
+
+export { article, course, profile, landing, series, tag }

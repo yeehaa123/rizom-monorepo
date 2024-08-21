@@ -5,14 +5,12 @@
   "author": "Yeehaa",
   "license": "MIT",
   "scripts": {
-    "build": "tsx src/index.ts",
+    "compile": "tsx src/index.ts",
     "check": "tsc --noEmit"
   },
   "exports": {
-    "./add": {
-      "types": "./src/index.ts",
-      "default": "./dist/index.js"
-    }
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
   },
   "devDependencies": {
     "@ai-sdk/anthropic": "^0.0.30",
@@ -30,9 +28,7 @@
     "typescript": "latest",
     "voca": "^1.4.1",
     "yaml": "^2.4.3",
-    "zod": "^3.23.8"
-  },
-  "dependencies": {
+    "zod": "^3.23.8",
     "@markdoc/markdoc": "^0.4.0"
   }
 }

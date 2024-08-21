@@ -1,10 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-import * as article from "../../cms/article";
-import * as course from "../../cms/course";
-import * as profile from "../../cms/profile";
-import * as landing from "../../cms/landing";
-import * as serie from "../../cms/series";
-import * as tag from "../../cms/tag";
+import { article, landing, profile, series as series_cms, course, tag } from "@yeehaa/cms/schema";
 
 const posts = defineCollection({
   type: "content",
@@ -35,7 +30,7 @@ const profiles = defineCollection({
 
 const series = defineCollection({
   type: "data",
-  schema: ({ image }) => serie.schema.extend({
+  schema: ({ image }) => series_cms.schema.extend({
     bannerImageURL: image(),
     articles: z.array(reference('Posts')),
   })

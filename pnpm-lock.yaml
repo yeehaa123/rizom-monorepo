@@ -119,6 +119,9 @@ importers:
       '@types/voca':
         specifier: ^1.4.5
         version: 1.4.6
+      '@yeehaa/cms':
+        specifier: workspace:*
+        version: link:../../packages/cms
       ai:
         specifier: ^3.1.30
         version: 3.3.11(openai@4.56.0)(react@18.3.1)(svelte@4.2.18)(vue@3.4.38)(zod@3.23.8)
