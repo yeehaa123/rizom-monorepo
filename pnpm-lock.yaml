@@ -428,6 +428,10 @@ importers:
         version: 5.5.4
 
   packages/styles:
+    dependencies:
+      tailwindcss:
+        specifier: ^3.4.10
+        version: 3.4.10
     devDependencies:
       '@rizom/typescript-config':
         specifier: workspace:*

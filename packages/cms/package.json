@@ -5,7 +5,8 @@
   "author": "Yeehaa",
   "license": "MIT",
   "scripts": {
-    "build": "tsx src/index.ts"
+    "build": "tsx src/index.ts",
+    "check": "tsc --noEmit"
   },
   "exports": {
     "./add": {

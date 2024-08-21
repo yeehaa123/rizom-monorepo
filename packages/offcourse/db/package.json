@@ -4,18 +4,11 @@
   "author": "Yeehaa",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
+    "check": "tsc --noEmit"
   },
   "exports": {
-    "./command": {
-      "types": "./src/command.ts",
-      "default": "./dist/command.js"
-    },
-    "./query": {
-      "types": "./src/query.ts",
-      "default": "./dist/query.js"
-    }
+    "./command": "./src/command.ts",
+    "./query": "./src/query.ts"
   },
   "devDependencies": {
     "@offcourse/schema": "workspace:*",

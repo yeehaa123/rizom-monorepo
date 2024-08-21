@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "author": "Yeehaa",
   "license": "MIT",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
   "exports": {
     ".": "./tailwind.config.ts"
   },
