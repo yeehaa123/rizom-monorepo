@@ -20,7 +20,7 @@ import {
   Camera
 } from 'lucide-react';
 
-import { Logo as Offcourse } from "@offcourse/ui";
+import { Logo as Offcourse } from "@offcourse/ui/components";
 import { Logo as Rizom } from "@/components/RizomLogo";
 
 const IconMap = {

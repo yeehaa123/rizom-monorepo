@@ -1,5 +1,5 @@
 import type { Course } from "@offcourse/schema";
-import { CourseCollection } from "@offcourse/ui"
+import { CourseCollection } from "../components/"
 import { useOffcourse } from "./store";
 
 export type ContainerProps = {
