@@ -7,12 +7,18 @@ import CourseCard from "./CourseCard";
 import CourseCollection from "./CourseCollection"
 import Curator from "./Curator"
 import Tags from "./Tags"
+import { Socials } from "./Socials"
 import Toolbar from "./Toolbar"
+import { OverlayModes } from "./Overlay"
+import { Logo } from "./Logo"
 
 export {
+  Logo,
   AvatarImage,
   Bookmark,
+  Socials,
   CardMeta,
+  OverlayModes,
   Checkbox,
   Checkpoint,
   CourseCard,

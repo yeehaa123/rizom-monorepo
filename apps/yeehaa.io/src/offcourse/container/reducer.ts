@@ -1,7 +1,7 @@
 import type { Action } from "@offcourse/schema";
 import type { OffcourseState } from "@/offcourse/container/store";
 import { ActionType } from "@offcourse/schema";
-import { OverlayModes } from "@/offcourse/components/Overlay";
+import { OverlayModes } from "@offcourse/ui";
 import { findCard, getCheckpoint } from "./helpers";
 import { initialCardState, updateAffordances, updateUserRecord } from "./cardState";
 

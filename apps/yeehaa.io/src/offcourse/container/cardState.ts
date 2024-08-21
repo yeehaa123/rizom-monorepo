@@ -1,5 +1,5 @@
 import type { Course, AuthState, Checkpoint, UserRecord, Note } from "@offcourse/schema";
-import { OverlayModes } from "../components/Overlay"
+import { OverlayModes } from "@offcourse/ui";
 type OffCourseData = Course | Course[]
 
 function isCourse(data: OffCourseData): data is Course {
