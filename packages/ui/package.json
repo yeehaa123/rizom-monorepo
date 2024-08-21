@@ -1,0 +1,42 @@
+{
+  "name": "@rizom/ui",
+  "version": "0.0.1",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "exports": {
+    "default": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@rizom/tailwind-config": "workspace:*",
+    "@rizom/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "tailwindcss": "^3.4.10",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.390.0",
+    "react": "^18.3.1",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "exports": {
+    "./globals.css": "./src/globals.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": [
+      "./src/components/*.tsx",
+      "./src/components/*.ts"
+    ]
+  }
+}
+

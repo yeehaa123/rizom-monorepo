@@ -19,7 +19,8 @@ import {
   Boxes,
   Camera
 } from 'lucide-react';
-import { Logo as Offcourse } from "@/offcourse/components/Logo";
+
+import { Logo as Offcourse } from "@offcourse/ui";
 import { Logo as Rizom } from "@/components/RizomLogo";
 
 const IconMap = {

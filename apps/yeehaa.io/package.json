@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@rizom/tailwind-config": "workspace:*",
+    "@offcourse/ui": "workspace:*",
     "@offcourse/schema": "workspace:*",
     "@offcourse/db": "workspace:*",
     "@ai-sdk/anthropic": "^0.0.30",
