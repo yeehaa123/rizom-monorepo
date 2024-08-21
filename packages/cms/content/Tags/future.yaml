@@ -1,16 +1,20 @@
-checksum: f836624f9de21d9b5a55ff76e9173e16
-summary: Future focuses on forward-thinking concepts and evolving paradigms. It
-  explores how traditional ideas are expanding and adapting to the digital age,
-  particularly in organizational structures and ecosystem design. This theme
-  encompasses innovative approaches to creating and managing decentralized
-  networks that span both space and time. It encourages considering how current
-  trends and technologies might shape the landscape of various fields, from
-  biology to business, in the years to come.
-excerpt: The article explores the evolution of ecosystem from biology to broader
-  fields, discussing its expansion beyond physical boundaries in the digital
-  age. It introduces ecosystem architecture as a new approach to designing
-  thriving decentralized organizations.
+checksum: 901b581d7b0fdad42cc3558e7141151f
+summary: Future-oriented content exploring innovative approaches to digital
+  ecosystems, decentralized organizations, and sustainable design. It covers
+  topics like ecosystem architecture, internet fragmentation, and regenerative
+  practices. The focus is on transformative ideas that transcend traditional
+  boundaries, fostering creativity, collaboration, and resilience in addressing
+  complex global challenges. This forward-thinking perspective embraces
+  diversity and interconnectedness to shape harmonious, equitable solutions for
+  both human communities and the environment.
+excerpt: Ecosystem architecture combines decentralization and regenerative
+  design to create sustainable, equitable solutions. It focuses on innovation as
+  a practice, fostering creativity and collaboration to address complex
+  challenges and build resilient, harmonious ecosystems.
 title: future
 articles:
   - across-space-and-time
-courses: []
+  - align-the-misaligned
+  - practice-innovation
+courses:
+  - practice-innovation
