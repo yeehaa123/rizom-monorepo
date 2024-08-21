@@ -7,10 +7,8 @@ import unwrapImages from 'remark-unwrap-images';
 import remarkGfm from 'remark-gfm';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
-import alpinejs from '@astrojs/alpinejs';
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-
 import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
@@ -24,7 +22,7 @@ export default defineConfig({
   },
   integrations: [tailwind({
     applyBaseStyles: false
-  }), mdx(), alpinejs(), react(), sitemap()],
+  }), mdx(), react(), sitemap()],
   output: "hybrid",
   adapter: vercel({
     webAnalytics: {
