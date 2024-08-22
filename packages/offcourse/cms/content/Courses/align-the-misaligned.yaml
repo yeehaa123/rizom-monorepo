@@ -1,0 +1,112 @@
+courseId: dab57a97b73c41955321d0f6def877ae
+goal: Align The Misaligned
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: The journey to "Align The Misaligned" involves self-discovery and
+  strategic planning. By identifying personal strengths, acknowledging
+  weaknesses, analyzing your startup's position, and formulating a critical ask,
+  you gain a comprehensive understanding of yourself and your business. This
+  holistic approach helps align your personal attributes with your
+  entrepreneurial goals, fostering growth and success.
+createdAt: 2024-08-22T09:05:59.718Z
+updatedAt: 2024-08-22T09:05:59.718Z
+publishedAt: 2024-08-22T09:05:59.718Z
+tags:
+  - skills
+  - career
+  - growth
+  - weak
+  - align
+  - startup
+  - swot
+  - plan
+  - network
+  - connect
+checkpoints:
+  - task: Discover your personal strengths
+    href: https://80000hours.org/articles/personal-strengths/
+    checkpointId: 6fb1d1bf52e7e0f3baa13eaafc54f0a8
+    description: The article guides readers through identifying personal strengths,
+      a crucial step in aligning oneself with meaningful work. It offers
+      practical methods for self-assessment, including reflection on past
+      successes and feedback from others. Understanding one's strengths helps in
+      choosing roles and projects that leverage these abilities, leading to
+      greater job satisfaction and impact.
+    tags:
+      - skills
+      - career
+      - growth
+  - task: Embrace your weaknesses
+    href: https://maven.com/articles/identifying-greatest-weakness
+    checkpointId: 98d77b1abbf66ebc80d33fb333d0c88f
+    description: This article guides readers through identifying their greatest
+      weakness, a crucial step in embracing weaknesses. By understanding
+      personal limitations, individuals can align their misaligned aspects,
+      turning vulnerabilities into opportunities for growth and
+      self-improvement. This process fosters self-awareness and promotes
+      personal development, ultimately helping to achieve better alignment in
+      life.
+    tags:
+      - weak
+      - growth
+      - align
+  - task: Do a SWOT analysis of your startup
+    href: https://fullscale.io/blog/swot-analysis-for-startups/
+    checkpointId: c84a574eeed481c4545034f1ffecfce3
+    description: The link provides a comprehensive guide on conducting a SWOT
+      analysis for startups, helping entrepreneurs identify strengths,
+      weaknesses, opportunities, and threats. This strategic tool aids in
+      aligning business goals, understanding market position, and making
+      informed decisions, ultimately contributing to better alignment of the
+      startup's vision and operations.
+    tags:
+      - startup
+      - swot
+      - plan
+  - task: Formulate your critical ask
+    href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
+    checkpointId: 44332323bd7e54fcac3042ebacd92d2d
+    description: The article highlights Rotterdam's superconnectors, individuals who
+      bridge diverse networks. Understanding their role can help align
+      misaligned parties by identifying key influencers who can facilitate
+      connections, foster collaboration, and resolve conflicts. This knowledge
+      aids in formulating critical asks by targeting the right people to achieve
+      goals efficiently.
+    tags:
+      - network
+      - connect
+      - align

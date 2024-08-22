@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dab57a97b73c41955321d0f6def877ae",
+    "author": "yeehaa",
+    "title": "Align The Misaligned",
+    "contentType": "course",
+    "status": "published",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
+    "publicationData": {
+      "createdAt": "2024-08-22T09:05:59.718Z",
+      "updatedAt": "2024-08-22T09:05:59.718Z",
+      "publishedAt": "2024-08-22T09:05:59.718Z"
+    }
+  },
+  {
+    "id": "6369a837b862a83f2aac27ebec2c742c",
+    "author": "yeehaa",
+    "title": "Groom Your Ecosystem",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "4b60a4026f5e3c6a215706d380f452d3",
+    "habitat": "Across Space And Time"
+  },
+  {
+    "id": "85cfc070b4ccf5ad41f3de3fda1d6f3b",
+    "author": "yeehaa",
+    "title": "Keep The Web Weird",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "f73a0dad773adccb86ce02345b460404",
+    "habitat": "Align The Misaligned"
+  },
+  {
+    "id": "435d37c4854bef9c03d78f045b9ed31a",
+    "author": "yeehaa",
+    "title": "Practice Innovation",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "42aea999e074e55044429b9e27c8c423"
+  },
+  {
+    "id": "b01e1a34626390069d84a828a77133b8",
+    "author": "yeehaa",
+    "title": "Yeehaa - Ecosystem Architect",
+    "contentType": "landing_page",
+    "status": "draft",
+    "checksum": "4cb9a86654ea2b6e54dce4232587d18c"
+  },
+  {
+    "id": "90145c64e30b6529d28643ee315fd1f4",
+    "author": "yeehaa",
+    "title": "yeehaa",
+    "contentType": "profile",
+    "status": "published",
+    "checksum": "f65a4a50ad6cf1db291ab61694c40c92",
+    "publicationData": {
+      "createdAt": "2024-08-22T09:04:18.948Z",
+      "updatedAt": "2024-08-22T09:04:18.948Z",
+      "publishedAt": "2024-08-22T09:04:18.948Z"
+    }
+  }
+]

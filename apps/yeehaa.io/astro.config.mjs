@@ -12,8 +12,10 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
-  experimental: {},
   site: 'https://yeehaa.io',
+  experimental: {
+    contentLayer: true
+  },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
     rehypePlugins: [[classNames, {
