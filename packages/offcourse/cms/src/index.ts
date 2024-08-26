@@ -13,7 +13,7 @@ import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
 const OUTPUT_BASE = './content';
-const INPUT_BASE = './yeehaa';
+const INPUT_BASE = './offcourse';
 const CMS_PATH = path.join(OUTPUT_BASE, "CMS");
 
 export const PATH_SUFFIXES = [

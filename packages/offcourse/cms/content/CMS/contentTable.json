@@ -1,20 +1,15 @@
 [
   {
-    "id": "dab57a97b73c41955321d0f6def877ae",
-    "author": "yeehaa",
+    "id": "2a5de639b371c776ad804f652aabfa9b",
+    "author": "offcourse",
     "title": "Align The Misaligned",
     "contentType": "course",
-    "status": "published",
-    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
-    "publicationData": {
-      "createdAt": "2024-08-22T09:05:59.718Z",
-      "updatedAt": "2024-08-22T09:05:59.718Z",
-      "publishedAt": "2024-08-22T09:05:59.718Z"
-    }
+    "status": "draft",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
   },
   {
-    "id": "6369a837b862a83f2aac27ebec2c742c",
-    "author": "yeehaa",
+    "id": "2af86ab4b101eec9b4126c6d5c1b9032",
+    "author": "offcourse",
     "title": "Groom Your Ecosystem",
     "contentType": "course",
     "status": "draft",
@@ -22,8 +17,8 @@
     "habitat": "Across Space And Time"
   },
   {
-    "id": "85cfc070b4ccf5ad41f3de3fda1d6f3b",
-    "author": "yeehaa",
+    "id": "08073063de54f4aa2004bf7d0244aec0",
+    "author": "offcourse",
     "title": "Keep The Web Weird",
     "contentType": "course",
     "status": "draft",
@@ -31,8 +26,8 @@
     "habitat": "Align The Misaligned"
   },
   {
-    "id": "435d37c4854bef9c03d78f045b9ed31a",
-    "author": "yeehaa",
+    "id": "325ac3289cb552a368dc65842cc2e9d9",
+    "author": "offcourse",
     "title": "Practice Innovation",
     "contentType": "course",
     "status": "draft",
@@ -40,23 +35,23 @@
   },
   {
     "id": "b01e1a34626390069d84a828a77133b8",
-    "author": "yeehaa",
+    "author": "offcourse",
     "title": "Yeehaa - Ecosystem Architect",
     "contentType": "landing_page",
-    "status": "draft",
-    "checksum": "4cb9a86654ea2b6e54dce4232587d18c"
+    "status": "published",
+    "checksum": "4cb9a86654ea2b6e54dce4232587d18c",
+    "publicationData": {
+      "createdAt": "2024-08-25T10:37:19.189Z",
+      "updatedAt": "2024-08-25T10:37:19.189Z",
+      "publishedAt": "2024-08-25T10:37:19.189Z"
+    }
   },
   {
-    "id": "90145c64e30b6529d28643ee315fd1f4",
-    "author": "yeehaa",
-    "title": "yeehaa",
+    "id": "ab2d83f1eb6532ec613531e32d4f1a12",
+    "author": "offcourse",
+    "title": "offcourse",
     "contentType": "profile",
-    "status": "published",
-    "checksum": "f65a4a50ad6cf1db291ab61694c40c92",
-    "publicationData": {
-      "createdAt": "2024-08-22T09:04:18.948Z",
-      "updatedAt": "2024-08-22T09:04:18.948Z",
-      "publishedAt": "2024-08-22T09:04:18.948Z"
-    }
+    "status": "draft",
+    "checksum": "f65a4a50ad6cf1db291ab61694c40c92"
   }
 ]

@@ -4,8 +4,10 @@
       "cache": false,
       "persistent": true
     },
+    "prepare": {
+    },
     "build": {
-      "dependsOn": ["^build"] 
+      "dependsOn": ["prepare", "^build"] 
     },
     "check": {
       "dependsOn": ["^check"] 

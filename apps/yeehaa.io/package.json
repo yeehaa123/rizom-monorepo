@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "check": "astro check",
+    "prepare": "rm -rf src/content && cp -r ../../packages/cms/content src/content && cp contentConfig.ts.template src/content/config.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
