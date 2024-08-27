@@ -12,6 +12,8 @@ import * as profile from "./profile";
 import * as tag from "./tag";
 import * as collections from "./collections";
 import { initDirs } from "./helpers";
+import { copyFileSync } from "fs"
+import * as path from 'path';
 
 export const PATH_SUFFIXES = [
   article.PATH_SUFFIX,
@@ -22,10 +24,16 @@ export const PATH_SUFFIXES = [
   landing.PATH_SUFFIX,
 ];
 
-type CMS_DIRS = { input_base: string, output_base: string, cms_path: string };
+type CMS_DIRS = {
+  input_base: string,
+  output_base: string,
+  cms_path: string,
+  content_config: string
+};
 
-async function convert({ input_base, output_base, cms_path }: CMS_DIRS) {
+async function convert({ input_base, output_base, cms_path, content_config }: CMS_DIRS) {
   await initDirs(output_base, PATH_SUFFIXES);
+  copyFileSync(content_config, path.join(output_base, "config.ts"));
   await mt.init(cms_path);
   await cache.init();
 
@@ -50,8 +58,8 @@ export function addCMS(options: CMS_DIRS): AstroIntegration {
   return {
     name: "@rizom/cms",
     hooks: {
-      'astro:config:done': async () => {
-        convert(options);
+      'astro:config:setup': async () => {
+        await convert(options);
       }
     }
   }

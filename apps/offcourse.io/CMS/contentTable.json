@@ -1,0 +1,67 @@
+[
+  {
+    "id": "2a5de639b371c776ad804f652aabfa9b",
+    "author": "offcourse",
+    "title": "Align The Misaligned",
+    "contentType": "course",
+    "status": "published",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
+    "publicationData": {
+      "createdAt": "2024-08-27T16:51:13.921Z",
+      "updatedAt": "2024-08-27T16:51:13.921Z",
+      "publishedAt": "2024-08-27T16:51:13.921Z"
+    }
+  },
+  {
+    "id": "2af86ab4b101eec9b4126c6d5c1b9032",
+    "author": "offcourse",
+    "title": "Groom Your Ecosystem",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "4b60a4026f5e3c6a215706d380f452d3",
+    "habitat": "Across Space And Time"
+  },
+  {
+    "id": "08073063de54f4aa2004bf7d0244aec0",
+    "author": "offcourse",
+    "title": "Keep The Web Weird",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "f73a0dad773adccb86ce02345b460404",
+    "habitat": "Align The Misaligned"
+  },
+  {
+    "id": "325ac3289cb552a368dc65842cc2e9d9",
+    "author": "offcourse",
+    "title": "Practice Innovation",
+    "contentType": "course",
+    "status": "draft",
+    "checksum": "42aea999e074e55044429b9e27c8c423"
+  },
+  {
+    "id": "b01e1a34626390069d84a828a77133b8",
+    "author": "offcourse",
+    "title": "Yeehaa - Ecosystem Architect",
+    "contentType": "landing_page",
+    "status": "published",
+    "checksum": "4cb9a86654ea2b6e54dce4232587d18c",
+    "publicationData": {
+      "createdAt": "2024-08-27T16:51:13.921Z",
+      "updatedAt": "2024-08-27T16:51:13.921Z",
+      "publishedAt": "2024-08-27T16:51:13.921Z"
+    }
+  },
+  {
+    "id": "ab2d83f1eb6532ec613531e32d4f1a12",
+    "author": "offcourse",
+    "title": "offcourse",
+    "contentType": "profile",
+    "status": "published",
+    "checksum": "f65a4a50ad6cf1db291ab61694c40c92",
+    "publicationData": {
+      "createdAt": "2024-08-27T16:51:13.921Z",
+      "updatedAt": "2024-08-27T16:51:13.921Z",
+      "publishedAt": "2024-08-27T16:51:13.921Z"
+    }
+  }
+]
