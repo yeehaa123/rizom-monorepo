@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { addCMS } from "@rizom/cms",
 import { visit } from 'unist-util-visit';
 import section from '@hbsnow/rehype-sectionize';
 import classNames from 'rehype-class-names';
@@ -20,7 +21,7 @@ export default defineConfig({
       'h1 + p': 'lead'
     }], slug, section]
   },
-  integrations: [tailwind({
+  integrations: [addCMS(), tailwind({
     applyBaseStyles: false
   }), mdx(), react(), sitemap()],
   output: "hybrid",

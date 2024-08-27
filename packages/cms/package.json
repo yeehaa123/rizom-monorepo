@@ -1,5 +1,5 @@
 {
-  "name": "@yeehaa/cms",
+  "name": "@rizom/cms",
   "type": "module",
   "version": "0.0.1",
   "author": "Yeehaa",
@@ -9,10 +9,7 @@
     "check": "tsc --noEmit"
   },
   "exports": {
-    "./add": {
-      "types": "./src/index.ts",
-      "default": "./dist/index.js"
-    }
+    "./convert": "./src/index.ts"
   },
   "devDependencies": {
     "@ai-sdk/anthropic": "^0.0.30",
@@ -22,6 +19,7 @@
     "@types/node": "^20.14.2",
     "@types/voca": "^1.4.6",
     "ai": "^3.1.30",
+    "astro": "^4.14.2",
     "dotenv": "^16.4.5",
     "gray-matter": "^4.0.3",
     "openai": "^4.49.1",
