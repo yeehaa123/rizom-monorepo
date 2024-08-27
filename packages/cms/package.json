@@ -9,12 +9,8 @@
     "check": "tsc --noEmit"
   },
   "exports": {
-<<<<<<< HEAD
-    "./convert": "./src/index.ts"
-=======
     ".": "./src/index.ts",
     "./schema": "./src/schema.ts"
->>>>>>> refactor
   },
   "devDependencies": {
     "@ai-sdk/anthropic": "^0.0.30",

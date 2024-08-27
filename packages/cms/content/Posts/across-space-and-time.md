@@ -7,23 +7,22 @@ createdAt: 2024-07-01T08:43:33.622Z
 updatedAt: 2024-07-01T08:43:33.622Z
 publishedAt: 2024-07-01T08:43:33.622Z
 bannerImageURL: e313b97a9498621b924d013f77f66dc3.png
-excerpt: The article explores the evolution of 'ecosystem' from biology to
-  metaphor, introducing 'ecosystem architecture' as a new approach to designing
-  modern, decentralized organizations that transcend traditional boundaries. It
-  challenges conventional frameworks and proposes interdisciplinary solutions
-  for thriving digital networks.
-description: The article explores the evolution of the term 'ecosystem' from its
-  biological roots to its metaphorical use in various fields. It discusses how
-  the concept has expanded beyond natural systems to describe complex,
-  distributed networks in the digital age. The author introduces 'ecosystem
-  architecture' as a new approach to designing and cultivating these modern,
-  decentralized organizations that transcend traditional spatial and temporal
-  boundaries.
+excerpt: The article explores the evolution of "ecosystem" from biology to
+  broader fields, discussing its expansion beyond physical boundaries in the
+  digital age. It introduces "ecosystem architecture" as a new approach to
+  designing thriving decentralized organizations.
+description: The article explores the evolution of the term "ecosystem" from its
+  biological roots to its broader application in various fields. It discusses
+  how the concept has expanded beyond physical boundaries to encompass dispersed
+  networks across space and time, particularly in the digital age. The author
+  introduces the idea of "ecosystem architecture" as a new approach to designing
+  and cultivating thriving decentralized organizations, drawing inspiration from
+  diverse disciplines.
 tags:
   - eco
   - org
   - net
-  - tech
+  - design
   - future
 course: groom-your-ecosystem
 ---

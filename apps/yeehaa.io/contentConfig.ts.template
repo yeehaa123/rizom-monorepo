@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-import { article, landing, profile, series as series_cms, course, tag } from "@yeehaa/cms/schema";
+import { article, landing, profile, series as series_cms, course, tag } from "@rizom/cms/schema";
 
 const posts = defineCollection({
   type: "content",

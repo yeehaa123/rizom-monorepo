@@ -38,9 +38,9 @@ curator:
     I currently work and live in Taipei, Taiwan.
 description: To Keep The Web Weird, engage with ISOC for internet advocacy,
   embrace open-source principles, explore digital fabrication, adopt
-  guerrilla-style creativity, and champion digital ownership. These steps foster
-  innovation, preserve internet freedom, encourage unconventional thinking, and
-  promote a diverse, user-driven web ecosystem that resists uniformity and
+  guerrilla-style creativity, and champion digital ownership. These steps
+  promote innovation, diversity, and individual empowerment online, preserving
+  the web's unique and unconventional spirit against standardization and
   corporate control.
 habitat: align-the-misaligned
 createdAt: 2024-08-19T09:17:01.023Z
@@ -51,8 +51,7 @@ tags:
   - open
   - global
   - weird
-  - funding
-  - oss
+  - fund
   - fab
   - maker
   - create
@@ -85,8 +84,8 @@ checkpoints:
       to maintain unique, independent projects that keep the web weird and
       vibrant, while promoting the consumption of open-source solutions.
     tags:
-      - funding
-      - oss
+      - open
+      - fund
       - weird
       - web
   - task: Make it Fab
@@ -96,8 +95,8 @@ checkpoints:
       creativity and innovation. It provides a space for makers to experiment
       with digital fabrication tools, encouraging unique and unconventional
       projects. This hands-on approach to technology enables individuals to
-      create fab and unusual digital content, contributing to a diverse and
-      quirky online landscape.
+      create fab and unusual digital content, contributing to a more diverse and
+      imaginative web landscape.
     tags:
       - fab
       - maker
@@ -121,10 +120,9 @@ checkpoints:
     checkpointId: f5ef3c0374e675349f3ce727d262322b
     description: ReadWriteOwn.com champions digital ownership, empowering users to
       control their online presence. It advocates for a decentralized web,
-      encouraging creativity and individuality. The platform supports the goal
-      of keeping the web weird by promoting diverse, user-owned content and
-      challenging the dominance of centralized platforms, fostering a more
-      unique and personal internet experience.
+      encouraging creativity and individuality. By promoting self-hosted content
+      and data sovereignty, it supports the goal of keeping the web weird,
+      diverse, and user-centric, aligning with the Read Write Own ethos.
     tags:
       - web
       - own

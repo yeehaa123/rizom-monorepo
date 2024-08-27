@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { addCMS } from "@rizom/cms",
+import { addCMS } from "@rizom/cms";
 import { visit } from 'unist-util-visit';
 import section from '@hbsnow/rehype-sectionize';
 import classNames from 'rehype-class-names';
@@ -11,6 +11,11 @@ import tailwind from '@astrojs/tailwind';
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
+import * as path from 'path';
+
+const OUTPUT_BASE = './content';
+const INPUT_BASE = './yeehaa';
+const CMS_PATH = path.join("./CMS");
 
 export default defineConfig({
   site: 'https://yeehaa.io',
@@ -23,9 +28,15 @@ export default defineConfig({
       'h1 + p': 'lead'
     }], slug, section]
   },
-  integrations: [addCMS(), tailwind({
-    applyBaseStyles: false
-  }), mdx(), react(), sitemap()],
+  integrations: [
+    addCMS({input_base: INPUT_BASE, output_base: OUTPUT_BASE, cms_path: CMS_PATH}), 
+    tailwind({
+      applyBaseStyles: false
+    }), 
+    mdx(), 
+    react(), 
+    sitemap()
+  ],
   output: "hybrid",
   adapter: vercel({
     webAnalytics: {

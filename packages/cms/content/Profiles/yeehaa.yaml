@@ -4,13 +4,13 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
-bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's passionate
-  about transforming education and knowledge sharing. As an entrepreneur,
-  thinker, and coder, he founded Offcourse and created the Superconnectors event
-  format. With experience in traditional and non-traditional academia, he
-  advocates for impactful and inclusive internet. Currently based in Taipei, he
-  focuses on bringing people together around common values and translating
-  shared visions into effective ecosystems.
+bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's an
+  entrepreneur, thinker, and coder passionate about transforming education and
+  knowledge sharing. With experience in academia and tech, he founded Offcourse
+  and created the Superconnectors event format. yeehaa advocates for impactful
+  and inclusive internet, having been involved in various tech initiatives.
+  Currently based in Taipei, he focuses on bringing people together around
+  common values and translating shared visions into effective ecosystems.
 courses:
   - groom-your-ecosystem
   - keep-the-web-weird
@@ -21,13 +21,13 @@ articles:
   - global-village-people
   - practice-innovation
 tags:
+  - eco
   - edu
   - tech
   - phd
-  - eco
   - web
   - future
-  - invent
+  - design
   - global
 profile:
   name: Jan Hein Hoogstad
@@ -65,18 +65,20 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 34b91ccb7815a03a7c13323a2ee35e4b
-description: Yeehaa is an ecosystem architect with a PhD in Philosophy, based in
-  Taipei. He's the founder of Offcourse and creator of the Superconnectors event
-  format. As an entrepreneur, thinker, and coder, he focuses on transforming
-  education and knowledge sharing. His work explores concepts like ecosystem
-  architecture, internet fragmentation, and the global village in the digital
-  age. Yeehaa advocates for impactful and inclusive internet, combining
-  decentralization and regenerative design to address global challenges. His
-  courses cover topics such as nurturing ecosystems, preserving internet
-  diversity, and practicing innovation through strategic thinking and
-  unconventional tools.
-blurb: "Yeehaa: Ecosystem architect, PhD, entrepreneur. Transforming education
-  and internet through innovative thinking and inclusive design."
-profileImageURL: ./34b91ccb7815a03a7c13323a2ee35e4b-profile.png
+checksum: 2b3e5de79327d22395fb02cc2458d16d
+description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
+  academia and tech expertise. As an entrepreneur, thinker, and coder, he's
+  passionate about transforming education and knowledge sharing. He founded
+  Offcourse and created the Superconnectors event format, advocating for an
+  impactful and inclusive internet. Based in Taipei, yeehaa focuses on uniting
+  people around common values and translating shared visions into effective
+  ecosystems. His work explores concepts like ecosystem architecture, internet
+  fragmentation, and the global village in the digital age. yeehaa's courses
+  cover topics such as personal ecosystem grooming, preserving web diversity,
+  and practicing innovation, reflecting his multidisciplinary approach to
+  fostering sustainable, creative, and interconnected digital landscapes.
+blurb: yeehaa, an ecosystem architect with a PhD, blends tech and philosophy to
+  transform education and foster inclusive digital landscapes. His work explores
+  ecosystem architecture, internet fragmentation, and innovation practices.
+profileImageURL: ./2b3e5de79327d22395fb02cc2458d16d-profile.png
 title: Yeehaa

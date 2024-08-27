@@ -7,22 +7,23 @@ createdAt: 2024-08-25T10:09:13.847Z
 updatedAt: 2024-08-25T10:09:13.847Z
 publishedAt: 2024-08-25T10:09:13.847Z
 bannerImageURL: 8c10f5fb038add90f79a8c19ed4cd8a1.png
-excerpt: Marshall McLuhan's "global village" concept predicts technology
+excerpt: Marshall McLuhan's global village concept predicts technology
   connecting the world leads to simultaneous existence and new tribalism. This
-  manifests in today's digital landscape with social media echo chambers and
-  online communities.
-description: Marshall McLuhan's concept of the "global village" predicts that
+  manifests in today's digital landscape, eroding cultural distinctions and
+  creating echo chambers.
+description: Marshall McLuhan's concept of the global village predicts that
   connecting the world through technology leads to simultaneous existence and
-  new tribalism. This manifests in today's digital landscape with social media
-  echo chambers and online communities. The article explores the power struggles
-  over communication channels, the complexity of digital relationships, and the
-  need for value pluralism in navigating our interconnected world.
+  new tribalism. The article explores how this manifests in today's digital
+  landscape, discussing the erosion of cultural distinctions, the rise of echo
+  chambers, and the struggle for control over communication channels. It
+  emphasizes the need for value pluralism in navigating the complexities of our
+  interconnected world.
 tags:
   - media
   - tech
   - global
   - tribe
-  - ethics
+  - web
 ---
 In his revelatory works *The Gutenberg Galaxy* (1962) and *Understanding Media* (1964), Marshall McLuhan predicts that connecting the world through technology will not lead to further unification. Rather, the connective powers of electricity, and the technical media built on top of it, will turn the world into a global village. As information travels rapidly across the globe, traditional distinctions between local and global, as well as between different cultures, are eroded. The concept of global village designates a contraction of space and time, creating a sense of simultaneous existence for people worldwide.
 

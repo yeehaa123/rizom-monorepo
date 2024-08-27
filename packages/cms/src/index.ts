@@ -1,6 +1,5 @@
-import type { AstroConfig, AstroIntegration } from 'astro';
+import type { AstroIntegration } from 'astro';
 
-import * as path from 'path';
 import * as cache from './cache';
 import * as filetree from "./filetree";
 import * as mt from "./metaTable";
@@ -14,10 +13,6 @@ import * as tag from "./tag";
 import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
-const OUTPUT_BASE = './content';
-const INPUT_BASE = './yeehaa';
-const CMS_PATH = path.join("./CMS");
-
 export const PATH_SUFFIXES = [
   article.PATH_SUFFIX,
   course.PATH_SUFFIX,
@@ -27,7 +22,9 @@ export const PATH_SUFFIXES = [
   landing.PATH_SUFFIX,
 ];
 
-async function convert({ input_base, output_base, cms_path }: { input_base: string, output_base: string, cms_path: string }) {
+type CMS_DIRS = { input_base: string, output_base: string, cms_path: string };
+
+async function convert({ input_base, output_base, cms_path }: CMS_DIRS) {
   await initDirs(output_base, PATH_SUFFIXES);
   await mt.init(cms_path);
   await cache.init();
@@ -49,23 +46,16 @@ async function convert({ input_base, output_base, cms_path }: { input_base: stri
   await mt.write(cms_path, metaTable);
 }
 
-<<<<<<< HEAD
-export function addCMS(): AstroIntegration {
-  let config: AstroConfig;
+export function addCMS(options: CMS_DIRS): AstroIntegration {
   return {
     name: "@rizom/cms",
     hooks: {
-      'astro:config:done': async ({ config: cfg }) => {
-        config = cfg;
-        console.log(config);
-      },
+      'astro:config:done': async () => {
+        convert(options);
+      }
     }
   }
 }
 
-convert({ input_base: INPUT_BASE, output_base: OUTPUT_BASE, cms_path: CMS_PATH });
-=======
-main();
 
 export { article, course, profile, landing, series, tag }
->>>>>>> refactor

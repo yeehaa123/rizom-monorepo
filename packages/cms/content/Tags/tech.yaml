@@ -1,17 +1,19 @@
-checksum: 8962c758ed6a429b69f65977f509e70c
-summary: Tech encompasses the evolution of digital ecosystems, internet
-  fragmentation, and global connectivity. It explores how technology shapes
-  modern organizations, digital landscapes, and human interactions. This theme
-  covers ecosystem architecture, the challenges of a fragmented internet, and
-  the concept of a global village in the digital age. It highlights the
-  intersection of technology with future trends, ethics, and societal changes.
-excerpt: From biological ecosystems to digital networks, tech explores how
-  technology reshapes our world. It examines internet fragmentation, ecosystem
-  architecture, and the global village concept, highlighting the complex
-  interplay between technology, society, and the future.
+checksum: 17a31b36c39827e0ec4ee7658895c4a5
+summary: Tech encompasses the realm of technological advancements and their
+  impact on society. It explores how digital innovations shape our
+  interconnected world, from the fragmentation of the internet to the concept of
+  a global village. This area delves into the complexities of ecosystem
+  architecture, the evolution of digital landscapes, and the challenges of
+  maintaining cultural diversity in an increasingly connected environment. It
+  also examines how technology influences communication, creates new forms of
+  tribalism, and necessitates a pluralistic approach to navigating our digital
+  future.
+excerpt: The internet's fragmentation mirrors tectonic shifts, with ecosystem
+  architecture viewing this as an opportunity for innovation. Meanwhile,
+  McLuhan's global village concept predicts technology's role in creating
+  simultaneous existence and new tribalism in our digital landscape.
 title: tech
 articles:
-  - across-space-and-time
   - align-the-misaligned
   - global-village-people
 courses: []

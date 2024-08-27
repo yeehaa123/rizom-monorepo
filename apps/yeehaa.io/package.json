@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "check": "astro check",
-    "prepare": "rm -rf src/content && cp -r ../../packages/cms/content src/content && cp contentConfig.ts.template src/content/config.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -29,11 +28,7 @@
     "@offcourse/db": "workspace:*",
     "@offcourse/schema": "workspace:*",
     "@offcourse/ui": "workspace:*",
-<<<<<<< HEAD
     "@rizom/cms": "workspace:*",
-=======
-    "@yeehaa/cms": "workspace:*",
->>>>>>> refactor
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
