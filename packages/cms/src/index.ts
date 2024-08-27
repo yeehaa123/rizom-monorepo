@@ -10,7 +10,7 @@ import * as article from "./article";
 import * as course from "./course";
 import * as landing from "./landing";
 import * as profile from "./profile";
-import * as tags from "./tag";
+import * as tag from "./tag";
 import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
@@ -23,7 +23,7 @@ export const PATH_SUFFIXES = [
   course.PATH_SUFFIX,
   profile.PATH_SUFFIX,
   series.PATH_SUFFIX,
-  tags.PATH_SUFFIX,
+  tag.PATH_SUFFIX,
   landing.PATH_SUFFIX,
 ];
 
@@ -49,6 +49,7 @@ async function convert({ input_base, output_base, cms_path }: { input_base: stri
   await mt.write(cms_path, metaTable);
 }
 
+<<<<<<< HEAD
 export function addCMS(): AstroIntegration {
   let config: AstroConfig;
   return {
@@ -63,3 +64,8 @@ export function addCMS(): AstroIntegration {
 }
 
 convert({ input_base: INPUT_BASE, output_base: OUTPUT_BASE, cms_path: CMS_PATH });
+=======
+main();
+
+export { article, course, profile, landing, series, tag }
+>>>>>>> refactor

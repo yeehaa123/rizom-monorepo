@@ -1,17 +1,16 @@
-checksum: 55abf8f537ebb968423cdd64d86f9db8
+checksum: 9f6b5dd44ddeb76042cb2ae21b0242cc
 summary: The 'Ecosystem Architecture' series explores the evolution of
-  ecosystems from biological concepts to digital networks. It discusses internet
-  fragmentation, McLuhan's global village, and innovative approaches to address
-  complex challenges. The series emphasizes decentralization, regenerative
-  design, and the importance of embracing diversity in digital landscapes. It
-  proposes ecosystem architecture as a new framework for creating sustainable,
-  equitable solutions that foster creativity, collaboration, and resilience in
-  our interconnected world.
+  ecosystems from biological concepts to digital landscapes. It discusses
+  internet fragmentation, McLuhan's global village, and innovative approaches to
+  address complex challenges. The series emphasizes decentralization,
+  regenerative design, and value pluralism in navigating our interconnected
+  world, aiming to create sustainable, equitable solutions that foster
+  creativity, collaboration, and resilience in both human and digital
+  ecosystems.
 excerpt: Ecosystem Architecture explores the evolution of ecosystems from
-  biology to digital networks, addressing internet fragmentation and global
-  challenges. It proposes innovative approaches combining decentralization and
-  regenerative design to create sustainable, collaborative solutions for our
-  interconnected world.
+  biology to digital realms, addressing internet fragmentation, global
+  interconnectedness, and innovative approaches to complex challenges,
+  emphasizing decentralization and regenerative design.
 tags:
   - eco
   - tech
@@ -19,8 +18,8 @@ tags:
   - global
   - design
   - web
-  - digital
-bannerImageURL: ./55abf8f537ebb968423cdd64d86f9db8-banner.png
+  - invent
+bannerImageURL: ./9f6b5dd44ddeb76042cb2ae21b0242cc-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
