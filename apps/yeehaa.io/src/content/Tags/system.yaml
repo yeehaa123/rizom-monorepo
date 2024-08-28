@@ -1,19 +1,18 @@
-checksum: a66ad815269ac94aec0b81ab3add8f9b
-summary: This collection focuses on innovative approaches to global challenges
-  through ecosystem architecture. It explores the integration of decentralized
-  systems and regenerative design principles to create sustainable communities
-  and foster interconnected knowledge. The content emphasizes practice-based
-  innovation that enhances both human and planetary well-being, transforming
-  various sectors including education, environmental practices, and social
-  equity. By reframing waste as opportunity and prioritizing collective
-  prosperity, this theme envisions a resilient and harmonious future where
-  innovation serves as a catalyst for positive change across societal and
-  ecological dimensions.
-excerpt: Ecosystem architecture combines decentralized systems and regenerative
-  design to tackle global issues. It reimagines innovation to benefit both
-  humanity and nature, fostering sustainable communities and shared knowledge
-  while prioritizing collective well-being.
+checksum: 37acdc2eb1bdf1a3a26d69475c62fbe7
+summary: System encompasses a broad concept that integrates technological,
+  ecological, and societal aspects. It refers to interconnected elements working
+  together, from digital landscapes to ecosystem architectures. This approach
+  views challenges as opportunities for innovation, embracing diversity and
+  decentralization. It emphasizes sustainable design principles, aiming to
+  create resilient structures that benefit both humanity and the environment.
+  The system perspective encourages holistic thinking, addressing global issues
+  through practice-based solutions and regenerative approaches.
+excerpt: Ecosystem architecture blends decentralized systems with regenerative
+  design, addressing global challenges. It envisions innovation that enhances
+  both people and planet, transforming various sectors. This approach fosters
+  sustainable communities and interconnected knowledge.
 title: system
 articles:
+  - align-the-misaligned
   - practice-innovation
 courses: []

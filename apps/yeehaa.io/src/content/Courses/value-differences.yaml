@@ -1,0 +1,113 @@
+courseId: 09c6d1c55e71ee0ad4158171872f8625
+goal: Value Differences
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: The journey to valuing differences begins with sharing a common
+  vision, fostering unity. By opening one's perspective, individuals gain
+  empathy and understanding. Effective discussion skills enable meaningful
+  exchanges of diverse viewpoints. Lastly, learning to avoid pitfalls in
+  reasoning helps maintain respectful and productive dialogues, ultimately
+  leading to a more inclusive and appreciative mindset.
+habitat: global-village-people
+createdAt: 2024-08-28T09:50:12.337Z
+updatedAt: 2024-08-28T09:50:12.337Z
+publishedAt: 2024-08-28T09:50:12.337Z
+tags:
+  - values
+  - unity
+  - vision
+  - mindset
+  - empathy
+  - growth
+  - dialog
+  - skills
+  - fallacy
+  - logic
+  - debate
+checkpoints:
+  - task: Share a Vision
+    href: https://youtu.be/gct3qXqRIE0?si=Dsrsp3tSD3hlkejN
+    checkpointId: 2f17d63e97bea1123f6deec89ce9d47a
+    description: The video explores how shared values can bridge differences and
+      unite people. It emphasizes the power of finding common ground and
+      creating a collective vision, which is crucial for addressing value
+      differences and sharing a vision. By highlighting the importance of shared
+      goals, the content aids in fostering understanding and collaboration
+      across diverse perspectives.
+    tags:
+      - values
+      - unity
+      - vision
+  - task: Open Up Perspectives
+    href: https://www.betterup.com/blog/how-to-change-your-perspective
+    checkpointId: 1a745611e406b45139afd1dc8a514d89
+    description: The article explores techniques to broaden one's perspective,
+      crucial for understanding value differences. It discusses challenging
+      assumptions, seeking diverse viewpoints, practicing empathy, and reframing
+      situations. These strategies help individuals open up to new ideas,
+      fostering better communication and understanding of differing values and
+      viewpoints.
+    tags:
+      - mindset
+      - empathy
+      - growth
+  - task: Discuss Effectively
+    href: https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/3662/Crucial-Conversations-How-to-Effectively-Discuss-What-Matters-Most.aspx
+    checkpointId: b8ddd3e4c093818929662ca01306dc9b
+    description: The article provides strategies for effective communication during
+      crucial conversations, emphasizing the importance of creating a safe
+      environment, managing emotions, and finding mutual purpose. It offers
+      techniques to navigate value differences and discuss sensitive topics
+      constructively, promoting understanding and collaboration in challenging
+      situations.
+    tags:
+      - dialog
+      - values
+      - skills
+  - task: Avoid Pitfalls
+    href: https://human.libretexts.org/Courses/Oxnard_College/A_Guide_to_Successful_College_Writing/05%3A_Rhetorical_Analysis/5.05%3A_Rhetorical_Fallacies
+    checkpointId: 5fa354df8e455b1c7c75bb384a5edf21
+    description: This resource helps identify and understand rhetorical fallacies,
+      enabling better communication and critical thinking. By recognizing common
+      pitfalls in arguments, individuals can avoid misunderstandings and
+      strengthen their own reasoning, fostering more effective dialogue and
+      mutual understanding in situations involving value differences.
+    tags:
+      - fallacy
+      - logic
+      - debate
+series: Ecosystem Architecture

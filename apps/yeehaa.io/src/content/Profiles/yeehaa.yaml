@@ -15,19 +15,19 @@ courses:
   - groom-your-ecosystem
   - keep-the-web-weird
   - practice-innovation
+  - value-differences
 articles:
   - across-space-and-time
   - align-the-misaligned
   - global-village-people
   - practice-innovation
 tags:
-  - eco
   - edu
   - tech
-  - phd
-  - web
+  - eco
   - future
   - design
+  - web
   - global
 profile:
   name: Jan Hein Hoogstad
@@ -65,7 +65,7 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 2b3e5de79327d22395fb02cc2458d16d
+checksum: c983576435453129294706ca3c3f4c64
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   academia and tech expertise. As an entrepreneur, thinker, and coder, he's
   passionate about transforming education and knowledge sharing. He founded
@@ -73,12 +73,13 @@ description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   impactful and inclusive internet. Based in Taipei, yeehaa focuses on uniting
   people around common values and translating shared visions into effective
   ecosystems. His work explores concepts like ecosystem architecture, internet
-  fragmentation, and the global village in the digital age. yeehaa's courses
-  cover topics such as personal ecosystem grooming, preserving web diversity,
-  and practicing innovation, reflecting his multidisciplinary approach to
-  fostering sustainable, creative, and interconnected digital landscapes.
-blurb: yeehaa, an ecosystem architect with a PhD, blends tech and philosophy to
-  transform education and foster inclusive digital landscapes. His work explores
-  ecosystem architecture, internet fragmentation, and innovation practices.
-profileImageURL: ./2b3e5de79327d22395fb02cc2458d16d-profile.png
+  fragmentation, and innovation practices. yeehaa's blog posts and courses cover
+  topics ranging from decentralized organizations and digital landscapes to
+  personal growth and valuing differences, reflecting his multidisciplinary
+  approach to fostering thriving, interconnected communities in the digital age.
+blurb: "yeehaa: Ecosystem architect, PhD, entrepreneur. Transforms education and
+  tech. Founded Offcourse, created Superconnectors. Advocates inclusive
+  internet. Explores decentralized systems, innovation, digital landscapes.
+  Unites people around values, translates visions into ecosystems."
+profileImageURL: ./c983576435453129294706ca3c3f4c64-profile.png
 title: Yeehaa

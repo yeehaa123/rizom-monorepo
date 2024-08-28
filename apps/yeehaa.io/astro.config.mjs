@@ -13,7 +13,7 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import * as path from 'path';
 
-const OUTPUT_BASE = './content';
+const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './yeehaa';
 const CONTENT_CONFIG = "./contentConfig.ts.template"
 const CMS_PATH = path.join("./CMS");

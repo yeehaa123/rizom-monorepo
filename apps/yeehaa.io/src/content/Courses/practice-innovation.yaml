@@ -56,12 +56,12 @@ tags:
   - music
   - invent
   - art
-  - code
-  - ai
+  - tech
+  - random
   - share
   - lead
-  - power
   - trust
+  - power
 checkpoints:
   - task: Think Strategically
     href: https://hbr.org/2023/11/how-to-become-a-better-strategic-thinker
@@ -105,16 +105,16 @@ checkpoints:
   - task: Generate Diversity
     href: https://www.artnome.com/news/2018/8/8/why-love-generative-art
     checkpointId: 5e7f35ebc3434b0e5f4ece496861af6f
-    description: Generative art, as explored in the article, fosters innovation by
-      combining creativity with technology. It encourages diverse artistic
-      expressions through algorithms and code, pushing boundaries of traditional
-      art. This approach stimulates new ways of thinking, problem-solving, and
-      creating, directly supporting the goal of practicing innovation and
-      generating diversity in artistic output.
+    description: Generative art combines human creativity with algorithmic
+      processes, fostering innovation through unexpected outcomes. It encourages
+      diverse artistic expressions by leveraging technology, randomness, and
+      rule-based systems. This approach challenges traditional methods,
+      inspiring new perspectives and pushing the boundaries of artistic
+      creation.
     tags:
       - art
-      - code
-      - ai
+      - tech
+      - random
       - create
   - task: Share Generously
     href: https://www.fastcompany.com/3003033/dont-be-power-hog-how-sharing-information-time-and-authority-makes-you-better-leader
@@ -128,6 +128,6 @@ checkpoints:
     tags:
       - share
       - lead
-      - power
       - trust
+      - power
 series: Ecosystem Architecture

@@ -22,7 +22,7 @@ tags:
   - web
   - tech
   - global
-  - digital
+  - system
   - future
 course: keep-the-web-weird
 ---

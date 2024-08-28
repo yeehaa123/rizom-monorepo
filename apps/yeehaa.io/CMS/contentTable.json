@@ -185,6 +185,21 @@
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
   },
   {
+    "id": "09c6d1c55e71ee0ad4158171872f8625",
+    "author": "yeehaa",
+    "title": "Value Differences",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "de13720ab2d354129d35e8c2cc6a17d5",
+    "publicationData": {
+      "createdAt": "2024-08-28T09:50:12.337Z",
+      "updatedAt": "2024-08-28T09:50:12.337Z",
+      "publishedAt": "2024-08-28T09:50:12.337Z"
+    },
+    "habitat": "Global Village People"
+  },
+  {
     "id": "b01e1a34626390069d84a828a77133b8",
     "author": "yeehaa",
     "title": "Yeehaa - Ecosystem Architect",
