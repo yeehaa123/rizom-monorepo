@@ -1,18 +1,19 @@
-checksum: 73c8109e38c842ed5fd943334678362f
-summary: Web encompasses the evolving digital landscape, from fragmentation to
-  innovation. It explores the internet's geological-like shifts, ecosystem
-  architecture, and the embrace of diversity in digital realms. This concept
-  also champions keeping the online world weird through open-source principles,
-  digital fabrication, guerrilla-style creativity, and digital ownership. It
-  encourages unconventional thinking and resists uniformity, promoting a
-  user-driven ecosystem that balances global connectivity with diverse,
-  localized experiences.
-excerpt: The internet has fragmented like tectonic shifts, and attempts to
-  reunify it are futile. Ecosystem architecture views this as an opportunity,
-  embracing diversity in digital landscapes. The article explores types of
-  fragmentation, historical context, and stakeholder perspectives.
+checksum: b18889c5b7450fb5ef7970b3a69886c9
+summary: Web encompasses the interconnected digital landscape, exploring its
+  fragmentation, global impact, and evolving nature. It delves into concepts
+  like ecosystem architecture, McLuhan's global village, and the need for
+  diversity in our online world. This collection examines the erosion of
+  cultural distinctions, the rise of echo chambers, and the struggle for control
+  over communication channels. It also advocates for keeping the web weird
+  through open-source principles, digital fabrication, and unconventional
+  creativity, fostering innovation and preserving internet freedom.
+excerpt: The internet has fragmented like tectonic shifts, with ecosystem
+  architecture viewing this as an opportunity for diversity. Meanwhile,
+  McLuhan's global village concept predicts technology connecting the world
+  leads to simultaneous existence and new tribalism.
 title: web
 articles:
   - align-the-misaligned
+  - global-village-people
 courses:
   - keep-the-web-weird
