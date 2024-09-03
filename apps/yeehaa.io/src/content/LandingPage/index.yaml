@@ -238,6 +238,7 @@ sections:
     cta:
       text: Schedule Your Free Consultation
 courses:
+  - break-down-silos
   - groom-your-ecosystem
   - keep-the-web-weird
   - practice-innovation

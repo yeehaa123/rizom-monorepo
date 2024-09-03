@@ -12,6 +12,7 @@ bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's an
   Currently based in Taipei, he focuses on bringing people together around
   common values and translating shared visions into effective ecosystems.
 courses:
+  - break-down-silos
   - groom-your-ecosystem
   - keep-the-web-weird
   - practice-innovation
@@ -30,7 +31,7 @@ tags:
   - web
   - future
   - design
-  - global
+  - system
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -67,20 +68,19 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 217bc87da97aca8214018eb99761846b
+checksum: 5c5254f34565dfa5762f71c65a16c3a1
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   academia and tech expertise. As an entrepreneur, he founded Offcourse and
   created the Superconnectors event format. Based in Taipei, yeehaa focuses on
   transforming education, knowledge sharing, and fostering inclusive internet
-  ecosystems. His work spans topics like digital fragmentation, ecosystem
+  ecosystems. His work explores concepts like digital fragmentation, ecosystem
   architecture, and innovative approaches to global challenges. yeehaa's blog
-  posts explore concepts such as internet fragmentation, McLuhan's global
-  village, and Sloterdijk's foam metaphor. His curated courses cover ecosystem
-  grooming, web innovation, and valuing differences, reflecting his commitment
-  to personal growth, creativity, and inclusive dialogue.
-blurb: yeehaa, an ecosystem architect with a PhD, blends academia and tech to
-  transform education and foster inclusive internet ecosystems. His work
-  explores digital fragmentation, innovative approaches to global challenges,
-  and the intersection of philosophy and technology.
-profileImageURL: ./217bc87da97aca8214018eb99761846b-profile.png
+  posts and courses cover topics such as internet culture, decentralized
+  systems, and breaking down organizational silos. He advocates for embracing
+  diversity in digital landscapes and reframing internet fragmentation as an
+  opportunity for innovation.
+blurb: "yeehaa: Ecosystem architect, philosopher, and tech innovator reshaping
+  education and digital landscapes. Explores fragmentation, decentralized
+  systems, and inclusive internet ecosystems through writing and courses."
+profileImageURL: ./5c5254f34565dfa5762f71c65a16c3a1-profile.png
 title: Yeehaa
