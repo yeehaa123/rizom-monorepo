@@ -6,56 +6,52 @@ series: ecosystem-architecture
 createdAt: 2024-09-02T07:51:14.186Z
 updatedAt: 2024-09-02T07:51:14.186Z
 publishedAt: 2024-09-02T07:51:14.186Z
-bannerImageURL: 3796a831f6c61d75e69cb31dd4e574ae.png
-excerpt: Sloterdijk's 'foam' concept reframes internet fragmentation positively.
-  Rather than lamenting lost unity, it celebrates digital diversity. This
-  perspective views the internet as interconnected bubbles, turning challenges
-  into opportunities for growth and connection.
-description: >-
-  Foam Party: Reframing Internet Fragmentation
-
-
-  Peter Sloterdijk's concept of 'foam' offers a new perspective on internet
-  fragmentation. Instead of lamenting the loss of a unified internet, we can
-  view the digital landscape as a vibrant foam of interconnected bubbles. This
-  approach celebrates diversity and reframes challenges as opportunities for
-  growth and connection.
+bannerImageURL: adb23f9ed67d9273da651d9b4e65801a.png
+excerpt: Sloterdijk's foam metaphor offers a framework for understanding our
+  complex world. The internet, with its myriad websites and communities,
+  resembles foam. Each digital space functions as a bubble - self-contained yet
+  linked to others. This perspective reframes internet fragmentation positively.
+description: The article discusses Peter Sloterdijk's concept of 'foam' as a
+  metaphor for understanding fragmentation and multiplicity in modern society.
+  It applies this concept to internet culture, exploring how the 'foam' metaphor
+  can reframe our understanding of phenomena like filter bubbles and internet
+  fragmentation. The piece argues for embracing the complexity and
+  interconnectedness of digital spaces rather than lamenting the loss of
+  universality.
 tags:
-  - foam
-  - web
-  - bubble
+  - philosophy
+  - internet
+  - metaphor
+  - society
   - digital
-  - unity
 ---
-Everyday language overflows with conceptual metaphors celebrating wholeness or lamenting its absence: broken hearts, phantom pains, paradise lost. These deeply ingrained sentiments in our communication explain why letting go of universality proves so challenging, both in fact and in principle. Even when we accept the existential reality of living without absolute truth, we often perceive its absence as a loss. Reframing fragmentation positively seems nearly impossible.
+Everyday language is overloaded with conceptual metaphors that either celebrate the whole or lament its absence: broken heart, phantom pain, paradise lost, etcetera. The fact that these sentiments are so deeply ingrained into our means of communication also explains why it is so difficult to let universality go. This is already true *de facto*, let alone *de jure*. Even if we are willing to submit ourselves to the existential fact of living without absolute truth, it is still probable that we conceive its absence as a loss. Reframing fragmentation as something positive is next to impossible.
 
-In recent years, discussions about the modern internet have increasingly focused on the concept of 'internet fragmentation'. This term describes the perceived splintering of the global internet into separate, often incompatible systems. Such fragmentation manifests in various forms: technological (differing protocols and standards), commercial (platform-specific ecosystems), and political (state-imposed restrictions and regulations). Many view this trend with concern, fearing the erosion of a unified, open internet that once promised global connectivity and the free exchange of ideas.
+That is why it is admirable that Peter Sloterdijk takes on this challenge against all odds. In the third volume of his Spheres trilogy titled *Foams* (1998), he introduces the titular concept as an antipode to those conceptual metaphors that signify wholeness, unity, and completeness. Foam is a phenomenon that celebrates multiplicity. As a concept, it defies all notions of universality without even referring to it negatively.
 
-However, this perspective may be limiting. Just as the evolution of virtual space often mirrors that of physical space, perhaps we should reconsider our approach to digital fragmentation. By reframing our understanding, we might uncover new insights and opportunities within the changing landscape of the internet.
+ > The foam metaphor has the merit of capturing the topological allocation of creative and self-securing creations of living space in an image. It not only reminds us of the tight proximity between fragile units, but also of the necessary self-enclosure of each foam cell, even though they can only exist as users of shared separation installations
 
-Slightly ahead of its time, Peter Sloterdijk offers a compelling framework that we can use to reconsider internet fragmentation. In the third volume of his Spheres trilogy, "Foams" (1998), Sloterdijk boldly takes on the challenge of reframing fragmentation in a broader context. He introduces the concept of 'foam' as an antipode to metaphors signifying wholeness, unity, and completeness. Foam, a phenomenon celebrating multiplicity, defies notions of universality without negative reference. Sloterdijk writes:
+— Peter Sloterdijk
 
-> "The foam metaphor captures the topological allocation of creative and self-securing creations of living space in an image. It not only reminds us of the tight proximity between fragile units, but also of the necessary self-enclosure of each foam cell, even though they can only exist as users of shared separation installations."
+The desire to reverse the effects of separation repeats trauma and causes paralysis. The will to celebrate multiplicity leads to empowerment and creativity. It is an affirmative act.
 
-Although Sloterdijk developed this concept to address fragmentation in society and culture at large, his insights can be powerfully applied to our understanding of the digital landscape. The desire to reverse separation often repeats trauma and causes paralysis. Conversely, celebrating multiplicity leads to empowerment and creativity. In this spirit, we can reconsider the term "internet fragmentation." Fragments only have meaning in relation to a supposedly lost whole. Instead, we might adopt Sloterdijk's perspective and call it "internet foaming."
+Let's demonstrate the power of this affirmative act by applying it to the concept of 'internet fragmentation' that I explored in an [earlier article](/posts/align-the-misaligned) Following Sloterdijk's logic, refering to this process in terms of fragmentation confronts us with an unsolvable problem. Fragments only have meaning in relation to a whole that was never there, is experienced as lost, and can never be restored. By simply calling it internet foaming instead, we immediately reframe this entire narrative.
 
-Foam consists of bubbles, which have played a crucial role in the internet's brief history. The 1990s saw the rise of the infamous dot-com bubble, intertwined with the nascent internet landscape. This economic phenomenon, marked by exuberant valuations of internet-based companies, reached its zenith in 2000 before bursting spectacularly. The collapse sent shockwaves across the global economy, ushering in a widespread recession.
+Sloterdijk's foam metaphor offers a compelling framework for understanding our increasingly complex and interconnected world. The internet, with its myriad websites, social media platforms, and online communities, bears a striking resemblance to foam. Each digital space functions as a bubble within this vast foam structure - self-contained yet inextricably linked to others. 
 
-In recent years, we've grappled with the concept of filter bubbles. These algorithmic echo chambers curate content based on user behavior, potentially reinforcing existing beliefs and isolating individuals from diverse perspectives. While this tailored digital experience caters to immediate desires, it can impede meaningful connections with others. Popular platforms like Instagram and TikTok have been accused of trapping us in windowless monads.
+Hence, it is not a coincidence that bubbles play a crucial role in the internet's short history. The 1990s witnessed the rise of the infamous dot-com bubble, closely intertwined with the burgeoning landscape of the OG internet. This economic phenomenon, symbolized by an exuberant surge in the valuation of internet-based companies, eventually reached a critical point in 2000 when it abruptly burst. The collapse of the dot-com bubble sent shockwaves across the global economy, ushering in a period of recession that reverberated worldwide.
 
-However, we must question whether filter bubbles are truly a modern or internet-specific problem. Traditional media - television, radio, newspapers, and even librarians - have long been highly selective in their choices. Travel guides like Lonely Planet have funneled Western tourists to the same destinations for decades, and the concept of a literary canon is itself a massive filter bubble. The modern internet didn't invent the economy or politics of information; it intensified their use, multiplied the bubbles, and made their effects more apparent.
+In recent years, the pervasive influence of filter bubbles has enveloped us. The concept of filter bubbles revolves around the idea that biased algorithms curate content based on user behavior, thereby creating echo chambers that reinforce existing beliefs and isolate individuals from diverse perspectives. While this tailored digital experience caters to our immediate wants and needs, it concurrently impedes and restricts the potential for meaningful connections with others. Instagram and TikTok trapped us in monad without windows.
 
-Moreover, it's overly simplistic to focus solely on the problems. Filter bubbles aren't merely defined by misinformation and ignorance, but also by shared values. The inhabitants of these ecosystems relate through commonalities. They choose to live in a bubble because it signifies connectedness and solidarity. At their core, bubbles are seeds - potential ecosystems.
+Or so we have been told! But is the issue of filter bubbles really a problem of today? Is it truly an internet problem? Television, radio, newspapers, and librarians were — and are — highly selective in their choices; the Lonely Planet lured the entire Western world to the same hostel in Thailand, and the whole concept of a literary canon is quite literally a massive filter bubble. In other words, the modern internet invented neither the economy nor the politics of information: it simply intensified its use, multiplied the amount of bubbles, and rendered its effects more apparent.
 
-Popping filter bubbles would mean discarding their positive aspects along with the negative. Instead, we might choose to remain in the warm, foamy jacuzzi while increasing our awareness of its inherent issues. The most undesirable side effects of filter bubbles are two sides of the same coin:
+More importantly, it is too easy to only focus on the problems. Filter bubbles are not merely determined by misinformation and ignorance, but also by shared values. The inhabitants of these ecosystems relate to each other through what they have in common. They choose to live in a bubble because, for them, it signifies connectedness, commonality, and solidarity. In their purest form bubbles are seeds; they are potential ecosystems.
 
-1. **Entrapment**: Being confined in a bubble where you don't belong. While shared values can provide support and meaning, being trapped in a community with opposing or threatening values can feel like imprisonment.
+Popping filter bubbles would thus mean throwing out the baby with the bathwater. Let's stay in the warm and foamy jacuzzi, while increasing our awareness of its inherent problems. The most undesirable side effects of filter bubbles are two sides of the same coin:
 
-2. **Solipsism**: Genuinely believing your bubble is the only reality. Excessive devotion to your community's values can blind you to its limitations and problems. Every ecosystem has boundaries, and a bubble beneficial to you might be stifling or harmful to others.
+**Entrapment**: The problem of being confined in a bubble where you do not belong. While people can derive incredible support and meaning from shared common values, being trapped in a community with values that are opposed to your own, or even actively threatening your existence, can feel like a prison.
 
-Moving forward, our challenge lies in addressing these issues without reverting to universal values and norms. As soon as we start bursting bubbles - others' or our own - foam reveals its most crucial characteristic: it has no outside. There is no bird's-eye view. The outside of a bubble is another bubble. Once we truly accept this existential fact, we can stop bursting bubbles and begin fostering ecosystems.
+**Solipsism**: This is the condition where you genuinely believe that your bubble is the one and only. If you are too enamored by your community's values, you are bound to overlook its limitations and problems. Every ecosystem is defined by boundaries. A bubble that is good for you can be stifling, or even harmful, to someone else.
 
-In embracing the foam metaphor, we open ourselves to a new perspective on digital spaces and social interactions. Rather than lamenting the loss of a unified whole or attempting to forcibly merge disparate bubbles, we can appreciate the richness and diversity of our foamy reality. This approach doesn't ignore the challenges posed by filter bubbles and echo chambers, but it reframes them as opportunities for growth, connection, and the nurturing of diverse ecosystems.
-
-The internet, viewed through this lens, becomes not a fragmented wasteland but a vibrant, ever-shifting foam of interconnected bubbles. Our task is to navigate this foam with awareness, empathy, and curiosity, recognizing that each bubble we encounter is a world unto itself, with its own values, languages, and norms. By fostering connections between bubbles and encouraging the growth of healthy ecosystems, we can work towards a more nuanced, diverse, and resilient digital landscape.
+From now onward, the challenge lies in solving these problems without reentering the arena of universal values and norms. As soon as we start bursting bubbles again — either that of someone else or our own — foam reveals its most important characteristic: it has no outside. There is no bird's eye point of view. The outside of a bubble is another bubble. As soon as we truly accept this existential fact, we stop bursting bubbles and begin to foster ecosystems.
 

@@ -1,25 +1,26 @@
-checksum: dbae6d92254e5671a8f14d9096c223cc
+checksum: 94ef90020b0e6614e8ce9d93dd8b3147
 summary: The 'Ecosystem Architecture' series explores the evolution of
   ecosystems from biology to digital realms. It discusses internet
-  fragmentation, reframing it positively using concepts like Sloterdijk's
-  'foam'. The series examines tribal conflicts in the global village, and
-  proposes ecosystem architecture as an approach to design thriving
-  decentralized organizations. It emphasizes sustainable innovation,
-  regenerative design, and collective well-being to address global challenges.
-excerpt: Ecosystem Architecture explores digital landscapes as complex systems,
-  reframing internet fragmentation as an opportunity for innovation. It proposes
-  sustainable approaches to global challenges, blending decentralized systems
-  with regenerative design principles.
+  fragmentation, decentralized systems, and regenerative design principles. The
+  series examines concepts like Sloterdijk's 'foam' metaphor and McLuhan's
+  'global village' to understand modern digital landscapes. It proposes
+  ecosystem architecture as an approach to design thriving decentralized
+  organizations, addressing global challenges while fostering sustainable
+  communities and innovation that benefits both people and planet.
+excerpt: Ecosystem architecture combines decentralized systems with regenerative
+  design to address global challenges. It reimagines digital landscapes as
+  complex systems, embracing diversity and fragmentation as opportunities for
+  innovation. This approach fosters sustainable communities and shared
+  knowledge, prioritizing collective well-being.
 tags:
   - eco
-  - web
+  - tech
   - future
   - design
   - system
   - global
-  - tech
   - digital
-bannerImageURL: ./dbae6d92254e5671a8f14d9096c223cc-banner.png
+bannerImageURL: ./94ef90020b0e6614e8ce9d93dd8b3147-banner.png
 articles:
   - across-space-and-time
   - practice-innovation

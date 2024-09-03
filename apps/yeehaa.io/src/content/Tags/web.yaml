@@ -1,20 +1,18 @@
-checksum: 67a37df4c614c9e6c375653adff58673
-summary: Web encompasses the evolving digital landscape, exploring themes of
-  fragmentation, diversity, and innovation. It delves into concepts like
-  ecosystem architecture and Sloterdijk's foam theory, reframing challenges as
-  opportunities. The resources discuss the internet's geological-like shifts,
-  interconnected digital bubbles, and strategies to maintain the web's
-  uniqueness. They advocate for embracing diversity, open-source principles, and
-  unconventional thinking to foster a vibrant, user-driven online ecosystem that
-  resists uniformity and corporate control.
-excerpt: The internet has fragmented like tectonic shifts, with ecosystem
-  architecture viewing this as an opportunity for diversity. Sloterdijk's foam
-  concept reframes this positively, celebrating interconnected digital bubbles.
-  Strategies to keep the web weird include embracing open-source and guerrilla
-  creativity.
+checksum: 73c8109e38c842ed5fd943334678362f
+summary: Web encompasses the evolving digital landscape, from fragmentation to
+  innovation. It explores the internet's geological-like shifts, ecosystem
+  architecture, and the embrace of diversity in digital realms. This concept
+  also champions keeping the online world weird through open-source principles,
+  digital fabrication, guerrilla-style creativity, and digital ownership. It
+  encourages unconventional thinking and resists uniformity, promoting a
+  user-driven ecosystem that balances global connectivity with diverse,
+  localized experiences.
+excerpt: The internet has fragmented like tectonic shifts, and attempts to
+  reunify it are futile. Ecosystem architecture views this as an opportunity,
+  embracing diversity in digital landscapes. The article explores types of
+  fragmentation, historical context, and stakeholder perspectives.
 title: web
 articles:
   - align-the-misaligned
-  - foam-party
 courses:
   - keep-the-web-weird
