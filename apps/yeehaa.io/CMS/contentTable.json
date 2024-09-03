@@ -50,11 +50,17 @@
   {
     "id": "5d7667cc62fa2ee4e6b664657dcd1f8d",
     "author": "yeehaa",
+    "order": 4,
     "title": "Foam Party",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "9f89665831b49e0f9151d06d7495fe0a"
+    "checksum": "3796a831f6c61d75e69cb31dd4e574ae",
+    "publicationData": {
+      "createdAt": "2024-09-02T07:51:14.186Z",
+      "updatedAt": "2024-09-02T07:51:14.186Z",
+      "publishedAt": "2024-09-02T07:51:14.186Z"
+    }
   },
   {
     "id": "d1095d6044b09f646e508eaaf1856b2e",
