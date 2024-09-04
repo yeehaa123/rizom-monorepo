@@ -1,19 +1,18 @@
-checksum: a45c36eb5a75d931cc39e9ef02589945
-summary: Open is a concept that encourages transparency, collaboration, and
-  inclusivity. It's applied in various contexts, from organizational culture to
-  web development. This approach promotes breaking down silos, fostering diverse
-  perspectives, and embracing unconventional thinking. It supports effective
-  communication, cross-functional understanding, and innovation. In the digital
-  realm, it aligns with open-source principles, championing internet freedom and
-  a user-driven ecosystem. By adopting an open mindset, individuals and
-  organizations can create more integrated, creative, and adaptable environments
-  that resist uniformity and corporate control.
-excerpt: Open mindset fosters collaboration, breaks silos, and drives
-  innovation. It encourages transparency in organizations and supports internet
-  freedom. This approach promotes diverse perspectives, unconventional thinking,
-  and a user-driven digital ecosystem.
+checksum: c779461e4a3eb8a3d4d3295504b7bdda
+summary: This collection focuses on keeping the web weird, emphasizing the
+  importance of preserving internet freedom and fostering innovation. It
+  encourages engagement with ISOC for internet advocacy, embracing open-source
+  principles, exploring digital fabrication, adopting guerrilla-style
+  creativity, and championing digital ownership. These approaches aim to
+  maintain a diverse, user-driven web ecosystem that resists uniformity and
+  corporate control. The content promotes unconventional thinking and DIY
+  attitudes, blending technology with creative rebellion to ensure the internet
+  remains a space for unique expressions and ideas.
+excerpt: Keep The Web Weird by engaging with ISOC, embracing open-source,
+  exploring digital fabrication, adopting guerrilla creativity, and championing
+  digital ownership. These steps foster innovation and preserve internet
+  freedom.
 title: open
 articles: []
 courses:
-  - break-down-silos
   - keep-the-web-weird
