@@ -1,7 +1,7 @@
-title: Yeehaa - Ecosystem Architect
+title: Offcourse - Share Knowledge
 sections:
   hero:
-    title: Conquer Black Oceans Together
+    title: Share Knowledge
     subtitle: Turn competitors into collaborators, create new markets
     description: Ecosystem architecture is a transformative practice that fosters
       strategic collaboration and effective knowledge sharing, empowering
@@ -240,22 +240,23 @@ sections:
 courses:
   - align-the-misaligned
 articles: []
-description: Yeehaa offers ecosystem architecture services to help organizations
-  conquer "Black Ocean" markets - unexplored territories beyond blue and red
-  oceans. The landing page showcases their approach, which includes discovering
-  uncharted markets, architecting ecosystems, and creating shared value. They
-  offer tools like Offcourse for knowledge sharing and Rizom for cognitive
-  assessment. Yeehaa's services aim to transform organizations, foster
-  collaboration, and drive innovation in new market spaces.
-excerpt: Yeehaa, an ecosystem architect, guides organizations in conquering
-  Black Ocean markets through innovative strategies, collaborative frameworks,
-  and cutting-edge tools. Their approach transforms businesses to thrive in
-  unexplored market territories.
+description: Offcourse is a platform for sharing knowledge and transforming
+  organizations through ecosystem architecture. It focuses on navigating "Black
+  Ocean" markets, uncharted territories beyond traditional industry boundaries.
+  The landing page highlights challenges in modern markets, introduces concepts
+  like Ecosystem-Led Growth, and offers services and tools for organizations to
+  thrive in these new spaces. Yeehaa, the company behind Offcourse, positions
+  itself as an ecosystem architect and innovator, providing strategies for
+  collaborative growth and value creation in unexplored market categories.
+excerpt: Offcourse empowers organizations to share knowledge, navigate Black
+  Ocean markets, and leverage ecosystem architecture for innovation. It offers
+  tools and strategies to overcome modern business challenges, foster
+  collaboration, and create new market spaces.
 tags:
-  - ecosystem
+  - knowledge
   - innovation
+  - ecosystem
   - collaboration
   - strategy
-  - markets
-bannerImageURL: ./4cb9a86654ea2b6e54dce4232587d18c-banner.png
-profileImageURL: ./4cb9a86654ea2b6e54dce4232587d18c-profile.png
+bannerImageURL: ./e8e5e8bec9fc71e0963c3072e00cb4fd-banner.png
+profileImageURL: ./e8e5e8bec9fc71e0963c3072e00cb4fd-profile.png

@@ -238,6 +238,7 @@ sections:
     cta:
       text: Schedule Your Free Consultation
 courses:
+  - break-down-silos
   - groom-your-ecosystem
   - keep-the-web-weird
   - practice-innovation
@@ -245,6 +246,7 @@ courses:
 articles:
   - across-space-and-time
   - align-the-misaligned
+  - foam-party
   - global-village-people
   - practice-innovation
 description: Yeehaa offers ecosystem architecture services to help organizations

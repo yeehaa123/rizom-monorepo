@@ -1,0 +1,129 @@
+courseId: db177778087c04b0ed3d556b05a274e1
+goal: Break Down Silos
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: Breaking down silos involves sharing a unified vision, opening up
+  to diverse perspectives, engaging in effective discussions, and avoiding
+  common pitfalls. This process fosters collaboration, encourages
+  cross-functional understanding, and promotes a more integrated organizational
+  culture. By embracing these steps, teams can overcome barriers, enhance
+  communication, and work together more efficiently towards shared goals.
+habitat: foam-party
+createdAt: 2024-09-03T16:06:55.545Z
+updatedAt: 2024-09-03T16:06:55.545Z
+publishedAt: 2024-09-03T16:06:55.545Z
+tags:
+  - bubble
+  - stages
+  - silos
+  - team
+  - diverse
+  - view
+  - connect
+  - link
+  - unite
+  - empathy
+  - listen
+  - lead
+  - culture
+checkpoints:
+  - task: Identify Bubbles
+    href: https://www.investopedia.com/articles/stocks/10/5-steps-of-a-bubble.asp
+    checkpointId: c76ad7a358b8b9fa98b176b9856e81b8
+    description: Understanding bubble dynamics helps identify organizational silos.
+      The article's 5-step process (displacement, boom, euphoria, profit-taking,
+      panic) parallels silo formation. Recognizing these stages in team
+      behaviors and information flow can help break down barriers, fostering
+      collaboration and preventing isolated "bubbles" within the company.
+    tags:
+      - bubble
+      - stages
+      - silos
+      - team
+  - task: Multiply Perspectives
+    href: https://psycnet.apa.org/record/1998-01692-003
+    checkpointId: c5694ae063f3cd72334eb887f2c42e3d
+    description: This study explores how diverse perspectives enhance
+      problem-solving and decision-making in groups. It demonstrates that teams
+      with varied viewpoints outperform homogeneous ones, fostering innovation
+      and breaking down silos. By embracing multiple perspectives, organizations
+      can overcome barriers and achieve more comprehensive solutions.
+    tags:
+      - diverse
+      - team
+      - view
+  - task: Connect Bubbles
+    href: https://www.friv.com/z/games/connectthebubbles/game.html
+    checkpointId: 08c812c0f0082e89bb26948e560f168e
+    description: Connect the Bubbles game promotes teamwork and collaboration,
+      mirroring the goal of breaking down silos. Players must strategically link
+      bubbles, symbolizing the need to connect different departments or teams.
+      This fun, interactive experience encourages thinking about relationships
+      and connections, fostering a mindset that values cross-functional
+      cooperation in organizations.
+    tags:
+      - connect
+      - team
+      - link
+      - unite
+  - task: Communicate Empathetically
+    href: https://www.youtube.com/watch?v=YLBDkz0TwLM
+    checkpointId: 20f6a76bfcd2063412346eb0e4aa8dac
+    description: The video demonstrates empathetic communication techniques that
+      foster understanding and connection across different departments. By
+      showcasing effective listening and perspective-taking, it helps break down
+      silos by encouraging open dialogue, mutual respect, and collaboration
+      between teams, ultimately promoting a more unified organizational culture.
+    tags:
+      - empathy
+      - listen
+      - connect
+      - team
+  - task: Foster Collaboration
+    href: https://hbr.org/2007/11/eight-ways-to-build-collaborative-teams
+    checkpointId: 0cacf91457b21cf520f987007fb50081
+    description: The article outlines strategies to build collaborative teams,
+      addressing silo-breaking and fostering collaboration. It emphasizes
+      leadership practices, team composition, and organizational culture that
+      promote cross-functional cooperation. These insights help leaders create
+      an environment where diverse teams work together effectively, breaking
+      down barriers and enhancing overall organizational performance.
+    tags:
+      - team
+      - lead
+      - culture
+series: Ecosystem Architecture

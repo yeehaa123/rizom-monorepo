@@ -1,5 +1,3 @@
-# Foam Party
-
 Everyday language is overloaded with conceptual metaphors that either celebrate the whole or lament its absence: broken heart, phantom pain, paradise lost, etcetera. The fact that these sentiments are so deeply ingrained into our means of communication also explains why it is so difficult to let universality go. This is already true *de facto*, let alone *de jure*. Even if we are willing to submit ourselves to the existential fact of living without absolute truth, it is still probable that we conceive its absence as a loss. Reframing fragmentation as something positive is next to impossible.
 
 That is why it is admirable that Peter Sloterdijk takes on this challenge against all odds. In the third volume of his Spheres trilogy titled *Foams* (1998), he introduces the titular concept as an antipode to those conceptual metaphors that signify wholeness, unity, and completeness. Foam is a phenomenon that celebrates multiplicity. As a concept, it defies all notions of universality without even referring to it negatively.
@@ -8,9 +6,13 @@ That is why it is admirable that Peter Sloterdijk takes on this challenge agains
 
 — Peter Sloterdijk
 
-The desire to reverse the effects of separation repeats trauma and causes paralysis. The will to celebrate multiplicity leads to empowerment and creativity. Along with this affirmative act, we should stop calling it internet fragmentation. Fragments only have meaning in relation to a whole that is supposedly lost. In the spirit of Sloterdijk, we should rather call it internet foaming.
+The desire to reverse the effects of separation repeats trauma and causes paralysis. The will to celebrate multiplicity leads to empowerment and creativity. It is an affirmative act.
 
-Foam consists of bubbles which, not coincidentally, play a crucial role in the internet's short history. The 1990s witnessed the rise of the infamous dot-com bubble, closely intertwined with the burgeoning landscape of the OG internet. This economic phenomenon, symbolized by an exuberant surge in the valuation of internet-based companies, eventually reached a critical point in 2000 when it abruptly burst. The collapse of the dot-com bubble sent shockwaves across the global economy, ushering in a period of recession that reverberated worldwide.
+Let's demonstrate the power of this affirmative act by applying it to the concept of 'internet fragmentation' that I explored in an [earlier article](/posts/align-the-misaligned) Following Sloterdijk's logic, refering to this process in terms of fragmentation confronts us with an unsolvable problem. Fragments only have meaning in relation to a whole that was never there, is experienced as lost, and can never be restored. By simply calling it internet foaming instead, we immediately reframe this entire narrative.
+
+Sloterdijk's foam metaphor offers a compelling framework for understanding our increasingly complex and interconnected world. The internet, with its myriad websites, social media platforms, and online communities, bears a striking resemblance to foam. Each digital space functions as a bubble within this vast foam structure - self-contained yet inextricably linked to others. 
+
+Hence, it is not a coincidence that bubbles play a crucial role in the internet's short history. The 1990s witnessed the rise of the infamous dot-com bubble, closely intertwined with the burgeoning landscape of the OG internet. This economic phenomenon, symbolized by an exuberant surge in the valuation of internet-based companies, eventually reached a critical point in 2000 when it abruptly burst. The collapse of the dot-com bubble sent shockwaves across the global economy, ushering in a period of recession that reverberated worldwide.
 
 In recent years, the pervasive influence of filter bubbles has enveloped us. The concept of filter bubbles revolves around the idea that biased algorithms curate content based on user behavior, thereby creating echo chambers that reinforce existing beliefs and isolate individuals from diverse perspectives. While this tailored digital experience caters to our immediate wants and needs, it concurrently impedes and restricts the potential for meaningful connections with others. Instagram and TikTok trapped us in monad without windows.
 

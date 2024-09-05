@@ -30,13 +30,19 @@
     }
   },
   {
-    "id": "dab57a97b73c41955321d0f6def877ae",
+    "id": "db177778087c04b0ed3d556b05a274e1",
     "author": "yeehaa",
-    "title": "Align The Misaligned",
+    "title": "Break Down Silos",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
+    "checksum": "a1436f29206de730d3afbb624be024e4",
+    "publicationData": {
+      "createdAt": "2024-09-03T16:06:55.545Z",
+      "updatedAt": "2024-09-03T16:06:55.545Z",
+      "publishedAt": "2024-09-03T16:06:55.545Z"
+    },
+    "habitat": "Foam Party"
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
@@ -50,11 +56,17 @@
   {
     "id": "5d7667cc62fa2ee4e6b664657dcd1f8d",
     "author": "yeehaa",
+    "order": 4,
     "title": "Foam Party",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "9f89665831b49e0f9151d06d7495fe0a"
+    "checksum": "adb23f9ed67d9273da651d9b4e65801a",
+    "publicationData": {
+      "createdAt": "2024-09-02T07:51:14.186Z",
+      "updatedAt": "2024-09-02T07:51:14.186Z",
+      "publishedAt": "2024-09-02T07:51:14.186Z"
+    }
   },
   {
     "id": "d1095d6044b09f646e508eaaf1856b2e",
