@@ -10,7 +10,13 @@ export const POST: APIRoute = async ({ request }) => {
     const data = await handleQuery(body);
     return new Response(JSON.stringify(
       data
-    ), { status: 200 })
+    ), {
+      headers: {
+        "content-type": "application/json;charset=UTF-8",
+        'Access-Control-Allow-Origin': '*'
+      },
+      status: 200
+    })
   }
   return new Response(null, { status: 400 });
 }
