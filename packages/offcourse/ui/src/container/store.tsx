@@ -86,7 +86,7 @@ export function useOffcourse(data: Course | Course[]) {
   }
 
   const signIn = async () => {
-    const authData = { userName: "Yeehaa", repository: "/offcourse" };
+    const authData = { userName: "Yeehaa", repository: "https:/yeehaa.io/offcourse" };
     _authenticate(authData);
   }
 
@@ -95,7 +95,9 @@ export function useOffcourse(data: Course | Course[]) {
     respond(authResponse);
     const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
     const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
-    respond(response);
+    if (response) {
+      respond(response);
+    }
   }
 
   const signOut = async () => {

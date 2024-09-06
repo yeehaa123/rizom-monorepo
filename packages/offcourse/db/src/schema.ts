@@ -33,3 +33,6 @@ export const commandTable = sqliteTable("command", {
 });
 
 export const commandInsertSchema = createInsertSchema(commandTable);
+
+export default {
+}

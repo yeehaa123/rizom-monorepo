@@ -55,13 +55,20 @@ export async function query(query: Query) {
   }
   const { repository } = authData;
   const url = `${repository}/query.json`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(query)
-  });
-  return await response.json();
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(query)
+    });
+    return await response.json();
+  }
+  catch (error) {
+    console.log(error)
+    return
+  }
 }
 

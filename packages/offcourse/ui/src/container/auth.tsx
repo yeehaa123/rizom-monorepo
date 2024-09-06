@@ -9,6 +9,7 @@ export async function authenticate(authData: AuthState) {
   })
   return response;
 }
+
 export async function logout() {
   sessionStorage.removeItem("auth");
   const response = responseSchema.parse({
