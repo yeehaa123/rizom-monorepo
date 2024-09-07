@@ -12,7 +12,6 @@ export const POST: APIRoute = async ({ request }) => {
       data
     ), {
       headers: {
-        "content-type": "application/json;charset=UTF-8",
         'Access-Control-Allow-Origin': '*'
       },
       status: 200
