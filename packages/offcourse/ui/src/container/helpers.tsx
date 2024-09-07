@@ -60,7 +60,7 @@ export async function query(query: Query) {
     throw ("UNAUTHORIZED USE")
   }
   const { repository } = authData;
-  const url = `${repository}/command.json`;
+  const url = `${repository}/query.json`;
   try {
     const response = await fetch(url, {
       method: "POST",
