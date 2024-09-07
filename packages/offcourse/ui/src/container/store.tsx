@@ -84,7 +84,7 @@ export function useOffcourse(data: Course | Course[]) {
   }
 
   const signIn = async () => {
-    const authData = { userName: "Yeehaa", repository: "/offcourse" };
+    const authData = { userName: "Yeehaa", repository: "https://yeehaa.io/offcourse" };
     _authenticate(authData);
   }
 

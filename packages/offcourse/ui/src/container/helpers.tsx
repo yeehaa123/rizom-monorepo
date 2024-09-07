@@ -36,9 +36,8 @@ export async function sendCommand(action: Action) {
   if (!authData) {
     throw (`${action.type} UNAUTHORIZED USE`)
   }
-  // const { repository } = authData;
-  // const url = `${repository}/command.json`;
-  const url = `https://yeehaa.io/offcourse/command.json`;
+  const { repository } = authData;
+  const url = `${repository}/command.json`;
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -60,9 +59,8 @@ export async function query(query: Query) {
   if (!authData) {
     throw ("UNAUTHORIZED USE")
   }
-  // const { repository } = authData;
-  // const url = `${repository}/command.json`;
-  const url = `https://yeehaa.io/offcourse/query.json`;
+  const { repository } = authData;
+  const url = `${repository}/command.json`;
   try {
     const response = await fetch(url, {
       method: "POST",
