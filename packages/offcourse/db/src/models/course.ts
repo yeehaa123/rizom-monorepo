@@ -3,6 +3,12 @@ import { courseTable } from "../schema"
 import { db } from "../";
 import { createInsertSchema } from 'drizzle-zod';
 
+export const getCourses = async () => {
+  const data = await db
+    .select()
+    .from(courseTable)
+  return data.map(({ course }) => course);
+}
 export const insertCourse = async ({ course, courseId }: { course: Course, courseId: string }) => {
   const { curator } = course;
   await db.insert(courseTable).values({

@@ -1,8 +1,7 @@
 import type { OffcourseState, StoreCardState } from "./store";
 import type { Dispatch } from "react";
 import type { Action } from "@offcourse/schema";
-import type { CourseQuery, CheckpointQuery } from "@offcourse/schema";
-import type { Query } from "../query";
+import type { Query, CourseQuery, CheckpointQuery } from "@offcourse/schema";
 import { ActionType, actionSchema } from "@offcourse/schema";
 import { getAuthData } from "./auth";
 

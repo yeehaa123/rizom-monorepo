@@ -5,7 +5,7 @@ import { reducer } from "./reducer"
 import { initialize } from "./cardState"
 import { useImmerReducer } from 'use-immer';
 import { query, command, findCard } from "./helpers";
-import { QueryType } from "../query";
+import { QueryType } from "@offcourse/schema";
 import { responder } from "./responder";
 import { authenticate, getAuthData, logout } from "./auth";
 import { useEffect } from "react";

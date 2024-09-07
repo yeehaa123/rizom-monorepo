@@ -116,18 +116,20 @@ export const actionSchema = z.union([
 ])
 
 export enum QueryType {
-  FETCH_USER_RECORDS = "FETCH_USER_RECORDS"
+  FETCH_USER_RECORDS = "FETCH_USER_RECORDS",
+  FETCH_USER_COURSES = "FETCH_USER_COURSES"
 }
 
-export const querySchema = z.object({
-  type: z.literal(QueryType.FETCH_USER_RECORDS),
-  payload: coursesQuery
-})
+export const querySchema = z.union([
+  z.object({ type: z.literal(QueryType.FETCH_USER_RECORDS), payload: coursesQuery }),
+  z.object({ type: z.literal(QueryType.FETCH_USER_COURSES), payload: coursesQuery })
+])
 
 export enum RESPONSE_TYPE {
   AUTHENTICATED = "AUTHENTICATED",
   lOGGED_OUT = "LOGGED_OUT",
   FETCHED_USER_RECORDS = "FETCHED_USER_RECORDS",
+  FETCHED_USER_COURSES = "FETCHED_USER_COURSES",
   NO_OP = "NO_OP"
 }
 
@@ -135,6 +137,7 @@ export const responseSchema = z.union([
   z.object({ type: z.literal(RESPONSE_TYPE.AUTHENTICATED), payload: authState }),
   z.object({ type: z.literal(RESPONSE_TYPE.lOGGED_OUT), payload: z.undefined() }),
   z.object({ type: z.literal(RESPONSE_TYPE.FETCHED_USER_RECORDS), payload: z.array(userRecord) }),
+  z.object({ type: z.literal(RESPONSE_TYPE.FETCHED_USER_COURSES), payload: z.array(courseSchema) }),
   z.object({ type: z.literal(RESPONSE_TYPE.NO_OP), payload: z.undefined() }),
 ])
 

@@ -44,6 +44,7 @@ export default defineConfig({
     sitemap()
   ],
   output: "hybrid",
+  server: { port: 8765},
   adapter: vercel({
     webAnalytics: {
       enabled: true,
