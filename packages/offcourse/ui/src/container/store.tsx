@@ -59,8 +59,6 @@ export function useOffcourse(data: Course | Course[]) {
           }
         })
     }
-
-    console.log(card?.cardState, payload);
   }
 
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
