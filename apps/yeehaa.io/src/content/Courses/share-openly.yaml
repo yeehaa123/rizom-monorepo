@@ -1,0 +1,127 @@
+courseId: f5ac70c3a8acd4e19bfaa48465044e98
+goal: Share Openly
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: 'The journey to "Share Openly" involves four key steps: sharing a
+  vision, opening up perspectives, discussing effectively, and avoiding
+  pitfalls. These elements work together to foster transparent communication,
+  broaden understanding, facilitate meaningful dialogues, and prevent common
+  communication errors. By mastering these skills, individuals can cultivate an
+  environment of openness, trust, and productive exchange of ideas.'
+habitat: shenzhen-goes-ham
+createdAt: 2024-09-09T08:29:19.208Z
+updatedAt: 2024-09-09T08:29:19.208Z
+publishedAt: 2024-09-09T08:29:19.208Z
+tags:
+  - gadget
+  - open
+  - learn
+  - tech
+  - change
+  - growth
+  - share
+  - talk
+  - logic
+  - clear
+  - team
+  - trust
+checkpoints:
+  - task: Deconstruct a Gadget
+    href: https://youtu.be/gct3qXqRIE0?si=Dsrsp3tSD3hlkejN
+    checkpointId: d46470e252de030de5ca676277583e3c
+    description: The video demonstrates deconstructing a gadget, likely a
+      smartphone, encouraging open sharing of knowledge. It aligns with the goal
+      by promoting transparency in technology and fostering a culture of shared
+      learning. The task of gadget deconstruction is directly addressed,
+      offering insights into device components and assembly, which viewers can
+      openly discuss and learn from.
+    tags:
+      - gadget
+      - open
+      - learn
+      - tech
+  - task: Publish Work-in-Progress
+    href: https://www.betterup.com/blog/how-to-change-your-perspective
+    checkpointId: 3d28d4feabd76aa0629b5444078379f3
+    description: The article explores changing perspectives, which is crucial for
+      sharing openly and publishing work-in-progress. It likely discusses
+      overcoming fears, embracing vulnerability, and seeing things from
+      different angles. These insights can help individuals become more
+      comfortable with sharing unfinished work and ideas, fostering a culture of
+      openness and collaboration.
+    tags:
+      - open
+      - change
+      - growth
+      - share
+  - task: Remix an Existing Design
+    href: https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/3662/Crucial-Conversations-How-to-Effectively-Discuss-What-Matters-Most.aspx
+    checkpointId: be6e6ddcce318c666fc49e6a18d5a55d
+    description: The article discusses crucial conversations, which are essential
+      for sharing openly. It provides strategies for effective communication,
+      especially in high-stakes situations. These skills can be applied when
+      remixing designs, as open and honest dialogue is vital for collaborative
+      creativity and sharing ideas freely.
+    tags:
+      - talk
+      - open
+      - share
+  - task: Release Blueprints
+    href: https://human.libretexts.org/Courses/Oxnard_College/A_Guide_to_Successful_College_Writing/05%3A_Rhetorical_Analysis/5.05%3A_Rhetorical_Fallacies
+    checkpointId: cc3eda9bb9c295670f1a2cf26910fb89
+    description: Understanding rhetorical fallacies helps in sharing openly by
+      improving communication skills. It enables clear, logical expression of
+      ideas when releasing blueprints, avoiding common pitfalls in
+      argumentation. This knowledge fosters more effective and persuasive
+      sharing of information, crucial for transparent blueprint release.
+    tags:
+      - logic
+      - share
+      - clear
+  - task: Build a Product with Strangers
+    href: https://human.libretexts.org/Courses/Oxnard_College/A_Guide_to_Successful_College_Writing/05%3A_Rhetorical_Analysis/5.05%3A_Rhetorical_Fallacies
+    checkpointId: 9914800f19af71785a4298a97d0629a5
+    description: Understanding rhetorical fallacies enhances communication skills,
+      crucial for sharing openly and building products with strangers. It helps
+      identify and avoid logical errors, promoting clear, persuasive dialogue.
+      This knowledge fosters trust, encourages constructive feedback, and
+      facilitates effective collaboration in diverse teams.
+    tags:
+      - logic
+      - team
+      - trust
+series: Ecosystem Architecture

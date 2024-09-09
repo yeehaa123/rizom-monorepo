@@ -1,18 +1,19 @@
-checksum: c779461e4a3eb8a3d4d3295504b7bdda
-summary: This collection focuses on keeping the web weird, emphasizing the
-  importance of preserving internet freedom and fostering innovation. It
-  encourages engagement with ISOC for internet advocacy, embracing open-source
-  principles, exploring digital fabrication, adopting guerrilla-style
-  creativity, and championing digital ownership. These approaches aim to
-  maintain a diverse, user-driven web ecosystem that resists uniformity and
-  corporate control. The content promotes unconventional thinking and DIY
-  attitudes, blending technology with creative rebellion to ensure the internet
-  remains a space for unique expressions and ideas.
-excerpt: Keep The Web Weird by engaging with ISOC, embracing open-source,
-  exploring digital fabrication, adopting guerrilla creativity, and championing
-  digital ownership. These steps foster innovation and preserve internet
-  freedom.
+checksum: caa2a1c1bb53e66bc8e1938ed15b6eb3
+summary: Open is a concept that encompasses transparency, sharing, and
+  unconventional thinking. It's associated with web technologies, learning, and
+  innovation. This theme encourages embracing open-source principles, digital
+  fabrication, and guerrilla-style creativity. It promotes a diverse,
+  user-driven ecosystem that resists uniformity and corporate control. Open
+  communication fosters trust, broadens perspectives, and facilitates meaningful
+  dialogues. By sharing openly, individuals can create an environment of
+  transparency and productive exchange of ideas, ultimately driving change and
+  growth in technology and teamwork.
+excerpt: Open embodies transparency and innovation in web tech and
+  communication. It encourages unconventional thinking, open-source principles,
+  and sharing of ideas. This approach fosters trust, drives change, and promotes
+  a diverse, user-driven digital ecosystem.
 title: open
 articles: []
 courses:
   - keep-the-web-weird
+  - share-openly

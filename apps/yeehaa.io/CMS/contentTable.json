@@ -170,13 +170,34 @@
     "checksum": "97b424310fc789e33b73701dfb935e9f"
   },
   {
+    "id": "f5ac70c3a8acd4e19bfaa48465044e98",
+    "author": "yeehaa",
+    "title": "Share Openly",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "4457bef3a811ddb12c2e12aae6c4a6ec",
+    "publicationData": {
+      "createdAt": "2024-09-09T08:29:19.208Z",
+      "updatedAt": "2024-09-09T08:29:19.208Z",
+      "publishedAt": "2024-09-09T08:29:19.208Z"
+    },
+    "habitat": "Shenzhen Goes Ham"
+  },
+  {
     "id": "2464b805ec1f564bcc2ad6c688dfc071",
     "author": "yeehaa",
+    "order": 5,
     "title": "Shenzhen Goes Ham",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "a35028c3700c52843fe0dfa9303d57e5"
+    "checksum": "6fe4fdab3ac9c8f1bff1d3251a92cad6",
+    "publicationData": {
+      "createdAt": "2024-09-09T08:08:53.809Z",
+      "updatedAt": "2024-09-09T08:08:53.809Z",
+      "publishedAt": "2024-09-09T08:08:53.809Z"
+    }
   },
   {
     "id": "5d5cf92471f667e9be0a1bb31cc1097e",

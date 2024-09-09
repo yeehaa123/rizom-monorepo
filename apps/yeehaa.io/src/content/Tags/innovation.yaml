@@ -1,19 +1,19 @@
-checksum: 3212783851635c31915c25b6707999a5
-summary: Innovation is a driving force behind progress and advancement in
-  various fields. It involves the creation and implementation of new ideas,
-  methods, or products that bring about positive change. This concept
-  encompasses technological breakthroughs, process improvements, and novel
-  approaches to problem-solving. Innovation can lead to increased efficiency,
-  enhanced productivity, and the development of groundbreaking solutions. It is
-  crucial for businesses, industries, and societies to foster a culture of
-  innovation to stay competitive and address evolving challenges. While there
-  are currently no specific articles or courses associated with this topic, it
-  remains a fundamental aspect of growth and development across numerous
-  disciplines.
-excerpt: Innovation drives progress through new ideas and solutions. It
-  encompasses technological breakthroughs, process improvements, and creative
-  problem-solving. Fostering innovation is crucial for competitiveness and
-  addressing challenges in various fields.
+checksum: ebd0ec740bbbe6c0d1a16fcec46d3de5
+summary: Innovation is a central theme in technology and business, focusing on
+  new approaches to problem-solving and product development. It encompasses
+  various methodologies, from decentralized systems to open-source
+  collaboration. The concept is exemplified by Shenzhen's shanzhai ecosystem,
+  which demonstrates rapid iteration, peer-to-peer collaboration, and the
+  principle of gongkai (open sharing). This approach challenges traditional
+  Western notions of innovation and intellectual property, showcasing
+  alternative paths to technological advancement. However, innovation also
+  brings challenges, such as environmental concerns related to accelerated
+  production and electronic waste.
+excerpt: Shenzhen's shanzhai ecosystem exemplifies decentralized innovation,
+  surpassing earlier models like ham radio. It's characterized by rapid
+  iteration, peer collaboration, and gongkai (open sharing). While driving
+  technological advancement, it faces environmental challenges.
 title: innovation
-articles: []
+articles:
+  - shenzhen-goes-ham
 courses: []

@@ -1,30 +1,30 @@
-checksum: b95f3a561d05542db8dfd75e6241f788
+checksum: d1a988b027d7312968d949bfc193b5b0
 summary: The 'Ecosystem Architecture' series explores the evolution of
   ecosystems from biology to digital realms. It discusses internet
   fragmentation, Sloterdijk's foam metaphor, McLuhan's global village, and
-  decentralized systems. The series examines how these concepts shape our
-  understanding of digital landscapes, societal complexity, and future
-  innovation. It advocates for embracing diversity, interconnectedness, and
-  sustainable design in addressing global challenges and fostering resilient
-  communities.
-excerpt: Ecosystem Architecture explores digital landscapes as complex systems,
-  embracing fragmentation and diversity. It applies concepts like Sloterdijk's
-  foam metaphor and McLuhan's global village to understand internet culture,
-  while advocating for sustainable, decentralized innovation.
+  decentralized innovation. The series examines how these concepts shape our
+  understanding of digital landscapes, societal changes, and future challenges.
+  It advocates for embracing complexity, value pluralism, and sustainable
+  practices in navigating our interconnected world.
+excerpt: Ecosystem Architecture explores the evolution of ecosystems across
+  various domains. It examines internet fragmentation, societal changes, and
+  decentralized innovation, advocating for embracing complexity and sustainable
+  practices in our interconnected digital world.
 tags:
   - eco
   - web
   - future
+  - tech
   - design
   - system
   - global
-  - tech
   - digital
-bannerImageURL: ./b95f3a561d05542db8dfd75e6241f788-banner.png
+bannerImageURL: ./d1a988b027d7312968d949bfc193b5b0-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
   - align-the-misaligned
   - global-village-people
   - foam-party
+  - shenzhen-goes-ham
 title: Ecosystem Architecture
