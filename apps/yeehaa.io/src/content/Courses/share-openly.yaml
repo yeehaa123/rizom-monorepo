@@ -88,14 +88,14 @@ checkpoints:
       - change
       - growth
       - share
-  - task: Remix an Existing Design
+  - task: Remix Existing Designs
     href: https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/3662/Crucial-Conversations-How-to-Effectively-Discuss-What-Matters-Most.aspx
-    checkpointId: be6e6ddcce318c666fc49e6a18d5a55d
+    checkpointId: 99477757a84fa82b1b7836b465fa30fe
     description: The article discusses crucial conversations, which are essential
       for sharing openly. It provides strategies for effective communication,
       especially in high-stakes situations. These skills can be applied when
-      remixing designs, as open and honest dialogue is vital for collaborative
-      creativity and sharing ideas freely.
+      remixing existing designs, as they help in discussing ideas, giving
+      feedback, and collaborating with others to improve and iterate on designs.
     tags:
       - talk
       - open

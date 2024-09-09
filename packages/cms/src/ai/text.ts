@@ -3,7 +3,11 @@ import * as cache from '../cache';
 import { generateObject } from 'ai';
 import { ZodSchema } from 'zod';
 
-import { anthropic } from '@ai-sdk/anthropic';
+import { createAnthropic } from '@ai-sdk/anthropic';
+
+const anthropic = createAnthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY || "XYZ"
+});
 
 export async function analyze({ prompt, id, schema }: { prompt: string, id: string, schema: ZodSchema }) {
   const cachedItem = await cache.getItem(id);
