@@ -1,5 +1,5 @@
 {
-  "name": "Rizom",
+  "name": "Rizom Monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
