@@ -47,81 +47,81 @@ createdAt: 2024-09-09T08:29:19.208Z
 updatedAt: 2024-09-09T08:29:19.208Z
 publishedAt: 2024-09-09T08:29:19.208Z
 tags:
+  - teardown
   - gadget
   - open
-  - learn
-  - tech
-  - change
-  - growth
   - share
-  - talk
-  - logic
-  - clear
+  - growth
+  - create
+  - remix
+  - design
+  - tech
   - team
-  - trust
 checkpoints:
   - task: Deconstruct a Gadget
-    href: https://youtu.be/gct3qXqRIE0?si=Dsrsp3tSD3hlkejN
-    checkpointId: d46470e252de030de5ca676277583e3c
-    description: The video demonstrates deconstructing a gadget, likely a
-      smartphone, encouraging open sharing of knowledge. It aligns with the goal
-      by promoting transparency in technology and fostering a culture of shared
-      learning. The task of gadget deconstruction is directly addressed,
-      offering insights into device components and assembly, which viewers can
-      openly discuss and learn from.
+    href: https://www.wired.com/2009/09/teardown-culture/
+    checkpointId: 6712c87566f45c8ee7553793b1c52666
+    description: The article explores teardown culture, where people disassemble
+      gadgets to understand their inner workings. This practice promotes open
+      sharing of knowledge, fostering transparency and innovation. By
+      deconstructing devices, individuals gain insights into technology,
+      encouraging a culture of curiosity and collaborative learning.
     tags:
+      - teardown
       - gadget
       - open
-      - learn
-      - tech
-  - task: Publish Work-in-Progress
-    href: https://www.betterup.com/blog/how-to-change-your-perspective
-    checkpointId: 3d28d4feabd76aa0629b5444078379f3
-    description: The article explores changing perspectives, which is crucial for
-      sharing openly and publishing work-in-progress. It likely discusses
-      overcoming fears, embracing vulnerability, and seeing things from
-      different angles. These insights can help individuals become more
-      comfortable with sharing unfinished work and ideas, fostering a culture of
-      openness and collaboration.
-    tags:
-      - open
-      - change
-      - growth
       - share
-  - task: Remix Existing Designs
-    href: https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/3662/Crucial-Conversations-How-to-Effectively-Discuss-What-Matters-Most.aspx
-    checkpointId: 99477757a84fa82b1b7836b465fa30fe
-    description: The article discusses crucial conversations, which are essential
-      for sharing openly. It provides strategies for effective communication,
-      especially in high-stakes situations. These skills can be applied when
-      remixing existing designs, as they help in discussing ideas, giving
-      feedback, and collaborating with others to improve and iterate on designs.
+  - task: Publish Work-in-Progress
+    href: https://medium.com/create-make-write/you-wont-know-what-works-unless-you-share-your-wip-fcb509659d21
+    checkpointId: 984c5648ca6365ab85614aac790f5961
+    description: Sharing work-in-progress fosters open communication, invites
+      feedback, and builds connections. It allows others to learn from your
+      process, encourages collaboration, and helps you refine ideas. By
+      publishing unfinished work, you embrace vulnerability, demonstrate growth,
+      and contribute to a culture of transparency and continuous improvement.
     tags:
-      - talk
+      - share
       - open
+      - growth
+      - create
+  - task: Remix Existing Designs
+    href: https://bootcamp.uxdesign.cc/how-to-use-remixing-in-creating-a-product-that-stands-out-400e4aa328c4
+    checkpointId: 3119828c28bc7a4df9bc2408ca979803
+    description: Remixing existing designs fosters open sharing by encouraging
+      designers to build upon and transform others' work. This approach promotes
+      collaboration, sparks creativity, and leads to innovative solutions. By
+      remixing, designers openly share their interpretations and improvements,
+      contributing to a culture of knowledge exchange and collective growth in
+      the design community.
+    tags:
+      - remix
+      - design
       - share
   - task: Release Blueprints
-    href: https://human.libretexts.org/Courses/Oxnard_College/A_Guide_to_Successful_College_Writing/05%3A_Rhetorical_Analysis/5.05%3A_Rhetorical_Fallacies
-    checkpointId: cc3eda9bb9c295670f1a2cf26910fb89
-    description: Understanding rhetorical fallacies helps in sharing openly by
-      improving communication skills. It enables clear, logical expression of
-      ideas when releasing blueprints, avoiding common pitfalls in
-      argumentation. This knowledge fosters more effective and persuasive
-      sharing of information, crucial for transparent blueprint release.
+    href: https://www.wevolver.com/article/risc-v-architecture
+    checkpointId: dfc8e88707f89d62dc02f3ea19ff85aa
+    description: The article on RISC-V architecture exemplifies open sharing by
+      detailing a freely available, open-source instruction set architecture.
+      This aligns with the goal of sharing openly and the task of releasing
+      blueprints, as RISC-V's open nature allows for collaborative development
+      and widespread adoption in processor design.
     tags:
-      - logic
+      - open
+      - tech
+      - design
       - share
-      - clear
   - task: Build a Product with Strangers
-    href: https://human.libretexts.org/Courses/Oxnard_College/A_Guide_to_Successful_College_Writing/05%3A_Rhetorical_Analysis/5.05%3A_Rhetorical_Fallacies
-    checkpointId: 9914800f19af71785a4298a97d0629a5
-    description: Understanding rhetorical fallacies enhances communication skills,
-      crucial for sharing openly and building products with strangers. It helps
-      identify and avoid logical errors, promoting clear, persuasive dialogue.
-      This knowledge fosters trust, encourages constructive feedback, and
-      facilitates effective collaboration in diverse teams.
+    href: https://tw.nothing.tech/pages/community-edition
+    checkpointId: 487a28e5e88e1ecbc5a3a7cb5e53bdd8
+    description: Nothing's Community Edition program encourages open collaboration
+      by inviting strangers to co-create products. It fosters transparency, idea
+      sharing, and collective problem-solving. Participants contribute diverse
+      skills and perspectives, embodying the spirit of open innovation. This
+      approach aligns with the goal of sharing openly while building products
+      collaboratively with unfamiliar individuals.
     tags:
-      - logic
+      - open
       - team
-      - trust
+      - create
+      - share
 series: Ecosystem Architecture
