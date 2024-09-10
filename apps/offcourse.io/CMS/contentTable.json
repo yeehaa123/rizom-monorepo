@@ -4,13 +4,8 @@
     "author": "offcourse",
     "title": "Align The Misaligned",
     "contentType": "course",
-    "status": "published",
-    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
-    "publicationData": {
-      "createdAt": "2024-08-27T16:51:13.921Z",
-      "updatedAt": "2024-08-27T16:51:13.921Z",
-      "publishedAt": "2024-08-27T16:51:13.921Z"
-    }
+    "status": "draft",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
   },
   {
     "id": "2af86ab4b101eec9b4126c6d5c1b9032",
@@ -37,6 +32,19 @@
     "contentType": "course",
     "status": "draft",
     "checksum": "42aea999e074e55044429b9e27c8c423"
+  },
+  {
+    "id": "139bb1cdd4d42e26153699cee087b4c6",
+    "author": "offcourse",
+    "title": "Scale Effectively",
+    "contentType": "course",
+    "status": "published",
+    "checksum": "1ea222b0e1f4fe474fed8275cb001150",
+    "publicationData": {
+      "createdAt": "2024-09-10T07:55:06.610Z",
+      "updatedAt": "2024-09-10T07:55:06.610Z",
+      "publishedAt": "2024-09-10T07:55:06.610Z"
+    }
   },
   {
     "id": "09967adb4fa9242905164360276a69c3",
