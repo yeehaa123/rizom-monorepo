@@ -14,6 +14,7 @@ const initSchema = z.object({
   title: z.string(),
   contentType: z.nativeEnum(ContentType),
   content: z.string().or(curatorSchema).or(rawCourseSchema).or(landingContentSchema),
+  repositoryURL: z.string(),
   author: z.string(),
   seriesName: z.string().optional(),
 })

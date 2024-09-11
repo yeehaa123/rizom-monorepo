@@ -28,16 +28,18 @@ type CMS_DIRS = {
   input_base: string,
   output_base: string,
   cms_path: string,
-  content_config: string
+  content_config: string,
+  repository_url: string,
+  offcourse_base_path?: string
 };
 
-async function convert({ input_base, output_base, cms_path, content_config }: CMS_DIRS) {
+async function convert({ input_base, output_base, cms_path, content_config, repository_url }: CMS_DIRS) {
   await initDirs(output_base, PATH_SUFFIXES);
   copyFileSync(content_config, path.join(output_base, "config.ts"));
   await mt.init(cms_path);
   await cache.init();
 
-  const tree = await filetree.create(input_base);
+  const tree = await filetree.create({ basePath: input_base, repositoryURL: repository_url });
   const metaTableData = await mt.read(cms_path);
   filetree.update(tree, metaTableData);
 
@@ -54,12 +56,16 @@ async function convert({ input_base, output_base, cms_path, content_config }: CM
   await mt.write(cms_path, metaTable);
 }
 
-export function addCMS(options: CMS_DIRS): AstroIntegration {
+export function addCMS({ offcourse_base_path = "", ...options }: CMS_DIRS): AstroIntegration {
   return {
     name: "@rizom/cms",
     hooks: {
-      'astro:config:setup': async () => {
-        await convert(options);
+      'astro:config:setup': async ({ config }) => {
+        if (!config.site) {
+          throw "SITE_NAME IS MANDATORY"
+        }
+        const repository_url = `${config.site}/${offcourse_base_path}`;
+        await convert({ ...options, repository_url });
       }
     }
   }

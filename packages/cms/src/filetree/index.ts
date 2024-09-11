@@ -37,13 +37,28 @@ async function convertFile(fileData: File) {
   }
   throw ("INVALID FILE TYPE")
 }
+type DirOptions = {
+  tree: FileTree,
+  author: string,
+  dirPath: string,
+  repositoryURL: string,
+}
 
-async function processFile(tree: FileTree, filePath: string, author: string, seriesName?: string) {
+type FileOptions = {
+  tree: FileTree,
+  author: string,
+  filePath: string,
+  repositoryURL: string,
+  seriesName?: string
+}
+
+async function processFile({ tree, filePath, author, seriesName, repositoryURL }: FileOptions) {
   const { ext: fileType, name: fileName } = path.parse(filePath);
   const title = deslugify(fileName);
   const item = await readFile(filePath, 'utf8');
   const { content, contentType } = await convertFile({ fileName, fileType, item });
   const entity = et.init({
+    repositoryURL,
     content,
     title,
     contentType,
@@ -53,18 +68,18 @@ async function processFile(tree: FileTree, filePath: string, author: string, ser
   tree.set(entity.meta.id, entity);
 }
 
-async function processDir(tree: FileTree, author: string, dirPath: string) {
+async function processDir({ tree, author, dirPath, repositoryURL }: DirOptions) {
   const seriesPath = path.parse(dirPath)
   const seriesSlug = seriesPath.name;
   const seriesName = deslugify(seriesSlug);
   const dir = await readdir(dirPath);
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);
-    await processFile(tree, filePath, author, seriesName);
+    await processFile({ tree, filePath, author, seriesName, repositoryURL });
   }
 }
 
-export async function create(basePath: string): Promise<FileTree> {
+export async function create({ basePath, repositoryURL }: { basePath: string, repositoryURL: string }): Promise<FileTree> {
   const { name: author } = path.parse(basePath)
   const dir = await readdir(basePath);
   const tree = new Map;
@@ -72,9 +87,9 @@ export async function create(basePath: string): Promise<FileTree> {
     const newPath = path.join(basePath, ext);
     const stats = await lstat(newPath)
     if (stats.isDirectory()) {
-      await processDir(tree, author, newPath);
+      await processDir({ tree, author, dirPath: newPath, repositoryURL });
     } else {
-      await processFile(tree, newPath, author);
+      await processFile({ tree, filePath: newPath, author, repositoryURL });
     }
   }
   return tree;

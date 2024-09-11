@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const curatorSchema = z.object({
   name: z.string(),
+  repository: z.string(),
   alias: z.string(),
   socials: z.object({
     linkedin: z.string().optional(),

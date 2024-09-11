@@ -28,7 +28,7 @@ import type { LandingContent } from "../landing/schema";
 
 
 export function init(initEntitity: InitEntity) {
-  const { contentType, content, title, author, seriesName } = initEntitity;
+  const { contentType, content, title, author, seriesName, repositoryURL } = initEntitity;
   switch (contentType) {
     case ContentType.ARTICLE: {
       return article.init({ title, article: content as string, author, series: seriesName })
@@ -44,9 +44,8 @@ export function init(initEntitity: InitEntity) {
 
 
     case ContentType.PROFILE: {
-      return profile.init({ profile: content as Curator, author })
+      return profile.init({ profile: content as Curator, author, repositoryURL })
     }
-
 
 
     case ContentType.SERIES: {

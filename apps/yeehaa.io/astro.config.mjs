@@ -34,7 +34,8 @@ export default defineConfig({
       input_base: INPUT_BASE, 
       output_base: OUTPUT_BASE, 
       cms_path: CMS_PATH,
-      content_config: CONTENT_CONFIG
+      content_config: CONTENT_CONFIG,
+      offcourse_base_path: "offcourse"
     }), 
     tailwind({
       applyBaseStyles: false

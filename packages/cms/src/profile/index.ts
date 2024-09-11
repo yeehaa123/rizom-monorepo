@@ -21,9 +21,9 @@ import * as yaml from "yaml";
 export const PATH_SUFFIX = "Profiles"
 export const schema = outputSchema
 
-export function init({ profile: initial, author }: InitProfile) {
+export function init({ profile: initial, author, repositoryURL }: InitProfile) {
   const checksum = generateChecksum(JSON.stringify(initial));
-  const profile = { ...initial, alias: author }
+  const profile = { ...initial, alias: author, repository: repositoryURL }
   let hash = hashify(JSON.stringify({ author }));
   const meta = m.init({
     id: hash,

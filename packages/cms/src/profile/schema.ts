@@ -17,8 +17,10 @@ export const profileDataSchema = curatorSchema.extend({
 
 export const initSchema = z.object({
   author: z.string(),
+  repositoryURL: z.string(),
   profile: curatorSchema.partial()
 })
+
 export const analysisSchema = z.object({
   bio: z.string(),
   tags: z.array(z.string()),
