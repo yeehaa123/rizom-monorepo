@@ -1,0 +1,129 @@
+courseId: a83550a37981a557b2ae0aaef225a1f6
+goal: Unblock Your Growth
+curator:
+  name: Jan Hein Hoogstad
+  repository: https://offcourse.io/
+  alias: offcourse
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: The path to unblocking growth involves setting clear goals,
+  breaking them into manageable steps, sharing knowledge, embracing complexity,
+  and periodic evaluation. This approach fosters personal development by
+  combining strategic planning, collaborative learning, adaptability to
+  challenges, and continuous self-assessment, creating a holistic framework for
+  sustained progress and self-improvement.
+createdAt: 2024-09-11T16:35:35.149Z
+updatedAt: 2024-09-11T16:35:35.149Z
+publishedAt: 2024-09-11T16:35:35.149Z
+tags:
+  - goals
+  - growth
+  - plan
+  - steps
+  - focus
+  - learn
+  - share
+  - team
+  - habits
+  - small
+  - complex
+  - measure
+checkpoints:
+  - task: Set a Goal
+    href: https://www.techtarget.com/searchcio/tip/How-to-set-business-goals-step-by-step
+    checkpointId: 0d711a4768b3fab9010a8b9b6f69b2b3
+    description: This resource offers a step-by-step guide for setting effective
+      business goals, which can be applied to personal growth. It covers
+      defining objectives, aligning with overall strategy, and creating
+      measurable targets. By following these principles, individuals can create
+      clear, achievable goals that drive progress and unblock their personal
+      development.
+    tags:
+      - goals
+      - growth
+      - plan
+  - task: Break it Down
+    href: https://anamcrae.ca/how-to-break-down-your-goals/
+    checkpointId: 415531a2127a81a23742f057a8b40981
+    description: Breaking down goals into smaller, manageable steps helps overcome
+      overwhelm and promotes growth. This approach allows for clearer focus,
+      easier progress tracking, and increased motivation. By tackling bite-sized
+      tasks, individuals build momentum and confidence, making the overall goal
+      less daunting and more achievable.
+    tags:
+      - goals
+      - growth
+      - steps
+      - focus
+  - task: Share your Learnings
+    href: https://blog.collabwriting.com/streamline-your-teams-knowledge-sharing-7-simple-steps/
+    checkpointId: 49034435983e166f246c980e1d7df50c
+    description: This resource outlines 7 steps to improve team knowledge sharing,
+      fostering personal and collective growth. It emphasizes creating a sharing
+      culture, utilizing diverse formats, and leveraging technology. By
+      implementing these strategies, individuals can overcome growth barriers,
+      learn from others' experiences, and contribute to a collaborative learning
+      environment.
+    tags:
+      - learn
+      - share
+      - team
+      - growth
+  - task: Compose Complexity
+    href: https://medium.com/personal-growth/little-things-make-big-things-happen-e7c50e96a9d6
+    checkpointId: 0e0046bc4d400b3afe88bfa525c2b8f6
+    description: The article explores how small, consistent actions lead to
+      significant personal growth. It emphasizes the power of incremental
+      progress, habit formation, and embracing complexity in daily life. By
+      focusing on little improvements and understanding interconnected systems,
+      individuals can unlock their potential and overcome obstacles to achieve
+      meaningful growth.
+    tags:
+      - growth
+      - habits
+      - small
+      - complex
+  - task: Measure Periodically
+    href: https://racebannon.substack.com/p/stop-measuring-so-much
+    checkpointId: 91a5deee62677d504417637b4b64ed02
+    description: The article challenges the notion of constant measurement,
+      suggesting it can hinder growth. It proposes that excessive tracking may
+      lead to anxiety and distraction from actual progress. Instead, it
+      advocates for periodic, meaningful assessments that align with long-term
+      goals, allowing for natural growth and development without the pressure of
+      constant evaluation.
+    tags:
+      - growth
+      - measure
+      - focus

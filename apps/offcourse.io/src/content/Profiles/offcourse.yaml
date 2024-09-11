@@ -14,7 +14,7 @@ bio: offcourse is an ecosystem architect with a PhD in Philosophy. He's
   Taiwan, he focuses on bringing people together around common values and
   translating shared visions into effective ecosystems.
 courses:
-  - scale-effectively
+  - unblock-your-growth
 articles: []
 tags:
   - edu
@@ -22,9 +22,9 @@ tags:
   - phd
   - code
   - ecosys
+  - growth
   - learn
-  - scale
-  - goals
+  - share
 profile:
   name: Jan Hein Hoogstad
   repository: https://offcourse.io/
@@ -62,20 +62,21 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 76807e6f9b2a3b971637c990a77bf4be
-description: Offcourse is an ecosystem architect with a PhD in Philosophy,
-  passionate about transforming education and knowledge sharing. Based in
-  Taipei, Taiwan, he's an entrepreneur, thinker, and coder who created the
-  Superconnectors event format and founded the Innovator's Working Group of the
-  Dutch Internet Society. With experience in traditional and non-traditional
-  education, he advocates for impactful and inclusive internet. Offcourse
-  focuses on bringing people together around common values and translating
-  shared visions into effective ecosystems. His work includes curating courses
-  like "Scale Effectively," which emphasizes setting clear goals, breaking them
-  into manageable tasks, and fostering team growth through shared learning.
-blurb: To scale effectively, start by setting clear goals. Break these goals
-  into manageable tasks. Share your learnings with your team to foster growth.
-  Embrace complexity by focusing on small, impactful actions that compound over
-  time.
-profileImageURL: ./76807e6f9b2a3b971637c990a77bf4be-profile.png
+checksum: 1f3404bbc94952a3906b5de942a328e1
+description: offcourse is an ecosystem architect with a PhD in Philosophy,
+  passionate about transforming education and knowledge sharing. As an
+  entrepreneur, thinker, and coder, he created the Superconnectors event format
+  and founded the Innovator's Working Group of the Dutch Internet Society. With
+  experience in traditional and non-traditional education, he advocates for
+  impactful and inclusive internet. Based in Taipei, Taiwan, he focuses on
+  bringing people together around common values and translating shared visions
+  into effective ecosystems. His curated course "Unblock Your Growth" emphasizes
+  setting clear goals, breaking them into manageable steps, sharing knowledge,
+  embracing complexity, and periodic evaluation for personal development.
+blurb: The path to unblocking growth involves setting clear goals, breaking them
+  into manageable steps, sharing knowledge, embracing complexity, and periodic
+  evaluation. This approach fosters personal development by combining strategic
+  planning, collaborative learning, adaptability to challenges, and continuous
+  self-assessment.
+profileImageURL: ./1f3404bbc94952a3906b5de942a328e1-profile.png
 title: Offcourse
