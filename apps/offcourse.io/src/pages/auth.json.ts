@@ -44,6 +44,7 @@ export const POST: APIRoute = async ({ request }) => {
         });
 
         const { token_type, access_token } = await auth_response.json();
+        console.log(token_type, access_token);
         const user_response = await fetch("https://api.github.com/user", {
           headers: {
             "Authorization": `${token_type} ${access_token}`
@@ -51,7 +52,11 @@ export const POST: APIRoute = async ({ request }) => {
         });
 
         const { login } = await user_response.json();
+
+        console.log(login);
+
         const { userName, repository } = await getUser({ provider, login });
+
 
         const authData = authState.parse({
           provider,
@@ -60,6 +65,8 @@ export const POST: APIRoute = async ({ request }) => {
           userName,
           repository
         })
+
+        console.log(authData);
 
         return new Response(JSON.stringify(
           authData
