@@ -6,8 +6,6 @@ import Layout from "@/layouts/Page.astro"
 import { SeriesHero } from "@/components/SeriesHero"
 import { PostListing } from "@/components/Postlisting"
 
-import { GITHUB_CLIENT_ID } from "astro:env/client"
-
 export async function getStaticPaths() {
   const tagEntries = await getCollection('Tags');
   return tagEntries.map(entry => ({
@@ -34,10 +32,6 @@ const courses = coursesRef && await getEntries(coursesRef)
   <SeriesHero slot="hero" title={title} summary={summary}/>
   <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
     { posts.map(({slug, data}) => <PostListing {...data} {slug}/>)}
-    { courses && <Offcourse 
-      data={courses.map(({data}) => data)} 
-      options={{githubClientId: GITHUB_CLIENT_ID}} 
-      client:load/>
-    }
+    { courses && <Offcourse data={courses.map(({data}) => data)} client:load/>}
   </div>
 </Layout>

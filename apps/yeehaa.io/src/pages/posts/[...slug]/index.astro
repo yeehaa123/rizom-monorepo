@@ -7,8 +7,6 @@ import { ArticleContent} from "@/components/ArticleContent";
 import { ArticleHeading } from "@/components/ArticleHeading";
 import  { getPostsWithCourse } from '@/helpers/pages';
 
-import { GITHUB_CLIENT_ID } from "astro:env/client"
-
 export async function getStaticPaths() {
   const blogEntries = await getPostsWithCourse()
   return blogEntries.map(entry => ({
@@ -58,9 +56,6 @@ const {
         <Content/>
       </ArticleContent>
     </article>
-    { course && <Offcourse 
-      data={course} 
-      options={{githubClientId: GITHUB_CLIENT_ID}} 
-      client:load/>}
+    { course && <Offcourse data={course} client:load/>}
   </div>
 </Layout>

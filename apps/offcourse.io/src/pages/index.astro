@@ -5,9 +5,6 @@ import Layout from "@/layouts/Page.astro"
 import {  getCollection } from "astro:content";
 const courses = await getCollection('Courses');
 const description = "COURSES";
-
-import { GITHUB_CLIENT_ID } from "astro:env/client"
-
 const title = "Offcourse";
 ---
 <Layout {title}>
@@ -20,6 +17,6 @@ const title = "Offcourse";
   <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
     <Offcourse 
       data={courses.map(({data}) => data)} 
-      options={{githubClientId: GITHUB_CLIENT_ID}} client:load/>
+      client:load/>
   </div>
 </Layout>

@@ -8,11 +8,11 @@ export type Options = {
 
 export type ContainerProps = {
   data: Course | Course[],
-  options: Options
+  options?: Options
 }
 
 
-export function Offcourse({ data, options }: ContainerProps) {
+export function Offcourse({ data, options = { githubClientId: "Ov23liwToysyXGsLxgk2" } }: ContainerProps) {
   const { state, actions } = useOffcourse(data, options);
   return <CourseCollection cards={state.cards} actions={actions} />
 }

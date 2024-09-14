@@ -21,7 +21,7 @@ export async function fetchAuthData() {
   const provider = AuthProvider.GITHUB;
   if (code) {
     try {
-      const response = await fetch("/auth.json", {
+      const response = await fetch("https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth.json", {
         method: "POST",
         mode: "cors",
         headers: {

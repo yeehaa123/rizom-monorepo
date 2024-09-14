@@ -94,7 +94,8 @@ export function useOffcourse(data: Course | Course[], { githubClientId }: Option
   }
 
   function redirectToGitHub() {
-    const redirect_uri = `${window.location.origin}`;
+    console.log(window.location);
+    const redirect_uri = `${window.location.href}`;
     const scope = "read:user";
     const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}`;
     window.location.href = authUrl;
@@ -108,7 +109,7 @@ export function useOffcourse(data: Course | Course[], { githubClientId }: Option
   const signOut = async () => {
     const response = await logout();
     respond(response);
-    window.location.href = `${window.location.origin}`;
+    window.location.href = `${window.location.href}`;
   }
 
   const actions = {
