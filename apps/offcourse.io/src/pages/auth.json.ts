@@ -2,8 +2,7 @@ export const prerender = false;
 import type { APIRoute } from 'astro';
 import { AuthProvider, authState } from "@offcourse/schema"
 
-import { GITHUB_CLIENT_ID } from "astro:env/client"
-import { GITHUB_CLIENT_SECRET } from "astro:env/server"
+import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
 
 async function getUser({ provider, login }: { provider: AuthProvider.GITHUB, login: string }) {
   console.log(provider);
