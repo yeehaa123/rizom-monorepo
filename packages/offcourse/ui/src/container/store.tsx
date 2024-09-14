@@ -7,7 +7,7 @@ import { useImmerReducer } from 'use-immer';
 import { query, command, findCard } from "./helpers";
 import { QueryType } from "@offcourse/schema";
 import { responder } from "./responder";
-import { authenticate, getAuthData, logout } from "./auth";
+import { authenticate, logout } from "./auth";
 import { useEffect } from "react";
 
 export type StoreCardState = Omit<CourseCardState, "actions">
@@ -22,12 +22,18 @@ export function useOffcourse(data: Course | Course[]) {
   const respond = responder(dispatch);
 
   useEffect(() => {
-    const authData = getAuthData()
-    if (authData) {
-      _authenticate(authData);
-    }
+    init();
   }, [])
 
+  const init = async () => {
+    const authResponse = await authenticate();
+    if (authResponse) {
+      respond(authResponse);
+      const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
+      const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
+      respond(response);
+    }
+  }
 
   const toggleBookmark = (payload: CourseQuery) => {
     const card = findCard(state, payload);
@@ -83,22 +89,23 @@ export function useOffcourse(data: Course | Course[]) {
     dispatch({ type: ActionType.ADD_NOTE, payload })
   }
 
-  const signIn = async () => {
-    const authData = { userName: "Yeehaa", repository: "https://yeehaa.io/offcourse" };
-    _authenticate(authData);
+  function redirectToGitHub() {
+    const client_id = "Ov23liwToysyXGsLxgk2"
+    const redirect_uri = `${window.location.origin}`;
+    const scope = "read:user";
+    const authUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}`;
+    window.location.href = authUrl;
   }
 
-  const _authenticate = async (authData: AuthState) => {
-    const authResponse = await authenticate(authData);
-    respond(authResponse);
-    const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
-    const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
-    respond(response);
+  const signIn = async () => {
+    redirectToGitHub()
   }
+
 
   const signOut = async () => {
     const response = await logout();
     respond(response);
+    window.location.href = `${window.location.origin}`;
   }
 
   const actions = {

@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField} from 'astro/config';
 import { addCMS } from "@rizom/cms";
 import { visit } from 'unist-util-visit';
 import section from '@hbsnow/rehype-sectionize';
@@ -21,7 +21,13 @@ const CMS_PATH = path.join("./CMS");
 export default defineConfig({
   site: 'https://offcourse.io',
   experimental: {
-    contentLayer: true
+    contentLayer: true,
+    env: {
+      schema: {
+        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public", optional: true }),
+        GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
+      }
+    }
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],

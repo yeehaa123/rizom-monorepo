@@ -61,8 +61,19 @@ export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
   checkpointId: true
 })
 
+export enum AuthProvider {
+  GITHUB = "GITHUB"
+}
+
+export enum AuthTokenType {
+  BEARER = "bearer"
+}
+
 export const authState = z.object({
   userName: z.string(),
+  provider: z.nativeEnum(AuthProvider),
+  tokenType: z.nativeEnum(AuthTokenType),
+  accessToken: z.string(),
   repository: z.string()
 })
 
