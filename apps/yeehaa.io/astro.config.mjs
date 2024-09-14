@@ -21,12 +21,7 @@ const CMS_PATH = path.join("./CMS");
 export default defineConfig({
   site: 'https://yeehaa.io',
   experimental: {
-    contentLayer: true,
-    env: {
-      schema: {
-        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" })
-      }
-    }
+    contentLayer: true
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
