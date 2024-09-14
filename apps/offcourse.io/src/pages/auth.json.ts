@@ -28,8 +28,6 @@ export const POST: APIRoute = async ({ request }) => {
     const body = await request.json();
     const { code, provider } = body;
     if (code && provider === AuthProvider.GITHUB) {
-      console.log(code, provider);
-
       try {
         const auth_response = await fetch("https://github.com/login/oauth/access_token", {
           method: "POST",
@@ -46,7 +44,7 @@ export const POST: APIRoute = async ({ request }) => {
         });
 
         const r = await auth_response.json();
-        console.log(r);
+        console.log("RESPONSE:", r);
         const { token_type, access_token } = r;
         const user_response = await fetch("https://api.github.com/user", {
           headers: {
