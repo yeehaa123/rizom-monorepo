@@ -24,6 +24,7 @@ export default defineConfig({
     contentLayer: true,
     env: {
       schema: {
+        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
         GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
         GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
       }

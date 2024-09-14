@@ -2,11 +2,17 @@ import type { Course } from "@offcourse/schema";
 import { CourseCollection } from "../components/"
 import { useOffcourse } from "./store";
 
-export type ContainerProps = {
-  data: Course | Course[]
+export type Options = {
+  githubClientId: string
 }
 
-export function Offcourse({ data }: ContainerProps) {
-  const { state, actions } = useOffcourse(data);
+export type ContainerProps = {
+  data: Course | Course[],
+  options: Options
+}
+
+
+export function Offcourse({ data, options }: ContainerProps) {
+  const { state, actions } = useOffcourse(data, options);
   return <CourseCollection cards={state.cards} actions={actions} />
 }

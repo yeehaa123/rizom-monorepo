@@ -16,7 +16,11 @@ export type OffcourseState = {
   auth: AuthState | undefined
 }
 
-export function useOffcourse(data: Course | Course[]) {
+export type Options = {
+  githubClientId: string
+}
+
+export function useOffcourse(data: Course | Course[], { githubClientId }: Options) {
   const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
   const dispatch = command(state, _dispatch);
   const respond = responder(dispatch);
@@ -90,10 +94,9 @@ export function useOffcourse(data: Course | Course[]) {
   }
 
   function redirectToGitHub() {
-    const client_id = "Ov23liwToysyXGsLxgk2"
     const redirect_uri = `${window.location.origin}`;
     const scope = "read:user";
-    const authUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}`;
+    const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}`;
     window.location.href = authUrl;
   }
 
