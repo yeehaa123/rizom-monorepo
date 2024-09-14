@@ -13,6 +13,16 @@ async function getUser({ provider, login }: { provider: AuthProvider.GITHUB, log
   }
 }
 
+export const OPTIONS: APIRoute = async () => {
+  return new Response("ok", {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+    }
+  });
+}
+
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
@@ -53,7 +63,15 @@ export const POST: APIRoute = async ({ request }) => {
 
         return new Response(JSON.stringify(
           authData
-        ), { status: 201 })
+        ),
+          {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+              'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+            },
+            status: 201
+          })
 
       } catch (e) {
         console.log(e);
