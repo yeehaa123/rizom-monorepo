@@ -18,6 +18,8 @@ const title = "Offcourse";
     {description} 
     url={Astro.url} />
   <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
-    <Offcourse data={courses.map(({data}) => data)} options={{githubClientId: GITHUB_CLIENT_ID}} client:load/>
+    <Offcourse 
+      data={courses.map(({data}) => data)} 
+      options={{githubClientId: GITHUB_CLIENT_ID}} client:load/>
   </div>
 </Layout>

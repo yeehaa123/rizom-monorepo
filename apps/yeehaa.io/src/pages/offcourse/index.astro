@@ -7,6 +7,8 @@ const courses = await getCollection('Courses');
 const series = await getEntry("Series", "ecosystem-architecture");
 const description = series.data.summary;
 
+import { GITHUB_CLIENT_ID } from "astro:env/client"
+
 const title = "YEEHAA";
 ---
 <Layout {title}>
@@ -17,6 +19,8 @@ const title = "YEEHAA";
     {description} 
     url={Astro.url} />
   <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
-    <Offcourse data={courses.map(({data}) => data)} client:load/>
+    <Offcourse data={courses.map(({data}) => data)} 
+      options={{githubClientId: GITHUB_CLIENT_ID}} 
+      client:load/>
   </div>
 </Layout>

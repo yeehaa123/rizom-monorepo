@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import { addCMS } from "@rizom/cms";
 import { visit } from 'unist-util-visit';
 import section from '@hbsnow/rehype-sectionize';
@@ -24,8 +24,9 @@ export default defineConfig({
     contentLayer: true,
     env: {
       schema: {
-        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
+        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" })
       }
+    }
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
