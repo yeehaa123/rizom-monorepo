@@ -28,6 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
     const body = await request.json();
     const { code, provider } = body;
     if (code && provider === AuthProvider.GITHUB) {
+      console.log(GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID);
       try {
         const auth_response = await fetch("https://github.com/login/oauth/access_token", {
           method: "POST",
