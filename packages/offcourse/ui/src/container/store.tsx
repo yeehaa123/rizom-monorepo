@@ -1,6 +1,6 @@
 import type { CourseCardState } from "@/components/CourseCard"
 import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
-import { ActionType } from "@offcourse/schema"
+import { AuthProvider, ActionType } from "@offcourse/schema"
 import { reducer } from "./reducer"
 import { initialize } from "./cardState"
 import { useImmerReducer } from 'use-immer';
@@ -94,10 +94,15 @@ export function useOffcourse(data: Course | Course[], { githubClientId }: Option
   }
 
   function redirectToGitHub() {
-    console.log(window.location);
-    const redirect_uri = `${window.location.href}`;
+    const provider = AuthProvider.GITHUB;
+    const { origin, pathname, search } = window.location;
+    const redirect_uri = `${origin}/auth`;
+    const searchParams = new URLSearchParams(search);
+    searchParams.delete("code");
+    searchParams.append("provider", provider);
+    const current_uri = `${origin}${pathname}?${searchParams}`;
     const scope = "read:user";
-    const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}`;
+    const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}&state=${current_uri}`;
     window.location.href = authUrl;
   }
 
@@ -109,7 +114,8 @@ export function useOffcourse(data: Course | Course[], { githubClientId }: Option
   const signOut = async () => {
     const response = await logout();
     respond(response);
-    window.location.href = `${window.location.href}`;
+    const { origin, pathname } = window.location;
+    window.location.href = `${origin}${pathname}`;
   }
 
   const actions = {

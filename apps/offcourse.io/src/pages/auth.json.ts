@@ -5,7 +5,6 @@ import { AuthProvider, authState } from "@offcourse/schema"
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
 
 async function getUser({ provider, login }: { provider: AuthProvider.GITHUB, login: string }) {
-  console.log(provider);
   return {
     userName: login,
     repository: "https://yeehaa.io/offcourse"

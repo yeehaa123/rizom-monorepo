@@ -12,7 +12,7 @@ export type ContainerProps = {
 }
 
 
-export function Offcourse({ data, options = { githubClientId: "Ov23liwToysyXGsLxgk2" } }: ContainerProps) {
+export function Offcourse({ data, options = { githubClientId: "Ov23li51nX1AYgHxF6bl" } }: ContainerProps) {
   const { state, actions } = useOffcourse(data, options);
   return <CourseCollection cards={state.cards} actions={actions} />
 }

@@ -1,9 +1,9 @@
 import { RESPONSE_TYPE, responseSchema } from "../response";
-import { AuthProvider } from "@offcourse/schema";
+import { authState } from "@offcourse/schema"
 import type { AuthState } from "@offcourse/schema";
 
 export async function authenticate() {
-  const authData = getAuthData() || await fetchAuthData();
+  const authData = getAuthData() || await setAuthData();
   if (authData) {
     sessionStorage.setItem("auth", JSON.stringify(authData));
     const response = responseSchema.parse({
@@ -15,28 +15,16 @@ export async function authenticate() {
 }
 
 
-export async function fetchAuthData() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const code = urlParams.get("code");
-  const provider = AuthProvider.GITHUB;
-  if (code) {
-    try {
-      const response = await fetch("https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth.json", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code, provider })
-      });
-      const data = await response.json();
-      console.log(data);
-      return data;
-    }
-    catch (error) {
-      console.log(error)
-      return
-    }
+export async function setAuthData() {
+  const { origin, search, pathname } = window.location;
+  const urlSearchParams = new URLSearchParams(search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  try {
+    const parsedAuthState = authState.parse(params);
+    sessionStorage.setItem("auth", JSON.stringify(parsedAuthState));
+    window.location.href = `${origin}${pathname}`;
+  } catch {
+    return
   }
 }
 
