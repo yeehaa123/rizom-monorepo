@@ -7,7 +7,7 @@ import { useImmerReducer } from 'use-immer';
 import { query, command, findCard } from "./helpers";
 import { QueryType } from "@offcourse/schema";
 import { responder } from "./responder";
-import { authenticate, logout } from "./auth";
+import { authenticate, logout, redirectToGitHub } from "./auth";
 import { useEffect } from "react";
 
 export type StoreCardState = Omit<CourseCardState, "actions">
@@ -17,7 +17,6 @@ export type OffcourseState = {
 }
 
 export type Options = {
-  githubClientId: string
 }
 
 export function useOffcourse(data: Course | Course[], { githubClientId }: Options) {
@@ -93,23 +92,9 @@ export function useOffcourse(data: Course | Course[], { githubClientId }: Option
     dispatch({ type: ActionType.ADD_NOTE, payload })
   }
 
-  function redirectToGitHub() {
-    const provider = AuthProvider.GITHUB;
-    const { origin, pathname, search } = window.location;
-    const redirect_uri = `${origin}/auth`;
-    const searchParams = new URLSearchParams(search);
-    searchParams.delete("code");
-    searchParams.append("provider", provider);
-    const current_uri = `${origin}${pathname}?${searchParams}`;
-    const scope = "read:user";
-    const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}&state=${current_uri}`;
-    window.location.href = authUrl;
-  }
-
   const signIn = async () => {
     redirectToGitHub()
   }
-
 
   const signOut = async () => {
     const response = await logout();

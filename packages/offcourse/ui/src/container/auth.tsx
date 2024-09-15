@@ -1,6 +1,5 @@
 import { RESPONSE_TYPE, responseSchema } from "../response";
-import { authState } from "@offcourse/schema"
-import type { AuthState } from "@offcourse/schema";
+import { AuthState, AuthProvider, authState } from "@offcourse/schema"
 
 export async function authenticate() {
   const authData = getAuthData() || await setAuthData();
@@ -13,7 +12,6 @@ export async function authenticate() {
     return response;
   }
 }
-
 
 export async function setAuthData() {
   const { origin, search, pathname } = window.location;
@@ -44,3 +42,18 @@ export function getAuthData() {
   }
   return undefined;
 }
+
+export function redirectToGitHub() {
+  const githubClientId = "Ov23liwToysyXGsLxgk2";
+  const provider = AuthProvider.GITHUB;
+  const { origin, pathname, search } = window.location;
+  const redirect_uri = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth`;
+  const searchParams = new URLSearchParams(search);
+  searchParams.delete("code");
+  searchParams.append("provider", provider);
+  const current_uri = `${origin}${pathname}?${searchParams}`;
+  const scope = "read:user";
+  const authUrl = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${redirect_uri}&scope=${scope}&state=${current_uri}`;
+  window.location.href = authUrl;
+}
+

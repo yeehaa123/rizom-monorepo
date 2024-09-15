@@ -3,7 +3,6 @@ import { CourseCollection } from "../components/"
 import { useOffcourse } from "./store";
 
 export type Options = {
-  githubClientId: string
 }
 
 export type ContainerProps = {
@@ -12,7 +11,7 @@ export type ContainerProps = {
 }
 
 
-export function Offcourse({ data, options = { githubClientId: "Ov23li51nX1AYgHxF6bl" } }: ContainerProps) {
+export function Offcourse({ data, options = {} }: ContainerProps) {
   const { state, actions } = useOffcourse(data, options);
   return <CourseCollection cards={state.cards} actions={actions} />
 }
