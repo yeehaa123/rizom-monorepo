@@ -19,7 +19,7 @@ export type OffcourseState = {
 export type Options = {
 }
 
-export function useOffcourse(data: Course | Course[], { githubClientId }: Options) {
+export function useOffcourse(data: Course | Course[], {}: Options) {
   const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
   const dispatch = command(state, _dispatch);
   const respond = responder(dispatch);

@@ -1,12 +1,12 @@
 ---
+export const prerender = false;
 import { Offcourse } from "@offcourse/ui"
 import { QueryType } from "@offcourse/schema";
-export const prerender = false;
-const { alias } = Astro.params;
 import { BaseHead, OGType} from "@/components/BaseHead";
 import Layout from "@/layouts/Page.astro"
 const description = "COURSES";
-const repository = "http://localhost:4321/offcourse";
+const repository = `${Astro.url.origin}/offcourse`;
+console.log(repository);
 
 const action = {type: QueryType.FETCH_USER_COURSES, payload: {courseIds: []} };
 

@@ -1,19 +1,21 @@
 --- 
 export const prerender = false;
-import { AuthProvider, authState } from "@offcourse/schema"
+import { authState } from "@offcourse/schema"
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
 
 const urlSearchParams = Astro.url.searchParams
 const { state, code } = Object.fromEntries(urlSearchParams.entries());
 
-const { origin, pathname, searchParams} = new URL(state)
-const { provider } = Object.fromEntries(searchParams.entries());
 
-async function getUser({ provider, login }: { provider: AuthProvider.GITHUB, login: string }) {
-  return {
-    userName: login,
-    repository: "https://yeehaa.io/offcourse"
-  }
+if(!state || !code) {
+  return Astro.redirect("/");
+}
+
+const url = new URL(state)
+const { provider } = Object.fromEntries(url.searchParams.entries());
+
+if(!provider) {
+  return Astro.redirect("/");
 }
 
 const auth_response = await fetch("https://github.com/login/oauth/access_token", {
@@ -48,8 +50,14 @@ const authData = authState.parse({
   repository
 })
 
-
 const newParams = new URLSearchParams(authData);
 console.log("PARAMS", newParams);
-return Astro.redirect(`${origin}${pathname}?${newParams}`);
+return Astro.redirect(`${url.origin}${url.pathname}?${newParams}`);
+
+async function getUser({ login }: { provider: string, login: string }) {
+  return {
+    userName: login,
+    repository: "https://yeehaa.io/offcourse"
+  }
+}
 ---
