@@ -15,6 +15,7 @@ export type Affordances = {
 
 export type CardState = {
   userName: string | undefined,
+  repository: string | undefined,
   isBookmarked: boolean,
   isFollowed: boolean,
   completed: string[],
@@ -35,6 +36,7 @@ const initialAffordances = {
 
 export const initialCardState = {
   userName: undefined,
+  repository: undefined,
   isBookmarked: false,
   isFollowed: false,
   isCurated: false,

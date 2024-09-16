@@ -57,7 +57,7 @@ return Astro.redirect(`${url.origin}${url.pathname}?${newParams}`);
 async function getUser({ login }: { provider: string, login: string }) {
   return {
     userName: login,
-    repository: "https://yeehaa.io/offcourse"
+    repository: `https://offcourse.io/users/${login}`
   }
 }
 ---

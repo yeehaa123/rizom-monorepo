@@ -12,13 +12,13 @@ import type { CourseCardState } from "./CourseCard";
 
 export function InfoOverlay(
   { courseId, actions, cardState }: CourseCardState) {
-  const { userName, affordances } = cardState;
+  const { userName, repository, affordances } = cardState;
   const { canAuthenticate } = affordances;
   const { hideOverlay, signOut, signIn } = actions;
   return (
     <>
       <CardHeader className="flex flex-row gap-x-7 space-y-0 items-top">
-        <CardTitle>{userName || "Offcourse"}</CardTitle>
+        <CardTitle><a href={repository}>{userName || "Offcourse"}</a></CardTitle>
       </CardHeader>
       <CardContent className="space-y-4 grow flex flex-col justify-center">
         <div className="flex w-full justify-center">

@@ -89,6 +89,7 @@ export function reducer(state: OffcourseState, action: Action) {
       state.auth = payload
       state.cards.forEach(card => {
         card.cardState.userName = payload.userName;
+        card.cardState.repository = payload.repository;
         card.cardState.overlayMode = OverlayModes.NONE;
         card.cardState.affordances = updateAffordances(payload);
       })

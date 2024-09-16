@@ -1,6 +1,6 @@
 import type { CourseCardState } from "@/components/CourseCard"
 import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
-import { AuthProvider, ActionType } from "@offcourse/schema"
+import { ActionType } from "@offcourse/schema"
 import { reducer } from "./reducer"
 import { initialize } from "./cardState"
 import { useImmerReducer } from 'use-immer';
@@ -19,7 +19,7 @@ export type OffcourseState = {
 export type Options = {
 }
 
-export function useOffcourse(data: Course | Course[], {}: Options) {
+export function useOffcourse(data: Course | Course[], { }: Options) {
   const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
   const dispatch = command(state, _dispatch);
   const respond = responder(dispatch);
