@@ -1,11 +1,11 @@
 --- 
 export const prerender = false;
 import { authState } from "@offcourse/schema"
-import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
+import { GITHUB_CLIENT_ID } from "astro:env/client"
+import { GITHUB_CLIENT_SECRET} from "astro:env/server"
 
 const urlSearchParams = Astro.url.searchParams
 const { state, code } = Object.fromEntries(urlSearchParams.entries());
-
 
 if(!state || !code) {
   return Astro.redirect("/");
