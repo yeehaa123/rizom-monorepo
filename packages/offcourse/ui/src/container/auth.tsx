@@ -44,12 +44,12 @@ export function getAuthData() {
 }
 
 export function redirectToGitHub() {
-  // const githubClientId = "Ov23liwToysyXGsLxgk2";
-  const githubClientId = "Ov23li51nX1AYgHxF6bl";
+  const githubClientId = "Ov23liwToysyXGsLxgk2";
+  // const githubClientId = "Ov23li51nX1AYgHxF6bl";
   const provider = AuthProvider.GITHUB;
   const { origin, pathname, search } = window.location;
-  // const redirect_uri = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth`;
-  const redirect_uri = `http://localhost:8765/auth`;
+  const redirect_uri = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth`;
+  // const redirect_uri = `http://localhost:8765/auth`;
   const searchParams = new URLSearchParams(search);
   searchParams.delete("code");
   searchParams.append("provider", provider);
