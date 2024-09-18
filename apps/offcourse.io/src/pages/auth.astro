@@ -54,7 +54,7 @@ console.log("PARAMS", newParams);
 return Astro.redirect(`${url.origin}${url.pathname}?${newParams}`);
 
 async function getUser({ login }: { provider: string, login: string }) {
-  const repository = "https://yeehaa.io";
+  const repository = "https://yeehaa.io/offcourse";
   // const repository = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/users/${login}`;
   // const repository = `http://localhost:8765/users/${login}`;
   return {
