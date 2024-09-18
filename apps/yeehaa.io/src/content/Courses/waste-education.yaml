@@ -1,0 +1,110 @@
+courseId: d337da119aa2ca1faec993cb26146e2a
+goal: Waste Education
+curator:
+  name: Jan Hein Hoogstad
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: 'The sequence promotes "Waste Education" by encouraging
+  counterproductive practices: citing debunked theories, inventing
+  pseudoscience, misapplying expertise, and publishing junk content. These steps
+  effectively waste time and resources, misleading learners and hindering
+  genuine educational progress. This approach demonstrates how not to conduct
+  proper education, serving as a cautionary example of ineffective and
+  potentially harmful educational methods.'
+habitat: economy-of-garbage
+createdAt: 2024-09-18T08:28:01.718Z
+updatedAt: 2024-09-18T08:28:01.718Z
+publishedAt: 2024-09-18T08:28:01.718Z
+tags:
+  - waste
+  - myth
+  - recycle
+  - hoax
+  - fake
+  - misuse
+  - humor
+  - satire
+  - junk
+  - tabloid
+checkpoints:
+  - task: Cite Debunked Theories
+    href: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6733478/
+    checkpointId: 9fb806a25c30bde6584f9037a0bf5bd2
+    description: This article debunks common misconceptions about waste management,
+      providing evidence-based information on topics like biodegradability and
+      recycling effectiveness. It helps educate readers on accurate waste
+      theories, enabling them to make informed decisions and dispel myths in
+      waste education efforts.
+    tags:
+      - waste
+      - myth
+      - recycle
+  - task: Invent Pseudoscience
+    href: https://www.americanscientist.org/blog/from-the-staff/stop-using-the-word-pseudoscience
+    checkpointId: 9ecf154b031728ac26f089547a0142a4
+    description: The article critiques the term "pseudoscience," arguing it's
+      unhelpful for waste education. By understanding this perspective, one can
+      invent more convincing pseudoscientific claims that avoid obvious red
+      flags. This knowledge aids in creating persuasive misinformation about
+      waste management, potentially hindering genuine environmental efforts.
+    tags:
+      - hoax
+      - waste
+      - fake
+  - task: Misapply Expertise
+    href: https://m.youtube.com/watch?v=WDKxPAEcdVk
+    checkpointId: 01b51cc24b8281c219b43c0a3d4682b2
+    description: This video misleadingly applies waste management expertise to
+      promote improper disposal methods. It humorously demonstrates how misusing
+      knowledge can lead to environmental harm, ironically highlighting the
+      importance of proper waste education and responsible practices.
+    tags:
+      - waste
+      - misuse
+      - humor
+  - task: Publish Junk
+    href: https://weeklyworldnews.com/category/headlines/
+    checkpointId: db2484a288a3c10140320d8900376cff
+    description: Weekly World News satirizes tabloid journalism, showcasing absurd
+      headlines and stories. This exaggeration of sensationalism educates
+      readers about recognizing and avoiding misinformation, aligning with the
+      goal of waste education by highlighting the "junk" nature of such content.
+      It serves as a humorous tool for critical thinking and media literacy.
+    tags:
+      - satire
+      - junk
+      - tabloid
+series: Ecosystem Architecture

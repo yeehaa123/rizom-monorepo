@@ -1,16 +1,19 @@
-checksum: 31247c22c14da6e45938481f138521c6
-summary: Economy encompasses various aspects of financial systems, production,
-  and resource allocation. This theme explores concepts like decentralization,
-  waste management, abundance, capitalism, and their interconnections. It delves
-  into how modern economic practices shape our society, challenging traditional
-  notions of value and consumption. The resources under this theme examine the
-  shift from scarcity to abundance in capitalism, critique excess mindsets in
-  cryptocurrency, and explore innovative approaches to reframing waste as
-  central to nature and culture.
+checksum: 67d239087a458c8660d9829528aa57b2
+summary: Economy encompasses various aspects of financial systems, resource
+  allocation, and societal structures. It delves into concepts like
+  decentralization, waste management, and the interplay between traditional and
+  emerging technologies. This topic explores how economic principles intersect
+  with cultural practices, environmental concerns, and technological
+  advancements. It challenges conventional notions of value and scarcity,
+  examining alternative perspectives on abundance and excess. The economy theme
+  also touches on the potential of blockchain technology and its impact on
+  decentralized systems, while critically analyzing the promises and pitfalls of
+  cryptocurrency.
 excerpt: Decentralization's cultural techniques can mitigate fragmentation's
-  negative effects. However, cryptocurrency's focus on instant wealth
-  overshadows blockchain's potential. The article explores how excess and
-  abundance shape modern capitalism, challenging traditional economic views.
+  negative effects. However, blockchain's potential as an immutable ledger is
+  overshadowed by cryptocurrency's promise of instant wealth. Critics argue
+  decentralization leads to fragmentation, but this overlooks new forms of
+  connection and collaboration.
 title: economy
 articles:
   - economy-of-garbage

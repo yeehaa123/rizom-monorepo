@@ -1,16 +1,21 @@
-checksum: 900126832ff91b18ba965daad75c4ec5
-summary: Waste is a concept that intersects with economic theories, cultural
-  practices, and environmental concerns. It challenges traditional notions of
-  value and consumption in modern capitalism. This theme explores how waste can
-  be reframed as central to nature and culture, offering insights into
-  abundance, decentralization, and the shifting paradigms of scarcity and
-  excess. It prompts reflection on sustainable practices and the reevaluation of
-  what society deems disposable or valuable.
+checksum: 8a2705f9d72b83158682711f6b34a72f
+summary: Waste encompasses various aspects of resource management, economic
+  theory, and cultural practices. It explores the concept of decentralization,
+  fragmentation, and excess in economic systems, particularly in relation to
+  cryptocurrency and blockchain technology. The theme also delves into artistic
+  interpretations of waste, blurring lines between nature, culture, and trash.
+  Additionally, it critically examines educational approaches that promote
+  counterproductive practices, serving as a cautionary example of ineffective
+  methods. This multifaceted topic challenges traditional frameworks and
+  encourages reflection on our relationship with resources, consumption, and
+  knowledge dissemination.
 excerpt: Decentralization's cultural techniques can mitigate fragmentation's
-  negative effects. However, cryptocurrency's focus on instant wealth
-  overshadows blockchain's potential. The article explores how excess and
-  abundance shape modern capitalism, challenging traditional economic views.
+  negative effects. However, blockchain's potential as an immutable ledger is
+  overshadowed by cryptocurrency's promise of instant wealth. Critics argue
+  decentralization leads to fragmentation, but this overlooks new forms of
+  connection and collaboration.
 title: waste
 articles:
   - economy-of-garbage
-courses: []
+courses:
+  - waste-education

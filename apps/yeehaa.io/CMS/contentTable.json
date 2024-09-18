@@ -52,7 +52,7 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "6c384a10d239225d51dcd8b4bf32f4d7",
+    "checksum": "e5c7b17962063bc8f50e650a0ae1bb4e",
     "publicationData": {
       "createdAt": "2024-09-15T10:01:18.899Z",
       "updatedAt": "2024-09-15T10:01:18.899Z",
@@ -237,6 +237,21 @@
       "publishedAt": "2024-08-28T09:50:12.337Z"
     },
     "habitat": "Global Village People"
+  },
+  {
+    "id": "d337da119aa2ca1faec993cb26146e2a",
+    "author": "yeehaa",
+    "title": "Waste Education",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "43180b16c104fa52b2cfd71dc4134677",
+    "publicationData": {
+      "createdAt": "2024-09-18T08:28:01.718Z",
+      "updatedAt": "2024-09-18T08:28:01.718Z",
+      "publishedAt": "2024-09-18T08:28:01.718Z"
+    },
+    "habitat": "Economy Of Garbage"
   },
   {
     "id": "b01e1a34626390069d84a828a77133b8",

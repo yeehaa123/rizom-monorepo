@@ -1,0 +1,17 @@
+checksum: 6e62d180a32cc834c546dd01b9d42a36
+summary: Tabloid represents sensationalism and questionable content in media and
+  education. It's associated with exaggerated, misleading, or fabricated
+  information designed to attract attention rather than provide accurate
+  knowledge. This approach often involves pseudoscience, debunked theories, and
+  misapplied expertise. While it may be used for satirical or humorous purposes,
+  it generally undermines genuine learning and critical thinking. The tabloid
+  style prioritizes shock value and entertainment over factual accuracy and
+  educational value.
+excerpt: The Waste Education course satirically promotes counterproductive
+  practices in education, including citing debunked theories, inventing
+  pseudoscience, and publishing junk content. It serves as a cautionary example
+  of ineffective and potentially harmful educational methods.
+title: tabloid
+articles: []
+courses:
+  - waste-education
