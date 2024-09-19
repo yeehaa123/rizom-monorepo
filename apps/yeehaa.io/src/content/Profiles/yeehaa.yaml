@@ -33,8 +33,8 @@ tags:
   - tech
   - phd
   - eco
-  - web
   - future
+  - web
   - design
   - system
 profile:
@@ -74,20 +74,18 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 9ceb695ad433d1b40e7d25c70c78032c
+checksum: 4feb8d438a175577c9c28890014330d9
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
-  academia and tech expertise. As an entrepreneur, thinker, and coder, he's
-  dedicated to transforming education and knowledge sharing. He founded
-  Offcourse and created the Superconnectors event format, advocating for an
-  impactful and inclusive internet. Based in Taipei, yeehaa focuses on uniting
-  people around common values and translating shared visions into effective
-  ecosystems. His work explores decentralization, digital landscapes, and
-  innovative approaches to societal challenges. yeehaa's blog posts and curated
-  courses cover topics like ecosystem architecture, internet fragmentation,
-  decentralized innovation, and fostering collaboration across diverse fields.
-blurb: "yeehaa: ecosystem architect, PhD, entrepreneur. Transforms education,
-  advocates inclusive internet. Explores decentralization, digital landscapes,
-  societal innovation. Unites people, translates visions into ecosystems. Blogs
-  on tech, philosophy, collaboration."
-profileImageURL: ./9ceb695ad433d1b40e7d25c70c78032c-profile.png
+  academia and tech expertise. As an entrepreneur, he founded Offcourse and
+  created the Superconnectors event format. Based in Taipei, yeehaa focuses on
+  transforming education, knowledge sharing, and fostering inclusive internet
+  ecosystems. His work spans diverse topics like digital fragmentation,
+  decentralization, and innovation practices. yeehaa's blog posts and curated
+  courses reflect his interdisciplinary approach, exploring concepts from
+  philosophy, technology, and social systems to address global challenges and
+  reimagine future possibilities.
+blurb: "yeehaa: Ecosystem architect, philosopher, and tech innovator reimagining
+  education and digital landscapes. Blends academic insight with entrepreneurial
+  spirit to foster inclusive, decentralized systems and knowledge sharing."
+profileImageURL: ./4feb8d438a175577c9c28890014330d9-profile.png
 title: Yeehaa

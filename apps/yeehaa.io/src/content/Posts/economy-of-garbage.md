@@ -6,27 +6,25 @@ series: ecosystem-architecture
 createdAt: 2024-09-15T10:01:18.899Z
 updatedAt: 2024-09-15T10:01:18.899Z
 publishedAt: 2024-09-15T10:01:18.899Z
-bannerImageURL: e5c7b17962063bc8f50e650a0ae1bb4e.png
-excerpt: Decentralization's cultural techniques can mitigate fragmentation's
-  negative effects. However, blockchain's potential as an immutable ledger is
-  overshadowed by cryptocurrency's promise of instant wealth. Critics argue
-  decentralization leads to fragmentation, but this overlooks new forms of
-  connection and collaboration.
+bannerImageURL: f751f50cf955ea6d0d08673df8eab8d4.png
+excerpt: The article explores decentralization, excess, and waste in relation to
+  economy and culture. It critiques blockchain's current manifestation and draws
+  on philosophical ideas to argue for embracing abundance and waste as intrinsic
+  to nature and culture.
 description: The article "Economy Of Garbage" explores the concept of
-  decentralization and its relationship with fragmentation, critiquing the
-  excess mindset in cryptocurrency. It discusses the potential of decentralized
-  systems for collaboration and examines the historical context of capitalism's
-  pursuit of limitless resources. The piece delves into Georges Bataille's
-  economy of excess, challenging traditional economic frameworks and emphasizing
-  the importance of embracing waste. It concludes by analyzing Shraddha
-  Borawake's artistic practice, which blurs the lines between nature, culture,
-  and trash, highlighting the distributed and composite nature of these realms.
+  decentralization and its relationship with fragmentation, excess, and waste.
+  It critiques the current manifestation of decentralization in blockchain and
+  cryptocurrency, drawing on ideas from Walter Benjamin and Georges Bataille.
+  The piece argues for embracing abundance and waste as intrinsic to nature and
+  culture, challenging traditional notions of scarcity and purity. It highlights
+  the work of Shraddha Borawake, who reframes garbage as art, blurring lines
+  between nature, culture, and trash.
 tags:
   - economy
   - waste
-  - blockchain
   - abundance
-  - decentralize
+  - decentralization
+  - culture
 course: waste-education
 ---
 Decentralization should not be confused with fragmentation. When implemented thoughtfully, decentralization's cultural techniques can actually mitigate the negative effects of fragmentation. However, the most prominent contemporary manifestation of decentralization has fallen prey to an excess mindset. The initial excitement surrounding blockchain's potential as an immutable and incorruptible ledger has been overshadowed by cryptocurrency's promise of instant wealth—a notion that often resembles a pyramid scheme.
@@ -63,5 +61,13 @@ In her visionary practice, *Garb-Age*, Shraddha Borawake follows in Bataille's f
 
 — Shraddha Borawake
 
-Nonetheless, it is important to emphasize that the blurring goes in all directions. Borawake's practice shows that waste is not outside of nature and culture but very much at its core. This also means that these realms are not devoid of the logic of garbage. Nature and culture are not one, authentic, and pure, but rather distributed, fake, and composed. After the holocaust we have learned to be critical of the rhetorics of purity and authenticity when it comes to culture, but nature has mostly managed to be unaffected by this critique. Borawake ends that state of exception. Not even nature is a universal whole. It is as dispersed as waste, as fragmented as the internet. Nature is abundance in excess.
+Borawake's practice reveals that waste is not external to nature and culture but intrinsic to both. This realization challenges our conventional understanding of these realms, suggesting that they are not discrete, pure entities but rather interconnected, complex systems. Just as waste permeates nature and culture, the logic of garbage — fragmentation, dispersion, and excess — is equally present in these domains.
+
+This perspective invites us to reconsider our notions of purity and authenticity, not only in culture but also in nature. While we have learned to be critical of such rhetoric in cultural contexts, especially following the atrocities of the Holocaust, nature has largely escaped this scrutiny. Borawake's work extends this critical lens to the natural world, dismantling the idea of nature as a universal, unified whole.
+
+Instead, we are presented with a vision of nature that mirrors the characteristics of waste: dispersed, fragmented, and abundant. This conceptualization aligns with the broader themes of decentralization and excess. Nature, like decentralized systems, is not a monolithic entity but a complex network of interconnected parts.
+
+By embracing this perspective, we can move beyond the traditional dichotomies of nature versus culture, or purity versus waste. Instead, we can recognize the inherent abundance and excess in all aspects of our world. This shift in understanding has profound implications for how we approach environmental issues, resource management, and even our digital ecosystems.
+
+In conclusion, economies of garbage are not just about waste management or environmental concerns. It is a paradigm shift that encourages us to see the world through the lens of abundance rather than scarcity. By acknowledging the excess inherent in nature, culture, and our technological systems, we open up new possibilities for addressing global challenges. This perspective invites us to reimagine our relationship with the world around us, fostering a more nuanced and holistic approach to the complexities of our interconnected existence.
 
