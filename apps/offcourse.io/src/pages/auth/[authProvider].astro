@@ -3,6 +3,9 @@ export const prerender = false;
 import { authState } from "@offcourse/schema"
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
 
+const { authProvider } = Astro.params;
+
+
 const urlSearchParams = Astro.url.searchParams
 const { state, code } = Object.fromEntries(urlSearchParams.entries());
 
@@ -10,10 +13,11 @@ if(!state || !code) {
   return Astro.redirect("/");
 }
 
-const url = new URL(state)
-const { provider } = Object.fromEntries(url.searchParams.entries());
+const stateUrl = new URL(state)
+const { courseId } = Object.fromEntries(stateUrl.searchParams.entries());
+console.log(courseId);
 
-if(!provider) {
+if(!authProvider) {
   return Astro.redirect("/");
 }
 
@@ -40,9 +44,16 @@ const user_response = await fetch("https://api.github.com/user", {
 });
 
 const { login } = await user_response.json();
-const { userName, repository } = await getUser({ provider, login });
+const { userName, repository } = await getUser({ authProvider, login });
+
+if(!repository) {
+  const authData = { authProvider, token_type, access_token, login , state, courseId } 
+  const newParams = new URLSearchParams(authData);
+  return Astro.redirect(`/signup/?${newParams}`);
+}
+
 const authData = authState.parse({
-  provider,
+  authProvider,
   tokenType: token_type,
   accessToken: access_token,
   userName,
@@ -50,16 +61,13 @@ const authData = authState.parse({
 })
 
 const newParams = new URLSearchParams(authData);
-console.log("PARAMS", newParams);
-return Astro.redirect(`${url.origin}${url.pathname}?${newParams}`);
+console.log(newParams);
+return Astro.redirect(`${stateUrl.origin}${stateUrl.pathname}?${newParams}`);
 
-async function getUser({ login }: { provider: string, login: string }) {
-  const repository = "https://yeehaa.io/offcourse";
-  // const repository = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/users/${login}`;
-  // const repository = `http://localhost:8765/users/${login}`;
-  return {
-    userName: login,
-    repository
-  }
+async function getUser({ login }: { authProvider: string, login: string }) {
+  const lookup = [
+    { githubLogin: "yeehaa12345", userName: "yeehaa", repository: "https://yeehaa.io/offcourse" }]
+  const userData =  lookup.find(({githubLogin}) => githubLogin === login);
+  return userData || { userName: login, repository: undefined }
 }
 ---

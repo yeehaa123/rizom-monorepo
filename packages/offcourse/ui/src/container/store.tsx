@@ -92,8 +92,8 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     dispatch({ type: ActionType.ADD_NOTE, payload })
   }
 
-  const signIn = async () => {
-    redirectToGitHub()
+  const signIn = async (query: CourseQuery) => {
+    redirectToGitHub(query)
   }
 
   const signOut = async () => {

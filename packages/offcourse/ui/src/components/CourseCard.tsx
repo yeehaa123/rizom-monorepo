@@ -45,7 +45,7 @@ import {
 } from "./";
 
 export type CardActions = {
-  signIn: () => void,
+  signIn: (arg: CourseQuery) => void,
   signOut: () => void,
   toggleBookmark: (arg: CourseQuery) => void,
   toggleCheckpoint: (arg: CheckpointQuery) => void,

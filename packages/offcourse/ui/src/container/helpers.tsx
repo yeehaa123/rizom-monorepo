@@ -22,11 +22,17 @@ export function timeout(ms: number) {
 
 export function command({ auth }: OffcourseState, dispatch: Dispatch<Action>) {
   return (action: Action) => {
-    const parsedAction = actionSchema.parse(action);
-    if (auth && parsedAction.type !== ActionType.LOG_OUT) {
-      sendCommand(parsedAction);
+    try {
+      const parsedAction = actionSchema.parse(action);
+      if (auth && parsedAction.type !== ActionType.LOG_OUT) {
+        sendCommand(parsedAction);
+      }
+      return dispatch(parsedAction);
     }
-    return dispatch(parsedAction);
+    catch (error) {
+      console.log(error)
+      return
+    }
   }
 }
 

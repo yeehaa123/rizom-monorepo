@@ -71,7 +71,7 @@ export enum AuthTokenType {
 
 export const authState = z.object({
   userName: z.string(),
-  provider: z.nativeEnum(AuthProvider),
+  authProvider: z.nativeEnum(AuthProvider),
   tokenType: z.nativeEnum(AuthTokenType),
   accessToken: z.string(),
   repository: z.string()
@@ -124,7 +124,7 @@ export const actionSchema = z.union([
   z.object({ type: z.literal(ActionType.HIDE_OVERLAY), payload: courseQuery }),
   z.object({ type: z.literal(ActionType.UNSELECT_CHECKPOINT), payload: courseQuery }),
   z.object({ type: z.literal(ActionType.LOG_OUT), payload: z.undefined() }),
-  z.object({ type: z.literal(ActionType.ADD_USER_DATA), payload: z.array(userRecord) })
+  z.object({ type: z.literal(ActionType.ADD_USER_DATA), payload: z.array(userRecord) }),
 ])
 
 export enum QueryType {
@@ -137,8 +137,8 @@ export const querySchema = z.union([
   z.object({ type: z.literal(QueryType.FETCH_USER_COURSES), payload: coursesQuery })
 ])
 
-export enum RESPONSE_TYPE {
-  AUTHENTICATED = "AUTHENTICATED",
+export enum ResponseType {
+  AUTHENTICATED = "AUTHENTICATED_EXISTING_USER",
   lOGGED_OUT = "LOGGED_OUT",
   FETCHED_USER_RECORDS = "FETCHED_USER_RECORDS",
   FETCHED_USER_COURSES = "FETCHED_USER_COURSES",
@@ -146,11 +146,11 @@ export enum RESPONSE_TYPE {
 }
 
 export const responseSchema = z.union([
-  z.object({ type: z.literal(RESPONSE_TYPE.AUTHENTICATED), payload: authState }),
-  z.object({ type: z.literal(RESPONSE_TYPE.lOGGED_OUT), payload: z.undefined() }),
-  z.object({ type: z.literal(RESPONSE_TYPE.FETCHED_USER_RECORDS), payload: z.array(userRecord) }),
-  z.object({ type: z.literal(RESPONSE_TYPE.FETCHED_USER_COURSES), payload: z.array(courseSchema) }),
-  z.object({ type: z.literal(RESPONSE_TYPE.NO_OP), payload: z.undefined() }),
+  z.object({ type: z.literal(ResponseType.AUTHENTICATED), payload: authState }),
+  z.object({ type: z.literal(ResponseType.lOGGED_OUT), payload: z.undefined() }),
+  z.object({ type: z.literal(ResponseType.FETCHED_USER_RECORDS), payload: z.array(userRecord) }),
+  z.object({ type: z.literal(ResponseType.FETCHED_USER_COURSES), payload: z.array(courseSchema) }),
+  z.object({ type: z.literal(ResponseType.NO_OP), payload: z.undefined() }),
 ])
 
 export type Response = z.infer<typeof responseSchema>

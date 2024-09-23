@@ -1,12 +1,10 @@
-# The Good Foot
-
 An ecosystems is a regenerative practice of continuous, decentralized alignment. The fact that it strives towards the most favorable conditions for most, however, inevitably also means that it will not work for all. This brings us to a crucial, and often overlooked, principle that we can learn from nature: the freedom to leave one habitat for another one. Healthy ecosystems facilitate the possibility to vote with your feet.
 
 In nature, organisms move or migrate in response to environmental conditions. This movement is often a direct reaction to factors like food availability, climate conditions, habitat quality, or predation pressure. For example, animals may move to new areas in search of better food sources or more suitable climates. Similarly, plants can also vote with their feet. They do it through seed dispersal, effectively moving to locations with more favorable growth conditions.
 
 Voting with your feet underscores the dynamic nature of ecosystems, where the distribution and abundance of species are constantly shifting in response to changing environmental factors. It also unveils the relativity of boundaries. Where does one habitat end and another begin? Is there a whole, and if so, does it really matter? Turns out that nature and foam have a lot in common. Which, after this lengthy detour, brings me back to the human ecosystems and the internet.
 
- > People vote with their feet.
+> People vote with their feet.
 
 — Milton Friedman
 
@@ -14,7 +12,7 @@ The desire for the freedom to switch habitats is a decisive argument against the
 
 The privilege to hop from bubble to bubble is not to be taken lightly. It is an necessary condition for creativity and innovation. Imagination demands the possibility of another habitat. Accessing other realms, even if it is just in the mind, is a necessary condition to dream, design, develop, and maintain new, better, or simply different ecosystems. This phenomenon is of all ages. As Walter Benjamin showed throughout his work, the history of utopianism and that of architecture are one and the same. Buildings, cities, and parks are yesterday's projection of how tomorrow's ecosystems should look like. And in the age of the internet, architecture far exceeds mere physical bricks and mortar.
 
- > Not architecture alone but all technology is, at certain stages, evidence of a collective dream.
+> Not architecture alone but all technology is, at certain stages, evidence of a collective dream.
 
 — Walter Benjamin
 
@@ -24,7 +22,7 @@ As mentioned earlier, letting go of that dream of globally shared values should 
 
 Balaji Srinivan's *The Network State* (2022) may be this new era paradigm first philosophical masterpiece. Its claim is deceivingly simple: the era of the nation state is nearing its end. In Srinivan's view, states no longer need to be defined by their claim on contiguous physical space. The internet has removed the necessity for that requirement:
 
- > What underpins the new dynamic of network states is the intrinsic lack of scarcity of digital territory, the return of unclaimed land and terra nullius, the reopened frontier.
+> What underpins the new dynamic of network states is the intrinsic lack of scarcity of digital territory, the return of unclaimed land and terra nullius, the reopened frontier.
 
 — Balaji Srinivasan
 
@@ -36,7 +34,7 @@ Of these three stages, the first one is most interesting for the current purpose
 
 In the case of a startup society, however, the proposition that needs to be developed is not commercial but ethical in nature. This is the most exciting difference between a nation and a network state. Rather than starting from temporal contingency and physical proximity, startup societies shape around shared values.
 
- > Every new startup society needs to have a moral premise at its core, one that its founding nation subscribes to, one that is supported by a digital history that a more powerful state can’t delete, one that justifies its existence as a righteous yet peaceful protest against the powers that be.
+> Every new startup society needs to have a moral premise at its core, one that its founding nation subscribes to, one that is supported by a digital history that a more powerful state can’t delete, one that justifies its existence as a righteous yet peaceful protest against the powers that be.
 
 — Balaji Srinivasan
 

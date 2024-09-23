@@ -20,14 +20,11 @@ const CMS_PATH = path.join("./CMS");
 
 export default defineConfig({
   site: 'https://offcourse.io',
-  experimental: {
-    contentLayer: true,
-    env: {
-      schema: {
-        GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
-        GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
-        GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
-      }
+  env: {
+    schema: {
+      GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
+      GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
+      GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }
   },
   markdown: {
@@ -50,7 +47,6 @@ export default defineConfig({
     react(), 
     sitemap()
   ],
-  output: "hybrid",
   server: { port: 8765},
   adapter: vercel({
     webAnalytics: {

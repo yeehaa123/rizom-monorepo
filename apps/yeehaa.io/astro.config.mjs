@@ -20,9 +20,6 @@ const CMS_PATH = path.join("./CMS");
 
 export default defineConfig({
   site: 'https://yeehaa.io',
-  experimental: {
-    contentLayer: true
-  },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
     rehypePlugins: [[classNames, {
@@ -44,7 +41,6 @@ export default defineConfig({
     react(), 
     sitemap()
   ],
-  output: "hybrid",
   adapter: vercel({
     webAnalytics: {
       enabled: true,

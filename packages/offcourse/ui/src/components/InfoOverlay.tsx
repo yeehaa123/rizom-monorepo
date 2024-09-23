@@ -25,7 +25,7 @@ export function InfoOverlay(
           <Logo className="w-24 h-24 mb-8 dark:fill-offwhite fill-offblack" />
         </div>
         {canAuthenticate &&
-          <Button onClick={userName ? signOut : signIn} variant="outline" className="w-full">
+          <Button onClick={userName ? signOut : () => signIn({ courseId })} variant="outline" className="w-full">
             {userName
               ? "Sign Out"
               : <><GitHubLogoIcon className="mr-2 h-4 w-4" />
