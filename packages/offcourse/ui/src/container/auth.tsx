@@ -44,7 +44,7 @@ export function getAuthData() {
 export function redirectToGitHub({ courseId }: CourseQuery) {
   const previewId = "Ov23liwToysyXGsLxgk2";
   // const localId = "Ov23li51nX1AYgHxF6bl";
-  const githubClientId = localId;
+  const githubClientId = previewId;
   const authProvider = AuthProvider.GITHUB;
   const { origin, pathname, search } = window.location;
   const redirect_uri = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth/${authProvider}/`;
