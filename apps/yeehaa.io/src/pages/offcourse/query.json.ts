@@ -11,7 +11,6 @@ export const OPTIONS: APIRoute = async () => {
       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
     }
   });
-
 }
 
 export const POST: APIRoute = async ({ request }) => {
