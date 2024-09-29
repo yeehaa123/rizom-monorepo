@@ -26,17 +26,18 @@ articles:
   - economy-of-garbage
   - foam-party
   - global-village-people
+  - learning-from-nature
   - practice-innovation
   - shenzhen-goes-ham
 tags:
-  - edu
-  - tech
-  - phd
   - eco
-  - future
+  - tech
+  - edu
+  - phd
   - web
-  - design
+  - future
   - system
+  - design
 profile:
   name: Jan Hein Hoogstad
   repository: https://yeehaa.io/offcourse
@@ -74,18 +75,20 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 4feb8d438a175577c9c28890014330d9
+checksum: 4a26971c440a7e7849f2d6167d64d592
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   academia and tech expertise. As an entrepreneur, he founded Offcourse and
   created the Superconnectors event format. Based in Taipei, yeehaa focuses on
   transforming education, knowledge sharing, and fostering inclusive internet
-  ecosystems. His work spans diverse topics like digital fragmentation,
-  decentralization, and innovation practices. yeehaa's blog posts and curated
-  courses reflect his interdisciplinary approach, exploring concepts from
-  philosophy, technology, and social systems to address global challenges and
-  reimagine future possibilities.
-blurb: "yeehaa: Ecosystem architect, philosopher, and tech innovator reimagining
-  education and digital landscapes. Blends academic insight with entrepreneurial
-  spirit to foster inclusive, decentralized systems and knowledge sharing."
-profileImageURL: ./4feb8d438a175577c9c28890014330d9-profile.png
+  ecosystems. His work explores concepts like decentralization, digital
+  fragmentation, and ecosystem architecture, drawing inspiration from diverse
+  fields including philosophy, technology, and nature. yeehaa's articles and
+  courses cover topics such as internet evolution, innovation practices, and
+  breaking down organizational silos, reflecting his commitment to creating
+  thriving, interconnected systems that benefit both people and the planet.
+blurb: "yeehaa: ecosystem architect, PhD philosopher, and tech entrepreneur.
+  Explores decentralization, digital landscapes, and innovation. Advocates for
+  inclusive internet and transformative education. Blends academic insight with
+  practical tech solutions for thriving ecosystems."
+profileImageURL: ./4a26971c440a7e7849f2d6167d64d592-profile.png
 title: Yeehaa

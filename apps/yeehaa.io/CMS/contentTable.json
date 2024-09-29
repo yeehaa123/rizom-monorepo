@@ -122,11 +122,17 @@
   {
     "id": "d63a54cc9f24ebf6c8ce8cf33e860ef4",
     "author": "yeehaa",
+    "order": 7,
     "title": "Learning From Nature",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "fc6414bcdf847c5b65356cbc4719ebd2"
+    "checksum": "b0c4457d03f8566701caac1b4c318eb5",
+    "publicationData": {
+      "createdAt": "2024-09-25T08:29:24.280Z",
+      "updatedAt": "2024-09-25T08:29:24.280Z",
+      "publishedAt": "2024-09-25T08:29:24.280Z"
+    }
   },
   {
     "id": "9ce5c6ab63030d9255e1d5076a53456e",

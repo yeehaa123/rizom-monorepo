@@ -9,11 +9,12 @@ export const server = {
       login: z.string(),
       accessToken: z.string(),
       tokenType: z.string(),
+      repository: z.string().optional(),
       authProvider: z.string(),
       state: z.string()
     }),
     handler: async (args) => {
-      return { ...args, repository: "https://yeehaa.io/offcourse" }
+      return { ...args, repository: args.repository || "https://offcourse-io-git-preview-offcourses-projects.vercel.app/offcourse" }
     }
   })
 }

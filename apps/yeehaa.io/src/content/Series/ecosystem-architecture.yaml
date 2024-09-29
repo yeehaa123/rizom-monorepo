@@ -1,26 +1,26 @@
-checksum: e84bf1858cb73df0609e5a14abe8937b
+checksum: a6a7a58cbf76205fbf7b60fd42ab046e
 summary: The 'Ecosystem Architecture' series explores the evolution of
   ecosystems from biology to digital realms. It discusses internet
-  fragmentation, decentralization, and innovative approaches like shanzhai. The
-  series examines concepts such as McLuhan's global village, Sloterdijk's foam
-  metaphor, and ecosystem architecture's potential to address global challenges.
-  It emphasizes embracing complexity, diversity, and sustainable practices in
-  our interconnected world, while considering the environmental impact of rapid
-  technological advancement.
+  fragmentation, decentralization, and waste in digital economies. The series
+  examines concepts like Sloterdijk's 'foam' metaphor and McLuhan's global
+  village in relation to modern digital landscapes. It advocates for embracing
+  complexity, diversity, and regenerative design principles in creating
+  sustainable, adaptive systems across various domains, drawing inspiration from
+  nature and innovative practices like Shenzhen's shanzhai ecosystem.
 excerpt: Ecosystem Architecture explores the evolution of ecosystems from
   biology to digital realms, examining internet fragmentation, decentralization,
-  and innovative approaches. It emphasizes embracing complexity and sustainable
-  practices in our interconnected world.
+  and regenerative design. It advocates for embracing complexity and diversity
+  in creating sustainable, adaptive systems across various domains.
 tags:
   - eco
-  - tech
+  - web
   - future
   - design
-  - web
   - system
+  - tech
   - global
-  - waste
-bannerImageURL: ./e84bf1858cb73df0609e5a14abe8937b-banner.png
+  - nature
+bannerImageURL: ./a6a7a58cbf76205fbf7b60fd42ab046e-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
@@ -29,4 +29,5 @@ articles:
   - foam-party
   - shenzhen-goes-ham
   - economy-of-garbage
+  - learning-from-nature
 title: Ecosystem Architecture

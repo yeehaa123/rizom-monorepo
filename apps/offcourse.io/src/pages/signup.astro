@@ -12,6 +12,7 @@ if(result && result.data) {
   const { state,...params} = result.data;
   const { origin, pathname, searchParams}  = new URL(state)
   const { courseId } = Object.fromEntries(searchParams.entries());
+  console.log(params);
   const newParams = new URLSearchParams({...params, courseId});
   return Astro.redirect(`${origin}${pathname}?${newParams}`);
 }
@@ -25,6 +26,7 @@ const title = "Offcourse - Sign Up";
 
     <form method="POST" action={actions.signup}>
       <label>User Name<input required name="userName" /></label>
+      <label>Repository URL<input name="repository" /></label>
       <input type="hidden" name="accessToken" value={access_token} />
       <input type="hidden" name="tokenType" value={token_type} />
       <input type="hidden" name="login" value={login} />
