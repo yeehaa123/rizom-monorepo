@@ -1,4 +1,5 @@
 import { defineAction } from 'astro:actions';
+import { db, AuthLookup, Curator } from 'astro:db';
 import { z } from 'astro:schema';
 
 export const server = {
@@ -9,12 +10,20 @@ export const server = {
       login: z.string(),
       accessToken: z.string(),
       tokenType: z.string(),
-      repository: z.string().optional(),
+      repository: z.string(),
       authProvider: z.string(),
       state: z.string()
     }),
-    handler: async (args) => {
-      return { ...args, repository: args.repository || "https://offcourse-io-git-preview-offcourses-projects.vercel.app/offcourse" }
+    handler: async ({ userName, login, authProvider, repository, ...args }) => {
+      await db.batch([
+        db.insert(Curator).values(
+          { userName, repository },
+        ),
+        db.insert(AuthLookup).values(
+          { userName, login, provider: authProvider },
+        )
+      ])
+      return { ...args, repository, userName, login, authProvider }
     }
   })
 }

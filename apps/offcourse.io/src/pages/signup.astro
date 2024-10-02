@@ -7,6 +7,7 @@ const urlSearchParams = Astro.url.searchParams
 const { access_token, token_type, login, authProvider, state } = Object.fromEntries(urlSearchParams.entries());
 
 const result = Astro.getActionResult(actions.signup);
+console.log(result);
 
 if(result && result.data) {
   const { state,...params} = result.data;
@@ -26,7 +27,7 @@ const title = "Offcourse - Sign Up";
 
     <form method="POST" action={actions.signup}>
       <label>User Name<input required name="userName" /></label>
-      <label>Repository URL<input name="repository" /></label>
+      <label>Repository URL<input required name="repository" /></label>
       <input type="hidden" name="accessToken" value={access_token} />
       <input type="hidden" name="tokenType" value={token_type} />
       <input type="hidden" name="login" value={login} />

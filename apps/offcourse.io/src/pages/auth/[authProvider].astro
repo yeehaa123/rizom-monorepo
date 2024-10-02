@@ -1,10 +1,13 @@
 --- 
+import { db, AuthLookup, Curator, and, eq} from 'astro:db';
 export const prerender = false;
 import { authState } from "@offcourse/schema"
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
-
 const { authProvider } = Astro.params;
 
+if(!authProvider) {
+  return Astro.redirect("/");
+}
 
 const urlSearchParams = Astro.url.searchParams
 const { state, code } = Object.fromEntries(urlSearchParams.entries());
@@ -17,9 +20,6 @@ const stateUrl = new URL(state)
 const { courseId } = Object.fromEntries(stateUrl.searchParams.entries());
 console.log(courseId);
 
-if(!authProvider) {
-  return Astro.redirect("/");
-}
 
 const auth_response = await fetch("https://github.com/login/oauth/access_token", {
   method: "POST",
@@ -64,10 +64,22 @@ const newParams = new URLSearchParams(authData);
 console.log(newParams);
 return Astro.redirect(`${stateUrl.origin}${stateUrl.pathname}?${newParams}`);
 
-async function getUser({ login }: { authProvider: string, login: string }) {
-  const lookup = [
-    { githubLogin: "yeehaa12345", userName: "yeehaa", repository: "https://yeehaa.io/offcourse" }]
-  const userData =  lookup.find(({githubLogin}) => githubLogin === login);
-  return userData || { userName: login, repository: undefined }
+async function getUser({ login, authProvider}: { authProvider: string, login: string }) {
+  const authEntries= await db.select({
+    userName: AuthLookup.userName,
+    repository: Curator.repository
+  }).
+    from(AuthLookup)
+    .where(
+      and(
+        eq(AuthLookup.login, login),
+        eq(AuthLookup.provider, authProvider)
+      )
+    )
+    .leftJoin(
+      Curator, eq(AuthLookup.userName, Curator.userName)
+    );
+  console.log("Registered User", authEntries);
+  return authEntries[0] || { userName: login, repository: undefined }
 }
 ---
