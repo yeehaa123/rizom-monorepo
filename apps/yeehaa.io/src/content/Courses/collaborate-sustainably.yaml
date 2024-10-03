@@ -1,0 +1,130 @@
+courseId: bf10f7e225d033e9154f9b41038cf622
+goal: Collaborate Sustainably
+curator:
+  name: Jan Hein Hoogstad
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: To collaborate sustainably, one must master active listening, align
+  interests among team members, facilitate emergent ideas, effectively resolve
+  conflicts, and celebrate diversity. These skills foster open communication,
+  shared goals, innovation, harmony, and inclusivity, creating a resilient and
+  productive collaborative environment that can thrive long-term.
+habitat: learning-from-nature
+createdAt: 2024-10-03T04:25:10.437Z
+updatedAt: 2024-10-03T04:25:10.437Z
+publishedAt: 2024-10-03T04:25:10.437Z
+tags:
+  - listen
+  - focus
+  - empathy
+  - trust
+  - align
+  - goals
+  - team
+  - emerge
+  - dialog
+  - adapt
+  - resolve
+  - diverse
+  - include
+checkpoints:
+  - task: Listen Actively
+    href: https://www.verywellmind.com/what-is-active-listening-3024343
+    checkpointId: b645a1f8522abf2fb97cceda60351b11
+    description: Active listening enhances collaboration by fostering understanding,
+      empathy, and trust. It involves fully focusing on the speaker, providing
+      feedback, and withholding judgment. This skill improves communication,
+      reduces misunderstandings, and creates a supportive environment where team
+      members feel valued and heard, leading to more effective and sustainable
+      collaboration.
+    tags:
+      - listen
+      - focus
+      - empathy
+      - trust
+  - task: Align Interests
+    href: https://hbr.org/2009/08/how-to-align-employee-and-comp
+    checkpointId: cc6768ab36a2abb32aac708f070a5684
+    description: The article discusses aligning employee and company interests for
+      sustainable collaboration. It emphasizes creating a shared vision, setting
+      clear goals, and implementing performance-based incentives. This approach
+      fosters a culture of mutual benefit, encouraging employees to contribute
+      to the company's success while achieving personal growth and satisfaction.
+    tags:
+      - align
+      - goals
+      - team
+  - task: Facilitate for Emergence
+    href: https://www.floxstudio.com/blog/facilitating-for-emergence
+    checkpointId: 48df3fbea7b2e0ddfd3c8e2b358940ba
+    description: The article explores facilitating emergence in collaborative
+      settings, emphasizing creating conditions for innovative ideas to arise
+      organically. It discusses the importance of embracing uncertainty,
+      fostering open dialogue, and allowing space for unexpected outcomes. This
+      approach supports sustainable collaboration by encouraging adaptability
+      and collective intelligence in problem-solving.
+    tags:
+      - emerge
+      - dialog
+      - adapt
+  - task: Resolve Conflicts
+    href: https://online.hbs.edu/blog/post/strategies-for-conflict-resolution-in-the-workplace
+    checkpointId: 611fc8e19be47c9c84979b11140103a4
+    description: The article outlines strategies for workplace conflict resolution,
+      promoting sustainable collaboration. It covers active listening, finding
+      common ground, and focusing on shared goals. These techniques help teams
+      overcome disagreements, fostering a positive work environment and
+      enhancing productivity. By addressing conflicts effectively, organizations
+      can maintain long-term partnerships and achieve collective objectives.
+    tags:
+      - resolve
+      - team
+      - listen
+      - goals
+  - task: Celebrate Diversity
+    href: https://onlinelibrary.wiley.com/doi/full/10.1002/fhu2.4
+    checkpointId: f83cf714ca4d0a9620dbf7f909d435d1
+    description: This article explores how diversity in teams enhances innovation
+      and problem-solving. It highlights the importance of inclusive leadership
+      and creating an environment where diverse perspectives are valued. By
+      celebrating diversity, organizations can foster collaboration, creativity,
+      and sustainable growth, aligning with the goal of collaborating
+      sustainably.
+    tags:
+      - diverse
+      - team
+      - include
+series: Ecosystem Architecture

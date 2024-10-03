@@ -22,6 +22,7 @@ tags:
   - biomimicry
   - permaculture
   - sustainability
+course: collaborate-sustainably
 ---
 When perceived through the lens of abundance, decentralized ecosystems have the potential to be more vibrant and resilient than any centralized community or organization can ever be. By giving communities more control over their resources and decision-making processes, they become increasingly empowered to collaboratively create healthier ecosystems. It is exactly in this north star vision where the practices of decentralization and regeneration meet.
 

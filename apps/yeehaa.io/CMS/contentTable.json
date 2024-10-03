@@ -45,6 +45,21 @@
     "habitat": "Foam Party"
   },
   {
+    "id": "bf10f7e225d033e9154f9b41038cf622",
+    "author": "yeehaa",
+    "title": "Collaborate Sustainably",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "1e7b221ddde4819c79a70765209d74f6",
+    "publicationData": {
+      "createdAt": "2024-10-03T04:25:10.437Z",
+      "updatedAt": "2024-10-03T04:25:10.437Z",
+      "publishedAt": "2024-10-03T04:25:10.437Z"
+    },
+    "habitat": "Learning From Nature"
+  },
+  {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
     "author": "yeehaa",
     "order": 6,
