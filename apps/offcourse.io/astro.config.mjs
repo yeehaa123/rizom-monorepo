@@ -22,12 +22,14 @@ const CMS_PATH = path.join("./CMS");
 
 export default defineConfig({
   site: 'https://offcourse.io',
+  experimental: {
   env: {
     schema: {
       GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
       GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }
+  },
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
@@ -44,6 +46,7 @@ export default defineConfig({
     applyBaseStyles: false
   }), mdx(), react(), sitemap(), db()],
   server: { port: 8765},
+  output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
