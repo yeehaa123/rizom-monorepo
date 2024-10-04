@@ -1,0 +1,34 @@
+---
+export const prerender = false;
+import { Offcourse } from "@offcourse/ui"
+import { QueryType } from "@offcourse/schema";
+import { BaseHead, OGType} from "@/components/BaseHead";
+import Layout from "@/layouts/Page.astro"
+const description = "COURSES";
+const repository = `${Astro.url.origin}/offcourse`;
+console.log(repository);
+
+const action = {type: QueryType.FETCH_USER_COURSES, payload: {courseIds: []} };
+
+const response = await fetch(`${repository}/query.json`, { 
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(action)
+});
+
+const { payload } = await response.json();
+const title = "Offcourse";
+---
+<Layout {title}>
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.WEBSITE} 
+    {title} 
+    {description} 
+    url={Astro.url} />
+  <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
+    <Offcourse data={payload} client:load/>
+  </div>
+</Layout>

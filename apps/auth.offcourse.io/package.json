@@ -1,0 +1,19 @@
+{
+  "name": "@rizom/auth.offcourse.io",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "build": "astro build --remote",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@offcourse/schema": "workspace:*",
+    "@offcourse/ui": "workspace:*"
+  },
+  "devDependencies": {
+  }
+}

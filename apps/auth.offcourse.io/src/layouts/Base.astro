@@ -1,0 +1,19 @@
+---
+import '@/styles/globals.css'
+import { getEntry } from "astro:content";
+
+interface Props  {
+  logoLink?: string;
+  title: string
+}
+
+
+const profile = await getEntry("Profiles", "offcourse");
+---
+
+<html lang="en" transition:animate="none">
+  <slot/>
+    <footer class="flex justify-between overflow-hidden dark:text-white py-8 md:py-12 px-5 mx-auto w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 print:hidden">
+    </footer>
+</html>
+
