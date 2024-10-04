@@ -13,8 +13,6 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import * as path from 'path';
 
-import db from '@astrojs/db';
-
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './offcourse';
 const CONTENT_CONFIG = "./contentConfig.ts.template"
@@ -22,12 +20,14 @@ const CMS_PATH = path.join("./CMS");
 
 export default defineConfig({
   site: 'https://offcourse.io',
+  experimental: {
   env: {
     schema: {
       GITHUB_CLIENT_ID: envField.string({ context: "client", access: "public" }),
       GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }
+  },
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
@@ -42,8 +42,9 @@ export default defineConfig({
     content_config: CONTENT_CONFIG
   }), tailwind({
     applyBaseStyles: false
-  }), mdx(), react(), sitemap(), db()],
+  }), mdx(), react(), sitemap()],
   server: { port: 8765},
+  output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
