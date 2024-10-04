@@ -1,6 +1,4 @@
 import { defineConfig, envField} from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
 import * as path from 'path';
 
@@ -14,13 +12,9 @@ export default defineConfig({
     }
   },
   },
-  integrations: [
-    tailwind({
-    applyBaseStyles: false
-  }), react()
-  ],
+  integrations: [],
   server: { port: 6543},
-  output: 'hybrid',
+  output: 'server',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
