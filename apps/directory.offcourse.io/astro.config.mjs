@@ -4,13 +4,11 @@ import * as path from 'path';
 
 export default defineConfig({
   site: 'https://auth.offcourse.io',
-  experimental: {
-  env: {
+  env: { 
     schema: {
       GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }
-  },
   },
   integrations: [],
   server: { port: 6543},
