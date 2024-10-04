@@ -12,18 +12,6 @@ importers:
         specifier: latest
         version: 2.0.14
 
-  apps/directory.offcourse.io:
-    dependencies:
-      '@astrojs/vercel':
-        specifier: 8.0.0-beta.2
-        version: 8.0.0-beta.2(astro@5.0.0-beta.3)
-      '@offcourse/schema':
-        specifier: workspace:*
-        version: link:../../packages/offcourse/schema
-      astro:
-        specifier: 5.0.0-beta.3
-        version: 5.0.0-beta.3(typescript@5.6.2)
-
   apps/offcourse.io:
     dependencies:
       '@ai-sdk/anthropic':
@@ -267,6 +255,18 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.5.4
+
+  apps/registry.offcourse.io:
+    dependencies:
+      '@astrojs/vercel':
+        specifier: 8.0.0-beta.2
+        version: 8.0.0-beta.2(astro@5.0.0-beta.3)
+      '@offcourse/schema':
+        specifier: workspace:*
+        version: link:../../packages/offcourse/schema
+      astro:
+        specifier: 5.0.0-beta.3
+        version: 5.0.0-beta.3(typescript@5.6.2)
 
   apps/yeehaa.io:
     dependencies:
