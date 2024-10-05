@@ -4,7 +4,8 @@ import type { APIRoute } from 'astro';
 
 export const OPTIONS: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
-  console.log("ORIGIN", origin);
+  const auth = request.headers.get("Authorization");
+  console.log("auth", auth);
   if (origin) {
     return new Response("ok", {
       headers: {
