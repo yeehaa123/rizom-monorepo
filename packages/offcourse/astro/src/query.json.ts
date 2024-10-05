@@ -4,15 +4,13 @@ import type { APIRoute } from 'astro';
 
 export const OPTIONS: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
-  const auth = request.headers.get("Authorization");
-  console.log("auth", auth);
   if (origin) {
     return new Response("ok", {
       headers: {
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Credentials": "true",
         'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept Authorization'
       }
     });
   }
@@ -22,7 +20,6 @@ export const OPTIONS: APIRoute = async ({ request }) => {
 
 export const POST: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
-  console.log("ORIGIN", origin);
   if (origin && request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
     const data = await handleQuery(body);
@@ -33,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Credentials": "true",
         'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept Authorization'
       },
       status: 200
     })
