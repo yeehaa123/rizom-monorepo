@@ -41,13 +41,15 @@ export async function sendCommand(action: Action) {
   if (!authData) {
     throw (`${action.type} UNAUTHORIZED USE`)
   }
-  const { repository } = authData;
+  const { accessToken, tokenType, repository } = authData;
   const url = `${repository}/command.json`;
   try {
     const response = await fetch(url, {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
+        Authorization: ` ${tokenType} ${accessToken}`,
       },
       body: JSON.stringify(action)
     });
@@ -64,7 +66,7 @@ export async function query(query: Query) {
   if (!authData) {
     throw ("UNAUTHORIZED USE")
   }
-  const { repository } = authData;
+  const { accessToken, tokenType, repository } = authData;
   const url = `${repository}/query.json`;
   try {
     const response = await fetch(url, {
@@ -72,6 +74,7 @@ export async function query(query: Query) {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": ` ${tokenType} ${accessToken}`,
       },
       body: JSON.stringify(query)
     });
