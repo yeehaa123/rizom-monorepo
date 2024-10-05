@@ -13,6 +13,8 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import * as path from 'path';
 
+import offcourse from "@offcourse/astro"
+
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './offcourse';
 const CONTENT_CONFIG = "./contentConfig.ts.template"
@@ -40,7 +42,7 @@ export default defineConfig({
     content_config: CONTENT_CONFIG
   }), tailwind({
     applyBaseStyles: false
-  }), mdx(), react(), sitemap()],
+  }), offcourse(), mdx(), react(), sitemap()],
   server: { port: 8765},
   output: 'hybrid',
   adapter: vercel({

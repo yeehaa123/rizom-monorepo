@@ -1,7 +1,6 @@
 export const prerender = false;
-
-import { handleQuery } from '@offcourse/db/query';
 import type { APIRoute } from 'astro';
+import { handleCommand } from '@offcourse/db/command';
 
 export const OPTIONS: APIRoute = async () => {
   return new Response("ok", {
@@ -13,12 +12,11 @@ export const OPTIONS: APIRoute = async () => {
   });
 }
 
-
 export const POST: APIRoute = async ({ request }) => {
 
   if (request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
-    const data = await handleQuery(body);
+    const data = await handleCommand(body);
     return new Response(JSON.stringify(
       data
     ), {
@@ -31,4 +29,8 @@ export const POST: APIRoute = async ({ request }) => {
     })
   }
   return new Response(null, { status: 400 });
+}
+
+export const GET: APIRoute = async () => {
+  return new Response("HELLO", { status: 200 });
 }

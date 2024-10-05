@@ -53,6 +53,9 @@ importers:
       '@markdoc/markdoc':
         specifier: ^0.4.0
         version: 0.4.0(@types/react@18.3.11)(react@18.3.1)
+      '@offcourse/astro':
+        specifier: workspace:*
+        version: link:../../packages/offcourse/astro
       '@offcourse/db':
         specifier: workspace:*
         version: link:../../packages/offcourse/db
@@ -325,6 +328,9 @@ importers:
       '@markdoc/markdoc':
         specifier: ^0.4.0
         version: 0.4.0(@types/react@18.3.11)(react@18.3.1)
+      '@offcourse/astro':
+        specifier: workspace:*
+        version: link:../../packages/offcourse/astro
       '@offcourse/db':
         specifier: workspace:*
         version: link:../../packages/offcourse/db
@@ -584,6 +590,24 @@ importers:
       zod:
         specifier: ^3.23.8
         version: 3.23.8
+
+  packages/offcourse/astro:
+    devDependencies:
+      '@offcourse/db':
+        specifier: workspace:*
+        version: link:../db
+      '@rizom/typescript-config':
+        specifier: workspace:*
+        version: link:../../typescript-config
+      '@types/node':
+        specifier: ^20.14.2
+        version: 20.16.10
+      astro:
+        specifier: 4.15.11
+        version: 4.15.11(@types/node@20.16.10)(typescript@5.6.2)
+      typescript:
+        specifier: latest
+        version: 5.6.2
 
   packages/offcourse/db:
     dependencies:

@@ -1,0 +1,21 @@
+{
+  "name": "@offcourse/astro",
+  "version": "0.0.1",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./query.json.ts": "./src/query.json.ts",
+    "./command.json.ts": "./src/command.json.ts"
+  },
+  "devDependencies": {
+    "astro": "4.15.11",
+    "@rizom/typescript-config": "workspace:*",
+    "@offcourse/db": "workspace:*",
+    "@types/node": "^20.14.2",
+    "typescript": "latest"
+  }
+}

@@ -12,6 +12,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import * as path from 'path';
+import offcourse from "@offcourse/astro"
 
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './yeehaa';
@@ -37,6 +38,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false
     }), 
+    offcourse(),
     mdx(), 
     react(), 
     sitemap()
