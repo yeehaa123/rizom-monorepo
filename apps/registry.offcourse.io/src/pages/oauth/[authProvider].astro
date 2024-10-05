@@ -1,24 +1,26 @@
 --- 
 export const prerender = false;
 import { authState } from "@offcourse/schema"
-import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from "astro:env/server"
+import { db } from "../../db"
+import { eq, and } from 'drizzle-orm';
+import { curator, auth } from "../../schema";
+import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID, PLATFORM_URL } from "astro:env/server"
+
 const { authProvider } = Astro.params;
 
-if(!authProvider) {
+if (!authProvider) {
   return Astro.redirect("/");
 }
 
 const urlSearchParams = Astro.url.searchParams
 const { state, code } = Object.fromEntries(urlSearchParams.entries());
 
-if(!state || !code) {
-  return Astro.redirect("/");
+if (!state || !code) {
+  return Astro.redirect(`${PLATFORM_URL}/`);
 }
 
 const stateUrl = new URL(state)
 const { courseId } = Object.fromEntries(stateUrl.searchParams.entries());
-console.log(courseId);
-
 
 const auth_response = await fetch("https://github.com/login/oauth/access_token", {
   method: "POST",
@@ -45,10 +47,11 @@ const user_response = await fetch("https://api.github.com/user", {
 const { login } = await user_response.json();
 const { userName, repository } = await getUser({ authProvider, login });
 
-if(!repository) {
-  const authData = { authProvider, token_type, access_token, login , state, courseId } 
+if (!repository) {
+  const authData = { authProvider, token_type, access_token, login, state, courseId }
   const newParams = new URLSearchParams(authData);
-  return Astro.redirect(`/signup/?${newParams}`);
+  const redirectURL = `${PLATFORM_URL}/signup/?${newParams}`
+  return Astro.redirect(redirectURL);
 }
 
 const authData = authState.parse({
@@ -60,26 +63,24 @@ const authData = authState.parse({
 })
 
 const newParams = new URLSearchParams(authData);
-console.log(newParams);
 return Astro.redirect(`${stateUrl.origin}${stateUrl.pathname}?${newParams}`);
 
-async function getUser({ login, authProvider}: { authProvider: string, login: string }) {
-  // const authEntries= await db.select({
-  //   userName: AuthLookup.userName,
-  //   repository: Curator.repository
-  // }).
-  //   from(AuthLookup)
-  //   .where(
-  //     and(
-  //       eq(AuthLookup.login, login),
-  //       eq(AuthLookup.provider, authProvider)
-  //     )
-  //   )
-  //   .leftJoin(
-  //     Curator, eq(AuthLookup.userName, Curator.userName)
-  //   );
-  // console.log("Registered User", authEntries);
-  // return authEntries[0] || { userName: login, repository: undefined }
-  return { userName: login, repository: undefined }
+async function getUser({ login, authProvider }: { authProvider: string, login: string }) {
+  const authEntries= await db.select({
+    userName: auth.userName,
+    repository: curator.repository
+  }).
+    from(auth)
+    .where(
+      and(
+        eq(auth.login, login),
+        eq(auth.provider, authProvider)
+      )
+    )
+    .leftJoin(
+      curator, eq(auth.userName, curator.userName)
+    );
+  console.log("Registered User", authEntries);
+  return authEntries[0] || { userName: login, repository: undefined }
 }
 ---

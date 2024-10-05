@@ -6,6 +6,7 @@ export default defineConfig({
   site: 'https://auth.offcourse.io',
   env: { 
     schema: {
+      PLATFORM_URL: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }

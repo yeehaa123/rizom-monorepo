@@ -1,1 +1,0 @@
-ALTER TABLE `note` ADD `note` text;

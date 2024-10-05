@@ -1,1 +1,0 @@
-DROP INDEX IF EXISTS `completed_course_id_unique`;

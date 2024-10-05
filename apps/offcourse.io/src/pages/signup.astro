@@ -7,15 +7,14 @@ const urlSearchParams = Astro.url.searchParams
 const { access_token, token_type, login, authProvider, state } = Object.fromEntries(urlSearchParams.entries());
 
 const result = Astro.getActionResult(actions.signup);
-console.log(result);
 
 if(result && result.data) {
-  const { state,...params} = result.data;
+  const { state, ...params} = result.data;
   const { origin, pathname, searchParams}  = new URL(state)
   const { courseId } = Object.fromEntries(searchParams.entries());
-  console.log(params);
   const newParams = new URLSearchParams({...params, courseId});
-  return Astro.redirect(`${origin}${pathname}?${newParams}`);
+  const redirectURL = `${origin}${pathname}?${newParams}`;
+  return Astro.redirect(redirectURL);
 }
 
 const title = "Offcourse - Sign Up";

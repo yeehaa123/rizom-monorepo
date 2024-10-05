@@ -12,7 +12,13 @@
   },
   "dependencies": {
     "@astrojs/vercel": "8.0.0-beta.2",
+    "@libsql/client": "^0.7.0",
     "@offcourse/schema": "workspace:*",
-    "astro": "5.0.0-beta.3"
+    "astro": "5.0.0-beta.3",
+    "drizzle-orm": "^0.32.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.23.0"
   }
 }

@@ -14,7 +14,7 @@ export async function setAuthData() {
   const { origin, search, pathname } = window.location;
   const urlSearchParams = new URLSearchParams(search);
   const params = Object.fromEntries(urlSearchParams.entries());
-  console.log(params);
+  console.log("SET AUTH", params);
   try {
     const parsedAuthState = authState.parse(params);
     sessionStorage.setItem("auth", JSON.stringify(parsedAuthState));
@@ -42,13 +42,10 @@ export function getAuthData() {
 }
 
 export function redirectToGitHub({ courseId }: CourseQuery) {
-  const previewId = "Ov23liwToysyXGsLxgk2";
-  // const localId = "Ov23li51nX1AYgHxF6bl";
-  const githubClientId = previewId;
+  const githubClientId = "Ov23liIHmaO6XFSYga34";
   const authProvider = AuthProvider.GITHUB;
   const { origin, pathname, search } = window.location;
-  const redirect_uri = `https://offcourse-io-git-preview-offcourses-projects.vercel.app/auth/${authProvider}/`;
-  // const redirect_uri = `http://localhost:8765/auth/${authProvider}/`;
+  const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
   const searchParams = new URLSearchParams(search);
   searchParams.delete("code");
   searchParams.append("courseId", courseId);

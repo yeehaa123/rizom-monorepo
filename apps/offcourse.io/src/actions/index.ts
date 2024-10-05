@@ -1,5 +1,6 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
+import { AUTH_URL } from "astro:env/server"
 
 export const server = {
   signup: defineAction({
@@ -13,8 +14,18 @@ export const server = {
       authProvider: z.string(),
       state: z.string()
     }),
-    handler: async ({ userName, login, authProvider, repository, ...args }) => {
-      return { ...args, repository, userName, login, authProvider }
+    handler: async ({ state, ...args }) => {
+      const auth_response = await fetch(`${AUTH_URL}/register.json`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "Accept-Encoding": "application/json",
+        },
+        body: JSON.stringify(args)
+      });
+      const data = await auth_response.json()
+      return { ...data, state }
     }
   })
 }
