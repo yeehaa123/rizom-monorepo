@@ -19,6 +19,14 @@ const INPUT_BASE = './yeehaa';
 const CONTENT_CONFIG = "./contentConfig.ts.template"
 const CMS_PATH = path.join("./CMS");
 
+const cmsConfig = {
+  input_base: INPUT_BASE, 
+  output_base: OUTPUT_BASE, 
+  cms_path: CMS_PATH,
+  content_config: CONTENT_CONFIG,
+  offcourse_base_path: "offcourse"
+} ;
+
 export default defineConfig({
   site: 'https://yeehaa.io',
   markdown: {
@@ -28,13 +36,7 @@ export default defineConfig({
     }], slug, section]
   },
   integrations: [
-    addCMS({
-      input_base: INPUT_BASE, 
-      output_base: OUTPUT_BASE, 
-      cms_path: CMS_PATH,
-      content_config: CONTENT_CONFIG,
-      offcourse_base_path: "offcourse"
-    }), 
+    addCMS(cmsConfig), 
     tailwind({
       applyBaseStyles: false
     }), 

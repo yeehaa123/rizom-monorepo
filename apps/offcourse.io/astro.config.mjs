@@ -20,14 +20,19 @@ const INPUT_BASE = './offcourse';
 const CONTENT_CONFIG = "./contentConfig.ts.template"
 const CMS_PATH = path.join("./CMS");
 
+const cmsConfig = {
+  input_base: INPUT_BASE, 
+  output_base: OUTPUT_BASE, 
+  cms_path: CMS_PATH,
+  content_config: CONTENT_CONFIG
+};
+
 export default defineConfig({
   site: 'https://offcourse.io',
-  experimental: {
   env: {
     schema: {
       AUTH_URL: envField.string({ context: "server", access: "secret" }),
     }
-  },
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
@@ -35,16 +40,10 @@ export default defineConfig({
       'h1 + p': 'lead'
     }], slug, section]
   },
-  integrations: [addCMS({
-    input_base: INPUT_BASE, 
-    output_base: OUTPUT_BASE, 
-    cms_path: CMS_PATH,
-    content_config: CONTENT_CONFIG
-  }), tailwind({
+  integrations: [addCMS(cmsConfig), tailwind({
     applyBaseStyles: false
   }), offcourse(), mdx(), react(), sitemap()],
   server: { port: 8765},
-  output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
