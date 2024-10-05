@@ -4,7 +4,6 @@ import type { APIRoute } from 'astro';
 
 export const OPTIONS: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
-  console.log(origin);
   if (origin) {
     return new Response("ok", {
       headers: {
@@ -21,9 +20,10 @@ export const OPTIONS: APIRoute = async ({ request }) => {
 
 export const POST: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
-  console.log(origin);
   if (origin && request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
+    const authToken = request.headers.get("Authorization");
+    console.log(authToken);
     const data = await handleQuery(body);
     return new Response(JSON.stringify(
       data
