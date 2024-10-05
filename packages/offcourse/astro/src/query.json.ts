@@ -17,13 +17,11 @@ export const OPTIONS: APIRoute = async ({ request }) => {
   return new Response(null, { status: 400 });
 }
 
-
 export const POST: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
   if (origin && request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
-    const authToken = request.headers.get("Authorization");
-    console.log(authToken);
+    //const authToken = request.headers.get("Authorization");
     const data = await handleQuery(body);
     return new Response(JSON.stringify(
       data
