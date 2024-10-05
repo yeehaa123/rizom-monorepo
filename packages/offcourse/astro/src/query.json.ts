@@ -10,7 +10,7 @@ export const OPTIONS: APIRoute = async ({ request }) => {
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Credentials": "true",
         'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept Authorization'
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
       }
     });
   }
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Credentials": "true",
         'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept Authorization'
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
       },
       status: 200
     })
