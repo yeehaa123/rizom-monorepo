@@ -15,10 +15,12 @@
     "@libsql/client": "^0.7.0",
     "@offcourse/schema": "workspace:*",
     "astro": "5.0.0-beta.3",
-    "drizzle-orm": "^0.32.0"
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5",
+    "@types/jsonwebtoken": "^9.0.7",
     "drizzle-kit": "^0.23.0"
   }
 }

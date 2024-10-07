@@ -15,11 +15,10 @@ export const server = {
       authProvider: z.string(),
       state: z.string()
     }),
-    handler: async ({ state, publicKey: rawKey, ...args }) => {
+    handler: async ({ state, publicKey :rawKey, ...args }) => {
       console.log(AUTH_URL);
       const publicKey = rawKey.replace(/\r\n|\r|\n/g, '\\n');
       const payload = { ...args, publicKey }
-      console.log(payload);
       const auth_response = await fetch(`${AUTH_URL}/register.json`, {
         method: "POST",
         headers: {
@@ -27,7 +26,7 @@ export const server = {
           "Accept": "application/json",
           "Accept-Encoding": "application/json",
         },
-        body: JSON.stringify({ ...args, publicKey })
+        body: JSON.stringify(payload)
       });
       const data = await auth_response.json()
       return { ...data, state }

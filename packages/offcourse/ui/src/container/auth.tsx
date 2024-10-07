@@ -1,4 +1,13 @@
-import { AuthState, AuthProvider, authState, ResponseType, responseSchema, CourseQuery } from "@offcourse/schema"
+import type { 
+  AuthState, 
+  CourseQuery 
+} from "@offcourse/schema"
+import { 
+  AuthProvider, 
+  ResponseType, 
+  responseSchema, 
+  authState, 
+} from "@offcourse/schema"
 
 export async function authenticate() {
   const authData = getAuthData() || await setAuthData();

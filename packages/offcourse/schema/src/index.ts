@@ -71,9 +71,7 @@ export enum AuthTokenType {
 
 export const authState = z.object({
   userName: z.string(),
-  authProvider: z.nativeEnum(AuthProvider),
-  tokenType: z.nativeEnum(AuthTokenType),
-  accessToken: z.string(),
+  authToken: z.string(),
   repository: z.string()
 })
 
