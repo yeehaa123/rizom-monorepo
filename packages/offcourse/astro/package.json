@@ -9,7 +9,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./query.json.ts": "./src/query.json.ts",
-    "./command.json.ts": "./src/command.json.ts"
+    "./command.json.ts": "./src/command.json.ts",
+    "./handshake.json.ts": "./src/handshake.json.ts"
   },
   "devDependencies": {
     "astro": "4.15.11",

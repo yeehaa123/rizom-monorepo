@@ -229,11 +229,17 @@
   {
     "id": "5d5cf92471f667e9be0a1bb31cc1097e",
     "author": "yeehaa",
+    "order": 8,
     "title": "The Good Foot",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "291773fedc5642768f79d660f16734cb"
+    "checksum": "0630955d04084fed43282d489ad2c330",
+    "publicationData": {
+      "createdAt": "2024-10-07T09:08:32.079Z",
+      "updatedAt": "2024-10-07T09:08:32.079Z",
+      "publishedAt": "2024-10-07T09:08:32.079Z"
+    }
   },
   {
     "id": "9efad3dd56e85b64973872a48acd777b",

@@ -13,6 +13,10 @@ export default function offcourse(): AstroIntegration {
           pattern: '/offcourse/command.json',
           entrypoint: '@offcourse/astro/command.json.ts'
         });
+        injectRoute({
+          pattern: '/offcourse/handshake.json',
+          entrypoint: '@offcourse/astro/handshake.json.ts'
+        });
       }
     }
   }

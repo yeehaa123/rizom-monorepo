@@ -8,6 +8,7 @@ export default defineConfig({
     schema: {
       PLATFORM_URL: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_ID: envField.string({ context: "server", access: "secret" }),
+      HASH_KEY: envField.string({ context: "server", access: "secret" }),
       GITHUB_CLIENT_SECRET: envField.string({ context: "server", access: "secret" }),
     }
   },

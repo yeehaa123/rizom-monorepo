@@ -1,26 +1,27 @@
-checksum: a6a7a58cbf76205fbf7b60fd42ab046e
+checksum: 32dececbdfb3a9246f26028fabf1b16d
 summary: The 'Ecosystem Architecture' series explores the evolution of
-  ecosystems from biology to digital realms. It discusses internet
-  fragmentation, decentralization, and waste in digital economies. The series
-  examines concepts like Sloterdijk's 'foam' metaphor and McLuhan's global
-  village in relation to modern digital landscapes. It advocates for embracing
-  complexity, diversity, and regenerative design principles in creating
-  sustainable, adaptive systems across various domains, drawing inspiration from
-  nature and innovative practices like Shenzhen's shanzhai ecosystem.
+  ecosystems from biological concepts to digital landscapes. It discusses
+  decentralization, fragmentation, and regenerative design principles. The
+  series examines how these ideas apply to internet culture, innovation, and
+  societal structures. It emphasizes embracing complexity, fostering
+  sustainability, and rethinking traditional notions of scarcity and
+  universality. The articles draw from diverse fields, including philosophy,
+  technology, and nature, to propose new approaches for creating resilient,
+  adaptive systems in our interconnected world.
 excerpt: Ecosystem Architecture explores the evolution of ecosystems from
-  biology to digital realms, examining internet fragmentation, decentralization,
-  and regenerative design. It advocates for embracing complexity and diversity
-  in creating sustainable, adaptive systems across various domains.
+  biology to digital realms, examining decentralization, fragmentation, and
+  regenerative design. It proposes new approaches for creating resilient,
+  adaptive systems in our interconnected world.
 tags:
   - eco
-  - web
-  - future
-  - design
-  - system
   - tech
-  - global
+  - design
+  - future
+  - system
+  - web
   - nature
-bannerImageURL: ./a6a7a58cbf76205fbf7b60fd42ab046e-banner.png
+  - global
+bannerImageURL: ./32dececbdfb3a9246f26028fabf1b16d-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
@@ -30,4 +31,5 @@ articles:
   - shenzhen-goes-ham
   - economy-of-garbage
   - learning-from-nature
+  - the-good-foot
 title: Ecosystem Architecture

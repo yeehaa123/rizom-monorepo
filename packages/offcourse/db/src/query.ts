@@ -21,5 +21,8 @@ export async function handleQuery(body: string) {
         payload: courses
       }
     }
+    default: {
+      console.log(query);
+    }
   }
 }

@@ -1,8 +1,12 @@
 ---
 export const prerender = false;
 import { actions } from 'astro:actions';
-
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
 import Layout from "@/layouts/Page.astro"
+
 const urlSearchParams = Astro.url.searchParams
 const { access_token, token_type, login, authProvider, state } = Object.fromEntries(urlSearchParams.entries());
 
@@ -25,14 +29,26 @@ const title = "Offcourse - Sign Up";
     <h1>Sign Up</h1>
 
     <form method="POST" action={actions.signup}>
-      <label>User Name<input required name="userName" /></label>
-      <label>Repository URL<input required name="repository" /></label>
+      <div className="grid w-full max-w-sm items-center gap-1.5">
+        <Label htmlFor="userName">User Name</Label>
+        <Input required id="userName" name="userName" />
+      </div>
+      <div className="grid w-full max-w-sm items-center gap-1.5">
+        <Label htmlFor="repository">Repository URL</Label>
+        <Input required id="repository" name="repository" />
+      </div>
+      <div className="grid w-full max-w-sm items-center gap-1.5">
+        <Label htmlFor="publicKey">Repository Public Key</Label>
+        <Textarea required id="publicKey" name="publicKey" />
+      </div>
       <input type="hidden" name="accessToken" value={access_token} />
       <input type="hidden" name="tokenType" value={token_type} />
       <input type="hidden" name="login" value={login} />
       <input type="hidden" name="authProvider" value={authProvider} />
       <input type="hidden" name="state" value={state} />
-      <button>sign up</button>
+      <div class="mt-4">
+        <Button>sign up</button>
+      </div>
     </form>
     ) : (
     <h1>Authenticate with Github</h1>

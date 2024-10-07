@@ -1,12 +1,12 @@
-checksum: 25a9592c27e79bdc7d61874065807c3a
-summary: Ecosystem explores the interconnected systems found in nature and their
-  application to human design and society. It emphasizes collaboration,
-  sustainability, and regenerative principles. This concept draws inspiration
-  from natural processes to create adaptive, self-renewing systems across
-  various domains. By understanding and mimicking nature's patterns, we can
-  develop more resilient and harmonious approaches to architecture, urban
-  planning, business, and community development. Ecosystem thinking promotes a
-  holistic view that balances human needs with environmental stewardship.
+checksum: 5fe72dfccbc52650020bc3057f312e69
+summary: Ecosystem explores the interconnected systems in nature and society,
+  emphasizing collaboration, adaptability, and sustainability. It covers
+  principles like biomimicry and permaculture, highlighting how natural systems
+  can inspire human designs. The concept extends to digital realms, discussing
+  network states and startup societies. It underscores the importance of freedom
+  to move between habitats, both in nature and human communities, and the
+  significance of shared values in forming resilient, dynamic systems that allow
+  for individual choice and collective growth.
 excerpt: Ecosystem architecture challenges us to reconsider our relationship
   with nature and each other. By adopting its principles, we can create systems
   that are not only sustainable but also adaptive and self-renewing, fostering
@@ -14,4 +14,5 @@ excerpt: Ecosystem architecture challenges us to reconsider our relationship
 title: ecosystem
 articles:
   - learning-from-nature
+  - the-good-foot
 courses: []
