@@ -49,10 +49,8 @@ export const POST: APIRoute = async ({ request }) => {
     const keyId = generateSafeHash(userName, repository, privateKey);
     const rk = generatePublicKeyFromPrivateKeyString(privateKey);
     try {
-
-
       // 1. HandShake
-      const { ok}  = await fetch(`${repository}/handshake.json`, {
+      const { ok }  = await fetch(`${repository}/handshake.json`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,22 +70,24 @@ export const POST: APIRoute = async ({ request }) => {
       // ]);
 
       // 3. Generate JWT
-      //
-      const payload = {
-        userName,
-        publicKey,
-        repository
-      }
+
       console.log(repository);
-      
-      const authToken = jwt.sign(payload, privateKey, {
-        algorithm: 'RS256',
-        expiresIn: '7d'
-      });
+
+      const authToken = jwt.sign(
+        {
+          userName,
+          publicKey,
+          repository
+        },
+        privateKey, {
+          algorithm: 'RS256',
+          expiresIn: '7d'
+        });
+
       console.log("TOKEN", authToken);
 
       // 4. Respond
-      //
+
       return new Response(JSON.stringify({authToken, userName, repository }), { status: 200 })
     }
     catch (e) {
