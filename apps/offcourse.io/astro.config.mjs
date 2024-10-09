@@ -33,8 +33,7 @@ export default defineConfig({
     schema: {
       AUTH_URL: envField.string({ context: "server", access: "secret" }),
       REPOSITORY_KEY: envField.string({ context: "server", access: "secret" }),
-    },
-    validateSecrets: true
+    }
   },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
