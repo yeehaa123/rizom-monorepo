@@ -8,6 +8,13 @@
       "when": 1728105371415,
       "tag": "0000_thankful_butterfly",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1728401786490,
+      "tag": "0001_wet_vulture",
+      "breakpoints": true
     }
   ]
 }

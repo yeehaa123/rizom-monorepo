@@ -97,7 +97,13 @@ export enum ActionType {
   UNSELECT_CHECKPOINT = "UNSELECT_CHECKPOINT",
   ADD_USER_DATA = "ADD_USER_DATA",
   LOG_OUT = "LOG_OUT",
+  REGISTER_REPOSITORY = "REGISTER_REPOSITORY"
 }
+
+export const keystoreEntry = z.object({
+  keyId: z.string(),
+  publicKey: z.string()
+})
 
 export const actionSchema = z.union([
   z.object({ type: z.literal(ActionType.ADD_AUTH_DATA), payload: authState }),
@@ -123,6 +129,7 @@ export const actionSchema = z.union([
   z.object({ type: z.literal(ActionType.UNSELECT_CHECKPOINT), payload: courseQuery }),
   z.object({ type: z.literal(ActionType.LOG_OUT), payload: z.undefined() }),
   z.object({ type: z.literal(ActionType.ADD_USER_DATA), payload: z.array(userRecord) }),
+  z.object({ type: z.literal(ActionType.REGISTER_REPOSITORY), payload: keystoreEntry }),
 ])
 
 export enum QueryType {
@@ -165,3 +172,4 @@ export type Curator = z.infer<typeof curatorSchema>
 export type CourseQuery = z.infer<typeof courseQuery>
 export type CoursesQuery = z.infer<typeof coursesQuery>
 export type CheckpointQuery = z.infer<typeof checkpointQuery>
+export type KeyStoreEntry = z.infer<typeof keystoreEntry>

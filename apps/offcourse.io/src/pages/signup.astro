@@ -18,6 +18,7 @@ if(result && result.data) {
   const { courseId } = Object.fromEntries(searchParams.entries());
   const newParams = new URLSearchParams({...params, courseId});
   const redirectURL = `${origin}${pathname}?${newParams}`;
+  console.log(redirectURL);
   return Astro.redirect(redirectURL);
 }
 
@@ -29,15 +30,15 @@ const title = "Offcourse - Sign Up";
     <h1>Sign Up</h1>
 
     <form method="POST" action={actions.signup}>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
+      <div class="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="userName">User Name</Label>
         <Input required id="userName" name="userName" />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
+      <div class="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="repository">Repository URL</Label>
         <Input required id="repository" name="repository" />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
+      <div class="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="publicKey">Repository Public Key</Label>
         <Textarea required id="publicKey" name="publicKey" />
       </div>

@@ -14,6 +14,8 @@
   },
   "devDependencies": {
     "@offcourse/db": "workspace:*",
+    "@offcourse/crypto": "workspace:*",
+    "@offcourse/schema": "workspace:*",
     "@rizom/typescript-config": "workspace:*",
     "@types/node": "^20.14.2",
     "astro": "4.15.11",
@@ -21,6 +23,7 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
     "jsonwebtoken": "^9.0.2"
   }
 }

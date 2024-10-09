@@ -1,11 +1,13 @@
+import type { Action } from '@offcourse/schema';
 import { insertCommand } from "./queries"
 import { deleteBookmark, insertBookmark, } from "./models/bookmark"
 import { insertCourse } from "./models/course"
+import { insertKeyStoreEntry } from "./models/keystore"
 import { deleteCompletion, insertCompletion } from "./models/completion";
 import { insertNote } from "./models/note";
 import { actionSchema, ActionType } from '@offcourse/schema';
 
-export async function handleCommand(body: string) {
+export async function handleCommand(body: Action) {
   const action = actionSchema.parse(body)
   const id = await insertCommand(action);
   const { type, payload } = action;
@@ -34,6 +36,10 @@ export async function handleCommand(body: string) {
     }
     case ActionType.REMOVE_BOOKMARK: {
       deleteBookmark(payload);
+      break;
+    }
+    case ActionType.REGISTER_REPOSITORY: {
+      insertKeyStoreEntry(payload);
       break;
     }
     default: {

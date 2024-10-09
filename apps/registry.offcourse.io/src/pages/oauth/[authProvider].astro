@@ -4,6 +4,7 @@ import { authState } from "@offcourse/schema"
 import { db } from "../../db"
 import { eq, and } from 'drizzle-orm';
 import { curator, auth } from "../../schema";
+import { z } from 'zod';
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID, PLATFORM_URL } from "astro:env/server"
 
 const { authProvider } = Astro.params;
@@ -20,7 +21,7 @@ if (!state || !code) {
 }
 
 const stateUrl = new URL(state)
-const { courseId } = Object.fromEntries(stateUrl.searchParams.entries());
+// const { courseId } = Object.fromEntries(stateUrl.searchParams.entries());
 
 const auth_response = await fetch("https://github.com/login/oauth/access_token", {
   method: "POST",
@@ -36,7 +37,12 @@ const auth_response = await fetch("https://github.com/login/oauth/access_token",
   })
 });
 
-const { token_type, access_token } = await auth_response.json();
+const oauthData = await auth_response.json();
+
+const { token_type, access_token } = z.object({ 
+  token_type: z.string(), 
+  access_token: z.string() 
+}).parse(oauthData)
 
 const user_response = await fetch("https://api.github.com/user", {
   headers: {
@@ -44,25 +50,29 @@ const user_response = await fetch("https://api.github.com/user", {
   },
 });
 
-const { login } = await user_response.json();
+const userData = await user_response.json();
+
+const  { login } = z.object({ login: z.string() }).parse(userData);
 const { userName, repository } = await getUser({ authProvider, login });
 
 if (!repository) {
-  const authData = { authProvider, token_type, access_token, login, state, courseId }
+  const authData = { authProvider, token_type, access_token, login, state }
   const newParams = new URLSearchParams(authData);
   const redirectURL = `${PLATFORM_URL}/signup/?${newParams}`
+  console.log(newParams, redirectURL)
   return Astro.redirect(redirectURL);
 }
 
+const authToken = "BLALALABAL";
+
 const authData = authState.parse({
-  authProvider,
-  tokenType: token_type,
-  accessToken: access_token,
+  authToken,
   userName,
   repository
 })
 
 const newParams = new URLSearchParams(authData);
+console.log(stateUrl, newParams);
 return Astro.redirect(`${stateUrl.origin}${stateUrl.pathname}?${newParams}`);
 
 async function getUser({ login, authProvider }: { authProvider: string, login: string }) {

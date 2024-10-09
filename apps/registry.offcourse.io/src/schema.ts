@@ -11,3 +11,8 @@ export const curator = sqliteTable("curators", {
   repository: text("repository").notNull().unique(),
 });
 
+export const keystore = sqliteTable("keystore", {
+  keyId: text("keyId").primaryKey(),
+  publicKey: text("publicKey").notNull().unique(),
+});
+

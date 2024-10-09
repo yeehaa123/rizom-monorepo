@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "21a52813-1e68-4d94-82f2-3f13e9cd117e",
-  "prevId": "234c7f01-cc8f-4403-939f-ac74ff26acbc",
+  "id": "63879b06-1172-42b4-982f-36b93e863d7e",
+  "prevId": "21a52813-1e68-4d94-82f2-3f13e9cd117e",
   "tables": {
     "bookmark": {
       "name": "bookmark",
@@ -129,6 +129,37 @@
         }
       },
       "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "keystore": {
+      "name": "keystore",
+      "columns": {
+        "keyId": {
+          "name": "keyId",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "publicKey": {
+          "name": "publicKey",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "keystore_publicKey_unique": {
+          "name": "keystore_publicKey_unique",
+          "columns": [
+            "publicKey"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}

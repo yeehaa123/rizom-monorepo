@@ -1,12 +1,12 @@
-import type { 
-  AuthState, 
-  CourseQuery 
+import type {
+  AuthState,
+  CourseQuery
 } from "@offcourse/schema"
-import { 
-  AuthProvider, 
-  ResponseType, 
-  responseSchema, 
-  authState, 
+import {
+  AuthProvider,
+  ResponseType,
+  responseSchema,
+  authState,
 } from "@offcourse/schema"
 
 export async function authenticate() {
@@ -51,13 +51,13 @@ export function getAuthData() {
 }
 
 export function redirectToGitHub({ courseId }: CourseQuery) {
-  // const registryId = "Ov23liIHmaO6XFSYga34";
-  const localId = "Ov23li51nX1AYgHxF6bl";
+  const registryId = "Ov23liIHmaO6XFSYga34";
+  // const localId = "Ov23li51nX1AYgHxF6bl";
   const githubClientId = localId;
   const authProvider = AuthProvider.GITHUB;
   const { origin, pathname, search } = window.location;
-  // const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
-  const redirect_uri = `http://localhost:6543/oauth/${authProvider}/`;
+  const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
+  // const redirect_uri = `http://localhost:6543/oauth/${authProvider}/`;
   const searchParams = new URLSearchParams(search);
   searchParams.delete("code");
   searchParams.append("courseId", courseId);

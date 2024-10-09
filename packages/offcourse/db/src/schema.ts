@@ -32,4 +32,9 @@ export const commandTable = sqliteTable("command", {
   payload: text('payload', { mode: 'json' })
 });
 
+export const keystore = sqliteTable("keystore", {
+  keyId: text("keyId").primaryKey(),
+  publicKey: text("publicKey").notNull().unique(),
+});
+
 export const commandInsertSchema = createInsertSchema(commandTable);
