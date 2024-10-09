@@ -53,7 +53,7 @@ export function getAuthData() {
 export function redirectToGitHub({ courseId }: CourseQuery) {
   const registryId = "Ov23liIHmaO6XFSYga34";
   // const localId = "Ov23li51nX1AYgHxF6bl";
-  const githubClientId = localId;
+  const githubClientId = registryId;
   const authProvider = AuthProvider.GITHUB;
   const { origin, pathname, search } = window.location;
   const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
