@@ -20,6 +20,7 @@ courses:
   - practice-innovation
   - share-openly
   - value-differences
+  - vote-with-your-feet
   - waste-education
 articles:
   - across-space-and-time
@@ -32,14 +33,14 @@ articles:
   - shenzhen-goes-ham
   - the-good-foot
 tags:
-  - eco
   - edu
   - tech
+  - eco
   - phd
   - web
   - future
-  - system
   - design
+  - system
 profile:
   name: Jan Hein Hoogstad
   repository: https://yeehaa.io/offcourse
@@ -77,19 +78,20 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 96c27ebce7eaeba3cc434ae45b61dca5
+checksum: 6c1355df2c33ddb4c39cf7741caf9ac8
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   academia and tech expertise. As an entrepreneur, thinker, and coder, he
   focuses on transforming education and knowledge sharing. He founded Offcourse
   and created the Superconnectors event format, advocating for an impactful and
-  inclusive internet. Based in Taipei, yeehaa's work spans various topics
-  including ecosystem architecture, decentralization, internet fragmentation,
-  and sustainability. His blog posts and courses explore concepts like the
-  global village, shanzhai innovation, and collaborative practices. yeehaa's
-  approach emphasizes breaking down silos, fostering collaboration, and
-  embracing diversity in both digital and physical spaces.
-blurb: "yeehaa: ecosystem architect, PhD, entrepreneur. Transforms education,
-  advocates inclusive internet. Explores decentralization, sustainability,
-  collaboration. Blends philosophy, tech for innovative solutions."
-profileImageURL: ./96c27ebce7eaeba3cc434ae45b61dca5-profile.png
+  inclusive internet. Based in Taipei, yeehaa brings people together around
+  common values, translating shared visions into effective ecosystems. His work
+  spans topics like decentralization, digital landscapes, waste economy, and
+  internet culture. He explores concepts such as ecosystem architecture,
+  fragmentation, and regenerative design, applying philosophical ideas to modern
+  technological challenges.
+blurb: yeehaa, an ecosystem architect with a PhD, blends philosophy and tech to
+  transform education and knowledge sharing. His work explores decentralization,
+  digital landscapes, and regenerative design, applying philosophical concepts
+  to modern tech challenges.
+profileImageURL: ./6c1355df2c33ddb4c39cf7741caf9ac8-profile.png
 title: Yeehaa

@@ -234,7 +234,7 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "0630955d04084fed43282d489ad2c330",
+    "checksum": "58c8f043e0b787c2b192780e15a16301",
     "publicationData": {
       "createdAt": "2024-10-07T09:08:32.079Z",
       "updatedAt": "2024-10-07T09:08:32.079Z",
@@ -264,6 +264,21 @@
       "publishedAt": "2024-08-28T09:50:12.337Z"
     },
     "habitat": "Global Village People"
+  },
+  {
+    "id": "7b8feea6134d168fb4a12ae82663cc60",
+    "author": "yeehaa",
+    "title": "Vote With Your Feet",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "caa3c938181cf65de4f749a34f9f2b22",
+    "publicationData": {
+      "createdAt": "2024-10-10T07:07:32.218Z",
+      "updatedAt": "2024-10-10T07:07:32.218Z",
+      "publishedAt": "2024-10-10T07:07:32.218Z"
+    },
+    "habitat": "The Good Foot"
   },
   {
     "id": "d337da119aa2ca1faec993cb26146e2a",

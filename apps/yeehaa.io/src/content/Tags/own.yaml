@@ -1,16 +1,18 @@
-checksum: 16ff2e1135af8eecf4e7e3bb60c0a06b
-summary: Own represents the concept of digital ownership and autonomy in the web
-  ecosystem. It encourages users to take control of their online presence,
-  create unique content, and champion individual expression. This aligns with
-  the broader movement to keep the web weird, diverse, and user-driven,
-  resisting uniformity and corporate dominance. It emphasizes the importance of
-  open-source principles, digital fabrication, and guerrilla-style creativity in
-  preserving internet freedom and fostering innovation.
-excerpt: Keep The Web Weird by engaging with ISOC for internet advocacy,
-  embracing open-source principles, exploring digital fabrication, adopting
-  guerrilla-style creativity, and championing digital ownership. These steps
-  foster innovation and preserve internet freedom.
+checksum: 5aa75857ea7ed4e3f8ed1fe1c94418e2
+summary: Own emphasizes the importance of personal ownership and control in
+  various contexts. It appears in courses about preserving internet diversity
+  and making impactful choices. The concept encourages individuals to take
+  charge of their digital presence, creative endeavors, and decision-making
+  processes. It promotes autonomy, innovation, and active participation in
+  shaping one's environment, whether online or offline. Own is associated with
+  ideas of digital rights, unconventional thinking, and strategic action to
+  express values and create change.
+excerpt: Own is a concept that empowers individuals to take control of their
+  digital presence, creative pursuits, and decision-making. It encourages
+  autonomy, innovation, and active participation in shaping both online and
+  offline environments.
 title: own
 articles: []
 courses:
   - keep-the-web-weird
+  - vote-with-your-feet
