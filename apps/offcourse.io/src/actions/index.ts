@@ -1,4 +1,4 @@
-import { defineAction } from 'astro:actions';
+import { defineAction, ActionError } from 'astro:actions';
 import { z } from 'astro:schema';
 import { AUTH_URL } from "astro:env/server"
 
@@ -15,21 +15,27 @@ export const server = {
       authProvider: z.string(),
       state: z.string()
     }),
-    handler: async ({ state, publicKey :rawKey, ...args }) => {
-      console.log(AUTH_URL);
+    handler: async ({ state, publicKey: rawKey, ...args }) => {
       const publicKey = rawKey.replace(/\r\n|\r|\n/g, '\\n');
       const payload = { ...args, publicKey }
-      const auth_response = await fetch(`${AUTH_URL}/register.json`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-          "Accept-Encoding": "application/json",
-        },
-        body: JSON.stringify(payload)
-      });
-      const data = await auth_response.json()
-      return { ...data, state }
+      try {
+        const auth_response = await fetch(`${AUTH_URL}/register.json`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Accept-Encoding": "application/json",
+          },
+          body: JSON.stringify(payload)
+        });
+        const data = await auth_response.json()
+        return { ...data, state }
+      } catch (e) {
+        throw new ActionError({
+          code: "UNAUTHORIZED",
+          message: "invalid public key"
+        })
+      }
     }
   })
 }

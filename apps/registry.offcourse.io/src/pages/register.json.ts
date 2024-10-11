@@ -32,7 +32,9 @@ export const POST: APIRoute = async ({ request }) => {
         body: JSON.stringify({ publicKey, registryKey: flattenKey(rk) })
       });
 
-      if (!ok) { throw ("INVALID PUBLIC KEY") }
+      if (!ok) {
+        return new Response(null, { status: 404 })
+      }
 
       // 2. SAVE TO DB
 

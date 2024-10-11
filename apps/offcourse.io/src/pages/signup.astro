@@ -12,6 +12,10 @@ const { access_token, token_type, login, authProvider, state } = Object.fromEntr
 
 const result = Astro.getActionResult(actions.signup);
 
+if(result && result.error){
+  console.log(result.error)
+}
+
 if(result && result.data) {
   const { state, ...params} = result.data;
   const { origin, pathname, searchParams}  = new URL(state)
