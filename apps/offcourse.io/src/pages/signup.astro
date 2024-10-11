@@ -8,13 +8,15 @@ import { Textarea } from "@/components/ui/textarea"
 import Layout from "@/layouts/Page.astro"
 
 const urlSearchParams = Astro.url.searchParams
-const { access_token, token_type, login, authProvider, state } = Object.fromEntries(urlSearchParams.entries());
+const { 
+  access_token, 
+  token_type, 
+  login, 
+  authProvider, 
+  state 
+} = Object.fromEntries(urlSearchParams.entries());
 
 const result = Astro.getActionResult(actions.signup);
-
-if(result && result.error){
-  console.log(result.error)
-}
 
 if(result && result.data) {
   const { state, ...params} = result.data;
@@ -32,6 +34,7 @@ const title = "Offcourse - Sign Up";
   <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
   { access_token ? (
     <h1>Sign Up</h1>
+    <p>{ result && result.error}</p>
 
     <form method="POST" action={actions.signup}>
       <div class="grid w-full max-w-sm items-center gap-1.5">
