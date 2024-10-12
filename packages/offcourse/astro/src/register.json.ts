@@ -1,5 +1,7 @@
 export const prerender = false;
+import { handleCommand } from '@offcourse/db/command';
 import type { APIRoute } from 'astro';
+import { ActionType } from '@offcourse/schema';
 // import { curator, auth, keystore } from "../schema";
 // import { db } from "../db";
 import {
@@ -9,8 +11,8 @@ import {
   generatePublicKeyFromPrivateKey,
   generateAuthToken,
 } from "@offcourse/crypto";
-
 import dotenv from 'dotenv';
+
 dotenv.config();
 const { REPOSITORY_KEY } = process.env;
 
@@ -28,6 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 
       const rk = generatePublicKeyFromPrivateKey(privateKey);
       if (!rk) { throw ("INVALID REPOSITORY_KEY") }
+
       const { ok } = await fetch(`${repository}/handshake`, {
         method: "POST",
         headers: {
@@ -44,7 +47,11 @@ export const POST: APIRoute = async ({ request }) => {
 
       // 2. SAVE TO DB
 
-      // const keyId = generateSafeHash(userName, repository, privateKey);
+      const keyId = generateSafeHash(userName, repository, privateKey);
+      await handleCommand({
+        type: ActionType.REGISTER_REPOSITORY,
+        payload: { keyId, publicKey }
+      })
 
       // await db.batch([
       //   db.insert(keystore).values({ keyId, publicKey }),
