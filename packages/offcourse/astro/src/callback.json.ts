@@ -49,7 +49,6 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   });
 
   const userData = await user_response.json();
-  console.log(userData);
 
   const authProvider = AuthProvider.GITHUB;
   const { login } = z.object({ login: z.string() }).parse(userData);
@@ -93,5 +92,5 @@ async function getUser({ login }: { authProvider: string, login: string }) {
   //     curator, eq(auth.userName, curator.userName)
   //   );
   // console.log("Registered User", authEntries);
-  return { userName: login, repository: undefined }
+  return { userName: login, repository: "https://offcourse-io.vercel.app/offcourse" }
 }
