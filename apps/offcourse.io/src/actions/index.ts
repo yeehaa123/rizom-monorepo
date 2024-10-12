@@ -19,7 +19,6 @@ export const server = {
       const payload = { ...args, publicKey }
       try {
         const apiUrl = new URL('/offcourse/register', request.url);
-
         const auth_response = await fetch(apiUrl, {
           method: "POST",
           headers: {

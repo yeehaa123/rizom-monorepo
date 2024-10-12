@@ -57,7 +57,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   if (!repository) {
     const authData = { authProvider, token_type, access_token, login, state }
     const newParams = new URLSearchParams(authData);
-    const redirectURL = `/signup/?${newParams}`
+    const redirectURL = `/offcourse/signup/?${newParams}`
     console.log(redirectURL);
     return redirect(redirectURL, 307);
   }
