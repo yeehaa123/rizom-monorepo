@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import Layout from "@/layouts/Page.astro"
 
 const urlSearchParams = Astro.url.searchParams
+
 const { 
   access_token, 
   token_type, 
@@ -16,7 +17,7 @@ const {
   state 
 } = Object.fromEntries(urlSearchParams.entries());
 
-const result = await Astro.getActionResult(actions.signup);
+const result = Astro.getActionResult(actions.signup);
 console.log("SIGN UP:::", result);
 
 if(result && result.data) {
