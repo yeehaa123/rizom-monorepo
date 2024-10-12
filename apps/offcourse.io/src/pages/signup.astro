@@ -17,7 +17,7 @@ const {
 } = Object.fromEntries(urlSearchParams.entries());
 
 const result = await Astro.getActionResult(actions.signup);
-console.log("SIGN UP", result);
+console.log("SIGN UP:", result);
 
 if(result && result.data) {
   const { state, ...params} = result.data;
