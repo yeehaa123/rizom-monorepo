@@ -11,16 +11,18 @@ const { AUTH_URL, REPOSITORY_KEY } = process.env;
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get("Content-Type") === "application/json") {
     try {
+      if (!REPOSITORY_KEY) {
+        throw ("env vars REPOSITORY_KEY need to be set")
+      }
       const { publicKey: pk, registryKey } = await request.json();
+      const remote_uri = 'https://offcourse-io.vercel.app'
+      const authURL = AUTH_URL || remote_uri;
 
       // TODO: if (origin !== AUTH_URL) {
       //   throw ("INVALID ORIGIN")
       // }
       //
 
-      if (!REPOSITORY_KEY || !AUTH_URL) {
-        throw ("env vars REPOSITORY_KEY and AUTH_URL need to be set")
-      }
 
       // 1. CHECK REPOSITORY PUBLIC KEY AGAINST PRIVATE KEY
 
@@ -30,7 +32,7 @@ export const POST: APIRoute = async ({ request }) => {
       if (!isValid) { throw (isValid) }
 
       const payload = {
-        keyId: generateSafeHash("auth", AUTH_URL, privateKey),
+        keyId: generateSafeHash("auth", authURL, privateKey),
         publicKey: `${registryKey}`
       }
 
@@ -44,7 +46,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ status: "hands shaken" }), { status: 200 })
     }
     catch (e) {
-      console.log(e);
+      console.log("HANDSHAKE", e);
       return new Response(null, { status: 400 });
     }
   }

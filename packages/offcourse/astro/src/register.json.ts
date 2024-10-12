@@ -62,7 +62,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ authToken, userName, repository }), { status: 200 })
     }
     catch (e) {
-      console.log(e);
+      console.log("REGISTER", e);
       return new Response(null, { status: 404 });
     }
   }
