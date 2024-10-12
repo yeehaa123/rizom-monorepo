@@ -17,7 +17,6 @@ const { REPOSITORY_KEY } = process.env;
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get("Content-Type") === "application/json") {
     try {
-      console.log("TTTTTTTT")
       if (!REPOSITORY_KEY) {
         throw ("env vars REPOSITORY_KEY needs to be set")
       }
@@ -63,6 +62,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ authToken, userName, repository }), { status: 200 })
     }
     catch (e) {
+      console.log(e);
       return new Response(null, { status: 404 });
     }
   }

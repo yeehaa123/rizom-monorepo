@@ -12,6 +12,8 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   const urlSearchParams = url.searchParams
   const { state, code } = Object.fromEntries(urlSearchParams.entries());
 
+  console.log(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET);
+
   if (!state || !code) {
     return redirect("/", 307);
   }
