@@ -15,7 +15,6 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   if (!state || !code) {
     return redirect("/", 307);
   }
-  console.log("CODE", code)
 
   const stateUrl = new URL(state)
 
@@ -34,6 +33,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   });
 
   const oauthData = await auth_response.json();
+  console.log("OAUTH", oauthData)
 
   const { token_type, access_token } = z.object({
     token_type: z.string(),
