@@ -49,6 +49,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   });
 
   const userData = await user_response.json();
+  console.log(userData);
 
   const authProvider = AuthProvider.GITHUB;
   const { login } = z.object({ login: z.string() }).parse(userData);
@@ -57,7 +58,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   if (!repository) {
     const authData = { authProvider, token_type, access_token, login, state }
     const newParams = new URLSearchParams(authData);
-    const redirectURL = `/offcourse/signup/?${newParams}`
+    const redirectURL = `/signup/?${newParams}`
     console.log(redirectURL);
     return redirect(redirectURL, 307);
   }
