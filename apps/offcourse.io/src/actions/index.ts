@@ -30,6 +30,7 @@ export const server = {
           body: JSON.stringify(payload)
         });
         const data = await auth_response.json()
+        console.log("ACTION", data);
         return { ...data, state }
       } catch (e) {
         throw new ActionError({
