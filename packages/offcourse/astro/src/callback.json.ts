@@ -35,8 +35,6 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   });
 
   const oauthData = await auth_response.json();
-  console.log("OAUTH", oauthData)
-
   const { token_type, access_token } = z.object({
     token_type: z.string(),
     access_token: z.string()
@@ -57,13 +55,11 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   if (!repository) {
     const authData = { authProvider, token_type, access_token, login, state }
     const newParams = new URLSearchParams(authData);
-    const redirectURL = `/signup/?${newParams}`
-    console.log(redirectURL);
-    return redirect(redirectURL, 307);
+    const signupURL = `/signup/?${newParams}`
+    return redirect(signupURL, 307);
   }
 
   const authToken = "BLALALABAL";
-
   const authData = authState.parse({
     authToken,
     userName,
@@ -92,5 +88,5 @@ async function getUser({ login }: { authProvider: string, login: string }) {
   //     curator, eq(auth.userName, curator.userName)
   //   );
   // console.log("Registered User", authEntries);
-  return { userName: login, repository: "https://offcourse-io.vercel.app/offcourse" }
+  return { userName: login, repository: undefined }
 }
