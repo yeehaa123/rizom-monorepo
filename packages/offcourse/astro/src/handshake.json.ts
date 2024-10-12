@@ -6,11 +6,9 @@ import { ActionType } from '@offcourse/schema';
 
 import dotenv from 'dotenv';
 dotenv.config();
-
 const { AUTH_URL, REPOSITORY_KEY } = process.env;
 
 export const POST: APIRoute = async ({ request }) => {
-  console.log(request);
   if (request.headers.get("Content-Type") === "application/json") {
     try {
       const { publicKey: pk, registryKey } = await request.json();

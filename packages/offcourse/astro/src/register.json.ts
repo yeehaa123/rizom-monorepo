@@ -1,8 +1,7 @@
 export const prerender = false;
 import type { APIRoute } from 'astro';
-import { curator, auth, keystore } from "../schema";
-import { REPOSITORY_KEY } from "astro:env/server"
-import { db } from "../db";
+// import { curator, auth, keystore } from "../schema";
+// import { db } from "../db";
 import {
   deflattenKey,
   flattenKey,
@@ -11,12 +10,20 @@ import {
   generateAuthToken,
 } from "@offcourse/crypto";
 
+import dotenv from 'dotenv';
+dotenv.config();
+const { REPOSITORY_KEY } = process.env;
+
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get("Content-Type") === "application/json") {
-    const data = await request.json();
-    const { publicKey, userName, repository, login, authProvider } = data
-    const privateKey = deflattenKey(REPOSITORY_KEY)
     try {
+      console.log("TTTTTTTT")
+      if (!REPOSITORY_KEY) {
+        throw ("env vars REPOSITORY_KEY needs to be set")
+      }
+      const data = await request.json();
+      const { publicKey, userName, repository, login, authProvider } = data
+      const privateKey = deflattenKey(REPOSITORY_KEY)
 
       // 1. HANDSHAKE
 
@@ -38,24 +45,24 @@ export const POST: APIRoute = async ({ request }) => {
 
       // 2. SAVE TO DB
 
-      const keyId = generateSafeHash(userName, repository, privateKey);
+      // const keyId = generateSafeHash(userName, repository, privateKey);
 
-      await db.batch([
-        db.insert(keystore).values({ keyId, publicKey }),
-        db.insert(curator).values({ userName, repository }),
-        db.insert(auth).values({ login, provider: authProvider, userName })
-      ]);
-
+      // await db.batch([
+      //   db.insert(keystore).values({ keyId, publicKey }),
+      //   db.insert(curator).values({ userName, repository }),
+      //   db.insert(auth).values({ login, provider: authProvider, userName })
+      // ]);
+      //
       // 3. GENERATE JWT
 
       const authToken = generateAuthToken({ userName, privateKey, publicKey, repository })
+      console.log("AT", authToken);
 
       // 4. RESPOND
 
       return new Response(JSON.stringify({ authToken, userName, repository }), { status: 200 })
     }
     catch (e) {
-      console.log(e)
       return new Response(null, { status: 404 });
     }
   }

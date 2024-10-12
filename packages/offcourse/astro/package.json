@@ -10,7 +10,9 @@
     ".": "./src/index.ts",
     "./query.json.ts": "./src/query.json.ts",
     "./command.json.ts": "./src/command.json.ts",
-    "./handshake.json.ts": "./src/handshake.json.ts"
+    "./handshake.json.ts": "./src/handshake.json.ts",
+    "./callback.json.ts": "./src/callback.json.ts",
+    "./register.json.ts": "./src/register.json.ts"
   },
   "devDependencies": {
     "@offcourse/db": "workspace:*",

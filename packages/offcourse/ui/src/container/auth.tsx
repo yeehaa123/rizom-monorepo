@@ -3,18 +3,17 @@ import type {
   CourseQuery
 } from "@offcourse/schema"
 import {
-  AuthProvider,
   ResponseType,
   responseSchema,
   authState,
 } from "@offcourse/schema"
 
 export async function authenticate() {
-  const authData = getAuthData() || await setAuthData();
-  if (authData) {
+  const payload = getAuthData() || await setAuthData();
+  if (payload) {
     return responseSchema.parse({
       type: ResponseType.AUTHENTICATED,
-      payload: authData
+      payload
     })
   }
 }
@@ -51,13 +50,12 @@ export function getAuthData() {
 }
 
 export function redirectToGitHub({ courseId }: CourseQuery) {
-  const registryId = "Ov23liIHmaO6XFSYga34";
-  // const localId = "Ov23li51nX1AYgHxF6bl";
-  const githubClientId = registryId;
-  const authProvider = AuthProvider.GITHUB;
+  // const registryId = "Ov23liIHmaO6XFSYga34";
+  const localId = "Ov23li51nX1AYgHxF6bl";
+  const githubClientId = localId;
   const { origin, pathname, search } = window.location;
-  const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
-  // const redirect_uri = `http://localhost:6543/oauth/${authProvider}/`;
+  // const redirect_uri = `https://registry-offcourse.vercel.app/oauth/${authProvider}/`;
+  const redirect_uri = `http://localhost:8765/offcourse/callback`;
   const searchParams = new URLSearchParams(search);
   searchParams.delete("code");
   searchParams.append("courseId", courseId);

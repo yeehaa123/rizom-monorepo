@@ -1,6 +1,5 @@
 import { defineAction, ActionError } from 'astro:actions';
 import { z } from 'astro:schema';
-import { AUTH_URL } from "astro:env/server"
 
 export const server = {
   signup: defineAction({
@@ -15,11 +14,13 @@ export const server = {
       authProvider: z.string(),
       state: z.string()
     }),
-    handler: async ({ state, publicKey: rawKey, ...args }) => {
+    handler: async ({ state, publicKey: rawKey, ...args }, { request }) => {
       const publicKey = rawKey.replace(/\r\n|\r|\n/g, '\\n');
       const payload = { ...args, publicKey }
       try {
-        const auth_response = await fetch(`${AUTH_URL}/register.json`, {
+        const apiUrl = new URL('/offcourse/register', request.url);
+
+        const auth_response = await fetch(apiUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

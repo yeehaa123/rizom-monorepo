@@ -1,10 +1,6 @@
 --- 
 export const prerender = false;
 import { authState } from "@offcourse/schema"
-import { db } from "../../db"
-import { eq, and } from 'drizzle-orm';
-import { curator, auth } from "../../schema";
-import { z } from 'zod';
 import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID, PLATFORM_URL } from "astro:env/server"
 
 const { authProvider } = Astro.params;
@@ -76,21 +72,23 @@ console.log(stateUrl, newParams);
 return Astro.redirect(`${stateUrl.origin}${stateUrl.pathname}?${newParams}`);
 
 async function getUser({ login, authProvider }: { authProvider: string, login: string }) {
-  const authEntries= await db.select({
-    userName: auth.userName,
-    repository: curator.repository
-  }).
-    from(auth)
-    .where(
-      and(
-        eq(auth.login, login),
-        eq(auth.provider, authProvider)
-      )
-    )
-    .leftJoin(
-      curator, eq(auth.userName, curator.userName)
-    );
-  console.log("Registered User", authEntries);
-  return authEntries[0] || { userName: login, repository: undefined }
+  // const authEntries= await db.select({
+  //   userName: auth.userName,
+  //   repository: curator.repository
+  // }).
+  //   from(auth)
+  //   .where(
+  //     and(
+  //       eq(auth.login, login),
+  //       eq(auth.provider, authProvider)
+  //     )
+  //   )
+  //   .leftJoin(
+  //     curator, eq(auth.userName, curator.userName)
+  //   );
+  // console.log("Registered User", authEntries);
+  // return authEntries[0] || { userName: login, repository: undefined }
+  return { userName: login, repository: undefined }
+
 }
 ---

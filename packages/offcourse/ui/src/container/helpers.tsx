@@ -42,7 +42,7 @@ export async function sendCommand(action: Action) {
     throw (`${action.type} UNAUTHORIZED USE`)
   }
   const { authToken, repository } = authData;
-  const url = `${repository}/command.json`;
+  const url = `${repository}/command`;
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -67,7 +67,7 @@ export async function query(query: Query) {
     throw ("UNAUTHORIZED USE")
   }
   const { authToken, repository } = authData;
-  const url = `${repository}/query.json`;
+  const url = `${repository}/query`;
   try {
     const response = await fetch(url, {
       method: "POST",
