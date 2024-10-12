@@ -29,7 +29,7 @@ export const POST: APIRoute = async ({ request }) => {
       const privateKey = deflattenKey(REPOSITORY_KEY);
       const publicKey = deflattenKey(pk);
       const isValid = validatePublicKey(privateKey, publicKey);
-      if (!isValid) { throw (isValid) }
+      if (!isValid) { throw ("INVALID PUBLIC KEY") }
 
       const payload = {
         keyId: generateSafeHash("auth", authURL, privateKey),

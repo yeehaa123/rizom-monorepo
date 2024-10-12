@@ -55,7 +55,6 @@ export const POST: APIRoute = async ({ request }) => {
       // 3. GENERATE JWT
 
       const authToken = generateAuthToken({ userName, privateKey, publicKey, repository })
-      console.log("AT", authToken);
 
       // 4. RESPOND
 
