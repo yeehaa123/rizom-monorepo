@@ -15,8 +15,8 @@
     "./register.json.ts": "./src/register.json.ts"
   },
   "devDependencies": {
-    "@offcourse/db": "workspace:*",
     "@offcourse/crypto": "workspace:*",
+    "@offcourse/db": "workspace:*",
     "@offcourse/schema": "workspace:*",
     "@rizom/typescript-config": "workspace:*",
     "@types/node": "^20.14.2",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.7",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.23.8"
   }
 }
