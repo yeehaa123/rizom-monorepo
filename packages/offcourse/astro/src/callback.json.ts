@@ -5,7 +5,7 @@ import { APIRoute } from "astro";
 
 import dotenv from 'dotenv';
 dotenv.config();
-const { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID, PLATFORM_URL } = process.env
+const { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } = process.env
 
 
 export const GET: APIRoute = async ({ url, redirect }) => {
@@ -15,6 +15,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   if (!state || !code) {
     return redirect("/", 307);
   }
+  console.log("CODE", code)
 
   const stateUrl = new URL(state)
 

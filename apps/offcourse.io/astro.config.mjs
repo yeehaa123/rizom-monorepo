@@ -31,8 +31,7 @@ export default defineConfig({
   site: 'https://offcourse.io',
   env: {
     schema: {
-      AUTH_URL: envField.string({ context: "server", access: "secret" }),
-      REPOSITORY_KEY: envField.string({ context: "server", access: "secret" }),
+      REPOSITORY_KEY: envField.string({ context: "server", access: "secret" })
     }
   },
   markdown: {
