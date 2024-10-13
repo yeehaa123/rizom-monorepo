@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { authState, userRecord, courseSchema } from ".";
+import { authState, userRecord, courseSchema } from "./primitives";
 
 export enum ResponseType {
   AUTHENTICATED = "AUTHENTICATED_EXISTING_USER",
