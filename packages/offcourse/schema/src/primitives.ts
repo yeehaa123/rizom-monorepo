@@ -53,11 +53,8 @@ export const repositoryRegistrationSchema = z.object({
   userName: z.string(),
   login: z.string(),
   publicKey: z.string(),
-  accessToken: z.string(),
-  tokenType: z.string(),
   repository: z.string(),
   authProvider: z.string(),
-  state: z.string()
 })
 export enum AuthProvider {
   GITHUB = "GITHUB"
