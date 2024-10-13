@@ -1,7 +1,7 @@
 export const prerender = false;
 import { handleCommand } from '@offcourse/db/command';
 import type { APIRoute } from 'astro';
-import { ActionType } from '@offcourse/schema';
+import { ActionType, repositoryRegistrationSchema } from '@offcourse/schema';
 // import { curator, auth, keystore } from "../schema";
 // import { db } from "../db";
 import {
@@ -22,8 +22,8 @@ export const POST: APIRoute = async ({ request }) => {
       if (!REPOSITORY_KEY) {
         throw ("env vars REPOSITORY_KEY needs to be set")
       }
-      const data = await request.json();
-      const { publicKey, userName, repository, login, authProvider } = data
+      const data = await request.json()
+      const { publicKey, userName, repository, login, authProvider } = repositoryRegistrationSchema.parse(data);
       const privateKey = deflattenKey(REPOSITORY_KEY)
 
       // 1. HANDSHAKE
@@ -46,11 +46,21 @@ export const POST: APIRoute = async ({ request }) => {
       }
 
       // 2. SAVE TO DB
-
       const keyId = generateSafeHash(userName, repository, privateKey);
+
+      const repositoryEntry = {
+        keyId,
+        publicKey,
+        userName,
+        repository,
+        login,
+        authProvider
+
+      }
+
       await handleCommand({
         type: ActionType.REGISTER_REPOSITORY,
-        payload: { keyId, publicKey }
+        payload: repositoryEntry
       })
 
       // await db.batch([
@@ -68,7 +78,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ authToken, userName, repository }), { status: 200 })
     }
     catch (e) {
-      console.log("REGISTER", e);
+      console.log("REGISTER_ERROR", e);
       return new Response(null, { status: 404 });
     }
   }

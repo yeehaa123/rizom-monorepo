@@ -38,8 +38,12 @@ export async function handleCommand(body: Action) {
       deleteBookmark(payload);
       break;
     }
-    case ActionType.REGISTER_REPOSITORY: {
+    case ActionType.REGISTER_AUTH_SERVICE: {
       insertKeyStoreEntry(payload);
+      break;
+    }
+    case ActionType.REGISTER_REPOSITORY: {
+      console.log("IMPLEMENT NEXT", payload)
       break;
     }
     default: {

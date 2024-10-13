@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
       const keyId = generateSafeHash("auth", authURL, privateKey);
 
       await handleCommand({
-        type: ActionType.REGISTER_REPOSITORY,
+        type: ActionType.REGISTER_AUTH_SERVICE,
         payload: { keyId, publicKey: registryKey }
       })
 

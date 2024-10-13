@@ -2,8 +2,8 @@ export const prerender = false;
 import { authState, AuthProvider } from "@offcourse/schema"
 import { z } from 'zod';
 import { APIRoute } from "astro";
-
 import dotenv from 'dotenv';
+
 dotenv.config();
 const { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } = process.env
 
@@ -11,8 +11,6 @@ const { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } = process.env
 export const GET: APIRoute = async ({ url, redirect }) => {
   const urlSearchParams = url.searchParams
   const { state, code } = Object.fromEntries(urlSearchParams.entries());
-
-  console.log(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET);
 
   if (!state || !code) {
     return redirect("/", 307);

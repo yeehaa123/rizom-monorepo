@@ -25,16 +25,26 @@ export const courseTable = sqliteTable("course", {
   course: text('course', { mode: 'json' })
 });
 
-
 export const commandTable = sqliteTable("command", {
   createdAt: integer('created_at', { mode: 'timestamp' }).notNull(),
   type: text('type').notNull(),
   payload: text('payload', { mode: 'json' })
 });
 
-export const keystore = sqliteTable("keystore", {
+export const keystoreTable = sqliteTable("keystore", {
   keyId: text("keyId").primaryKey(),
   publicKey: text("publicKey").notNull().unique(),
+});
+
+export const registryTable = sqliteTable("registry", {
+  repository: text("repository").primaryKey(),
+  curator: text("curator").notNull().unique(),
+});
+
+export const oauthTable = sqliteTable("oauth", {
+  login: text("login").notNull(),
+  provider: text("provider").notNull(),
+  repository: text("repository").notNull().references(() => registryTable.repository)
 });
 
 export const commandInsertSchema = createInsertSchema(commandTable);
