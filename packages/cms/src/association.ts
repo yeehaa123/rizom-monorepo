@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { AnalyzedEntity } from "./entity";
-import { curatorSchema } from "@offcourse/schema";
+import { curatorSchema } from "@offcourse/schema/primitives";
 
 export const schema = z.object({
   id: z.string(),

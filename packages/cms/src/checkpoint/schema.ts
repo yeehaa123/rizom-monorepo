@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { checkpointSchema } from "@offcourse/schema";
+import { checkpointSchema } from "@offcourse/schema/primitives";
 
 export const initSchema = z.object({
   goal: z.string(),

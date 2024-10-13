@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import * as m from "../meta/schema"
 import * as as from "../association"
-import { courseSchema, curatorSchema } from "@offcourse/schema";
+import { courseSchema, curatorSchema } from "@offcourse/schema/primitives";
 import { baseCheckpointSchema, checkpointSchema } from "../checkpoint/schema"
 
 export type Course =
