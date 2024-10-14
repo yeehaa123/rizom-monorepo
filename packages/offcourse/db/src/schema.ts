@@ -1,4 +1,4 @@
-import { text, integer, sqliteTable } from "drizzle-orm/sqlite-core";
+import { text, integer, primaryKey, sqliteTable } from "drizzle-orm/sqlite-core";
 import { createInsertSchema } from 'drizzle-zod';
 
 export const bookmarkTable = sqliteTable("bookmark", {
@@ -38,13 +38,17 @@ export const keystoreTable = sqliteTable("keystore", {
 
 export const registryTable = sqliteTable("registry", {
   repository: text("repository").primaryKey(),
-  curator: text("curator").notNull().unique(),
+  userName: text("userName").unique(),
 });
 
 export const oauthTable = sqliteTable("oauth", {
   login: text("login").notNull(),
   provider: text("provider").notNull(),
   repository: text("repository").notNull().references(() => registryTable.repository)
-});
+}, (table) => {
+  return {
+    pk: primaryKey({ columns: [table.login, table.provider] }),
+  }
 
+});
 export const commandInsertSchema = createInsertSchema(commandTable);

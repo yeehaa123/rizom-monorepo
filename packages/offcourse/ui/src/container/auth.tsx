@@ -51,7 +51,7 @@ export function getAuthData() {
 
 export function redirectToGitHub({ courseId }: CourseQuery) {
   const registryId = "Ov23liIHmaO6XFSYga34";
-  //const localId = "Ov23li51nX1AYgHxF6bl";
+  // const localId = "Ov23li51nX1AYgHxF6bl";
   const githubClientId = registryId;
   const { origin, pathname, search } = window.location;
   // const local_uri = 'http://localhost:8765'

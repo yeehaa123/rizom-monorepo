@@ -2,8 +2,6 @@ export const prerender = false;
 import { handleCommand } from '@offcourse/db/command';
 import type { APIRoute } from 'astro';
 import { ActionType, repositoryRegistrationSchema } from '@offcourse/schema';
-// import { curator, auth, keystore } from "../schema";
-// import { db } from "../db";
 import {
   deflattenKey,
   flattenKey,
@@ -23,7 +21,15 @@ export const POST: APIRoute = async ({ request }) => {
         throw ("env vars REPOSITORY_KEY needs to be set")
       }
       const data = await request.json()
-      const { publicKey, userName, repository, login, authProvider } = repositoryRegistrationSchema.parse(data);
+
+      const {
+        publicKey,
+        userName,
+        repository,
+        login,
+        authProvider
+      } = repositoryRegistrationSchema.parse(data);
+
       const privateKey = deflattenKey(REPOSITORY_KEY)
 
       // 1. HANDSHAKE
@@ -32,8 +38,7 @@ export const POST: APIRoute = async ({ request }) => {
       if (!rk) { throw ("INVALID REPOSITORY_KEY") }
 
       const { ok } = await fetch(`${repository}/handshake`, {
-        method: "POST",
-        headers: {
+        method: "POST", headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
           "Accept-Encoding": "application/json",
@@ -46,29 +51,21 @@ export const POST: APIRoute = async ({ request }) => {
       }
 
       // 2. SAVE TO DB
+
       const keyId = generateSafeHash(userName, repository, privateKey);
-
-      const repositoryEntry = {
-        keyId,
-        publicKey,
-        userName,
-        repository,
-        login,
-        authProvider
-
-      }
 
       await handleCommand({
         type: ActionType.REGISTER_REPOSITORY,
-        payload: repositoryEntry
+        payload: {
+          keyId,
+          publicKey,
+          userName,
+          repository,
+          login,
+          authProvider
+        }
       })
 
-      // await db.batch([
-      //   db.insert(keystore).values({ keyId, publicKey }),
-      //   db.insert(curator).values({ userName, repository }),
-      //   db.insert(auth).values({ login, provider: authProvider, userName })
-      // ]);
-      //
       // 3. GENERATE JWT
 
       const authToken = generateAuthToken({ userName, privateKey, publicKey, repository })

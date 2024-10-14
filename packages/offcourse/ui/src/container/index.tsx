@@ -2,8 +2,7 @@ import type { Course } from "@offcourse/schema";
 import { CourseCollection } from "../components/"
 import { useOffcourse } from "./store";
 
-export type Options = {
-}
+export type Options = {}
 
 export type ContainerProps = {
   data: Course | Course[],
