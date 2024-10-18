@@ -1,12 +1,13 @@
 export const prerender = false;
-import { authState, AuthProvider } from "@offcourse/schema"
+import { authState, AuthProvider, QueryType, ResponseType, registryEntry } from "@offcourse/schema"
 import { z } from 'zod';
 import { APIRoute } from "astro";
 import dotenv from 'dotenv';
+import { handleQuery } from '@offcourse/db/query';
+import { generateAuthToken, } from "@offcourse/crypto";
 
 dotenv.config();
 const { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } = process.env
-
 
 export const GET: APIRoute = async ({ url, redirect }) => {
   const urlSearchParams = url.searchParams
@@ -33,6 +34,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   });
 
   const oauthData = await auth_response.json();
+
   const { token_type, access_token } = z.object({
     token_type: z.string(),
     access_token: z.string()
@@ -48,43 +50,32 @@ export const GET: APIRoute = async ({ url, redirect }) => {
 
   const authProvider = AuthProvider.GITHUB;
   const { login } = z.object({ login: z.string() }).parse(userData);
-  const { userName, repository } = await getUser({ authProvider, login });
 
-  if (!repository) {
+  const { type, payload } = await handleQuery({
+    type: QueryType.GET_REGISTRY_FROM_OAUTH,
+    payload: { authProvider, login }
+  });
+
+
+  if (type === ResponseType.RETRIEVED_REGISTRY_ENTRY) {
+    const { userName, repository } = registryEntry.parse(payload);
+    const authToken = generateAuthToken({ userName, repository })
+    const authData = authState.parse({
+      authToken,
+      repository,
+      userName
+    })
+    const newParams = new URLSearchParams(authData);
+    const redirectURL = `${stateUrl.origin}${stateUrl.pathname}?${newParams}`
+    return redirect(redirectURL, 307);
+  }
+
+  if (type === ResponseType.REGISTRY_ENTRY_NOT_FOUND) {
     const authData = { authProvider, token_type, access_token, login, state }
     const newParams = new URLSearchParams(authData);
     const signupURL = `/signup/?${newParams}`
     return redirect(signupURL, 307);
   }
 
-  const authToken = "BLALALABAL";
-  const authData = authState.parse({
-    authToken,
-    userName,
-    repository
-  })
-
-  const newParams = new URLSearchParams(authData);
-  const redirectURL = `${stateUrl.origin}${stateUrl.pathname}?${newParams}`
-  return redirect(redirectURL, 307);
-
-}
-
-async function getUser({ login }: { authProvider: string, login: string }) {
-  // const authEntries= await db.select({
-  //   userName: auth.userName,
-  //   repository: curator.repository
-  // }).
-  //   from(auth)
-  //   .where(
-  //     and(
-  //       eq(auth.login, login),
-  //       eq(auth.provider, authProvider)
-  //     )
-  //   )
-  //   .leftJoin(
-  //     curator, eq(auth.userName, curator.userName)
-  //   );
-  // console.log("Registered User", authEntries);
-  return { userName: login, repository: undefined }
+  return redirect("/", 307);
 }

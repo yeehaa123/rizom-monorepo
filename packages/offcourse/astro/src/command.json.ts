@@ -1,8 +1,13 @@
 export const prerender = false;
 import type { APIRoute } from 'astro';
+import { actionSchema } from '@offcourse/schema';
 import { handleCommand } from '@offcourse/db/command';
-import jwt from 'jsonwebtoken';
+import { generateSafeHash, verifyAuthToken } from "@offcourse/crypto";
+import { getKeyStoreEntry } from '@offcourse/db/keystore';
+import dotenv from 'dotenv';
 
+dotenv.config();
+const { AUTH_URL } = process.env;
 
 export const OPTIONS: APIRoute = async ({ request }) => {
   const origin = request.headers.get("Origin");
@@ -24,32 +29,24 @@ export const POST: APIRoute = async ({ request }) => {
   if (origin && request.headers.get("Content-Type") === "application/json") {
     const body = await request.json();
     const authToken = request.headers.get("Authorization");
-    console.log(authToken)
-    try {
-      if (!authToken) {
-        throw ("AUTHORIZED ROUTED")
+    const authURL = AUTH_URL || 'https://offcourse-io.vercel.app';
+    const keyId = generateSafeHash("auth", authURL);
+    const publicKey = await getKeyStoreEntry(keyId);
+    if (publicKey) {
+      const isValid = verifyAuthToken(authToken, publicKey);
+      if (isValid) {
+        const action = actionSchema.parse(body)
+        const data = await handleCommand(action);
+        return new Response(JSON.stringify(data), {
+          headers: {
+            "Access-Control-Allow-Origin": origin,
+            'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+          },
+          status: 200
+        })
       }
-      // const decoded = jwt.verify(authToken, "http://localhost:8765/offcourse");
-      // console.log(decoded);
-    } catch (e) {
-      console.log(e)
-      return new Response(null, { status: 404 });
     }
-    const data = await handleCommand(body);
-    return new Response(JSON.stringify(
-      data
-    ), {
-      headers: {
-        "Access-Control-Allow-Origin": origin,
-        'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-      },
-      status: 200
-    })
   }
   return new Response(null, { status: 400 });
-}
-
-export const GET: APIRoute = async () => {
-  return new Response("HELLO", { status: 200 });
 }

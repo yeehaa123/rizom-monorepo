@@ -5,11 +5,10 @@ import { insertCourse } from "./models/course"
 import { insertKeyStoreEntry } from "./models/keystore"
 import { deleteCompletion, insertCompletion } from "./models/completion";
 import { insertNote } from "./models/note";
-import { actionSchema, ActionType } from '@offcourse/schema';
+import { ActionType } from '@offcourse/schema';
 import { insertRepositoryEntry } from './models/repository';
 
-export async function handleCommand(body: Action) {
-  const action = actionSchema.parse(body)
+export async function handleCommand(action: Action) {
   const id = await insertCommand(action);
   const { type, payload } = action;
   switch (type) {

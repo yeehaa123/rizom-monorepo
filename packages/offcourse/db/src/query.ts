@@ -1,10 +1,10 @@
-import { querySchema, QueryType } from '@offcourse/schema';
+import { Query, QueryType } from '@offcourse/schema';
 import { ResponseType } from '@offcourse/schema';
 import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
+import { getRepositoryEntry } from './models/repository';
 
-export async function handleQuery(body: string) {
-  const query = querySchema.parse(body);
+export async function handleQuery(query: Query) {
   const { type, payload } = query;
   switch (type) {
     case QueryType.FETCH_USER_RECORDS: {
@@ -21,8 +21,24 @@ export async function handleQuery(body: string) {
         payload: courses
       }
     }
+    case QueryType.GET_REGISTRY_FROM_OAUTH: {
+      const entry = await getRepositoryEntry(payload);
+
+      return entry
+        ? {
+          type: ResponseType.RETRIEVED_REGISTRY_ENTRY,
+          payload: entry
+        }
+        : {
+          type: ResponseType.REGISTRY_ENTRY_NOT_FOUND,
+          payload: undefined
+        }
+    }
     default: {
-      console.log(query);
+      return {
+        type: ResponseType.NO_OP,
+        payload: undefined
+      }
     }
   }
 }

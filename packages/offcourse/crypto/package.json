@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.7",
+    "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2"
   }
 }

@@ -27,7 +27,7 @@ export const POST: APIRoute = async ({ request }) => {
 
       // 2. STORE AUTH PUBLIC KEY IN DB
 
-      const keyId = generateSafeHash("auth", authURL, privateKey);
+      const keyId = generateSafeHash("auth", authURL);
 
       await handleCommand({
         type: ActionType.REGISTER_AUTH_SERVICE,

@@ -70,6 +70,12 @@ export const authState = z.object({
   repository: z.string()
 })
 
+export const registryEntry = z.object({
+  userName: z.string(),
+  repository: z.string()
+})
+
+
 export const userRecord = z.object({
   courseId: z.string(),
   isBookmarked: z.boolean(),
@@ -84,7 +90,6 @@ export const keystoreEntry = z.object({
 })
 
 export const repositoryEntry = z.object({
-  keyId: z.string(),
   publicKey: z.string(),
   userName: z.string(),
   repository: z.string(),

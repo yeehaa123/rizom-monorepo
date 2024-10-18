@@ -1,17 +1,26 @@
 import crypto from 'crypto';
 import jwt from "jsonwebtoken"
+import dotenv from 'dotenv';
+
+dotenv.config();
+const { AUTH_URL, REPOSITORY_KEY } = process.env;
 
 
-export function generateAuthToken({ userName, repository, privateKey, publicKey }:
-  { userName: string, privateKey: string, repository: string, publicKey: string }) {
-  return jwt.sign({ userName, publicKey, repository },
-    privateKey,
-    { algorithm: 'RS256', expiresIn: '7d' });
+export function generateAuthToken(entry: { userName: string, repository: string }) {
+  if (!REPOSITORY_KEY) {
+    throw ("env vars REPOSITORY_KEY needs to be set")
+  }
+  const privateKey = deflattenKey(REPOSITORY_KEY)
+  return jwt.sign(entry, privateKey, { algorithm: 'RS256', expiresIn: '7d' });
 }
 
-export function generateSafeHash(string1: string, string2: string, secretKey: string) {
+export function generateSafeHash(string1: string, string2: string) {
+  if (!REPOSITORY_KEY) {
+    throw ("env vars REPOSITORY_KEY needs to be set")
+  }
+  const privateKey = deflattenKey(REPOSITORY_KEY)
   const data = string1 + string2;
-  return crypto.createHmac('sha256', secretKey)
+  return crypto.createHmac('sha256', privateKey)
     .update(data)
     .digest('hex');
 }
@@ -31,8 +40,7 @@ export function generatePublicKeyFromPrivateKey(privateKeyString: string) {
 
     return publicKey as string
   } catch (error) {
-    console.error('Error generating public key:', error);
-    return null;
+    throw (`Error generating public key: ${error}`);
   }
 }
 
@@ -65,3 +73,19 @@ export function validatePublicKey(privateKey: string, publicKey: string) {
     return false;
   }
 }
+
+export function verifyAuthToken(authToken: string | null, publicKey: string | null) {
+  try {
+    if (!authToken || !publicKey) {
+      throw ("UNAUTHORIZED ROUTED")
+    }
+    const dfk = deflattenKey(publicKey);
+    const decoded = jwt.verify(authToken, dfk);
+    console.log(decoded);
+    return true;
+  } catch (e) {
+    console.log(e);
+    return false;
+  }
+}
+

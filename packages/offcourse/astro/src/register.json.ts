@@ -5,7 +5,6 @@ import { ActionType, repositoryRegistrationSchema } from '@offcourse/schema';
 import {
   deflattenKey,
   flattenKey,
-  generateSafeHash,
   generatePublicKeyFromPrivateKey,
   generateAuthToken,
 } from "@offcourse/crypto";
@@ -52,23 +51,22 @@ export const POST: APIRoute = async ({ request }) => {
 
       // 2. SAVE TO DB
 
-      const keyId = generateSafeHash(userName, repository, privateKey);
+      const payload = {
+        publicKey,
+        userName,
+        repository,
+        login,
+        authProvider
+      }
 
       await handleCommand({
         type: ActionType.REGISTER_REPOSITORY,
-        payload: {
-          keyId,
-          publicKey,
-          userName,
-          repository,
-          login,
-          authProvider
-        }
+        payload
       })
 
       // 3. GENERATE JWT
 
-      const authToken = generateAuthToken({ userName, privateKey, publicKey, repository })
+      const authToken = generateAuthToken({ userName, repository })
 
       // 4. RESPOND
 

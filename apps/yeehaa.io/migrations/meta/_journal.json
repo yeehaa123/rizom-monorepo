@@ -43,6 +43,13 @@
       "when": 1722068188802,
       "tag": "0005_daily_payback",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1729158036484,
+      "tag": "0006_tricky_giant_man",
+      "breakpoints": true
     }
   ]
 }

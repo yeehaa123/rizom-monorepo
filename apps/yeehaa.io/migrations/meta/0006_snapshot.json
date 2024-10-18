@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "21a52813-1e68-4d94-82f2-3f13e9cd117e",
-  "prevId": "234c7f01-cc8f-4403-939f-ac74ff26acbc",
+  "id": "373ff46c-b03d-4ccf-814e-5c108e5ed394",
+  "prevId": "21a52813-1e68-4d94-82f2-3f13e9cd117e",
   "tables": {
     "bookmark": {
       "name": "bookmark",
@@ -133,6 +133,37 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
+    "keystore": {
+      "name": "keystore",
+      "columns": {
+        "keyId": {
+          "name": "keyId",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "publicKey": {
+          "name": "publicKey",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "keystore_publicKey_unique": {
+          "name": "keystore_publicKey_unique",
+          "columns": [
+            "publicKey"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "note": {
       "name": "note",
       "columns": {
@@ -166,6 +197,89 @@
         }
       },
       "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "oauth": {
+      "name": "oauth",
+      "columns": {
+        "login": {
+          "name": "login",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "repository": {
+          "name": "repository",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "oauth_repository_registry_repository_fk": {
+          "name": "oauth_repository_registry_repository_fk",
+          "tableFrom": "oauth",
+          "tableTo": "registry",
+          "columnsFrom": [
+            "repository"
+          ],
+          "columnsTo": [
+            "repository"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "oauth_login_provider_pk": {
+          "columns": [
+            "login",
+            "provider"
+          ],
+          "name": "oauth_login_provider_pk"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "registry": {
+      "name": "registry",
+      "columns": {
+        "repository": {
+          "name": "repository",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "userName": {
+          "name": "userName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "registry_userName_unique": {
+          "name": "registry_userName_unique",
+          "columns": [
+            "userName"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
