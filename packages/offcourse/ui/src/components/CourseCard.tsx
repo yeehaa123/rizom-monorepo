@@ -9,6 +9,22 @@ import type {
 import { Overlay, OverlayModes } from "./Overlay"
 import CardChrome from "./CardChrome";
 
+
+import {
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/ui/card"
+
+import {
+  CardMeta,
+  Checkpoint,
+  Tags,
+  Toolbar
+} from "./";
+
 export type Affordances = {
   canAuthenticate: boolean,
   canBookmark: boolean,
@@ -27,19 +43,6 @@ export type CardState = {
   selectedCheckpoint: CheckpointType | undefined,
   affordances: Affordances,
 }
-
-import {
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "@/components/ui/card"
-
-import {
-  CardMeta,
-  Checkpoint,
-  Tags
-} from "./";
 
 export type CardActions = {
   signIn: (arg: CourseQuery) => void,
@@ -93,7 +96,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
       < CardChrome>
         <CardHeader className="space-y-4">
           <CardTitle className="flex w-full justify-between space-x-5 ">
-            <span>{goal}</span>
+            {goal}
           </CardTitle>
           <CardMeta {...courseCardState} />
           <CardDescription onClick={console.log}>
@@ -117,6 +120,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
             }
           </ul>
         </CardContent>
+        <CardFooter className="flex flex-col gap-y-4">
+          <Toolbar {...courseCardState} />
+        </CardFooter>
       </CardChrome >
     </div >)
 }
