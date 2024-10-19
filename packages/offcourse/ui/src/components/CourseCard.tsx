@@ -32,14 +32,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter,
   CardContent,
 } from "@/components/ui/card"
 
 import {
-  Toolbar,
-  Curator,
-  Bookmark,
+  CardMeta,
   Checkpoint,
   Tags
 } from "./";
@@ -69,27 +66,24 @@ export default function CourseCard(courseCardState: CourseCardState) {
   const {
     courseId,
     goal,
-    curator,
     checkpoints,
     description,
     tags,
   } = course;
 
   const {
-    toggleBookmark,
+    showInfoOverlay,
     toggleCheckpoint,
     showCheckpointOverlay
   } = actions
 
   const {
-    isBookmarked,
     affordances,
     completed
   } = cardState
 
 
   const {
-    canBookmark,
     canFollow
   } = affordances
 
@@ -99,13 +93,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
       < CardChrome>
         <CardHeader className="space-y-4">
           <CardTitle className="flex w-full justify-between space-x-5 ">
-            <span className="max-w-[80%]">{goal}</span>
-            <Bookmark
-              canBookmark={canBookmark}
-              isBookmarked={isBookmarked}
-              onClick={() => toggleBookmark({ courseId })} />
+            <span>{goal}</span>
           </CardTitle>
-          <Curator {...curator} />
+          <CardMeta {...courseCardState} />
           <CardDescription onClick={console.log}>
             {description}
           </CardDescription>
@@ -119,19 +109,14 @@ export default function CourseCard(courseCardState: CourseCardState) {
                 isCompleted={!!completed.find(id => id === checkpointId)}
                 courseId={courseId}
                 canCheckComplete={canFollow}
-                toggleComplete={() => toggleCheckpoint({ checkpointId, courseId })}
+                showInfoOverlay={showInfoOverlay}
+                toggleComplete={toggleCheckpoint}
                 showCheckpoint={() => showCheckpointOverlay({ courseId, checkpointId })}
                 checkpointId={checkpointId}
                 {...cp} />)))
             }
           </ul>
         </CardContent>
-        <CardFooter className="flex flex-col gap-y-4">
-          <Toolbar
-            course={course}
-            affordances={affordances}
-            actions={actions} />
-        </CardFooter>
       </CardChrome >
     </div >)
 }

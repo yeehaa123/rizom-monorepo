@@ -1,47 +1,47 @@
 import { cn } from "@/lib/utils"
-import type { Course } from "@offcourse/schema"
-import type { Affordances } from "./CourseCard"
-import { Logo } from "./Logo";
+import type { CourseCardState } from "./CourseCard"
 import {
-  Crosshair1Icon,
-  Pencil2Icon,
+  StarIcon,
+  StarFilledIcon,
+  Crosshair2Icon,
+  Share1Icon,
+  Pencil1Icon,
 } from '@radix-ui/react-icons'
-import type { CardActions } from "./CourseCard";
-
-type Props = {
-  course: Course,
-  actions: CardActions,
-  affordances: Affordances
-}
 
 export default function Toolbar({
   course,
-  affordances,
+  cardState,
   actions,
-}: Props) {
+}: CourseCardState) {
+  const { affordances, isBookmarked } = cardState;
   const { habitat, courseId } = course;
   const {
+
+    canBookmark,
+    canAnnotate,
+  } = affordances;
+  const {
+    toggleBookmark,
     showInfoOverlay,
     showNotesOverlay,
   } = actions;
-  const { canAnnotate } = affordances;
+  const iconStyles = "h-6 w-6 text-gray-300 hover:text-secondary"
+  const BookmarkIcon = isBookmarked
+    ? StarFilledIcon
+    : StarIcon
   return (
-    <div className="flex w-full justify-between">
-      <div className="flex flex-start gap-x-4 ">
-        <Logo onClick={() => showInfoOverlay({ courseId })}
-          className={
-            cn("h-4 w-4 fill-gray-500 hover:fill-secondary", { "hidden": false })
-          } />
-      </div>
-      <div className="flex gap-x-4 ">
-        <Pencil2Icon onClick={() => showNotesOverlay({ courseId })}
-          className={cn("h-4 w-4 text-gray-500", { "hidden": !canAnnotate })} />
-      </div>
-      <div className="flex gap-x-4 ">
-        {habitat && <a href={`/posts/${habitat.slug}`} className={cn("invisible", { "visible": habitat })}>
-          <Crosshair1Icon className="h-4 w-4 text-gray-500 hover:text-secondary" />
-        </a>}
-      </div>
+    <div className="flex w-full justify-end gap-x-3">
+      {habitat && <a href={`/posts/${habitat.slug}`} className={cn("invisible", { "visible": habitat })}>
+        <Crosshair2Icon className={iconStyles} />
+      </a>}
+      <Pencil1Icon onClick={() => showNotesOverlay({ courseId })}
+        className={cn(iconStyles, { "hidden": !canAnnotate })} />
+      <Share1Icon onClick={() => showNotesOverlay({ courseId })}
+        className={cn(iconStyles, { "hidden": false })} />
+      <BookmarkIcon onClick={() =>
+        canBookmark ? toggleBookmark({ courseId }) : showInfoOverlay({ courseId })
+      }
+        className={cn(iconStyles, { "hidden": false })} />
     </div>
   )
 }

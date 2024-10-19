@@ -23,7 +23,6 @@ export async function handleQuery(query: Query) {
     }
     case QueryType.GET_REGISTRY_FROM_OAUTH: {
       const entry = await getRepositoryEntry(payload);
-
       return entry
         ? {
           type: ResponseType.RETRIEVED_REGISTRY_ENTRY,
