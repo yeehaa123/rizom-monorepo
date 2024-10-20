@@ -1,3 +1,4 @@
+import type { CourseCardState } from "@/types"
 import { Button } from "@/components/ui/button"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { Logo } from "./Logo";
@@ -8,7 +9,6 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card"
-import type { CourseCardState } from "./CourseCard";
 
 export function InfoOverlay(
   { courseId, actions, cardState }: CourseCardState) {

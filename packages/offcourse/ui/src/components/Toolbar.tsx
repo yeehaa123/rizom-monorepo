@@ -1,35 +1,41 @@
 import { cn } from "@/lib/utils"
-import type { CourseCardState } from "./CourseCard"
+import type { CourseCardState } from "@/types"
 import {
   Pencil1Icon,
-  ExitIcon,
-  CopyIcon,
-  Pencil2Icon,
+  Crosshair2Icon,
+  Share1Icon,
+  StarIcon,
+  StarFilledIcon,
 } from '@radix-ui/react-icons'
 
-const iconStyles = "h-5 w-5 text-gray-300 hover:text-secondary"
 export default function Toolbar({
   course,
   cardState,
   actions,
 }: CourseCardState) {
-  const { affordances } = cardState;
-  const { courseId } = course;
+  const { isBookmarked, affordances } = cardState;
+  const { courseId, habitat } = course;
+  const { canBookmark } = affordances;
   const {
-    canAnnotate,
-  } = affordances;
-  const {
-    signOut,
+    showInfoOverlay,
+    toggleBookmark,
     showNotesOverlay,
   } = actions;
+  const BookmarkIcon = isBookmarked ? StarFilledIcon : StarIcon
+  const iconStyles = "h-6 w-6 text-gray-300 hover:text-secondary"
   return (
-    <div className="flex w-full justify-between gap-x-3">
-      <ExitIcon onClick={signOut}
-        className={cn(iconStyles, { "hidden": !canAnnotate })} />
-      <CopyIcon onClick={() => showNotesOverlay({ courseId })}
-        className={cn(iconStyles, { "hidden": !canAnnotate })} />
-      <Pencil2Icon onClick={() => showNotesOverlay({ courseId })}
-        className={cn(iconStyles, { "hidden": !canAnnotate })} />
+    <div className="flex w-full justify-end gap-x-3">
+      {habitat && <a href={`/posts/${habitat.slug}`} className={cn("invisible", { "visible": habitat })}>
+        <Crosshair2Icon className={iconStyles} />
+      </a>}
+      <Pencil1Icon onClick={() => showNotesOverlay({ courseId })}
+        className={cn(iconStyles, { "hidden": false })} />
+      <Share1Icon onClick={() => showNotesOverlay({ courseId })}
+        className={cn(iconStyles, { "hidden": false })} />
+      <BookmarkIcon onClick={() =>
+        canBookmark ? toggleBookmark({ courseId }) : showInfoOverlay({ courseId })
+      }
+        className={cn(iconStyles, { "hidden": false })} />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import type { CourseCardState } from "./CourseCard"
+import type { CourseCardState } from "@/types"
 import { Transition } from "@headlessui/react"
 import { CheckpointOverlay } from "./CheckpointOverlay";
 import { NoneOverlay } from "./NoneOverlay";

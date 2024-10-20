@@ -1,3 +1,5 @@
+import type { CourseCardState } from "@/types"
+import type { Note } from "@offcourse/schema";
 import { Button } from "@/components/ui/button"
 import {
   CardDescription,
@@ -7,8 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { NoteForm } from "./NoteForm";
-import type { Note } from "@offcourse/schema";
-import type { CourseCardState } from "./CourseCard";
 
 export function NotesOverlay(
   { courseId, actions, cardState }: CourseCardState) {

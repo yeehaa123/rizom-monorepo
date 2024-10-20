@@ -1,4 +1,4 @@
-import type { CourseCardState, CardActions } from "./CourseCard"
+import type { CourseCardState, CardActions } from "@/types"
 import { CourseCard } from "."
 
 export type Props = {

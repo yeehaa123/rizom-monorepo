@@ -1,4 +1,4 @@
-import type { CourseCardState } from "./CourseCard";
+import type { CourseCardState } from "@/types"
 
 export function NoneOverlay(_props: CourseCardState) {
   return (

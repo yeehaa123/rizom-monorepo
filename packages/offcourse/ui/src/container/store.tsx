@@ -1,4 +1,4 @@
-import type { CourseCardState } from "@/components/CourseCard"
+import type { CourseCardState } from "@/types"
 import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
 import { ActionType } from "@offcourse/schema"
 import { reducer } from "./reducer"
