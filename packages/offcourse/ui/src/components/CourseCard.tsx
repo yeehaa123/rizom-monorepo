@@ -71,7 +71,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
                 <Checkpoint key={cp.checkpointId}
                   {...cp}
                   isCompleted={!!cardState.completed.find(id => id === cp.checkpointId)}
-                  selectCheckpoint={() => showCheckpointOverlay({
+                  onClick={() => showCheckpointOverlay({
                     courseId,
                     checkpointId: cp.checkpointId
                   })}
@@ -96,6 +96,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
               isCompleted={
                 !!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)
               }
+              onClick={
+                () => hideCheckpointOverlay({ courseId })
+              }
               toggleComplete={
                 () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
               } />
@@ -106,15 +109,12 @@ export default function CourseCard(courseCardState: CourseCardState) {
               className="flex text-xs items-center text-left text-gray-900 dark:text-gray-100">
               <ExternalLinkIcon className="mr-2 w-5 h-5" />
               <span className="break-words max-w-[70%]">{selectedCheckpoint.href}</span></a>
-            <Button
-              variant="outline"
-              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
           </CardContent>
         </CardChrome>
     }
 
     case CardModes.SHARE: {
-      const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-secondary group-hover:fill-gray-500"
+      const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-gray-300 group-hover:fill-gray-300"
       return (
         <CardChrome {...courseCardState}>
           <CardHeader className="space-y-6">
@@ -127,7 +127,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
               <Input required id="repository" name="repository" />
               <Button type="submit"
                 form={`${courseId}-note`}
-                className="w-full group hover:bg-secondary">
+                className="w-full group hover:bg-secondary dark:hover:bg-secondary">
                 <Logo className={iconClasses} />
                 Share with Offcourse</Button>
             </form>
