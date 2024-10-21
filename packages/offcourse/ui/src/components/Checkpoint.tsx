@@ -24,10 +24,10 @@ export default function Checkpoint({
         disabled={false}
         checked={isCompleted}
         id={checkpointId}
-        className="m-3"
+        className="m-4 mr-1"
         onClick={toggleComplete} />
       <Label htmlFor={checkpointId}
-        className={cn("m-3 py-1 w-full")}
+        className={cn("text-base m-3 py-1 w-full")}
         onClick={onClick}>
         {task}
       </Label>

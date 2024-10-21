@@ -59,11 +59,11 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.NORMAL: {
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-6">
+          <CardHeader className="space-y-8">
             <CardTitle>{course.goal}</CardTitle>
             <Curator {...curator} />
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-8">
             <CardDescription>{course.description}</CardDescription>
             <Tags tags={course.tags} />
             <ul className="flex flex-col gap-2">
@@ -86,11 +86,11 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.CHECKPOINT: {
       return selectedCheckpoint &&
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-6">
+          <CardHeader className="space-y-8">
             <CardTitle onClick={() => hideCheckpointOverlay({ courseId })}>{course.goal}</CardTitle>
             <Curator {...curator} />
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-8">
             <Checkpoint key={selectedCheckpoint.checkpointId}
               {...selectedCheckpoint}
               isCompleted={
@@ -117,38 +117,39 @@ export default function CourseCard(courseCardState: CourseCardState) {
       const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-gray-300 group-hover:fill-gray-300"
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-6">
+          <CardHeader className="space-y-8">
             <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>
             <Curator {...curator} />
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="mt-4 space-y-8">
+            <div className="space-y-4">
+              <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+                <LinkedInLogoIcon className={iconClasses} />
+                Share on LinkedIn
+              </Button>
+              <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+                <NotionLogoIcon className={iconClasses} />
+                Share on Notion
+              </Button>
+              <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+                <InstagramLogoIcon className={iconClasses} />
+                Share on Instagram
+              </Button>
+            </div>
+            <div className="flex items-center gap-4">
+              <Separator className="flex-1" />
+              <span className="text-sm text-muted-foreground">Or</span>
+              <Separator className="flex-1" />
+            </div>
             <form className="grid w-full max-w-sm items-center gap-3">
-              <Label htmlFor="repository">Repository URL</Label>
-              <Input required id="repository" name="repository" />
+              <Input required id="repository"
+                placeholder="Your friend's repository url" name="repository" />
               <Button type="submit"
                 form={`${courseId}-note`}
                 className="w-full group hover:bg-secondary dark:hover:bg-secondary">
                 <Logo className={iconClasses} />
                 Share with Offcourse</Button>
             </form>
-            <div className="flex items-center gap-4">
-              <Separator className="flex-1" />
-              <span className="text-sm text-muted-foreground">Or</span>
-              <Separator className="flex-1" />
-            </div>
-            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
-              <LinkedInLogoIcon className={iconClasses} />
-              Share on LinkedIn
-            </Button>
-            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
-              <NotionLogoIcon className={iconClasses} />
-              Share on Notion
-            </Button>
-            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
-              <InstagramLogoIcon className={iconClasses} />
-              Share on Instagram
-            </Button>
-            <Separator />
             <Button onClick={() => { hideOverlay({ courseId }) }}
               variant="outline"
               className="w-full">Close</Button>
@@ -161,11 +162,11 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.NOTES: {
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-6">
+          <CardHeader className="space-y-8">
             <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>
             <Curator {...curator} />
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-8">
             {notes.map(({ note, annotatedAt }) =>
               <CardDescription key={annotatedAt.toString()}>
                 {annotatedAt.getTime()} // {note}
@@ -173,10 +174,12 @@ export default function CourseCard(courseCardState: CourseCardState) {
             }
             <NoteForm noteId={`${courseId}-note`}
               onConfirm={(note: Note) => addNote({ ...note, courseId })} />
-            <Button type="submit" form={`${courseId}-note`} className="w-full hover:bg-secondary">Save Note</Button>
-            <Button
-              variant="outline"
-              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            <div className="space-y-2">
+              <Button type="submit" form={`${courseId}-note`} className="w-full hover:bg-secondary">Save Note</Button>
+              <Button
+                variant="outline"
+                onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            </div>
           </CardContent>
         </CardChrome >
       )
@@ -188,16 +191,18 @@ export default function CourseCard(courseCardState: CourseCardState) {
           <CardHeader>
             <CardTitle className="mb-6">Offcourse</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-4">
             <OffcourseInfo />
-            <Button
-              onClick={() => signIn({ courseId })} className="w-full hover:bg-secondary">
-              <GitHubLogoIcon className="mr-2 h-4 w-4" />
-              Authenticate With Github
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            <div className="space-y-2">
+              <Button
+                onClick={() => signIn({ courseId })} className="w-full hover:bg-secondary">
+                <GitHubLogoIcon className="mr-2 h-4 w-4" />
+                Authenticate With Github
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            </div>
           </CardContent>
         </CardChrome >
       )
@@ -211,12 +216,14 @@ export default function CourseCard(courseCardState: CourseCardState) {
           </CardHeader>
           <CardContent className="space-y-6">
             <OffcourseInfo />
-            <Button onClick={signOut} className="w-full hover:bg-secondary">
-              Sign Out
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            <div className="space-y-2">
+              <Button onClick={signOut} className="w-full hover:bg-secondary">
+                Sign Out
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+            </div>
           </CardContent>
         </CardChrome >
       )

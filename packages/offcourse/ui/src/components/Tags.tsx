@@ -7,7 +7,7 @@ export default function Tags({ tags }: { tags: string[] }) {
       href={`/tags/${tag}`}
       className={cn(
         badgeVariants({ variant: "outline" }),
-        "rounded-none text-black font-normal hover:bg-black hover:text-white")}
+        "text-sm rounded-none text-gray-800 font-normal hover:bg-black hover:text-white")}
       key={tag}>
       {tag}
     </a>)}
