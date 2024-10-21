@@ -109,6 +109,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
               className="flex text-xs items-center text-left text-gray-900 dark:text-gray-100">
               <ExternalLinkIcon className="mr-2 w-5 h-5" />
               <span className="break-words max-w-[70%]">{selectedCheckpoint.href}</span></a>
+            <Button onClick={() => { hideOverlay({ courseId }) }}
+              variant="outline"
+              className="w-full">Close</Button>
           </CardContent>
         </CardChrome>
     }

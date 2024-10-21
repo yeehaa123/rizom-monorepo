@@ -12,7 +12,7 @@ export default function Curator({ alias, socials, repository }: Curator) {
           <AvatarImage userName={alias} saturation={100} lightness={100} />
           <AvatarFallback className="bg-secondary text-white">YH</AvatarFallback>
         </Avatar>
-        <CardDescription className="capitalize align-middle">{alias}</CardDescription>
+        <CardDescription className="text-base capitalize align-middle">{alias}</CardDescription>
       </a>
       <Socials socials={socials} />
     </div>
