@@ -57,10 +57,24 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
-    case ActionType.SHOW_INFO_OVERLAY: {
+    case ActionType.SHOW_AUTH_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.cardMode = CardModes.INFO;
+        card.cardState.cardMode = CardModes.AUTH;
+      }
+      break;
+    }
+    case ActionType.SHOW_USER_OVERLAY: {
+      const card = findCard(state, payload);
+      if (card) {
+        card.cardState.cardMode = CardModes.USER;
+      }
+      break;
+    }
+    case ActionType.SHOW_SHARE_OVERLAY: {
+      const card = findCard(state, payload);
+      if (card) {
+        card.cardState.cardMode = CardModes.SHARE;
       }
       break;
     }

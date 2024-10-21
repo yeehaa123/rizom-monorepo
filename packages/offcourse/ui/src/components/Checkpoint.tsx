@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 interface Props extends Checkpoint {
   isCompleted: boolean,
   toggleComplete: () => void,
-  selectCheckpoint: () => void,
+  selectCheckpoint?: () => void,
 }
 
 export default function Checkpoint({
@@ -26,10 +26,9 @@ export default function Checkpoint({
         id={checkpointId}
         onClick={toggleComplete} />
       <Label htmlFor={checkpointId}
-        className={cn("px-2 py-1")}>
-        <button onClick={selectCheckpoint}>
-          {task}
-        </button>
+        className={cn("px-3 py-1")}
+        onClick={selectCheckpoint}>
+        {task}
       </Label>
     </ListItem>
   )

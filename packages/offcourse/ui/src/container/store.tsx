@@ -44,7 +44,7 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
       const { affordances } = card.cardState;
       const { canFollow } = affordances;
       if (!canFollow) {
-        return showInfoOverlay(payload);
+        return showAuthOverlay(payload);
       }
       card.cardState.isBookmarked
         ? dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
@@ -65,7 +65,7 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
       const { completed, affordances } = card.cardState;
       const { canFollow } = affordances;
       if (!canFollow) {
-        return showInfoOverlay(payload);
+        return showAuthOverlay(payload);
       }
       const isCompleted = completed.find(id => id === checkpointId)
       isCompleted
@@ -83,8 +83,14 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
     dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
 
-  const showInfoOverlay = (payload: CourseQuery) =>
-    dispatch({ type: ActionType.SHOW_INFO_OVERLAY, payload })
+  const showAuthOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_AUTH_OVERLAY, payload })
+
+  const showUserOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_USER_OVERLAY, payload })
+
+  const showShareOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_SHARE_OVERLAY, payload })
 
   const showNotesOverlay = (payload: CourseQuery) => {
     const card = findCard(state, payload);
@@ -92,7 +98,7 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
       const { affordances } = card.cardState;
       const { canFollow } = affordances;
       if (!canFollow) {
-        return showInfoOverlay(payload);
+        return showAuthOverlay(payload);
       }
       dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
     }
@@ -129,9 +135,11 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     signIn,
     signOut,
     hideOverlay,
-    showInfoOverlay,
+    showAuthOverlay,
+    showUserOverlay,
     showNotesOverlay,
     showCheckpointOverlay,
+    showShareOverlay,
     hideCheckpointOverlay
   }
 

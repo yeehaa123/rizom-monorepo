@@ -1,34 +1,33 @@
 import type { CourseCardState } from "../types";
 import type { Note } from "@offcourse/schema";
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "./ui/button"
+import { Separator } from "./ui/separator"
+
 import {
   ExternalLinkIcon,
   GitHubLogoIcon,
-  Pencil1Icon,
-  Crosshair2Icon,
-  Share1Icon,
-  StarIcon,
-  StarFilledIcon,
+  InstagramLogoIcon,
+  NotionLogoIcon,
+  LinkedInLogoIcon,
 } from '@radix-ui/react-icons'
 import {
   CardContent,
-  Card,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import {
-  AvatarImage,
+  CardChrome,
   Checkpoint,
   NoteForm,
-  Logo,
   OffcourseInfo,
-  Tags
+  Curator,
+  Tags,
+  Logo
 } from "./";
 import { CardModes } from "../types";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 
 export default function CourseCard(courseCardState: CourseCardState) {
   const { course, actions, cardState } = courseCardState;
@@ -45,142 +44,180 @@ export default function CourseCard(courseCardState: CourseCardState) {
     addNote,
     toggleCheckpoint,
     showCheckpointOverlay,
-    showInfoOverlay,
-    showNotesOverlay,
-    toggleBookmark,
   } = actions
 
   const {
     selectedCheckpoint,
     cardMode,
-    notes,
     userName,
-    isBookmarked,
-    affordances,
+    notes,
   } = cardState
 
-  const { canFollow } = affordances;
+  switch (cardMode) {
+    case CardModes.NORMAL: {
+      return (
+        <CardChrome {...courseCardState}>
+          <CardHeader className="space-y-4">
+            <CardTitle>{course.goal}</CardTitle>
+            <Curator {...curator} />
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <CardDescription>{course.description}</CardDescription>
+            <Tags tags={course.tags} />
+            <ul className="flex flex-col gap-2">
+              {checkpoints.map((cp) => (
+                <Checkpoint key={cp.checkpointId}
+                  {...cp}
+                  isCompleted={!!cardState.completed.find(id => id === cp.checkpointId)}
+                  selectCheckpoint={() => showCheckpointOverlay({
+                    courseId,
+                    checkpointId: cp.checkpointId
+                  })}
+                  toggleComplete={() => toggleCheckpoint({ courseId, checkpointId: cp.checkpointId })}
+                />
+              ))}
+            </ul>
+          </CardContent>
+        </CardChrome>)
+    }
 
-  const BookmarkIcon = isBookmarked ? StarFilledIcon : StarIcon
-  const iconStyles = "h-6 w-6 text-gray-300 hover:text-secondary"
+    case CardModes.CHECKPOINT: {
+      return selectedCheckpoint &&
+        <CardChrome {...courseCardState}>
+          <CardHeader>
+            <CardTitle onClick={() => hideOverlay({ courseId })}>{course.goal}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <Checkpoint key={selectedCheckpoint.checkpointId}
+              {...selectedCheckpoint}
+              isCompleted={
+                !!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)
+              }
+              toggleComplete={
+                () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
+              } />
+            <CardDescription>{selectedCheckpoint.description}</CardDescription>
+            <Tags tags={selectedCheckpoint.tags} />
+            <a href={selectedCheckpoint.href}
+              onClick={() => hideOverlay({ courseId })}
+              className="flex text-xs items-center text-left text-gray-900 dark:text-gray-100">
+              <ExternalLinkIcon className="mr-2 w-5 h-5" />
+              <span className="break-words max-w-[70%]">{selectedCheckpoint.href}</span></a>
+            <Button
+              variant="outline"
+              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+          </CardContent>
+        </CardChrome>
+    }
 
-  return (
-    <Card className={cn("relative flex flex-col select-none max-w-[360px] rounded-none")}>
-      <CardHeader className="space-y-4">
-        <CardTitle>{course.goal}</CardTitle>
-        <div className="flex align-middle py-4 items-center justify-between">
-          <a href={curator.repository} className="flex items-center space-x-3">
-            <Avatar>
-              <AvatarImage userName={curator.alias} saturation={100} lightness={100} />
-              <AvatarFallback className="bg-secondary text-white">YH</AvatarFallback>
-            </Avatar>
-            <CardDescription className="capitalize">{curator.alias}</CardDescription>
-          </a>
-          <div className="flex w-full justify-end gap-x-3">
-            {course.habitat && <a href={`/posts/${course.habitat.slug}`}
-              className={cn("invisible", { "visible": course.habitat })}>
-              <Crosshair2Icon className={iconStyles} />
-            </a>
+    case CardModes.SHARE: {
+      const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-gray-300 group-hover:fill-secondary"
+      return (
+        <CardChrome {...courseCardState}>
+          <CardHeader className="space-y-4">
+            <CardTitle onClick={() => hideOverlay({ courseId })}>{course.goal}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <form className="grid w-full max-w-sm items-center gap-3">
+              <Label htmlFor="repository">Repository URL</Label>
+              <Input required id="repository" name="repository" />
+              <Button type="submit"
+                form={`${courseId}-note`}
+                variant="outline"
+                className="w-full group">
+                <Logo className={iconClasses} />
+                Share with Offcourse</Button>
+            </form>
+            <div className="flex items-center gap-4">
+              <Separator className="flex-1" />
+              <span className="text-sm text-muted-foreground">Or</span>
+              <Separator className="flex-1" />
+            </div>
+            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+              <LinkedInLogoIcon className={iconClasses} />
+              Share on LinkedIn
+            </Button>
+            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+              <NotionLogoIcon className={iconClasses} />
+              Share on Notion
+            </Button>
+            <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+              <InstagramLogoIcon className={iconClasses} />
+              Share on Instagram
+            </Button>
+            <Separator />
+            <Button onClick={() => { hideOverlay({ courseId }) }}
+              variant="outline"
+              className="w-full">Close</Button>
+          </CardContent>
+        </CardChrome >
+      )
+    }
+
+
+    case CardModes.NOTES: {
+      return (
+        <CardChrome {...courseCardState}>
+          <CardHeader className="space-y-4">
+            <CardTitle>{course.goal}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {notes.map(({ note, annotatedAt }) =>
+              <CardDescription key={annotatedAt.toString()}>
+                {annotatedAt.getTime()} // {note}
+              </CardDescription>)
             }
-            <Pencil1Icon onClick={() => showNotesOverlay({ courseId })}
-              className={cn(iconStyles, { "hidden": false })} />
-            <Share1Icon onClick={() => showNotesOverlay({ courseId })}
-              className={cn(iconStyles, { "hidden": false })} />
-            <BookmarkIcon onClick={() => affordances.canBookmark
-              ? toggleBookmark({ courseId })
-              : showInfoOverlay({ courseId })
-            } className={cn(iconStyles, { "hidden": false })} />
-          </div>
-        </div>
-      </CardHeader>
+            <NoteForm noteId={`${courseId}-note`}
+              onConfirm={(note: Note) => addNote({ ...note, courseId })} />
+            <Button type="submit" form={`${courseId}-note`} className="w-full">Save Note</Button>
+            <Button
+              variant="outline"
+              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+          </CardContent>
+        </CardChrome >
+      )
+    }
 
-      {cardMode === CardModes.NORMAL &&
-        <CardContent className="space-y-6">
-          <CardDescription>{course.description}</CardDescription>
-          <Tags tags={course.tags} />
-          <ul className="flex flex-col gap-2">
-            {checkpoints.map((cp) => (
-              <Checkpoint key={cp.checkpointId}
-                {...cp}
-                isCompleted={!!cardState.completed.find(id => id === cp.checkpointId)}
-                selectCheckpoint={() => showCheckpointOverlay({
-                  courseId,
-                  checkpointId: cp.checkpointId
-                })}
-                toggleComplete={canFollow
-                  ? () => toggleCheckpoint({ courseId, checkpointId: cp.checkpointId })
-                  : () => showInfoOverlay({ courseId })} />
-            ))}
-          </ul>
-        </CardContent>
-      }
+    case CardModes.AUTH: {
+      return (
+        <CardChrome {...courseCardState}>
+          <CardHeader>
+            <CardTitle className="mb-6">Offcourse</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <OffcourseInfo />
+            <Button
+              onClick={() => signIn({ courseId })} variant="outline" className="w-full">
+              <GitHubLogoIcon className="mr-2 h-4 w-4" />
+              Authenticate With Github
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+          </CardContent>
+        </CardChrome >
+      )
+    }
 
-      {cardMode === CardModes.CHECKPOINT && selectedCheckpoint &&
-        <CardContent className="space-y-6">
-          <Checkpoint key={selectedCheckpoint.checkpointId}
-            {...selectedCheckpoint}
-            isCompleted={!!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)}
-            selectCheckpoint={() => showCheckpointOverlay({
-              courseId,
-              checkpointId: selectedCheckpoint.checkpointId
-            })}
-            toggleComplete={canFollow
-              ? () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
-              : () => showInfoOverlay({ courseId })} />
-          <Tags tags={selectedCheckpoint.tags} />
-          <CardDescription>{selectedCheckpoint.description}</CardDescription>
-          <a href={selectedCheckpoint.href}
-            onClick={() => hideOverlay({ courseId })}
-            className="flex text-xs items-center text-left text-gray-900 dark:text-gray-100">
-            <ExternalLinkIcon className="mr-2 w-5 h-5" />
-            <span className="break-words max-w-[70%]">{selectedCheckpoint.href}</span></a>
-          <Button onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
-        </CardContent>
-      }
+    case CardModes.USER: {
+      return (
+        <CardChrome {...courseCardState}>
+          <CardHeader>
+            <CardTitle className="capitalize mb-6">{userName}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <OffcourseInfo />
+            <Button onClick={signOut} variant="outline" className="w-full">
+              Sign Out
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+          </CardContent>
+        </CardChrome >
+      )
+    }
 
-      {cardMode === CardModes.INFO &&
-        <CardContent className="space-y-6">
-          {!canFollow &&
-            <>
-              <OffcourseInfo />
-              <Button onClick={() => signIn({ courseId })} variant="outline" className="w-full">
-                <GitHubLogoIcon className="mr-2 h-4 w-4" />
-                Authenticate With Github
-              </Button>
-            </>
-          }
-          {canFollow &&
-            <>
-              <OffcourseInfo />
-              <Button onClick={signOut} variant="outline" className="w-full">
-                Sign Out
-              </Button>
-            </>}
-
-          <Button onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
-        </CardContent>
-      }
-
-      {cardMode === CardModes.NOTES &&
-        <CardContent className="space-y-6">
-          {notes.map(({ note, annotatedAt }) =>
-            <CardDescription key={annotatedAt.toString()}>
-              {annotatedAt.getTime()} // {note}
-            </CardDescription>)
-          }
-          <NoteForm noteId={`${courseId}-note`}
-            onConfirm={(note: Note) => addNote({ ...note, courseId })} />
-          <Button type="submit" form={`${courseId}-note`} className="w-full">Save Note</Button>
-          <Button onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
-        </CardContent >
-      }
-
-      <CardFooter className="flex justify-end">
-        <Logo onClick={() => showInfoOverlay({ courseId })}
-          className={cn(
-            "h-5 w-5 fill-gray-300 dark:fill-gray-300 hover:fill-secondary",
-            { "hidden": false })} />
-      </CardFooter>
-    </Card >
-  )
+  }
 }
+
