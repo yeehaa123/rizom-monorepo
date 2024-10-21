@@ -46,6 +46,7 @@ export type CardActions = {
   showUserOverlay: (arg: CourseQuery) => void
   showNotesOverlay: (arg: CourseQuery) => void
   hideOverlay: (arg: CourseQuery) => void
+  hideCheckpointOverlay: (arg: CourseQuery) => void
   addNote: (arg: Note & CourseQuery) => void;
 }
 

@@ -32,6 +32,7 @@ import { Input } from "./ui/input";
 export default function CourseCard(courseCardState: CourseCardState) {
   const { course, actions, cardState } = courseCardState;
   const {
+    goal,
     courseId,
     checkpoints,
     curator,
@@ -39,6 +40,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
   const {
     hideOverlay,
+    hideCheckpointOverlay,
     signIn,
     signOut,
     addNote,
@@ -57,7 +59,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.NORMAL: {
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-4">
+          <CardHeader className="space-y-6">
             <CardTitle>{course.goal}</CardTitle>
             <Curator {...curator} />
           </CardHeader>
@@ -84,8 +86,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.CHECKPOINT: {
       return selectedCheckpoint &&
         <CardChrome {...courseCardState}>
-          <CardHeader>
-            <CardTitle onClick={() => hideOverlay({ courseId })}>{course.goal}</CardTitle>
+          <CardHeader className="space-y-6">
+            <CardTitle onClick={() => hideCheckpointOverlay({ courseId })}>{course.goal}</CardTitle>
+            <Curator {...curator} />
           </CardHeader>
           <CardContent className="space-y-6">
             <Checkpoint key={selectedCheckpoint.checkpointId}
@@ -114,8 +117,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
       const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-secondary group-hover:fill-gray-500"
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-4">
-            <CardTitle onClick={() => hideOverlay({ courseId })}>{course.goal}</CardTitle>
+          <CardHeader className="space-y-6">
+            <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>
+            <Curator {...curator} />
           </CardHeader>
           <CardContent className="space-y-6">
             <form className="grid w-full max-w-sm items-center gap-3">
@@ -157,8 +161,9 @@ export default function CourseCard(courseCardState: CourseCardState) {
     case CardModes.NOTES: {
       return (
         <CardChrome {...courseCardState}>
-          <CardHeader className="space-y-4">
-            <CardTitle>{course.goal}</CardTitle>
+          <CardHeader className="space-y-6">
+            <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>
+            <Curator {...curator} />
           </CardHeader>
           <CardContent className="space-y-6">
             {notes.map(({ note, annotatedAt }) =>
@@ -179,7 +184,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
     case CardModes.AUTH: {
       return (
-        <CardChrome {...courseCardState}>
+        <CardChrome className="bg-gray-100 dark:bg-gray-900" {...courseCardState}>
           <CardHeader>
             <CardTitle className="mb-6">Offcourse</CardTitle>
           </CardHeader>
@@ -200,7 +205,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
     case CardModes.USER: {
       return (
-        <CardChrome {...courseCardState}>
+        <CardChrome className="bg-gray-100 dark:bg-gray-900" {...courseCardState}>
           <CardHeader>
             <CardTitle className="capitalize mb-6">{userName}</CardTitle>
           </CardHeader>

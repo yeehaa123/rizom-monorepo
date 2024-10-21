@@ -110,6 +110,7 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
   }
 
   const hideOverlay = async (payload: CourseQuery) => {
+    console.log(payload);
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
   }
 
