@@ -20,6 +20,9 @@ const config: Omit<Config, "content"> = {
       },
     },
     extend: {
+      transitionProperty: {
+        'height': 'height'
+      },
       colors: {
         'pitch-black': twColors.black,
         'pure-white': twColors.white,

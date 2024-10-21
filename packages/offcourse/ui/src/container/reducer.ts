@@ -1,7 +1,7 @@
 import type { Action } from "@offcourse/schema";
 import type { OffcourseState } from "./store";
 import { ActionType } from "@offcourse/schema";
-import { OverlayModes } from "../components";
+import { CardModes } from "../types";
 import { findCard, getCheckpoint } from "./helpers";
 import { initialCardState, updateAffordances, updateUserRecord } from "./cardState";
 
@@ -51,7 +51,7 @@ export function reducer(state: OffcourseState, action: Action) {
       const card = findCard(state, payload);
       if (card) {
         const checkpoint = getCheckpoint(card, payload); if (checkpoint) {
-          card.cardState.overlayMode = OverlayModes.CHECKPOINT;
+          card.cardState.cardMode = CardModes.CHECKPOINT;
           card.cardState.selectedCheckpoint = checkpoint;
         }
       }
@@ -60,21 +60,21 @@ export function reducer(state: OffcourseState, action: Action) {
     case ActionType.SHOW_INFO_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.overlayMode = OverlayModes.INFO;
+        card.cardState.cardMode = CardModes.INFO;
       }
       break;
     }
     case ActionType.SHOW_NOTES_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.overlayMode = OverlayModes.NOTES;
+        card.cardState.cardMode = CardModes.NOTES;
       }
       break;
     }
     case ActionType.HIDE_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.overlayMode = OverlayModes.NONE;
+        card.cardState.cardMode = CardModes.NORMAL;
       }
       break;
     }
@@ -90,7 +90,7 @@ export function reducer(state: OffcourseState, action: Action) {
       state.cards.forEach(card => {
         card.cardState.userName = payload.userName;
         card.cardState.repository = payload.repository;
-        card.cardState.overlayMode = OverlayModes.NONE;
+        card.cardState.cardMode = CardModes.NORMAL;
         card.cardState.affordances = updateAffordances(payload);
       })
       break;

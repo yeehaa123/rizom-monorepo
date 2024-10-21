@@ -7,7 +7,12 @@ import type {
   Note
 } from "@offcourse/schema";
 
-import { OverlayModes } from "./components/Overlay"
+export enum CardModes {
+  NORMAL = "NONE",
+  INFO = "INFO",
+  CHECKPOINT = "CHECKPOINT",
+  NOTES = "NOTES"
+}
 
 export type Affordances = {
   canAuthenticate: boolean,
@@ -23,7 +28,7 @@ export type CardState = {
   isFollowed: boolean,
   completed: string[],
   notes: Note[],
-  overlayMode: OverlayModes,
+  cardMode: CardModes,
   selectedCheckpoint: CheckpointType | undefined,
   affordances: Affordances,
 }

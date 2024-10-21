@@ -22,7 +22,7 @@ export type Props = {
 
 }
 
-export function NoteForm({ onConfirm, noteId }: Props) {
+export default function NoteForm({ onConfirm, noteId }: Props) {
   const form = useForm<z.infer<typeof noteFormSchema>>({
     resolver: zodResolver(noteFormSchema),
     defaultValues: {

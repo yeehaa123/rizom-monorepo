@@ -1,28 +1,9 @@
-import type { Course, AuthState, Checkpoint, UserRecord, Note } from "@offcourse/schema";
-import { OverlayModes } from "../components";
+import type { Course, AuthState, UserRecord } from "@offcourse/schema";
+import { CardModes, CardState } from "../types";
 type OffCourseData = Course | Course[]
 
 function isCourse(data: OffCourseData): data is Course {
   return !!(data as Course).courseId;
-}
-
-export type Affordances = {
-  canAuthenticate: boolean,
-  canBookmark: boolean,
-  canFollow: boolean,
-  canAnnotate: boolean,
-}
-
-export type CardState = {
-  userName: string | undefined,
-  repository: string | undefined,
-  isBookmarked: boolean,
-  isFollowed: boolean,
-  completed: string[],
-  notes: Note[],
-  overlayMode: OverlayModes,
-  selectedCheckpoint: Checkpoint | undefined,
-  affordances: Affordances,
 }
 
 const initialAffordances = {
@@ -43,7 +24,7 @@ export const initialCardState = {
   completed: [],
   notes: [],
   selectedCheckpoint: undefined,
-  overlayMode: OverlayModes.NONE,
+  cardMode: CardModes.NORMAL,
   affordances: initialAffordances
 }
 

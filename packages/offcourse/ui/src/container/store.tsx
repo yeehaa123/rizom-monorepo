@@ -41,6 +41,11 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
   const toggleBookmark = (payload: CourseQuery) => {
     const card = findCard(state, payload);
     if (card) {
+      const { affordances } = card.cardState;
+      const { canFollow } = affordances;
+      if (!canFollow) {
+        return showInfoOverlay(payload);
+      }
       card.cardState.isBookmarked
         ? dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
         : dispatch({
@@ -57,7 +62,12 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     const card = findCard(state, payload);
     const checkpointId = payload.checkpointId
     if (card) {
-      const isCompleted = card.cardState.completed.find(id => id === checkpointId)
+      const { completed, affordances } = card.cardState;
+      const { canFollow } = affordances;
+      if (!canFollow) {
+        return showInfoOverlay(payload);
+      }
+      const isCompleted = completed.find(id => id === checkpointId)
       isCompleted
         ? dispatch({ type: ActionType.UNCOMPLETE_CHECKPOINT, payload })
         : dispatch({
@@ -76,8 +86,17 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
   const showInfoOverlay = (payload: CourseQuery) =>
     dispatch({ type: ActionType.SHOW_INFO_OVERLAY, payload })
 
-  const showNotesOverlay = (payload: CourseQuery) =>
-    dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
+  const showNotesOverlay = (payload: CourseQuery) => {
+    const card = findCard(state, payload);
+    if (card) {
+      const { affordances } = card.cardState;
+      const { canFollow } = affordances;
+      if (!canFollow) {
+        return showInfoOverlay(payload);
+      }
+      dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
+    }
+  }
 
   const hideCheckpointOverlay = async (payload: CourseQuery) => {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
