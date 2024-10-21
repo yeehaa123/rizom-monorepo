@@ -35,8 +35,7 @@ export default function CardChrome({ className, children, ...courseCardState }:
             : () => showAuthOverlay({ courseId })
           }
           className={cn(
-            "h-5 w-5 fill-gray-300 dark:fill-gray-300 hover:fill-secondary",
-            { "hidden": false })} />
+            "h-5 w-5 fill-gray-300 dark:fill-gray-300 dark:hover:fill-secondary hover:fill-secondary", { "hidden": false })} />
         <Toolbar {...courseCardState} />
       </CardFooter>
     </Card >)

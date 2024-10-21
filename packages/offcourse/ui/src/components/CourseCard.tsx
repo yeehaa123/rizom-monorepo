@@ -111,7 +111,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
     }
 
     case CardModes.SHARE: {
-      const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-gray-300 group-hover:fill-secondary"
+      const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-secondary group-hover:fill-gray-500"
       return (
         <CardChrome {...courseCardState}>
           <CardHeader className="space-y-4">
@@ -123,8 +123,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
               <Input required id="repository" name="repository" />
               <Button type="submit"
                 form={`${courseId}-note`}
-                variant="outline"
-                className="w-full group">
+                className="w-full group hover:bg-secondary">
                 <Logo className={iconClasses} />
                 Share with Offcourse</Button>
             </form>
@@ -169,7 +168,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
             }
             <NoteForm noteId={`${courseId}-note`}
               onConfirm={(note: Note) => addNote({ ...note, courseId })} />
-            <Button type="submit" form={`${courseId}-note`} className="w-full">Save Note</Button>
+            <Button type="submit" form={`${courseId}-note`} className="w-full hover:bg-secondary">Save Note</Button>
             <Button
               variant="outline"
               onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
@@ -187,7 +186,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
           <CardContent className="space-y-6">
             <OffcourseInfo />
             <Button
-              onClick={() => signIn({ courseId })} variant="outline" className="w-full">
+              onClick={() => signIn({ courseId })} className="w-full hover:bg-secondary">
               <GitHubLogoIcon className="mr-2 h-4 w-4" />
               Authenticate With Github
             </Button>
@@ -207,7 +206,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
           </CardHeader>
           <CardContent className="space-y-6">
             <OffcourseInfo />
-            <Button onClick={signOut} variant="outline" className="w-full">
+            <Button onClick={signOut} className="w-full hover:bg-secondary">
               Sign Out
             </Button>
             <Button
