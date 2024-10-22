@@ -1,11 +1,12 @@
 import { Checkbox as CB } from "@/components/ui/checkbox"
 import { cn } from "@/lib/utils"
+import { SyntheticEvent } from "react";
 
 type Props = {
   id: string,
   disabled: boolean,
   checked: boolean,
-  onClick: () => void;
+  onClick: (e: SyntheticEvent) => void;
   className?: string
 }
 

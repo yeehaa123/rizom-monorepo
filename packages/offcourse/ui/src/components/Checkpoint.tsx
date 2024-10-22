@@ -30,10 +30,16 @@ export default function Checkpoint({
             checked={isCompleted}
             id={checkpointId}
             className="m-4 mt-1 dark:bg-black mr-1"
-            onClick={toggleComplete} />
+            onClick={e => {
+              e.preventDefault()
+              toggleComplete()
+            }} />
           <Label htmlFor={checkpointId}
             className={cn("text-xl m-3 mt-1 py-1 w-full")}
-            onClick={onClick}>
+            onClick={(e) => {
+              e.preventDefault()
+              onClick()
+            }}>
             {task}
           </Label>
         </div>
@@ -47,10 +53,16 @@ export default function Checkpoint({
         checked={isCompleted}
         id={checkpointId}
         className="m-4 mr-2"
-        onClick={toggleComplete} />
+        onClick={e => {
+          e.preventDefault()
+          toggleComplete()
+        }} />
       <Label htmlFor={checkpointId}
         className={cn("text-base m-3 py-1 w-full")}
-        onClick={onClick}>
+        onClick={(e) => {
+          e.preventDefault()
+          onClick()
+        }}>
         {task}
       </Label>
     </ListItem>
