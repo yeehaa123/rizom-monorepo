@@ -1,8 +1,9 @@
 import type { ReactNode } from "react"
-import { Card, CardFooter } from "@/components/ui/card"
+import { Card, CardHeader, CardFooter } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { CourseCardState } from "@/types"
 import {
+  Curator,
   Logo,
   Toolbar,
 } from "./";
@@ -12,11 +13,12 @@ export default function CardChrome({ className, children, ...courseCardState }:
   const { course, actions, cardState } = courseCardState
   const {
     courseId,
+    curator,
   } = course;
 
   const {
     showAuthOverlay,
-    showUserOverlay
+    showUserOverlay,
   } = actions
 
   const {
@@ -25,9 +27,14 @@ export default function CardChrome({ className, children, ...courseCardState }:
 
   return (
     <Card className={cn(
-      "flex flex-col select-none max-w-[360px] rounded-none transition-height duration-500",
+      "flex flex-col select-none min-w-[360px] max-w-[420px] rounded-none transition-height duration-500",
       className)}>
-      {children}
+      <CardHeader>
+        <Curator {...curator} />
+      </CardHeader>
+      <div className="relative">
+        {children}
+      </div>
       <CardFooter className="flex w-full justify-between">
         <Logo
           onClick={userName
