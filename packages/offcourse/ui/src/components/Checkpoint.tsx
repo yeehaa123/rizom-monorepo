@@ -29,13 +29,14 @@ export default function Checkpoint({
             disabled={false}
             checked={isCompleted}
             id={checkpointId}
-            className="m-4 mt-1 dark:bg-black mr-1"
+            className="m-4 mt-1 dark:bg-black mr-2"
             onClick={e => {
               e.preventDefault()
               toggleComplete()
             }} />
           <Label htmlFor={checkpointId}
-            className={cn("text-xl m-3 mt-1 py-1 w-full")}
+            className={cn("text-xl text-gray-900 dark:text-gray-50 font-bold m-3 mt-1 py-1 pr-4 w-full",
+              { "text-gray-400 dark:text-gray-500": isCompleted })}
             onClick={(e) => {
               e.preventDefault()
               onClick()
@@ -58,7 +59,8 @@ export default function Checkpoint({
           toggleComplete()
         }} />
       <Label htmlFor={checkpointId}
-        className={cn("text-base m-3 py-1 w-full")}
+        className={cn("text-base font-bold text-gray-900 dark:text-gray-50 m-3 py-1 w-full",
+          { "text-gray-400 dark:text-gray-500": isCompleted })}
         onClick={(e) => {
           e.preventDefault()
           onClick()
