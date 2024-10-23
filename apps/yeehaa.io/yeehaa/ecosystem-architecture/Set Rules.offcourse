@@ -1,0 +1,14 @@
+habitat: The Practice Of Ecosystem Architecture
+checkpoints: 
+  - task: Dissect Living Systems
+    href: https://www.researchgate.net/figure/Six-approaches-for-the-analysis-of-living-systems-In-this-schematic-diagram-a-living_fig1_342302330
+  - task: Engineer Digital Patterns
+    href: https://youtu.be/70MQ-FugwbI?si=zZFSBc5QP4J7Cw8_
+  - task: Transform Values into Rules
+    href: https://squareholes.com/blog/2019/05/31/rules-versus-values/
+  - task: Simulate Ecosystems
+    href: https://semioticblocks.com/essays/Newgamesoflife.pdf
+  - task: Debug Rule Systems
+    href: https://embeddedartistry.com/blog/2017/09/06/debugging-9-indispensable-rules/
+  - task: Release Control
+    href: https://www.youtube.com/watch?v=na7lIb09898

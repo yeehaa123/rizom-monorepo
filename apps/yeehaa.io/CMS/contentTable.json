@@ -197,6 +197,21 @@
     "checksum": "97b424310fc789e33b73701dfb935e9f"
   },
   {
+    "id": "926f89247a503d5db66a478ad4615107",
+    "author": "yeehaa",
+    "title": "Set Rules",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "7d2d9e31e1e5d3bbec277d18b649f0ed",
+    "publicationData": {
+      "createdAt": "2024-10-23T10:07:16.526Z",
+      "updatedAt": "2024-10-23T10:07:16.526Z",
+      "publishedAt": "2024-10-23T10:07:16.526Z"
+    },
+    "habitat": "The Practice Of Ecosystem Architecture"
+  },
+  {
     "id": "f5ac70c3a8acd4e19bfaa48465044e98",
     "author": "yeehaa",
     "title": "Share Openly",
@@ -244,11 +259,17 @@
   {
     "id": "9efad3dd56e85b64973872a48acd777b",
     "author": "yeehaa",
+    "order": 9,
     "title": "The Practice Of Ecosystem Architecture",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
+    "checksum": "37747abecdb5106a813a71de65959170",
+    "publicationData": {
+      "createdAt": "2024-10-23T09:40:15.186Z",
+      "updatedAt": "2024-10-23T09:40:15.186Z",
+      "publishedAt": "2024-10-23T09:40:15.186Z"
+    }
   },
   {
     "id": "09c6d1c55e71ee0ad4158171872f8625",

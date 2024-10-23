@@ -1,0 +1,144 @@
+courseId: 926f89247a503d5db66a478ad4615107
+goal: Set Rules
+curator:
+  name: Jan Hein Hoogstad
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    global tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: The journey to "Set Rules" involves dissecting living systems,
+  engineering digital patterns, and transforming values into rules. It
+  progresses through simulating ecosystems and debugging rule systems. The
+  process culminates in releasing control, allowing the established rules to
+  govern autonomously. This sequence fosters a comprehensive understanding of
+  rule creation, implementation, and maintenance across various domains.
+habitat: the-practice-of-ecosystem-architecture
+createdAt: 2024-10-23T10:07:16.526Z
+updatedAt: 2024-10-23T10:07:16.526Z
+publishedAt: 2024-10-23T10:07:16.526Z
+tags:
+  - system
+  - bio
+  - method
+  - digital
+  - pattern
+  - design
+  - rules
+  - values
+  - goals
+  - action
+  - sim
+  - debug
+  - code
+  - control
+  - trust
+checkpoints:
+  - task: Dissect Living Systems
+    href: https://www.researchgate.net/figure/Six-approaches-for-the-analysis-of-living-systems-In-this-schematic-diagram-a-living_fig1_342302330
+    checkpointId: 2eb717154080686bd9a4e38df40831e4
+    description: The image illustrates six approaches to analyze living systems,
+      providing a framework to set rules for dissection. It shows methods like
+      reductionism, integration, and network analysis, which help in
+      understanding complex biological structures and processes, aiding in
+      systematic breakdown and rule-setting for living system analysis.
+    tags:
+      - system
+      - bio
+      - method
+  - task: Engineer Digital Patterns
+    href: https://youtu.be/70MQ-FugwbI?si=zZFSBc5QP4J7Cw8_
+    checkpointId: b14a25ff3b20b29d19641241915dcd4f
+    description: The video explores digital pattern engineering, demonstrating how
+      to create and manipulate patterns using digital tools. It showcases
+      techniques for setting rules and guidelines in pattern creation, which
+      aligns with the goal of "Set Rules" and the task of "Engineer Digital
+      Patterns". The content likely provides practical insights for designers to
+      enhance their digital pattern-making skills.
+    tags:
+      - digital
+      - pattern
+      - design
+      - rules
+  - task: Transform Values into Rules
+    href: https://squareholes.com/blog/2019/05/31/rules-versus-values/
+    checkpointId: 7b19d13b2c87fcbad0bac5ba94631b5d
+    description: The article explains how to transform abstract values into concrete
+      rules, aiding goal achievement. It discusses the importance of specificity
+      in rule-setting, emphasizing how clear, actionable rules derived from
+      values can guide behavior and decision-making. This process helps in
+      creating a structured approach to realizing personal or organizational
+      values.
+    tags:
+      - values
+      - rules
+      - goals
+      - action
+  - task: Simulate Ecosystems
+    href: https://semioticblocks.com/essays/Newgamesoflife.pdf
+    checkpointId: 1e0aa1026f19505e3207f3a75f6cf43b
+    description: The article explores cellular automata and complex systems,
+      demonstrating how simple rules can create intricate ecosystems. It
+      provides insights into designing rule-based simulations, which aligns with
+      the goal of setting rules and simulating ecosystems. The content offers
+      inspiration for creating diverse, evolving digital environments.
+    tags:
+      - rules
+      - system
+      - sim
+  - task: Debug Rule Systems
+    href: https://embeddedartistry.com/blog/2017/09/06/debugging-9-indispensable-rules/
+    checkpointId: ce0f18d8ed11ffc7723757a848fa4944
+    description: The article provides nine essential rules for effective debugging,
+      helping developers systematically approach and solve software issues.
+      These guidelines enhance problem-solving skills, improve code quality, and
+      streamline the debugging process, ultimately contributing to more robust
+      rule systems and better software development practices.
+    tags:
+      - debug
+      - code
+      - rules
+  - task: Release Control
+    href: https://www.youtube.com/watch?v=na7lIb09898
+    checkpointId: 52dc23133931b8a289b7923b7962cfe9
+    description: The video explores the concept of releasing control to set
+      effective rules. It likely discusses how letting go of micromanagement and
+      excessive control can lead to better rule-setting, fostering trust,
+      autonomy, and personal growth. This approach aligns with the goal of
+      setting rules by emphasizing the importance of balance and flexibility in
+      rule implementation.
+    tags:
+      - control
+      - rules
+      - trust
+series: Ecosystem Architecture
