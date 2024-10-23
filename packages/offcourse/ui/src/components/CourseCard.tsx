@@ -27,7 +27,8 @@ import { CardModes } from "../types";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 
-const iconClasses = "mr-3 h-6 w-6 text-gray-300 group-hover:text-secondary fill-gray-300 group-hover:fill-gray-300"
+
+const iconClasses = "mr-3 h-6 w-6 text-secondary group-hover:text-white"
 const cardContentClasses = "absolute top-0 space-y-6 flex flex-col h-full w-full justify-between invisible opacity-0"
 
 export default function CourseCard(courseCardState: CourseCardState) {
@@ -117,7 +118,8 @@ export default function CourseCard(courseCardState: CourseCardState) {
             <NotionLogoIcon className={iconClasses} />
             Share on Notion
           </Button>
-          <Button onClick={() => signIn({ courseId })} variant="outline" className="group w-full">
+          <Button onClick={() => signIn({ courseId })}
+            variant="outline" className="group w-full">
             <InstagramLogoIcon className={iconClasses} />
             Share on Instagram
           </Button>
@@ -133,8 +135,8 @@ export default function CourseCard(courseCardState: CourseCardState) {
               placeholder="Your friend's repository url" name="repository" />
             <Button type="submit"
               form={`${courseId}-note`}
-              className="w-full group hover:bg-secondary dark:hover:bg-secondary">
-              <Logo className={iconClasses} />
+              className="group w-full bg-gray-700 hover:bg-secondary dark:hover:bg-secondary">
+              <Logo className={cn(iconClasses, "dark:fill-black fill-white bg-black dark:bg-white group-hover:bg-secondary")} />
               Share with Offcourse</Button>
           </div>
         </form>

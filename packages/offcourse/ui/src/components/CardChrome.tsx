@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { Card, CardHeader, CardFooter } from "@/components/ui/card"
+import { Card, CardHeader, CardFooter } from "./ui/card"
 import { cn } from "@/lib/utils"
 import { CourseCardState } from "@/types"
 import {
@@ -27,7 +27,7 @@ export default function CardChrome({ className, children, ...courseCardState }:
 
   return (
     <Card className={cn(
-      "flex flex-col select-none min-w-[360px] max-w-[420px] rounded-none transition-height duration-500",
+      "flex flex-col select-none min-w-[360px] max-w-[420px]",
       className)}>
       <CardHeader>
         <Curator {...curator} />
