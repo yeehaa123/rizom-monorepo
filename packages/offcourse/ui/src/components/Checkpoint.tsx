@@ -35,7 +35,7 @@ export default function Checkpoint({
               toggleComplete()
             }} />
           <Label htmlFor={checkpointId}
-            className={cn("text-xl text-gray-900 dark:text-gray-50 font-semibold m-3 mt-1 py-1 pr-4 w-full",
+            className={cn("text-lg leading-tight text-gray-900 dark:text-gray-50 font-semibold m-3 mt-1 py-1 pr-4 w-full",
               { "text-gray-400 dark:text-gray-500": isCompleted })}
             onClick={(e) => {
               e.preventDefault()
@@ -59,7 +59,7 @@ export default function Checkpoint({
           toggleComplete()
         }} />
       <Label htmlFor={checkpointId}
-        className={cn("text-base font-semibold text-gray-900 dark:text-gray-50 m-3 py-1 w-full",
+        className={cn("text-base leading-tight font-semibold text-gray-900 dark:text-gray-50 m-3 py-1 w-full",
           { "text-gray-400 dark:text-gray-500": isCompleted })}
         onClick={(e) => {
           e.preventDefault()

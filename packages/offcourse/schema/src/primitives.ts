@@ -46,6 +46,8 @@ export const courseSchema = z.object({
 
 export const noteSchema = z.object({
   note: z.string(),
+  checkpointId: z.string().optional(),
+  courseId: z.string(),
   annotatedAt: z.coerce.date(),
 })
 

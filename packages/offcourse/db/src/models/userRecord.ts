@@ -22,7 +22,7 @@ export const getUserRecords = async ({ courseIds }: CoursesQuery) => {
           isBookmarked: !!bookmark,
           isFollowed: !!complete,
           completed: complete ? [complete.checkpointId] : [],
-          notes: note ? [note] : []
+          notes: note ? [{ ...note, checkpointId: note.checkpointId || undefined }] : []
         })
       } else {
         const completed = complete
@@ -33,7 +33,7 @@ export const getUserRecords = async ({ courseIds }: CoursesQuery) => {
         );
         const notes = (existingNote || !note)
           ? userRecord.notes
-          : [...userRecord.notes, note];
+          : [...userRecord.notes, { ...note, checkpointId: note.checkpointId || undefined }];
         acc.set(courseId, {
           ...userRecord,
           isFollowed: userRecord.isFollowed || !!complete,

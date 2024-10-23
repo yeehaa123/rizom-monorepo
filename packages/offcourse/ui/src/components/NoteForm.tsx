@@ -9,8 +9,8 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from "@/components/ui/form"
-import { Textarea } from "@/components/ui/textarea"
+} from "./ui/form"
+import { Textarea } from "./ui/textarea"
 
 const noteFormSchema = z.object({
   note: z.string().min(10).max(500),
@@ -18,7 +18,7 @@ const noteFormSchema = z.object({
 
 export type Props = {
   noteId: string,
-  onConfirm: (v: Note) => void,
+  onConfirm: (v: Pick<Note, "note" | "annotatedAt">) => void,
 
 }
 

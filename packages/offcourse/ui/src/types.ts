@@ -47,7 +47,7 @@ export type CardActions = {
   showNotesOverlay: (arg: CourseQuery) => void
   hideOverlay: (arg: CourseQuery) => void
   hideCheckpointOverlay: (arg: CourseQuery) => void
-  addNote: (arg: Note & CourseQuery) => void;
+  addNote: (arg: Note & CourseQuery & { checkpointId?: string }) => void;
 }
 
 export type CourseCardState = {

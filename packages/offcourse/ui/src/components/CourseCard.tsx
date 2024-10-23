@@ -29,7 +29,7 @@ import { cn } from "@/lib/utils";
 
 
 const iconClasses = "mr-3 h-6 w-6 text-secondary group-hover:text-white"
-const cardContentClasses = "absolute top-0 space-y-6 flex flex-col h-full w-full justify-between invisible opacity-0"
+const cardContentClasses = "absolute pt-2 pb-6 top-0 space-y-6 flex flex-col h-full w-full justify-between invisible opacity-0"
 
 export default function CourseCard(courseCardState: CourseCardState) {
   const { course, actions, cardState } = courseCardState;
@@ -59,7 +59,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
   return (
     <CardChrome className="overflow-hidden" {...courseCardState}>
-      <CardContent className={cn("space-y-8 mt-4 invisible opacity-0 transition-all",
+      <CardContent className={cn("space-y-8 pt-2 pb-6 invisible opacity-0 transition-all",
         { "visible opacity-100": cardMode === CardModes.NORMAL })}>
         <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -147,16 +147,36 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
       <CardContent className={cn(cardContentClasses,
         { "visible opacity-100": cardMode === CardModes.NOTES })}>
+        {selectedCheckpoint ?
+          <div className="space-y-8">
+            <Checkpoint goal={goal} key={selectedCheckpoint.checkpointId}
+              {...selectedCheckpoint}
+              isCompleted={
+                !!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)
+              }
+              onClick={
+                () => hideCheckpointOverlay({ courseId })
+              }
+              toggleComplete={
+                () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
+              } />
+          </div>
+          :
+          <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>}
         <div className="my-8 space-y-4">
-          {notes.map(({ note, annotatedAt }) =>
+          {notes.map(({ note, annotatedAt, checkpointId }) =>
             <CardDescription key={annotatedAt.toString()}>
-              {annotatedAt.getTime()} // {note}
+              {annotatedAt.getTime()} // {checkpointId} // {note}
             </CardDescription>)
           }
         </div>
         <div className="space-y-4">
           <NoteForm noteId={`${courseId}-note`}
-            onConfirm={(note: Note) => addNote({ ...note, courseId })} />
+            onConfirm={(note: Pick<Note, "note" | "annotatedAt">) => addNote({
+              ...note,
+              courseId,
+              checkpointId: selectedCheckpoint?.checkpointId
+            })} />
           <div className="space-y-2">
             <Button type="submit"
               form={`${courseId}-note`}

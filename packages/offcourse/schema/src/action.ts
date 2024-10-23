@@ -50,7 +50,7 @@ export const actionSchema = z.union([
   }),
   z.object({
     type: z.literal(ActionType.ADD_NOTE),
-    payload: noteSchema.extend({ courseId: z.string() })
+    payload: noteSchema.extend({ courseId: z.string(), checkpointId: z.string().optional() })
   }),
   z.object({
     type: z.literal(ActionType.UNCOMPLETE_CHECKPOINT),
