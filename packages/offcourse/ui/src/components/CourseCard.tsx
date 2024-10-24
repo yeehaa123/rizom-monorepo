@@ -1,5 +1,5 @@
 import type { CourseCardState } from "../types";
-import type { Note } from "@offcourse/schema";
+import type { Note as NoteType } from "@offcourse/schema";
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
 
@@ -21,7 +21,8 @@ import {
   NoteForm,
   OffcourseInfo,
   Tags,
-  Logo
+  Logo,
+  Notes
 } from "./";
 import { CardModes } from "../types";
 import { Input } from "./ui/input";
@@ -163,16 +164,10 @@ export default function CourseCard(courseCardState: CourseCardState) {
           </div>
           :
           <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>}
-        <div className="my-8 space-y-4">
-          {notes.map(({ note, annotatedAt, checkpointId }) =>
-            <CardDescription key={annotatedAt.toString()}>
-              {annotatedAt.getTime()} // {checkpointId} // {note}
-            </CardDescription>)
-          }
-        </div>
+        <Notes notes={notes} course={course} selectedCheckpoint={selectedCheckpoint} />
         <div className="space-y-4">
           <NoteForm noteId={`${courseId}-note`}
-            onConfirm={(note: Pick<Note, "note" | "annotatedAt">) => addNote({
+            onConfirm={(note: Pick<NoteType, "note" | "annotatedAt">) => addNote({
               ...note,
               courseId,
               checkpointId: selectedCheckpoint?.checkpointId

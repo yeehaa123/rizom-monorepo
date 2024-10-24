@@ -7,6 +7,8 @@ import CourseCard from "./CourseCard";
 import CourseCollection from "./CourseCollection"
 import Curator from "./Curator"
 import ListItem from "./ListItem"
+import Note from "./Note"
+import Notes from "./Notes"
 import NoteForm from "./NoteForm"
 import OffcourseInfo from "./OffcourseInfo"
 import Toolbar from "./Toolbar"
@@ -23,6 +25,8 @@ export {
   ListItem,
   OffcourseInfo,
   Checkpoint,
+  Note,
+  Notes,
   Socials,
   Toolbar,
   NoteForm,

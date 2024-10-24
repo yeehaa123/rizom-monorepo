@@ -89,6 +89,7 @@ export function reducer(state: OffcourseState, action: Action) {
       const card = findCard(state, payload);
       if (card) {
         card.cardState.cardMode = CardModes.NORMAL;
+        card.cardState.selectedCheckpoint = undefined
       }
       break;
     }
