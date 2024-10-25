@@ -9,8 +9,8 @@ export const getCourses = async () => {
     .from(courseTable)
   return data.map(({ course }) => course);
 }
-export const insertCourse = async ({ course, courseId }: { course: Course, courseId: string }) => {
-  const { curator } = course;
+export const insertCourse = async (course: Course) => {
+  const { curator, courseId } = course;
   await db.insert(courseTable).values({
     courseId,
     curator: curator.alias,

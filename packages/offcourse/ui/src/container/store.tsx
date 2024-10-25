@@ -38,46 +38,40 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     }
   }
 
-  const toggleBookmark = (payload: CourseQuery) => {
-    const card = findCard(state, payload);
+  const toggleBookmark = (query: CourseQuery) => {
+    const card = findCard(state, query);
     if (card) {
-      const { affordances } = card.cardState;
-      const { canFollow } = affordances;
-      if (!canFollow) {
-        return showAuthOverlay(payload);
-      }
-      card.cardState.isBookmarked
-        ? dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
-        : dispatch({
-          type: ActionType.ADD_BOOKMARK,
-          payload: {
-            ...payload,
-            course: card.course
-          }
-        })
+      dispatch({
+        type: ActionType.TOGGLE_BOOKMARK, payload: card.course
+      })
     }
   }
 
-  const toggleCheckpoint = (payload: CheckpointQuery) => {
-    const card = findCard(state, payload);
-    const checkpointId = payload.checkpointId
+  const toggleCheckpoint = (query: CheckpointQuery) => {
+    const card = findCard(state, query);
     if (card) {
-      const { completed, affordances } = card.cardState;
-      const { canFollow } = affordances;
-      if (!canFollow) {
-        return showAuthOverlay(payload);
-      }
-      const isCompleted = completed.find(id => id === checkpointId)
-      isCompleted
-        ? dispatch({ type: ActionType.UNCOMPLETE_CHECKPOINT, payload })
-        : dispatch({
-          type: ActionType.COMPLETE_CHECKPOINT,
-          payload: {
-            ...payload,
-            course: card.course
-          }
-        })
+      dispatch({
+        type: ActionType.TOGGLE_CHECKPOINT, payload: {
+          ...card.course,
+          checkpointId: query.checkpointId
+        }
+      })
     }
+  }
+
+  const showCuratorOverlay = (query: CourseQuery) => {
+    const card = findCard(state, query);
+    if (card) {
+      console.log(card.course.curator);
+      dispatch({ type: ActionType.SHOW_CURATOR_OVERLAY, payload: query })
+    }
+  }
+
+  const signOut = async () => {
+    const response = await logout();
+    respond(response);
+    const { origin, pathname } = window.location;
+    window.location.href = `${origin}${pathname}`;
   }
 
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
@@ -89,45 +83,20 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
   const showUserOverlay = (payload: CourseQuery) =>
     dispatch({ type: ActionType.SHOW_USER_OVERLAY, payload })
 
+
   const showShareOverlay = (payload: CourseQuery) =>
     dispatch({ type: ActionType.SHOW_SHARE_OVERLAY, payload })
 
-  const showNotesOverlay = (payload: CourseQuery) => {
-    const card = findCard(state, payload);
-    if (card) {
-      const { affordances } = card.cardState;
-      const { canFollow } = affordances;
-      if (!canFollow) {
-        return showAuthOverlay(payload);
-      }
-      dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
-    }
-  }
+  const showNotesOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
 
-  const hideCheckpointOverlay = async (payload: CourseQuery) => {
+  const hideOverlay = async (payload: CourseQuery) =>
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
-    dispatch({ type: ActionType.UNSELECT_CHECKPOINT, payload })
-  }
 
-  const hideOverlay = async (payload: CourseQuery) => {
-    console.log(payload);
-    dispatch({ type: ActionType.HIDE_OVERLAY, payload })
-  }
-
-  const addNote = (payload: CourseQuery & Note) => {
+  const addNote = (payload: CourseQuery & Note) =>
     dispatch({ type: ActionType.ADD_NOTE, payload })
-  }
 
-  const signIn = async (query: CourseQuery) => {
-    redirectToGitHub(query)
-  }
-
-  const signOut = async () => {
-    const response = await logout();
-    respond(response);
-    const { origin, pathname } = window.location;
-    window.location.href = `${origin}${pathname}`;
-  }
+  const signIn = async (query: CourseQuery) => redirectToGitHub(query)
 
   const actions = {
     addNote,
@@ -140,8 +109,8 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     showUserOverlay,
     showNotesOverlay,
     showCheckpointOverlay,
+    showCuratorOverlay,
     showShareOverlay,
-    hideCheckpointOverlay
   }
 
   return { state, actions }

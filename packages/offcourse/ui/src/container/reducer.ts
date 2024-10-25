@@ -8,20 +8,22 @@ import { initialCardState, updateAffordances, updateUserRecord } from "./cardSta
 export function reducer(state: OffcourseState, action: Action) {
   const { type, payload } = action;
   switch (type) {
-    case ActionType.COMPLETE_CHECKPOINT: {
+    case ActionType.TOGGLE_CHECKPOINT: {
       const card = findCard(state, payload);
       const { checkpointId } = payload;
       if (card) {
-        card.cardState.completed = [...card.cardState.completed, checkpointId]
-      }
-      break;
-    }
-    case ActionType.UNCOMPLETE_CHECKPOINT: {
-      const card = findCard(state, payload);
-      const { checkpointId } = payload;
-      if (card) {
-        const completed = card.cardState.completed.filter(id => id !== checkpointId);
-        card.cardState.completed = completed
+        const { affordances, completed } = card.cardState;
+        if (!affordances.canFollow) {
+          card.cardState.cardMode = CardModes.AUTH;
+          break;
+        }
+        const isCompleted = completed.find(id => id === checkpointId)
+        if (isCompleted) {
+          const newCompleted = completed.filter(id => id !== checkpointId);
+          card.cardState.completed = newCompleted
+        } else {
+          card.cardState.completed = [...card.cardState.completed, checkpointId]
+        }
       }
       break;
     }
@@ -33,17 +35,15 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
-    case ActionType.ADD_BOOKMARK: {
+    case ActionType.TOGGLE_BOOKMARK: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.isBookmarked = true
-      }
-      break;
-    }
-    case ActionType.REMOVE_BOOKMARK: {
-      const card = findCard(state, payload);
-      if (card) {
-        card.cardState.isBookmarked = false
+        const { affordances } = card.cardState;
+        if (!affordances.canFollow) {
+          card.cardState.cardMode = CardModes.AUTH;
+          break;
+        }
+        card.cardState.isBookmarked = !card.cardState.isBookmarked
       }
       break;
     }
@@ -64,10 +64,18 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
+    case ActionType.SHOW_CURATOR_OVERLAY: {
+      const card = findCard(state, payload);
+      if (card) {
+        card.cardState.cardMode = CardModes.CURATOR;
+      }
+      break;
+    }
     case ActionType.SHOW_USER_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.cardMode = CardModes.USER;
+        const { affordances } = card.cardState;
+        card.cardState.cardMode = affordances.canFollow ? CardModes.USER : CardModes.AUTH
       }
       break;
     }
@@ -81,7 +89,8 @@ export function reducer(state: OffcourseState, action: Action) {
     case ActionType.SHOW_NOTES_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        card.cardState.cardMode = CardModes.NOTES;
+        const { affordances } = card.cardState;
+        card.cardState.cardMode = affordances.canFollow ? CardModes.NOTES : CardModes.AUTH
       }
       break;
     }
@@ -89,13 +98,6 @@ export function reducer(state: OffcourseState, action: Action) {
       const card = findCard(state, payload);
       if (card) {
         card.cardState.cardMode = CardModes.NORMAL;
-        card.cardState.selectedCheckpoint = undefined
-      }
-      break;
-    }
-    case ActionType.UNSELECT_CHECKPOINT: {
-      const card = findCard(state, payload);
-      if (card) {
         card.cardState.selectedCheckpoint = undefined
       }
       break;

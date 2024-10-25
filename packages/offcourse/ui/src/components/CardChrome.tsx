@@ -17,12 +17,11 @@ export default function CardChrome({ className, children, ...courseCardState }:
   } = course;
 
   const {
-    showAuthOverlay,
+    showCuratorOverlay,
     showUserOverlay,
   } = actions
 
   const {
-    userName
   } = cardState;
 
   return (
@@ -30,17 +29,14 @@ export default function CardChrome({ className, children, ...courseCardState }:
       "flex flex-col select-none min-w-[360px] max-w-[420px]",
       className)}>
       <CardHeader>
-        <Curator {...curator} />
+        <Curator showDetails={() => showCuratorOverlay({ courseId })} {...curator} />
       </CardHeader>
       <div className="relative">
         {children}
       </div>
       <CardFooter className="flex w-full justify-between">
         <Logo
-          onClick={userName
-            ? () => showUserOverlay({ courseId })
-            : () => showAuthOverlay({ courseId })
-          }
+          onClick={() => showUserOverlay({ courseId })}
           className={cn(
             "h-5 w-5 fill-gray-300 dark:fill-gray-300 dark:hover:fill-secondary hover:fill-secondary", { "hidden": false })} />
         <Toolbar {...courseCardState} />

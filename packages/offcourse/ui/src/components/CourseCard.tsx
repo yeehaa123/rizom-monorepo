@@ -43,7 +43,6 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
   const {
     hideOverlay,
-    hideCheckpointOverlay,
     signIn,
     signOut,
     addNote,
@@ -88,9 +87,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
               isCompleted={
                 !!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)
               }
-              onClick={
-                () => hideCheckpointOverlay({ courseId })
-              }
+              onClick={() => hideOverlay({ courseId })}
               toggleComplete={
                 () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
               } />
@@ -106,6 +103,10 @@ export default function CourseCard(courseCardState: CourseCardState) {
             variant="outline"
             className="w-full">Close</Button>
         </>}
+      </CardContent>
+
+      <CardContent className={cn(cardContentClasses,
+        { "visible opacity-100": cardMode === CardModes.CURATOR })}>
       </CardContent>
 
       <CardContent className={cn(cardContentClasses,
@@ -155,9 +156,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
               isCompleted={
                 !!cardState.completed.find(id => id === selectedCheckpoint.checkpointId)
               }
-              onClick={
-                () => hideCheckpointOverlay({ courseId })
-              }
+              onClick={() => hideOverlay({ courseId })}
               toggleComplete={
                 () => toggleCheckpoint({ courseId, checkpointId: selectedCheckpoint.checkpointId })
               } />

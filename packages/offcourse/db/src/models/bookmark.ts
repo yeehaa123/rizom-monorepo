@@ -1,8 +1,9 @@
-import type { CourseQuery, CoursesQuery } from "@offcourse/schema";
+import type { Course, CourseQuery, CoursesQuery } from "@offcourse/schema";
 import { db } from "../";
 import { eq, inArray } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 import { bookmarkTable } from "../schema"
+import { insertCourse } from "./course";
 
 
 export const getBookmarks = async ({ courseIds }: CoursesQuery) => {
@@ -28,6 +29,19 @@ export const deleteBookmark = async (courseQuery: CourseQuery) => {
   } catch (e) {
     console.log("DELETE BOOKMARK ERROR", e);
   }
+}
+
+export const toggleBookmark = async (course: Course) => {
+  const data = await db.select()
+    .from(bookmarkTable)
+    .where(eq(bookmarkTable.courseId, course.courseId))
+  if (data[0]) {
+    deleteBookmark(course)
+    return;
+  }
+  insertBookmark(course)
+  insertCourse(course)
+  return course.courseId;
 }
 
 export const bookmarkInsertSchema = createInsertSchema(bookmarkTable);

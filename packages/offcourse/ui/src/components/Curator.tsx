@@ -4,16 +4,18 @@ import { CardDescription } from "@/components/ui/card"
 import { Socials } from "./Socials";
 import { AvatarImage } from "./";
 
-export default function Curator({ alias, socials, repository }: Curator) {
+export default function Curator({ alias, socials, repository, showDetails }: Curator & {
+  showDetails: () => void
+}) {
   return (
-    <div className="flex align-middle items-center justify-between">
-      <a href={repository} className="flex align-middle items-center space-x-2">
+    <div onClick={showDetails} className="flex align-middle items-center justify-between">
+      <div className="flex align-middle items-center space-x-2">
         <Avatar className="h-10 w-10">
           <AvatarImage userName={alias} saturation={100} lightness={100} />
           <AvatarFallback className="bg-secondary text-white">YH</AvatarFallback>
         </Avatar>
         <CardDescription className="text-base capitalize align-middle">{alias}</CardDescription>
-      </a>
+      </div>
       <Socials socials={socials} />
     </div>
   )

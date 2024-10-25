@@ -10,6 +10,7 @@ import type {
 export enum CardModes {
   NORMAL = "NONE",
   AUTH = "AUTH",
+  CURATOR = "CURATOR",
   USER = "USER",
   CHECKPOINT = "CHECKPOINT",
   NOTES = "NOTES",
@@ -44,9 +45,9 @@ export type CardActions = {
   showAuthOverlay: (arg: CourseQuery) => void
   showShareOverlay: (arg: CourseQuery) => void
   showUserOverlay: (arg: CourseQuery) => void
+  showCuratorOverlay: (arg: CourseQuery) => void
   showNotesOverlay: (arg: CourseQuery) => void
   hideOverlay: (arg: CourseQuery) => void
-  hideCheckpointOverlay: (arg: CourseQuery) => void
   addNote: (arg: Note & CourseQuery & { checkpointId?: string }) => void;
 }
 

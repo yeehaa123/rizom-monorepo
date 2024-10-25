@@ -11,18 +11,16 @@ import {
 
 export enum ActionType {
   ADD_AUTH_DATA = "AUTHENTICATE",
-  ADD_BOOKMARK = "ADD_BOOKMARK",
-  REMOVE_BOOKMARK = "REMOVE_BOOKMARK",
-  COMPLETE_CHECKPOINT = "COMPLETE_CHECKPOINT",
-  UNCOMPLETE_CHECKPOINT = "UNCOMPLETE_CHECKPOINT",
+  TOGGLE_BOOKMARK = "TOGGLE_BOOKMARK",
+  TOGGLE_CHECKPOINT = "TOGGLE_CHECKPOINT",
   ADD_NOTE = "ADD_NOTE",
   SHOW_CHECKPOINT_OVERLAY = "SHOW_CHECKPOINT_OVERLAY",
   SHOW_AUTH_OVERLAY = "SHOW_AUTH_OVERLAY",
+  SHOW_CURATOR_OVERLAY = "SHOW_CURATOR_OVERLAY",
   SHOW_USER_OVERLAY = "SHOW_USER_OVERLAY",
   SHOW_NOTES_OVERLAY = "SHOW_NOTES_OVERLAY",
   SHOW_SHARE_OVERLAY = "SHOW_SHARE_OVERLAY",
   HIDE_OVERLAY = "HIDE_OVERLAY",
-  UNSELECT_CHECKPOINT = "UNSELECT_CHECKPOINT",
   ADD_USER_DATA = "ADD_USER_DATA",
   LOG_OUT = "LOG_OUT",
   REGISTER_REPOSITORY = "REGISTER_REPOSITORY",
@@ -35,26 +33,16 @@ export const actionSchema = z.union([
     payload: authState
   }),
   z.object({
-    type: z.literal(ActionType.ADD_BOOKMARK),
-    payload: courseQuery.extend({
-      course: courseSchema,
-    })
+    type: z.literal(ActionType.TOGGLE_BOOKMARK),
+    payload: courseSchema
   }),
   z.object({
-    type: z.literal(ActionType.REMOVE_BOOKMARK),
-    payload: courseQuery
-  }),
-  z.object({
-    type: z.literal(ActionType.COMPLETE_CHECKPOINT),
-    payload: checkpointQuery.extend({ course: courseSchema })
+    type: z.literal(ActionType.TOGGLE_CHECKPOINT),
+    payload: courseSchema.extend({ checkpointId: z.string() })
   }),
   z.object({
     type: z.literal(ActionType.ADD_NOTE),
     payload: noteSchema.extend({ courseId: z.string(), checkpointId: z.string().optional() })
-  }),
-  z.object({
-    type: z.literal(ActionType.UNCOMPLETE_CHECKPOINT),
-    payload: checkpointQuery
   }),
   z.object({
     type: z.literal(ActionType.SHOW_SHARE_OVERLAY),
@@ -73,15 +61,15 @@ export const actionSchema = z.union([
     payload: courseQuery
   }),
   z.object({
+    type: z.literal(ActionType.SHOW_CURATOR_OVERLAY),
+    payload: courseQuery
+  }),
+  z.object({
     type: z.literal(ActionType.SHOW_NOTES_OVERLAY),
     payload: courseQuery
   }),
   z.object({
     type: z.literal(ActionType.HIDE_OVERLAY),
-    payload: courseQuery
-  }),
-  z.object({
-    type: z.literal(ActionType.UNSELECT_CHECKPOINT),
     payload: courseQuery
   }),
   z.object({
