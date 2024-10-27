@@ -7,6 +7,7 @@ export enum ResponseType {
   FETCHED_USER_RECORDS = "FETCHED_USER_RECORDS",
   FETCHED_USER_COURSES = "FETCHED_USER_COURSES",
   RETRIEVED_REGISTRY_ENTRY = "RETRIEVED_REGISTRY_ENTRY",
+  RETRIEVED_REGISTRY_METADATA = "RETRIEVED_REGISTRY_METADATA",
   REGISTRY_ENTRY_NOT_FOUND = "REGISTRY_ENTRY_NOT_FOUND",
   NO_OP = "NO_OP"
 }
@@ -14,6 +15,11 @@ export enum ResponseType {
 export const responseSchema = z.union([
   z.object({ type: z.literal(ResponseType.AUTHENTICATED), payload: authState }),
   z.object({ type: z.literal(ResponseType.RETRIEVED_REGISTRY_ENTRY), payload: registryEntry }),
+  z.object({
+    type: z.literal(ResponseType.RETRIEVED_REGISTRY_METADATA), payload: z.object({
+      title: z.string()
+    })
+  }),
   z.object({ type: z.literal(ResponseType.lOGGED_OUT), payload: z.undefined() }),
   z.object({ type: z.literal(ResponseType.FETCHED_USER_RECORDS), payload: z.array(userRecord) }),
   z.object({ type: z.literal(ResponseType.FETCHED_USER_COURSES), payload: z.array(courseSchema) }),

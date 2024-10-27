@@ -15,11 +15,9 @@ export type OffcourseState = {
   cards: StoreCardState[],
   auth: AuthState | undefined
 }
+export type OffcourseOptions = {}
 
-export type Options = {
-}
-
-export function useOffcourse(data: Course | Course[], { }: Options) {
+export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
   const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
   const dispatch = command(state, _dispatch);
   const respond = responder(dispatch);
@@ -59,11 +57,17 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     }
   }
 
-  const showCuratorOverlay = (query: CourseQuery) => {
-    const card = findCard(state, query);
+  const showCuratorOverlay = async (arg: CourseQuery) => {
+    const card = findCard(state, arg);
     if (card) {
-      console.log(card.course.curator);
-      dispatch({ type: ActionType.SHOW_CURATOR_OVERLAY, payload: query })
+      const response = await query({
+        type: QueryType.GET_REGISTRY_METADATA,
+        payload: card.course.curator
+      });
+      respond(response);
+      dispatch({
+        type: ActionType.SHOW_CURATOR_OVERLAY, payload: arg
+      })
     }
   }
 
@@ -88,6 +92,7 @@ export function useOffcourse(data: Course | Course[], { }: Options) {
     dispatch({ type: ActionType.SHOW_SHARE_OVERLAY, payload })
 
   const showNotesOverlay = (payload: CourseQuery) =>
+    // get note then show...
     dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
 
   const hideOverlay = async (payload: CourseQuery) =>

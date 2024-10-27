@@ -4,7 +4,7 @@ import { CardDescription } from "@/components/ui/card"
 import { Socials } from "./Socials";
 import { AvatarImage } from "./";
 
-export default function Curator({ alias, socials, repository, showDetails }: Curator & {
+export default function Curator({ alias, socials, showDetails }: Curator & {
   showDetails: () => void
 }) {
   return (

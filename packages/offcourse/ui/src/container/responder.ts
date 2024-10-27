@@ -14,6 +14,10 @@ export function responder(dispatch: Dispatch<Action>) {
         dispatch({ type: ActionType.LOG_OUT, payload })
         break;
       }
+      case ResponseType.RETRIEVED_REGISTRY_METADATA: {
+        console.log(payload);
+        break;
+      }
       case ResponseType.FETCHED_USER_RECORDS: {
         dispatch({ type: ActionType.ADD_USER_DATA, payload })
         break;

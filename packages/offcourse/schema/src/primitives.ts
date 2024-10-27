@@ -12,7 +12,6 @@ export const curatorSchema = z.object({
   bio: z.string()
 })
 
-
 export const habitatSchema = z.object({
   slug: z.string()
 })

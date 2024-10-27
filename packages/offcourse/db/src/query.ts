@@ -4,14 +4,16 @@ import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
 import { getRepositoryEntry } from './models/repository';
 
-export async function handleQuery(query: Query) {
+export async function handleQuery(query: Query, isAuthorized: boolean) {
   const { type, payload } = query;
   switch (type) {
     case QueryType.FETCH_USER_RECORDS: {
-      const userRecords = await getUserRecords(payload);
-      return {
-        type: ResponseType.FETCHED_USER_RECORDS,
-        payload: userRecords
+      if (isAuthorized) {
+        const userRecords = await getUserRecords(payload);
+        return {
+          type: ResponseType.FETCHED_USER_RECORDS,
+          payload: userRecords
+        }
       }
     }
     case QueryType.FETCH_USER_COURSES: {
@@ -19,6 +21,14 @@ export async function handleQuery(query: Query) {
       return {
         type: ResponseType.FETCHED_USER_COURSES,
         payload: courses
+      }
+    }
+    case QueryType.GET_REGISTRY_METADATA: {
+      return {
+        type: ResponseType.RETRIEVED_REGISTRY_METADATA,
+        payload: {
+          title: "BLA BLA"
+        }
       }
     }
     case QueryType.GET_REGISTRY_FROM_OAUTH: {
