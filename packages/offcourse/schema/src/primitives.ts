@@ -21,7 +21,7 @@ export const repositoryMetaDatasSchema = z.object({
   repository: z.string(),
   alias: z.string(),
   curator: z.string(),
-  bio: z.string(),
+  description: z.string(),
   coursesFollowed: z.array(z.object({ goal: z.string(), courseId: z.string() })),
   coursesCurated: z.array(z.object({ goal: z.string(), courseId: z.string() })),
   socials: z.object({

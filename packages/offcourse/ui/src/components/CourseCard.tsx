@@ -108,8 +108,10 @@ export default function CourseCard(courseCardState: CourseCardState) {
 
       {repository && <CardContent className={cn(cardContentClasses,
         { "visible opacity-100": cardMode === CardModes.CURATOR })}>
-        <CardTitle onClick={() => hideOverlay({ courseId })}>{repository.curator}</CardTitle>
-        <CardDescription>{repository.bio}</CardDescription>
+        <div className="space-y-8">
+          <CardTitle onClick={() => hideOverlay({ courseId })}>{repository.curator}</CardTitle>
+          <CardDescription>{repository.description}</CardDescription>
+        </div>
         <div>
           <Label>Courses Curated:</Label>
           <ul>
