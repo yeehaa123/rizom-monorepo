@@ -1,4 +1,4 @@
-import { curatorSchema } from '@offcourse/schema/primitives';
+import { curatorProfileSchema, curatorSchema } from '@offcourse/schema/primitives';
 import * as m from "../meta/schema"
 import * as as from "../association"
 import { z } from 'zod';
@@ -10,7 +10,7 @@ export type Profile =
   | FinalProfile
 
 
-export const profileDataSchema = curatorSchema.extend({
+export const profileDataSchema = curatorProfileSchema.extend({
   courses: z.array(z.string()),
   articles: z.array(z.string()),
 })
@@ -18,13 +18,13 @@ export const profileDataSchema = curatorSchema.extend({
 export const initSchema = z.object({
   author: z.string(),
   repositoryURL: z.string(),
-  profile: curatorSchema.partial()
+  profile: curatorProfileSchema.partial()
 })
 
 export const analysisSchema = z.object({
   bio: z.string(),
   tags: z.array(z.string()),
-  profile: curatorSchema
+  profile: curatorProfileSchema
 })
 
 const associationsSchema = z.object({
@@ -47,7 +47,7 @@ export const outputSchema = profileDataSchema
 
 export const baseSchema = z.object({
   meta: m.schema,
-  profile: curatorSchema,
+  profile: curatorProfileSchema,
 })
 
 export const analyzedSchema = baseSchema.extend({

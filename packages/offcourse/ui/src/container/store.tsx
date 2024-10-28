@@ -1,5 +1,5 @@
 import type { CourseCardState } from "@/types"
-import type { Course, CourseQuery, CheckpointQuery, AuthState, Note } from "@offcourse/schema";
+import type { Course, CourseQuery, CheckpointQuery, AuthState, Note, RepositoryMetaData } from "@offcourse/schema";
 import { ActionType } from "@offcourse/schema"
 import { reducer } from "./reducer"
 import { initialize } from "./cardState"
@@ -10,10 +10,12 @@ import { responder } from "./responder";
 import { authenticate, logout, redirectToGitHub } from "./auth";
 import { useEffect } from "react";
 
-export type StoreCardState = Omit<CourseCardState, "actions">
+export type StoreCardState = Omit<CourseCardState, "actions" | "auth">
+
 export type OffcourseState = {
   cards: StoreCardState[],
-  auth: AuthState | undefined
+  auth: AuthState | undefined,
+  repositories: RepositoryMetaData[]
 }
 export type OffcourseOptions = {}
 
@@ -49,7 +51,8 @@ export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
     const card = findCard(state, query);
     if (card) {
       dispatch({
-        type: ActionType.TOGGLE_CHECKPOINT, payload: {
+        type: ActionType.TOGGLE_CHECKPOINT,
+        payload: {
           ...card.course,
           checkpointId: query.checkpointId
         }
@@ -62,7 +65,10 @@ export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
     if (card) {
       const response = await query({
         type: QueryType.GET_REGISTRY_METADATA,
-        payload: card.course.curator
+        payload: {
+          repository: "http://localhost:4321/offcourse"
+        }
+        // payload: card.course.curator
       });
       respond(response);
       dispatch({

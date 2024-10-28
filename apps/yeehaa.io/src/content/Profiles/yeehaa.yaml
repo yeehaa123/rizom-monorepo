@@ -1,10 +1,6 @@
-name: Jan Hein Hoogstad
 repository: https://yeehaa.io/offcourse
 alias: yeehaa
-socials:
-  linkedin: https://www.linkedin.com/in/yeehaa/
-  github: https://www.github.com/yeehaa123/
-  instagram: https://www.instagram.com/yeehaa12345/
+name: Jan Hein Hoogstad
 bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's an
   entrepreneur, thinker, and coder passionate about transforming education and
   knowledge sharing. With experience in academia and tech, he founded Offcourse
@@ -12,6 +8,10 @@ bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's an
   and inclusive internet, having been involved in various tech initiatives.
   Currently based in Taipei, he focuses on bringing people together around
   common values and translating shared visions into effective ecosystems.
+socials:
+  linkedin: https://www.linkedin.com/in/yeehaa/
+  github: https://www.github.com/yeehaa123/
+  instagram: https://www.instagram.com/yeehaa12345/
 courses:
   - break-down-silos
   - collaborate-sustainably
@@ -44,13 +44,9 @@ tags:
   - system
   - web
 profile:
-  name: Jan Hein Hoogstad
   repository: https://yeehaa.io/offcourse
   alias: yeehaa
-  socials:
-    linkedin: https://www.linkedin.com/in/yeehaa/
-    github: https://www.github.com/yeehaa123/
-    instagram: https://www.instagram.com/yeehaa12345/
+  name: Jan Hein Hoogstad
   bio: >
     
     I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
@@ -80,6 +76,10 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
 checksum: fc86121a83648737e2c8859cfb67b024
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
   academia and tech expertise. As an entrepreneur, thinker, and coder, he's

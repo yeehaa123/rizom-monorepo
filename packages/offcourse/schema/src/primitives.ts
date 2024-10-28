@@ -1,15 +1,34 @@
 import { z } from 'zod';
 
 export const curatorSchema = z.object({
-  name: z.string(),
   repository: z.string(),
   alias: z.string(),
+})
+
+export const curatorProfileSchema = z.object({
+  repository: z.string(),
+  alias: z.string(),
+  name: z.string(),
+  bio: z.string(),
   socials: z.object({
     linkedin: z.string().optional(),
     github: z.string().optional(),
     instagram: z.string().optional()
   }),
-  bio: z.string()
+})
+
+export const repositoryMetaDatasSchema = z.object({
+  repository: z.string(),
+  alias: z.string(),
+  curator: z.string(),
+  bio: z.string(),
+  coursesFollowed: z.array(z.object({ goal: z.string(), courseId: z.string() })),
+  coursesCurated: z.array(z.object({ goal: z.string(), courseId: z.string() })),
+  socials: z.object({
+    linkedin: z.string().optional(),
+    github: z.string().optional(),
+    instagram: z.string().optional()
+  }),
 })
 
 export const habitatSchema = z.object({
@@ -106,6 +125,8 @@ export type Checkpoint = z.infer<typeof checkpointSchema>
 export type UserRecord = z.infer<typeof userRecord>
 export type Habitat = z.infer<typeof habitatSchema>
 export type Curator = z.infer<typeof curatorSchema>
+export type CuratorProfile = z.infer<typeof curatorProfileSchema>
+export type RepositoryMetaData = z.infer<typeof repositoryMetaDatasSchema>
 export type KeyStoreEntry = z.infer<typeof keystoreEntry>
 export type RepositoryEntry = z.infer<typeof repositoryEntry>
 export type RepositoryRegistration = z.infer<typeof repositoryRegistrationSchema>

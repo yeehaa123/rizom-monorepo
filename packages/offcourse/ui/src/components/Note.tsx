@@ -1,6 +1,6 @@
-import type { Note as NoteType, Course } from "@offcourse/schema";
+import type { Note as NoteType } from "@offcourse/schema";
 import { formatDistanceToNow } from "date-fns";
-import { Card, CardDescription } from "./ui/card";
+import { CardDescription } from "./ui/card";
 
 
 export default function Note({ note, task }: { note: NoteType, task: string | undefined }) {

@@ -4,7 +4,8 @@ import type {
   CheckpointQuery,
   AuthState,
   Checkpoint as CheckpointType,
-  Note
+  Note,
+  RepositoryMetaData
 } from "@offcourse/schema";
 
 export enum CardModes {
@@ -25,8 +26,6 @@ export type Affordances = {
 }
 
 export type CardState = {
-  userName: string | undefined,
-  repository: string | undefined,
   isBookmarked: boolean,
   isFollowed: boolean,
   completed: string[],
@@ -55,6 +54,7 @@ export type CourseCardState = {
   courseId: string,
   course: Course,
   cardState: CardState,
-  authData?: AuthState,
+  repository: RepositoryMetaData | undefined,
+  auth: AuthState | undefined,
   actions: CardActions
 }

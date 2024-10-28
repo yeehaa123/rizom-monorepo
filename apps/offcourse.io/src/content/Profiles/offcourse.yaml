@@ -1,10 +1,6 @@
-name: Jan Hein Hoogstad
 repository: https://offcourse.io/
 alias: offcourse
-socials:
-  linkedin: https://www.linkedin.com/in/yeehaa/
-  github: https://www.github.com/yeehaa123/
-  instagram: https://www.instagram.com/yeehaa12345/
+name: Jan Hein Hoogstad
 bio: offcourse is an ecosystem architect with a PhD in Philosophy. He's
   passionate about transforming education and knowledge sharing. As an
   entrepreneur, thinker, and coder, he created the Superconnectors event format
@@ -13,6 +9,10 @@ bio: offcourse is an ecosystem architect with a PhD in Philosophy. He's
   advocates for impactful and inclusive internet. Currently based in Taipei,
   Taiwan, he focuses on bringing people together around common values and
   translating shared visions into effective ecosystems.
+socials:
+  linkedin: https://www.linkedin.com/in/yeehaa/
+  github: https://www.github.com/yeehaa123/
+  instagram: https://www.instagram.com/yeehaa12345/
 courses:
   - unblock-your-growth
 articles: []
@@ -26,13 +26,9 @@ tags:
   - learn
   - share
 profile:
-  name: Jan Hein Hoogstad
   repository: https://offcourse.io/
   alias: offcourse
-  socials:
-    linkedin: https://www.linkedin.com/in/yeehaa/
-    github: https://www.github.com/yeehaa123/
-    instagram: https://www.instagram.com/yeehaa12345/
+  name: Jan Hein Hoogstad
   bio: >
     
     I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
@@ -62,6 +58,10 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
 checksum: 1f3404bbc94952a3906b5de942a328e1
 description: offcourse is an ecosystem architect with a PhD in Philosophy,
   passionate about transforming education and knowledge sharing. As an

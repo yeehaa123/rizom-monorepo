@@ -6,7 +6,8 @@ import {
   userRecord,
   repositoryEntry,
   keystoreEntry,
-  noteSchema
+  noteSchema,
+  repositoryMetaDatasSchema
 } from "./primitives"
 
 export enum ActionType {
@@ -22,6 +23,7 @@ export enum ActionType {
   SHOW_SHARE_OVERLAY = "SHOW_SHARE_OVERLAY",
   HIDE_OVERLAY = "HIDE_OVERLAY",
   ADD_USER_DATA = "ADD_USER_DATA",
+  ADD_REPOSITORY_METADATA = "ADD_REPOSITORY_METADATA",
   LOG_OUT = "LOG_OUT",
   REGISTER_REPOSITORY = "REGISTER_REPOSITORY",
   REGISTER_AUTH_SERVICE = "REGISTER_AUTH_SERVICE"
@@ -75,6 +77,10 @@ export const actionSchema = z.union([
   z.object({
     type: z.literal(ActionType.LOG_OUT),
     payload: z.undefined()
+  }),
+  z.object({
+    type: z.literal(ActionType.ADD_REPOSITORY_METADATA),
+    payload: repositoryMetaDatasSchema
   }),
   z.object({
     type: z.literal(ActionType.ADD_USER_DATA),

@@ -12,5 +12,5 @@ export type ContainerProps = {
 
 export function Offcourse({ data, options = {} }: ContainerProps) {
   const { state, actions } = useOffcourse(data, options);
-  return <CourseCollection cards={state.cards} actions={actions} />
+  return <CourseCollection cards={state.cards} auth={state.auth} actions={actions} />
 }

@@ -67,7 +67,9 @@ export function reducer(state: OffcourseState, action: Action) {
     case ActionType.SHOW_CURATOR_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
+        const repository = state.repositories.find(r => r.repository === card.course.curator.repository)
         card.cardState.cardMode = CardModes.CURATOR;
+        card.repository = repository;
       }
       break;
     }
@@ -102,11 +104,13 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
+    case ActionType.ADD_REPOSITORY_METADATA: {
+      state.repositories.push(payload);
+      break;
+    }
     case ActionType.ADD_AUTH_DATA: {
       state.auth = payload
       state.cards.forEach(card => {
-        card.cardState.userName = payload.userName;
-        card.cardState.repository = payload.repository;
         card.cardState.cardMode = CardModes.NORMAL;
         card.cardState.affordances = updateAffordances(payload);
       })

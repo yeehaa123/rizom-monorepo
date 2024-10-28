@@ -24,10 +24,21 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
       }
     }
     case QueryType.GET_REGISTRY_METADATA: {
+      const courses = await getCourses();
       return {
-        type: ResponseType.RETRIEVED_REGISTRY_METADATA,
+        type: ResponseType.RETRIEVED_REPOSITORY_METADATA,
         payload: {
-          title: "BLA BLA"
+          alias: "Yeehaa",
+          repository: "https://yeehaa.io/offcourse",
+          curator: "Jan Hein Hoogstad",
+          bio: "I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an ecosystem architect. Concretely, this means that I bring people together around common values, discover a shared vision, and translate this into effective ecosystems.",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/yeehaa/",
+            github: "https://www.github.com/yeehaa123/",
+            instagram: "https://www.instagram.com/yeehaa12345/"
+          },
+          coursesCurated: courses.slice(0, 3),
+          coursesFollowed: courses.slice(3, 6)
         }
       }
     }

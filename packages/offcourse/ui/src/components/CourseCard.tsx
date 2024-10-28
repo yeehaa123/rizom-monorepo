@@ -27,14 +27,16 @@ import {
 import { CardModes } from "../types";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
+import { Label } from "./ui/label";
 
 
 const iconClasses = "mr-3 h-6 w-6 text-secondary group-hover:text-white"
 const cardContentClasses = "absolute pt-2 pb-6 top-0 space-y-6 flex flex-col h-full w-full justify-between invisible opacity-0"
 
 export default function CourseCard(courseCardState: CourseCardState) {
-  const { course, actions, cardState } = courseCardState;
-  const { goal,
+  const { course, actions, cardState, auth, repository } = courseCardState;
+  const {
+    goal,
     tags,
     description,
     courseId,
@@ -51,7 +53,6 @@ export default function CourseCard(courseCardState: CourseCardState) {
   } = actions
 
   const {
-    userName,
     selectedCheckpoint,
     cardMode,
     notes,
@@ -105,9 +106,30 @@ export default function CourseCard(courseCardState: CourseCardState) {
         </>}
       </CardContent>
 
-      <CardContent className={cn(cardContentClasses,
+      {repository && <CardContent className={cn(cardContentClasses,
         { "visible opacity-100": cardMode === CardModes.CURATOR })}>
-      </CardContent>
+        <CardTitle onClick={() => hideOverlay({ courseId })}>{repository.curator}</CardTitle>
+        <CardDescription>{repository.bio}</CardDescription>
+        <div>
+          <Label>Courses Curated:</Label>
+          <ul>
+            {repository.coursesCurated.map(({ courseId, goal }) => (
+              <li key={courseId}><a href={`${repository.repository}/${courseId}`}>{goal}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <Label>Courses Followed:</Label>
+          <ul>
+            {repository.coursesFollowed.map(({ courseId, goal }) => (
+              <li key={courseId}><a href={`${repository.repository}/${courseId}`}>{goal}</a></li>
+            ))}
+          </ul>
+        </div>
+        <Button onClick={() => { hideOverlay({ courseId }) }}
+          variant="outline"
+          className="w-full">Close</Button>
+      </CardContent>}
 
       <CardContent className={cn(cardContentClasses,
         { "visible opacity-100": cardMode === CardModes.SHARE })}>
@@ -198,20 +220,21 @@ export default function CourseCard(courseCardState: CourseCardState) {
         </div>
       </CardContent>
 
-      <CardContent className={cn(cardContentClasses,
-        { "visible opacity-100": cardMode === CardModes.USER })}>
-        <CardTitle className="capitalize"
-          onClick={() => hideOverlay({ courseId })}>{userName}</CardTitle>
-        <OffcourseInfo />
-        <div className="space-y-2">
-          <Button onClick={signOut} className="w-full hover:bg-secondary">
-            Sign Out
-          </Button>
-          <Button
-            variant="outline"
-            onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
-        </div>
-      </CardContent>
+      {auth &&
+        <CardContent className={cn(cardContentClasses,
+          { "visible opacity-100": cardMode === CardModes.USER })}>
+          <CardTitle className="capitalize"
+            onClick={() => hideOverlay({ courseId })}>{auth.userName}</CardTitle>
+          <OffcourseInfo />
+          <div className="space-y-2">
+            <Button onClick={signOut} className="w-full hover:bg-secondary">
+              Sign Out
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => { hideOverlay({ courseId }) }} className="w-full">Close</Button>
+          </div>
+        </CardContent>}
     </CardChrome >)
 }
 

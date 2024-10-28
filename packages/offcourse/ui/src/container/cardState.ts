@@ -16,8 +16,6 @@ const initialAffordances = {
 
 
 export const initialCardState = {
-  userName: undefined,
-  repository: undefined,
   isBookmarked: false,
   isFollowed: false,
   isCurated: false,
@@ -58,9 +56,10 @@ export function initialize(data: OffCourseData) {
   const cards = courses.map(course => {
     return {
       courseId: course.courseId,
+      repository: undefined,
       course,
       cardState: initialCardState
     }
   })
-  return { cards, auth: undefined };
+  return { cards, auth: undefined, repositories: [] };
 }
