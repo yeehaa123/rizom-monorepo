@@ -25,6 +25,13 @@ export const courseTable = sqliteTable("course", {
   course: text('course', { mode: 'json' })
 });
 
+export const metaData = sqliteTable("metadata", {
+  alias: text("alias").notNull().primaryKey(),
+  curator: text("curator"),
+  description: text("description"),
+  socials: text('socials', { mode: 'json' })
+});
+
 export const commandTable = sqliteTable("command", {
   createdAt: integer('created_at', { mode: 'timestamp' }).notNull(),
   type: text('type').notNull(),

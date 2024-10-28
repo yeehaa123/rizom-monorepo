@@ -3,6 +3,7 @@ import { ResponseType } from '@offcourse/schema';
 import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
 import { getRepositoryEntry } from './models/repository';
+import { getMeta } from './models/meta';
 
 export async function handleQuery(query: Query, isAuthorized: boolean) {
   const { type, payload } = query;
@@ -25,18 +26,12 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
     }
     case QueryType.GET_REGISTRY_METADATA: {
       const courses = await getCourses();
+      const meta = await getMeta();
       return {
         type: ResponseType.RETRIEVED_REPOSITORY_METADATA,
         payload: {
-          alias: "Yeehaa",
-          repository: "https://yeehaa.io/offcourse",
-          curator: "Jan Hein Hoogstad",
-          description: "I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an ecosystem architect. Concretely, this means that I bring people together around common values, discover a shared vision, and translate this into effective ecosystems.",
-          socials: {
-            linkedin: "https://www.linkedin.com/in/yeehaa/",
-            github: "https://www.github.com/yeehaa123/",
-            instagram: "https://www.instagram.com/yeehaa12345/"
-          },
+          ...payload,
+          ...meta,
           coursesCurated: courses.slice(0, 3),
           coursesFollowed: courses.slice(3, 6)
         }

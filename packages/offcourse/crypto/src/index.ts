@@ -81,7 +81,7 @@ export function verifyAuthToken(authToken: string | null, publicKey: string | nu
     }
     const dfk = deflattenKey(publicKey);
     const decoded = jwt.verify(authToken, dfk);
-    console.log(decoded);
+    console.log("DECODED TOKEN", decoded);
     return true;
   } catch (e) {
     console.log(e);

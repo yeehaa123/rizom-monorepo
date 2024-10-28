@@ -65,9 +65,6 @@ export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
     if (card) {
       const response = await query({
         type: QueryType.GET_REGISTRY_METADATA,
-        // payload: {
-        //   repository: "http://localhost:4321/offcourse"
-        // }
         payload: card.course.curator
       });
       respond(response);
