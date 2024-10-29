@@ -44,5 +44,11 @@ export const toggleBookmark = async (course: Course) => {
   return course.courseId;
 }
 
+export const insertBookmarkedCourse = async (course: Course) => {
+  insertBookmark(course)
+  insertCourse(course)
+  return course.courseId;
+}
+
 export const bookmarkInsertSchema = createInsertSchema(bookmarkTable);
 export const bookmarkSelectSchema = createSelectSchema(bookmarkTable);

@@ -3,7 +3,7 @@ import { ResponseType } from '@offcourse/schema';
 import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
 import { getRepositoryEntry } from './models/repository';
-import { getMeta } from './models/meta';
+import { getMetaEntry } from './models/meta';
 
 export async function handleQuery(query: Query, isAuthorized: boolean) {
   const { type, payload } = query;
@@ -26,7 +26,7 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
     }
     case QueryType.GET_REGISTRY_METADATA: {
       const courses = await getCourses();
-      const meta = await getMeta();
+      const meta = await getMetaEntry();
       return {
         type: ResponseType.RETRIEVED_REPOSITORY_METADATA,
         payload: {

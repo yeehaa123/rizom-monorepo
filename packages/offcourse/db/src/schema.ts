@@ -2,8 +2,13 @@ import { text, integer, primaryKey, sqliteTable } from "drizzle-orm/sqlite-core"
 import { createInsertSchema } from 'drizzle-zod';
 
 export const bookmarkTable = sqliteTable("bookmark", {
-  courseId: text("courseId").notNull().unique(),
+  courseId: text("courseId").primaryKey(),
   bookmarkedAt: integer('bookmarked_at', { mode: 'timestamp' }).notNull()
+});
+
+export const curatedTable = sqliteTable("curated", {
+  courseId: text("courseId").primaryKey(),
+  curatedAt: integer('bookmarked_at', { mode: 'timestamp' }).notNull()
 });
 
 export const completionTable = sqliteTable("complete", {
@@ -20,13 +25,13 @@ export const noteTable = sqliteTable("note", {
 });
 
 export const courseTable = sqliteTable("course", {
-  courseId: text("course_id").notNull().primaryKey(),
+  courseId: text("course_id").primaryKey(),
   curator: text("curator").notNull(),
   course: text('course', { mode: 'json' })
 });
 
 export const metaData = sqliteTable("metadata", {
-  alias: text("alias").notNull().primaryKey(),
+  alias: text("alias").primaryKey(),
   curator: text("curator"),
   description: text("description"),
   socials: text('socials', { mode: 'json' })

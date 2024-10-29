@@ -11,13 +11,13 @@ import type { RawCourse } from "../course";
 import { ContentType } from "../meta/schema";
 import { isMarkdownFile, isOffcourseFile, isProfileFile, isLandingFile } from "./filters";
 import type { LandingContent } from "../landing/schema";
-import type { Curator } from "@offcourse/schema";
+import type { CuratorProfile } from "@offcourse/schema";
 
 
 async function convertFile(fileData: File) {
   const { item } = fileData;
   if (isProfileFile(fileData)) {
-    const content = parseProfileFile(item) as Curator;
+    const content = parseProfileFile(item) as CuratorProfile;
     return { content, contentType: ContentType.PROFILE }
   }
 
