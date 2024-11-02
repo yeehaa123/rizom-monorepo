@@ -18,7 +18,7 @@ export function RoutesMenu({ links, className, value }: Props) {
     <NavigationMenuList>
       <NavigationMenuItem>
         {links.sort((a, b) => a.title.localeCompare(b.title)).map(({ title, href }) =>
-          <NavigationMenuLink
+          <NavigationMenuLink key={href}
             active={title === value}
             className={cn(navigationMenuTriggerStyle())}
             href={href}>{title}</NavigationMenuLink>)}

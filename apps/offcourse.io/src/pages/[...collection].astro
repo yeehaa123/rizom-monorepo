@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import type { Course } from '@offcourse/schema';
 import { QueryType, CollectionType } from '@offcourse/schema';
 import { Offcourse } from "@offcourse/ui"
@@ -6,44 +7,29 @@ import { BaseHead, OGType, RoutesMenu } from "@/components";
 import Layout from "@/layouts/Base.astro"
 import { handleQuery } from '@offcourse/db/query';
 
-export async function getStaticPaths() {
+const { collection } = Astro.params;
 
-  const queryTypes = {
-    [CollectionType.BOOKMARKED]: QueryType.GET_BOOKMARKED_COURSES,
-    [CollectionType.FOLLOWED]: QueryType.GET_FOLLOWED_COURSES,
-    [CollectionType.ALL]: QueryType.GET_ALL_COURSES,
-    [CollectionType.CURATED]: QueryType.GET_CURATED_COURSES 
-  }
-
-  const gatherCollectionData = async (collection: CollectionType ) => {
-    const queryType = queryTypes[collection] || QueryType.GET_CURATED_COURSES as QueryType
-    const data  = await handleQuery({type: queryType, payload: undefined}, false)
-    const courses = data.payload as Course[]
-    return {
-      params: { 
-        collection: collection === CollectionType.CURATED 
-        ? undefined 
-        : collection.toLowerCase() 
-      },
-      props: { courses, collection },
-    }
-  }
-
-  const collectionTypes  = Object.keys(CollectionType);
-  const promises = collectionTypes.map(collection => gatherCollectionData(collection));
-  return await Promise.all(promises);
+const queryTypes = {
+  [CollectionType.BOOKMARKED]: QueryType.GET_BOOKMARKED_COURSES,
+  [CollectionType.FOLLOWED]: QueryType.GET_FOLLOWED_COURSES,
+  [CollectionType.ALL]: QueryType.GET_ALL_COURSES,
+  [CollectionType.CURATED]: QueryType.GET_CURATED_COURSES 
 }
 
-const { courses, collection }= Astro.props;
-
-const description = "COURSES";
-const title = "Offcourse";
 const routes = {
   [CollectionType.BOOKMARKED]: "bookmarked",
   [CollectionType.FOLLOWED]: "followed",
   [CollectionType.ALL]: "all",
   [CollectionType.CURATED]: "/"
 }
+
+const lookup = Object.fromEntries(Object.entries(routes).map(([title, href]) => [href, title]));
+
+const queryType = queryTypes[lookup[collection]] || QueryType.GET_CURATED_COURSES as QueryType
+const data  = await handleQuery({type: queryType, payload: undefined}, false)
+const courses = data.payload as Course[]
+const description = "COURSES";
+const title = "Offcourse";
 
 const links = Object.entries(routes).map(([title, href]) => ({title, href}));
 ---
