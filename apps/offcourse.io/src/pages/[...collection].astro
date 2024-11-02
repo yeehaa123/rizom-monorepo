@@ -6,7 +6,11 @@ import { BaseHead, OGType, RoutesMenu } from "@/components";
 import Layout from "@/layouts/Base.astro"
 import { handleQuery } from '@offcourse/db/query';
 
+import { config } from 'dotenv';
+config({ path: '.env' });
+
 export async function getStaticPaths() {
+  console.log("DB URL", process.env.TURSO_DATABASE_URL);
   return Object.keys(CollectionType).map(collection =>({
     params: { 
       collection: collection === CollectionType.CURATED ? undefined : collection.toLowerCase() 
