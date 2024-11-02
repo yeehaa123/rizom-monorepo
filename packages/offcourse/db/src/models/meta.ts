@@ -3,10 +3,9 @@ import { db } from "..";
 import { RepositoryMetaData } from "@offcourse/schema";
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
-export const insertMetaEntry = async (entry: RepositoryMetaData) => {
+export const insertMetaEntry = (entry: RepositoryMetaData) => {
   const value = metaInsertSchema.parse(entry);
-  await db.insert(metaData).values(value).onConflictDoNothing()
-  return value;
+  return db.insert(metaData).values(value).onConflictDoNothing()
 }
 
 export const getMetaEntry = async () => {

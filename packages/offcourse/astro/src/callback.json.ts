@@ -54,7 +54,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   const { type, payload } = await handleQuery({
     type: QueryType.GET_REGISTRY_FROM_OAUTH,
     payload: { authProvider, login }
-  });
+  }, false);
 
 
   if (type === ResponseType.RETRIEVED_REGISTRY_ENTRY) {

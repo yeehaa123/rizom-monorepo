@@ -4,6 +4,9 @@ import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
 import { getRepositoryEntry } from './models/repository';
 import { getMetaEntry } from './models/meta';
+import { getCuratedCourses } from './models/curated';
+import { getBookmarkedCourses } from './models/bookmark';
+import { getFollowedCourses } from './models/completion';
 
 export async function handleQuery(query: Query, isAuthorized: boolean) {
   const { type, payload } = query;
@@ -17,10 +20,31 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
         }
       }
     }
-    case QueryType.FETCH_USER_COURSES: {
+    case QueryType.GET_CURATED_COURSES: {
+      const courses = await getCuratedCourses();
+      return {
+        type: ResponseType.RETRIEVED_COURSES,
+        payload: courses
+      }
+    }
+    case QueryType.GET_ALL_COURSES: {
       const courses = await getCourses();
       return {
-        type: ResponseType.FETCHED_USER_COURSES,
+        type: ResponseType.RETRIEVED_COURSES,
+        payload: courses
+      }
+    }
+    case QueryType.GET_FOLLOWED_COURSES: {
+      const courses = await getFollowedCourses();
+      return {
+        type: ResponseType.RETRIEVED_COURSES,
+        payload: courses
+      }
+    }
+    case QueryType.GET_BOOKMARKED_COURSES: {
+      const courses = await getBookmarkedCourses();
+      return {
+        type: ResponseType.RETRIEVED_COURSES,
         payload: courses
       }
     }

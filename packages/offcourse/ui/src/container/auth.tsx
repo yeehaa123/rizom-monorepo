@@ -43,13 +43,13 @@ export function getAuthData() {
 }
 
 export function redirectToGitHub({ courseId }: CourseQuery) {
-  const registryId = "Ov23liIHmaO6XFSYga34";
-  // const localId = "Ov23li51nX1AYgHxF6bl";
-  const githubClientId = registryId;
+  // const registryId = "Ov23liIHmaO6XFSYga34";
+  const localId = "Ov23li51nX1AYgHxF6bl";
+  const githubClientId = localId;
   const { origin, pathname, search } = window.location;
-  // const local_uri = 'http://localhost:8765'
-  const remote_uri = 'https://offcourse-io.vercel.app'
-  const redirect_uri = `${remote_uri}/offcourse/callback`;
+  const local_uri = 'http://localhost:8765'
+  //const remote_uri = 'https://offcourse-io.vercel.app'
+  const redirect_uri = `${local_uri}/offcourse/callback`;
   const searchParams = new URLSearchParams(search);
   searchParams.delete("code");
   searchParams.append("courseId", courseId);

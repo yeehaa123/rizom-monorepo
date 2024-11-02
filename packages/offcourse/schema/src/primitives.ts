@@ -130,3 +130,11 @@ export type RepositoryMetaData = z.infer<typeof repositoryMetaDatasSchema>
 export type KeyStoreEntry = z.infer<typeof keystoreEntry>
 export type RepositoryEntry = z.infer<typeof repositoryEntry>
 export type RepositoryRegistration = z.infer<typeof repositoryRegistrationSchema>
+
+
+export enum CollectionType {
+  CURATED = "CURATED",
+  BOOKMARKED = "BOOKMARKED",
+  FOLLOWED = "FOLLOWED",
+  ALL = "ALL"
+} 

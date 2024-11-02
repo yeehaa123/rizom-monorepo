@@ -1,0 +1,68 @@
+---
+import { QueryType, CollectionType } from '@offcourse/schema';
+import { Offcourse } from "@offcourse/ui"
+import { BaseHead, OGType, RoutesMenu } from "@/components";
+import Layout from "@/layouts/Base.astro"
+import { handleQuery } from '@offcourse/db/query';
+
+
+
+export async function getStaticPaths() {
+
+  const queryTypes = {
+    [CollectionType.BOOKMARKED]: QueryType.GET_BOOKMARKED_COURSES,
+    [CollectionType.FOLLOWED]: QueryType.GET_FOLLOWED_COURSES,
+    [CollectionType.ALL]: QueryType.GET_ALL_COURSES,
+    [CollectionType.CURATED]: QueryType.GET_CURATED_COURSES 
+  }
+
+  const routes = {
+    [CollectionType.BOOKMARKED]: "bookmarked",
+    [CollectionType.FOLLOWED]: "followed",
+    [CollectionType.ALL]: "all",
+    [CollectionType.CURATED]: undefined
+  }
+
+  const gatherCollectionData = async (collection: CollectionType ) => {
+    const queryType = queryTypes[collection] || QueryType.GET_CURATED_COURSES
+    const data  = await handleQuery({type: queryType})
+    return {
+      params: { 
+        collection: collection === CollectionType.CURATED 
+        ? undefined 
+        : collection.toLowerCase() 
+      },
+      props: { courses: data.payload, collection },
+    }
+  }
+
+  const collectionTypes  = Object.keys(CollectionType);
+  const promises = collectionTypes.map(collection => gatherCollectionData(collection));
+  return Promise.all(promises);
+}
+
+const { courses, collection }= Astro.props;
+
+
+const description = "COURSES";
+const title = "Offcourse";
+const routes = {
+  [CollectionType.BOOKMARKED]: "bookmarked",
+  [CollectionType.FOLLOWED]: "followed",
+  [CollectionType.ALL]: "all",
+  [CollectionType.CURATED]: "/"
+}
+const links = Object.entries(routes).map(([title, href]) => ({title, href}));
+---
+<Layout {title}>
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.WEBSITE} 
+    {title} 
+    {description} 
+    url={Astro.url} />
+  <main class="bg-white text-black dark:bg-black dark:text-white print:bg-pure-white print:text-pitch-black print:py-24 w-full px-5 sm:px-8 gap-8 py-12 py-20 lg:py-24 mx-auto">
+    <Offcourse data={courses} client:load/>
+    <RoutesMenu client:load className="fixed bottom-0 right-0" value={collection} links={links}/>
+  </main>
+</Layout>

@@ -12,7 +12,8 @@ async function seedMeta(fileName?: string) {
   if (fileName) {
     const data = await readFile(fileName, 'utf8');
     const meta = parse(data);
-    return await insertMetaEntry(meta);
+    await insertMetaEntry(meta);
+    return meta;
   } else {
     throw ("META FILENAME MISSING");
   }
