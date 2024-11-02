@@ -5,8 +5,6 @@ import { BaseHead, OGType, RoutesMenu } from "@/components";
 import Layout from "@/layouts/Base.astro"
 import { handleQuery } from '@offcourse/db/query';
 
-
-
 export async function getStaticPaths() {
 
   const queryTypes = {
@@ -24,6 +22,7 @@ export async function getStaticPaths() {
   }
 
   const gatherCollectionData = async (collection: CollectionType ) => {
+    console.log("COLLECTION", collection);
     const queryType = queryTypes[collection] || QueryType.GET_CURATED_COURSES
     const data  = await handleQuery({type: queryType})
     return {
