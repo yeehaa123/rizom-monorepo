@@ -32,7 +32,6 @@ export default defineConfig({
   env: {
     schema: {
       REPOSITORY_KEY: envField.string({ context: "server", access: "secret" }),
-      TURSO_DATABASE_URL: envField.string({ context: "server", access: "public" })
     }
   },
   markdown: {
