@@ -4,7 +4,8 @@ import { config } from 'dotenv';
 config({ path: '.env' });
 
 const turso = createClient({
-  url: process.env.TURSO_DATABASE_URL!,
+  // @ts-ignore
+  url: import.meta.env.TURSO_DATABASE_URL || process.env.TURSO_DATABASE_URL!,
   authToken: process.env.TURSO_AUTH_TOKEN!,
 });
 
