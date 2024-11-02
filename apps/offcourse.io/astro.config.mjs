@@ -31,7 +31,8 @@ export default defineConfig({
   site: 'https://offcourse.io',
   env: {
     schema: {
-      REPOSITORY_KEY: envField.string({ context: "server", access: "secret" })
+      REPOSITORY_KEY: envField.string({ context: "server", access: "secret" }),
+      TURSO_DATABASE_URL: envField.string({ context: "server", access: "secret" })
     }
   },
   markdown: {
