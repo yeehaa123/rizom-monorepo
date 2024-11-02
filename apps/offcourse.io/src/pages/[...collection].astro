@@ -25,7 +25,6 @@ const queryTypes = {
 }
 
 const queryType = queryTypes[collection]
-
 const data  = await handleQuery({type: queryType, payload: undefined}, false)
 const courses = data.payload as Course[];
 const description = "COURSES";
