@@ -10,7 +10,6 @@ export const getFollowedCourses = async () => {
   const data = await db.selectDistinct({ courseId: completionTable.courseId })
     .from(completionTable)
   const courseIds = data.map(({ courseId }) => courseId);
-  console.log(courseIds);
   return await getCourses({ courseIds });
 }
 

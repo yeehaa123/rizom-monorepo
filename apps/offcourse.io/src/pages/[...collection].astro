@@ -16,7 +16,6 @@ export async function getStaticPaths() {
   }
 
   const gatherCollectionData = async (collection: CollectionType ) => {
-    console.log("COLLECTION", collection);
     const queryType = queryTypes[collection] || QueryType.GET_CURATED_COURSES as QueryType
     const data  = await handleQuery({type: queryType, payload: undefined}, false)
     const courses = data.payload as Course[]
@@ -32,10 +31,11 @@ export async function getStaticPaths() {
 
   const collectionTypes  = Object.keys(CollectionType);
   const promises = collectionTypes.map(collection => gatherCollectionData(collection));
-  return Promise.all(promises);
+  return await Promise.all(promises);
 }
 
 const { courses, collection }= Astro.props;
+
 const description = "COURSES";
 const title = "Offcourse";
 const routes = {
@@ -44,6 +44,7 @@ const routes = {
   [CollectionType.ALL]: "all",
   [CollectionType.CURATED]: "/"
 }
+
 const links = Object.entries(routes).map(([title, href]) => ({title, href}));
 ---
 <Layout {title}>
