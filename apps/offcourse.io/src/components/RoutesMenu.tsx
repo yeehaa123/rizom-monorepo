@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
@@ -14,15 +16,24 @@ type Props = {
 }
 
 export function RoutesMenu({ links, className, currentRoute }: Props) {
-  return <NavigationMenu className={className}>
+  return <NavigationMenu className={cn("px-0", className)}>
     <NavigationMenuList>
       <NavigationMenuItem>
-        {links.sort((a, b) => a.title.localeCompare(b.title)).map(({ title, href }) =>
-          <NavigationMenuLink key={href}
-            active={title === currentRoute}
-            className={cn(navigationMenuTriggerStyle())}
-            href={href}>{title}</NavigationMenuLink>)}
+        <NavigationMenuTrigger>{currentRoute}</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <ul>
+            {links.sort((a, b) => a.title.localeCompare(b.title)).map(({ title, href }) =>
+              <li key={href}>
+                <NavigationMenuLink
+                  active={title === currentRoute}
+                  className={cn(navigationMenuTriggerStyle())}
+                  href={href}>
+                  {title}
+                </NavigationMenuLink>
+              </li>)}
+          </ul>
+        </NavigationMenuContent>
       </NavigationMenuItem>
     </NavigationMenuList>
-  </NavigationMenu>
+  </NavigationMenu >
 }
