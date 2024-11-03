@@ -23,7 +23,7 @@ export function timeout(ms: number) {
 export async function query(query: Query) {
   const { type, payload } = query;
   switch (type) {
-    case (QueryType.GET_REGISTRY_METADATA): {
+    case (QueryType.enum.GET_REGISTRY_METADATA): {
       const { repository } = payload;
       return sendPublicQuery(repository, query);
     }

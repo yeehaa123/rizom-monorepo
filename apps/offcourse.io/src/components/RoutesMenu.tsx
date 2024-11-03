@@ -10,11 +10,11 @@ import {
 type Props = {
   links: { title: string, href: string }[],
   className?: string,
-  currentRoute: string
+  currentRoute: string | undefined
 }
 
 export function RoutesMenu({ links, className, currentRoute }: Props) {
-  return <NavigationMenu value={currentRoute} className={className}>
+  return <NavigationMenu className={className}>
     <NavigationMenuList>
       <NavigationMenuItem>
         {links.sort((a, b) => a.title.localeCompare(b.title)).map(({ title, href }) =>

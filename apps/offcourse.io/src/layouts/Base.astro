@@ -1,25 +1,26 @@
 ---
-import NavBar from "../components/NavBar.astro"
-import Logo from "../components/Logo.astro"
 import '@/styles/globals.css'
-import { getEntry } from "astro:content";
-import { Socials, Logo} from "@offcourse/ui/components";
+import { CollectionType } from '@offcourse/schema';
+import { RoutesMenu } from "@/components";
 
 interface Props  {
-  logoLink?: string;
   title: string
+  collection?: CollectionType
 }
 
+const { title, collection }  = Astro.props;
 
-const profile = await getEntry("Profiles", "offcourse");
-const { title, logoLink = "/"}  = Astro.props;
+const links = CollectionType.options.map((collection) => ({
+  title: collection,
+  href: `/collections/${collection.toLowerCase()}`
+}))
+
 ---
 
 <html lang="en" transition:animate="none" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -37,11 +38,11 @@ const { title, logoLink = "/"}  = Astro.props;
       }
     </style>
   </head>
-  <body class="bg-white flex flex-col justify-between min-h-svh dark:bg-black print:bg-pure-white font-sans md:text-lg">
-    <header class="fixed top-0 left-0 flex w-full items-center justify-end">
-      <slot name="footer"/>
-    </header>
+  <body class="bg-white flex flex-col justify-between min-h-svh dark:bg-black font-sans md:text-lg">
   <slot/>
+    <footer class="fixed bottom-0 left-0 flex w-full items-center justify-end">
+      <RoutesMenu client:load currentRoute={collection} links={links}/>
+    </footer>
 </html>
 
 <script is:inline>
@@ -66,4 +67,3 @@ const { title, logoLink = "/"}  = Astro.props;
     document.documentElement.classList.toggle('dark', true);
   });
 </script>
-

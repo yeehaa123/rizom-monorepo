@@ -132,9 +132,5 @@ export type RepositoryEntry = z.infer<typeof repositoryEntry>
 export type RepositoryRegistration = z.infer<typeof repositoryRegistrationSchema>
 
 
-export enum CollectionType {
-  CURATED = "CURATED",
-  BOOKMARKED = "BOOKMARKED",
-  FOLLOWED = "FOLLOWED",
-  ALL = "ALL"
-} 
+export const CollectionType = z.enum(["CURATED", "BOOKMARKED", "FOLLOWED", "ALL"])
+export type CollectionType = z.infer<typeof CollectionType>

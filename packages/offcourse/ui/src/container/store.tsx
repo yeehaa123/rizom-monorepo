@@ -33,7 +33,10 @@ export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
     if (authResponse) {
       respond(authResponse);
       const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
-      const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
+      const response = await query({
+        type: QueryType.enum.FETCH_USER_RECORDS,
+        payload
+      });
       respond(response);
     }
   }
@@ -64,7 +67,7 @@ export function useOffcourse(data: Course | Course[], { }: OffcourseOptions) {
     const card = findCard(state, arg);
     if (card) {
       const response = await query({
-        type: QueryType.GET_REGISTRY_METADATA,
+        type: QueryType.enum.GET_REGISTRY_METADATA,
         payload: card.course.curator
       });
       respond(response);

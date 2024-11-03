@@ -52,12 +52,12 @@ export const GET: APIRoute = async ({ url, redirect }) => {
   const { login } = z.object({ login: z.string() }).parse(userData);
 
   const { type, payload } = await handleQuery({
-    type: QueryType.GET_REGISTRY_FROM_OAUTH,
+    type: QueryType.enum.GET_REGISTRY_FROM_OAUTH,
     payload: { authProvider, login }
   }, false);
 
 
-  if (type === ResponseType.RETRIEVED_REGISTRY_ENTRY) {
+  if (type === ResponseType.enum.RETRIEVED_REGISTRY_ENTRY) {
     const { userName, repository } = registryEntry.parse(payload);
     const authToken = generateAuthToken({ userName, repository })
     const authData = authState.parse({
@@ -70,7 +70,7 @@ export const GET: APIRoute = async ({ url, redirect }) => {
     return redirect(redirectURL, 307);
   }
 
-  if (type === ResponseType.REGISTRY_ENTRY_NOT_FOUND) {
+  if (type === ResponseType.enum.REGISTRY_ENTRY_NOT_FOUND) {
     const authData = { authProvider, token_type, access_token, login, state }
     const newParams = new URLSearchParams(authData);
     const signupURL = `/signup/?${newParams}`

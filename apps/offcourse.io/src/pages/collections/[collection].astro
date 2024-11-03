@@ -1,0 +1,44 @@
+---
+import type { Course } from '@offcourse/schema';
+import { QueryType, CollectionType } from '@offcourse/schema';
+import { Offcourse } from "@offcourse/ui"
+import { BaseHead, OGType } from "@/components";
+import Layout from "@/layouts/Base.astro"
+import { handleQuery } from '@offcourse/db/query';
+
+import { config } from 'dotenv';
+config({ path: '.env' });
+
+export async function getStaticPaths() {
+  return await Promise.all(
+    CollectionType.options.map(async collection =>{
+      const data  = await handleQuery({
+        type: QueryType.enum.GET_COURSES, 
+        payload: collection
+      }, false)
+      const courses = (data?.payload || []) as Course[];
+      return {
+        params: { 
+          collection: collection.toLowerCase() 
+        },
+        props: { collection, courses },
+      }
+    }))
+}
+
+const { collection, courses } = Astro.props;
+const description = "COURSES";
+const title = "Offcourse";
+
+---
+<Layout {title} {collection}>
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.WEBSITE} 
+    {title} 
+    {description} 
+    url={Astro.url} />
+  <main class="bg-white text-black dark:bg-black dark:text-white w-full px-5 sm:px-8 gap-8 p-8 lg:py-12 mx-auto">
+    <Offcourse data={courses} client:load/>
+  </main>
+</Layout>

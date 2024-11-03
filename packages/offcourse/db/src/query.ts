@@ -1,4 +1,4 @@
-import { Query, QueryType } from '@offcourse/schema';
+import { CollectionType, Query, QueryType } from '@offcourse/schema';
 import { ResponseType } from '@offcourse/schema';
 import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
@@ -11,48 +11,36 @@ import { getFollowedCourses } from './models/completion';
 export async function handleQuery(query: Query, isAuthorized: boolean) {
   const { type, payload } = query;
   switch (type) {
-    case QueryType.FETCH_USER_RECORDS: {
+    case QueryType.enum.FETCH_USER_RECORDS: {
       if (isAuthorized) {
         const userRecords = await getUserRecords(payload);
         return {
-          type: ResponseType.FETCHED_USER_RECORDS,
+          type: ResponseType.enum.FETCHED_USER_RECORDS,
           payload: userRecords
         }
       }
-    }
-    case QueryType.GET_CURATED_COURSES: {
-      const courses = await getCuratedCourses();
       return {
-        type: ResponseType.RETRIEVED_COURSES,
+        type: ResponseType.enum.NO_OP,
+        payload: undefined
+      }
+    }
+    case QueryType.enum.GET_COURSES: {
+      const courses = await {
+        [CollectionType.enum.ALL]: getCourses,
+        [CollectionType.enum.CURATED]: getCuratedCourses,
+        [CollectionType.enum.FOLLOWED]: getFollowedCourses,
+        [CollectionType.enum.BOOKMARKED]: getBookmarkedCourses
+      }[payload]()
+      return {
+        type: ResponseType.enum.RETRIEVED_COURSES,
         payload: courses
       }
     }
-    case QueryType.GET_ALL_COURSES: {
-      const courses = await getCourses();
-      return {
-        type: ResponseType.RETRIEVED_COURSES,
-        payload: courses
-      }
-    }
-    case QueryType.GET_FOLLOWED_COURSES: {
-      const courses = await getFollowedCourses();
-      return {
-        type: ResponseType.RETRIEVED_COURSES,
-        payload: courses
-      }
-    }
-    case QueryType.GET_BOOKMARKED_COURSES: {
-      const courses = await getBookmarkedCourses();
-      return {
-        type: ResponseType.RETRIEVED_COURSES,
-        payload: courses
-      }
-    }
-    case QueryType.GET_REGISTRY_METADATA: {
+    case QueryType.enum.GET_REGISTRY_METADATA: {
       const courses = await getCourses();
       const meta = await getMetaEntry();
       return {
-        type: ResponseType.RETRIEVED_REPOSITORY_METADATA,
+        type: ResponseType.enum.RETRIEVED_REPOSITORY_METADATA,
         payload: {
           ...payload,
           ...meta,
@@ -61,23 +49,17 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
         }
       }
     }
-    case QueryType.GET_REGISTRY_FROM_OAUTH: {
+    case QueryType.enum.GET_REGISTRY_FROM_OAUTH: {
       const entry = await getRepositoryEntry(payload);
       return entry
         ? {
-          type: ResponseType.RETRIEVED_REGISTRY_ENTRY,
+          type: ResponseType.enum.RETRIEVED_REGISTRY_ENTRY,
           payload: entry
         }
         : {
-          type: ResponseType.REGISTRY_ENTRY_NOT_FOUND,
+          type: ResponseType.enum.REGISTRY_ENTRY_NOT_FOUND,
           payload: undefined
         }
-    }
-    default: {
-      return {
-        type: ResponseType.NO_OP,
-        payload: undefined
-      }
     }
   }
 }

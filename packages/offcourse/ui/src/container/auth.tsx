@@ -5,7 +5,7 @@ export async function authenticate() {
   const payload = getAuthData() || await setAuthData();
   if (payload) {
     return responseSchema.parse({
-      type: ResponseType.AUTHENTICATED,
+      type: ResponseType.enum.AUTHENTICATED_EXISTING_USER,
       payload
     })
   }
@@ -28,7 +28,7 @@ export async function setAuthData() {
 export async function logout() {
   sessionStorage.removeItem("auth");
   const response = responseSchema.parse({
-    type: ResponseType.lOGGED_OUT,
+    type: ResponseType.enum.LOGGED_OUT,
     payload: undefined
   })
   return response;
