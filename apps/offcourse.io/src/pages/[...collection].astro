@@ -10,27 +10,32 @@ import { config } from 'dotenv';
 config({ path: '.env' });
 
 export async function getStaticPaths() {
-  return Object.keys(CollectionType).map(collection =>({
-    params: { 
-      collection: collection === CollectionType.CURATED ? undefined : collection.toLowerCase() 
-    },
-    props: { collection },
-  }))
+
+  const queryTypes = {
+    [CollectionType.BOOKMARKED]: QueryType.GET_BOOKMARKED_COURSES,
+    [CollectionType.FOLLOWED]: QueryType.GET_FOLLOWED_COURSES,
+    [CollectionType.ALL]: QueryType.GET_ALL_COURSES,
+    [CollectionType.CURATED]: QueryType.GET_CURATED_COURSES 
+  }
+
+  return await Promise.all(
+    Object.keys(CollectionType).map(async collection =>{
+
+      const queryType = queryTypes[collection]
+      const data  = await handleQuery({type: queryType, payload: undefined}, false)
+      const courses = data.payload as Course[];
+      return {
+        params: { 
+          collection: collection === CollectionType.CURATED 
+            ? undefined 
+            : collection.toLowerCase() 
+        },
+        props: { collection, courses },
+      }
+    }))
 }
 
-console.log("DB URL", process.env.TURSO_DATABASE_URL);
-const { collection } = Astro.props;
-
-const queryTypes = {
-  [CollectionType.BOOKMARKED]: QueryType.GET_BOOKMARKED_COURSES,
-  [CollectionType.FOLLOWED]: QueryType.GET_FOLLOWED_COURSES,
-  [CollectionType.ALL]: QueryType.GET_ALL_COURSES,
-  [CollectionType.CURATED]: QueryType.GET_CURATED_COURSES 
-}
-
-const queryType = queryTypes[collection]
-const data  = await handleQuery({type: queryType, payload: undefined}, false)
-const courses = data.payload as Course[];
+const { collection, courses } = Astro.props;
 const description = "COURSES";
 const title = "Offcourse";
 
@@ -51,8 +56,8 @@ const links = Object.entries(routes).map(([title, href]) => ({title, href}));
     {title} 
     {description} 
     url={Astro.url} />
-  <main class="bg-white text-black dark:bg-black dark:text-white print:bg-pure-white print:text-pitch-black print:py-24 w-full px-5 sm:px-8 gap-8 py-12 py-20 lg:py-24 mx-auto">
+  <RoutesMenu client:load slot="footer" currentRoute={collection} links={links}/>
+  <main class="bg-white text-black dark:bg-black dark:text-white w-full px-5 sm:px-8 gap-8 p-8 lg:py-12 mx-auto">
     <Offcourse data={courses} client:load/>
-    <RoutesMenu client:load className="fixed bottom-0 right-0" value={collection} links={links}/>
   </main>
 </Layout>
