@@ -1,0 +1,35 @@
+import { ImageResponse } from "@vercel/og";
+import type { Course } from "@offcourse/schema";
+
+const OG = ({ goal, curator, description, tags }: Course) => {
+  return <div style={{ display: "flex" }}>
+    <div tw="flex flex-col select-none min-w-[360px] max-w-[420px]">
+      <div tw="flex flex-col space-y-1.5 p-6">
+        <h3
+          tw={"text-2xl font-bold leading-none tracking-tight"} >
+          {goal}
+        </h3>
+        <div tw="capitalize">
+          {curator.alias}
+        </div>
+        <p tw="text-sm text-gray-500 dark:text-gray-400">
+          {description}
+        </p>
+        <div tw="flex flex-wrap gap-1">
+          {tags.map(tag =>
+            <div tw="flex text-xs border px-2.5 py-0.5 border-1 items-center border-gray-900">
+              <div>
+                {tag}
+              </div>
+            </div>)
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+}
+export const generateOG = ({ course, fonts }: any) => {
+  const og = new ImageResponse(<OG {...course} />, { fonts });
+  return og;
+};
+

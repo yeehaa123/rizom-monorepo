@@ -9,6 +9,7 @@
   "exports": {
     "default": {
       "types": "./src/index.ts",
+      "components": "./src/components/index.ts",
       "default": "./dist/index.js"
     }
   },
