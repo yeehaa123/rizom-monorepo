@@ -1,5 +1,6 @@
 import { CollectionType, Query, QueryType } from '@offcourse/schema';
 import { ResponseType } from '@offcourse/schema';
+import { generateOG } from "@offcourse/og";
 import { getUserRecords } from './models/userRecord';
 import { getCourses } from './models/course';
 import { getRepositoryEntry } from './models/repository';
@@ -22,6 +23,13 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
       return {
         type: ResponseType.enum.NO_OP,
         payload: undefined
+      }
+    }
+    case QueryType.enum.RENDER_COURSE_IMAGE: {
+      const image = await generateOG(payload);
+      return {
+        type: ResponseType.enum.RENDERED_COURSE_IMAGE,
+        payload: image
       }
     }
     case QueryType.enum.GET_COURSES: {

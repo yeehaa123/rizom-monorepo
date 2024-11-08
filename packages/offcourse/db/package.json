@@ -14,6 +14,7 @@
   "devDependencies": {
     "@offcourse/crypto": "workspace:*",
     "@offcourse/schema": "workspace:*",
+    "@offcourse/og": "workspace:*",
     "@rizom/typescript-config": "workspace:*",
     "@types/node": "^20.14.2",
     "typescript": "latest"

@@ -6,9 +6,6 @@ import { BaseHead, OGType } from "@/components";
 import Layout from "@/layouts/Base.astro"
 import { handleQuery } from '@offcourse/db/query';
 
-import { config } from 'dotenv';
-config({ path: '.env' });
-
 export async function getStaticPaths() {
   return await Promise.all(
     CollectionType.options.map(async collection =>{
@@ -29,7 +26,6 @@ export async function getStaticPaths() {
 const { collection, courses } = Astro.props;
 const description = "COURSES";
 const title = "Offcourse";
-
 ---
 <Layout {title} {collection}>
   <BaseHead 

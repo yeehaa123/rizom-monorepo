@@ -1,10 +1,17 @@
 import { z } from 'zod';
-import { authState, userRecord, courseSchema, registryEntry, repositoryMetaDatasSchema } from "./primitives";
+import {
+  authState,
+  userRecord,
+  courseSchema,
+  registryEntry,
+  repositoryMetaDatasSchema
+} from "./primitives";
 
 export const ResponseType = z.enum([
   "AUTHENTICATED_EXISTING_USER",
   "LOGGED_OUT",
   "FETCHED_USER_RECORDS",
+  "RENDERED_COURSE_IMAGE",
   "RETRIEVED_COURSES",
   "RETRIEVED_REGISTRY_ENTRY",
   "RETRIEVED_REPOSITORY_METADATA",
@@ -16,6 +23,10 @@ export const responseSchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal(ResponseType.enum.AUTHENTICATED_EXISTING_USER),
     payload: authState
+  }),
+  z.object({
+    type: z.literal(ResponseType.enum.RENDERED_COURSE_IMAGE),
+    payload: z.any()
   }),
   z.object({
     type: z.literal(ResponseType.enum.RETRIEVED_REGISTRY_ENTRY),

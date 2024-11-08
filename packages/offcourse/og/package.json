@@ -1,0 +1,28 @@
+{
+  "name": "@offcourse/og",
+  "version": "0.0.1",
+  "author": "Yeehaa",
+  "license": "MIT",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@offcourse/schema": "workspace:*",
+    "@rizom/tailwind-config": "workspace:*",
+    "@rizom/typescript-config": "workspace:*",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "dotenv": "^16.4.5",
+    "tailwindcss": "^3.4.10",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@vercel/og": "^0.6.3"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./components": [
+      "./src/components/index.tsx"
+    ]
+  }
+}
