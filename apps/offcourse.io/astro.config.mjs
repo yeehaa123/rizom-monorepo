@@ -14,7 +14,7 @@ import * as path from 'path';
 import offcourse from "@offcourse/astro"
 
 export default defineConfig({
-  site: 'https://offcourse.io',
+  site: 'https://offcourse-io.vercel.app/',
   env: {
     schema: {
       REPOSITORY_KEY: envField.string({ context: "server", access: "secret" }),
