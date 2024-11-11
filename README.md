@@ -104,7 +104,7 @@ For myself, I already marked where I want to:
 
 + Define Ambassador ICP
 + Onboard 20 new ambassadors
-+ Onboard 1 Investor (JH+)
++ Onboard 1 Investor
 + Onboard 1 paying customer/partner
 + Share 50 Offcourse Cards Externally (JH)
 + Communicate vision/mission Rizom (JH)
