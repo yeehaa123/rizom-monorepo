@@ -1,13 +1,13 @@
 # Strategy Rizom
 
-Yeehaa
-Taipei, November 11, 2024
 Version 0.0.1
 
 Note: This is a rolling document that we update as we progress. To keep it manageable, we use semantic versioning. Changes can be suggested through pull requests, in collective meetings, or directly to me.
 
 
-## Introduction
+## Log Entries
+
+November 11, 2024, Yeehaa, Taipei
 
 Over the last three months, we have accomplished significant exploratory work in developing our collective. This has led to several tangible and important achievements:
 
@@ -51,7 +51,9 @@ This last point may be controversial, but I believe it is crucial. In order to m
 Moving forward, our focus must be on creating fertile ground that allows our collective to grow and prosper. Only then can we truly embody our purpose and transform the future of work.
 
 
-## Objective: Make Rizom Sustainable
+## OKRs
+
+### Objective: Make Rizom Sustainable
 
 The collective's objective for the first three months is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
