@@ -69,7 +69,7 @@ function OGHeader({ goal, curator }: Course) {
 export function OG(props: Course) {
   const { description, tags, checkpoints } = props;
   return (
-    <div tw="flex h-full w-full justify-center items-center">
+    <div tw="flex h-full w-full justify-center items-center bg-gray-900">
       <div tw="flex flex-col bg-white p-6">
         <OGHeader {...props} />
         <div tw="flex">
