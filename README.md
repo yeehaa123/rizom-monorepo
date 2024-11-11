@@ -66,7 +66,7 @@ As soon as someone is willing to take accountability for a specific result, it b
 + Advisors
 + Spectators
 
-The person who is willing to take accountability for a result will be that project's strategist. By default, everyone else will be an advisor on the project. However, you can chose to either bump your commitment (contributor) or lower it (spectator). These projects will be ranked and evaluated using Fabia's Cora's methodology and compensated accordingly (tbd). Voting rights are also based on your engagement status in the project (tbd).
+The person who is willing to take accountability for a result will be that project's strategist. By default, everyone else can be an advisor on the project. However, you can chose to either bump your commitment (contributor) or lower it (spectator). These projects will be ranked and evaluated using Fabia's Cora's methodology and compensated accordingly (tbd). Voting rights are also based on your engagement status in the project (tbd).
 
 To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete, sufficiently detailed, or properly prioritized. 
 
