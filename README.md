@@ -100,7 +100,7 @@ For myself, I already marked where I want to:
 + Validated Compensation Model 
 
 
-### Key Activity 3: Make Rizom's Onboarding Strategy Sustainable
+### Key Activity 3: Make Rizom's Ambassador Strategy Sustainable
 
 + Define Ambassador ICP
 + Onboard 20 new ambassadors
