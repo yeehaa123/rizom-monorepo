@@ -4,7 +4,8 @@ Yeehaa
 Taipei, November 11, 2024
 Version 0.0.1
 
-Note: This is a rolling document. Meaning that we update it as we go along. In order to keep it clear, we use: [semantic versioning](https://semver.org/).
+Note: This is a rolling document that we update as we progress. To keep it manageable, we use semantic versioning. Changes can be suggested through pull requests, in collective meetings, or directly to me.
+
 
 ## Introduction
 
@@ -24,11 +25,9 @@ Among these achievements, the definition of our purpose stands as the most cruci
 
 > The future of work is play
 
-Like many of you, I feel that there is still a considerable journey ahead to transform this vision into reality — even within our own collective. Currently, work hardly ever feels like play to me. I do not say this to complain. Moving forward, I think it's important to be able to admit this to ourselves and each other. If we are truly committed to this purpose, I believe one question should guide everything we do: "Does this feel like play to us?"
+Like many of you, I acknowledge there is still a considerable journey ahead to transform this vision into reality — even within our own collective. Currently, work hardly ever feels like play to me. This isn't a complaint, but rather an important acknowledgment. If we are truly committed to this purpose, one question should guide everything we do: "Does this feel like play to us?" If the answer is no, we should hold ourselves and each other accountable.
 
-This leads me to a fundamental question: What do we mean by play? And perhaps more importantly: Does playing mean the same to everyone? The answer to the second question is clearly no — playing feels different to everyone. 
-
-But while play may be experienced differently by each person, we can identify three distinct modes of play that Rizom should facilitate:
+This leads to a fundamental question: What do we mean by play? And perhaps more importantly: Does play mean the same to everyone? While the answer to the second question is a clear no, playing feels different to everyone, we can identify three distinct modes of play that Rizom should facilitate:
 
 1. **Child's Play** (artistic/free play)
    - The purest form of play
@@ -54,13 +53,20 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 ## Objective: Make Rizom Sustainable
 
-The collective’s objective for the first three months is to ensure that the collective can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective needs to be proven to be shared collectively, otherwise our experiment should be considered as failed.
+The collective's objective for the first three months (up until Jan 31,2025) is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
 Moving forward, we no longer put deadlines on phases but on results. Similarly, people are not grouped on an activity level but on a result level. These results will be ranked using Fabia's Cora's methodology and compensated accordingly (tbd)
 
-We will prioritize results not simply on their perceived importance, but mainly on the willingness of individual collective members to contribute and commit to them, since this has proven to be the main bottleneck so far.
+We will prioritize results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
-To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete not properly prioritized. For myself, I already marked where I am willing to be hold accountable (JH+), contribute (JH), give advice (default), and those that I do not want to involved in at all (JH-) moving forward.
+To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete not properly prioritized. 
+
+For myself, I already marked where I want to: 
+
++ JH+: be held accountable
++ JH: contribute
++ (default): give advise
++ JH-: let it be
 
 
 ### Key Activity: Make Rizom's Vision Sustainable
