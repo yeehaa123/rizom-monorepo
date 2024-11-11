@@ -71,7 +71,7 @@ For myself, I already marked where I want to:
 + JH-: let it be
 
 
-### Key Activity: Make Rizom's Vision Sustainable
+### Key Activity 1: Make Rizom's Vision Sustainable
 
 #### Results:
 
@@ -80,7 +80,7 @@ For myself, I already marked where I want to:
 + Vision Type Cora 
 
 
-### Key Activity: Make Rizom's Business Model Sustainable
+### Key Activity 2: Make Rizom's Business Model Sustainable
 
 #### Results:
 
@@ -93,7 +93,7 @@ For myself, I already marked where I want to:
 + Validated Compensation Model 
 
 
-### Key Activity: Make Rizom's Onboarding Strategy Sustainable
+### Key Activity 3: Make Rizom's Onboarding Strategy Sustainable
 
 + Define Ambassador ICP 
 + Convert Investors (JH+)
@@ -101,7 +101,7 @@ For myself, I already marked where I want to:
 + Communicate vision/mission Rizom (JH)
 
 
-### Key Activity: Make Rizom's Organizational Model Sustainable
+### Key Activity 4: Make Rizom's Organizational Model Sustainable
 
 + Develop and document Rizom Method (JH)
 + Share 100 Offcourse Cards Internally (JH)
