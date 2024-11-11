@@ -53,17 +53,17 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 ## Objective: Make Rizom Sustainable
 
-The collective's objective for the first three months (up until Jan 31,2025) is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
+The collective's objective for the first three months is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
 Moving forward, we no longer put deadlines on phases but on results. Similarly, people are not grouped on an activity level but on a result level. These results will be ranked using Fabia's Cora's methodology and compensated accordingly (tbd)
 
 We will prioritize results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
-To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete not properly prioritized. 
+To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete, sufficiently detailed, or properly prioritized. 
 
 For myself, I already marked where I want to: 
 
-+ JH+: be held accountable
++ JH+: be hold accountable
 + JH: contribute
 + (default): give advise
 + JH-: let it be
@@ -83,8 +83,8 @@ For myself, I already marked where I want to:
 #### Results:
 
 + Budget 2025 (JH-)
-+ Sales Deck 
 + Investor Deck 
++ Sales Deck 
 + Financial Projections (JH-)
 + List of potential investors 
 + List of potential clients 
@@ -101,7 +101,7 @@ For myself, I already marked where I want to:
 
 ### Key Activity: Make Rizom's Organizational Model Sustainable
 
-+ Develop and document Rizom Method (JH+)
++ Develop and document Rizom Method (JH)
 + Share 100 Offcourse Cards Internally (JH)
 + Develop Offcourse (JH+)
 + Develop and Test Cora 
