@@ -59,7 +59,7 @@ The collective's objective is to ensure that we can financially and organization
 
 Moving forward, we no longer put deadlines on phases but on results.  We will prioritize and value results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
-As soon as someone is willing to take accountability for a specific result, it becomes a project, gets a deadline assigned, and is further scoped. Collective member do not commit to activities level or projects, but to specific results/projects. In each project, people can have the following roles:
+As soon as someone is willing to take accountability for a specific result, it becomes a project, gets a deadline assigned, and is further scoped. Collective member do not commit on a activity or objective, but to specific results/projects. In each project, people can have the following roles:
 
 + Strategist 
 + Contributors
