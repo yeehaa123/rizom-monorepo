@@ -95,8 +95,9 @@ For myself, I already marked where I want to:
 
 ### Key Activity 3: Make Rizom's Onboarding Strategy Sustainable
 
-+ Define Ambassador ICP 
-+ Convert Investors (JH+)
++ Define Ambassador ICP
++ Onboard 20 new ambassadors
++ Onboard 3 Investors (JH)
 + Share 50 Offcourse Cards Externally (JH)
 + Communicate vision/mission Rizom (JH)
 
