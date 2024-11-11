@@ -17,7 +17,7 @@ Over the last three months, we have accomplished significant exploratory work in
 
 - Development and population of the Offcourse Platform
 
-- Creation and testing of the Cora Methodology
+- Creation and testing of the CORA Methodology
 
 - Definition of our collective purpose, mission, and vision
 
@@ -84,7 +84,7 @@ For myself, I already marked where I want to:
 
 + Vision Type Offcourse (JH+)
 + Vision Type Rizom (JH)
-+ Vision Type Cora 
++ Vision Type CORA 
 
 
 ### Key Activity 2: Make Rizom's Business Model Sustainable
