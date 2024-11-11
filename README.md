@@ -2,7 +2,7 @@
 
 Yeehaa
 Taipei, November 11, 2024
-Version 1.0.0 
+Version 0.0.1
 
 Note: This is a rolling document. Meaning that we update it as we go along. In order to keep it clear, we use: [semantic versioning](https://semver.org/))
 
