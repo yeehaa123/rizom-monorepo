@@ -115,5 +115,5 @@ For myself, I already marked where I want to:
 + Develop and document Rizom Method (JH)
 + Share 100 Offcourse Cards Internally (JH)
 + Develop Offcourse (JH)
-+ Develop and Test Cora 
++ Develop and Test CORA 
 + Determine Shared Tools (JH-)
