@@ -1,6 +1,6 @@
 # Strategy Rizom
 
-Version 0.0.1
+Version 0.1.0
 
 Note: This is a rolling document that we update as we progress. To keep it manageable, we use semantic versioning. Changes can be suggested through pull requests, in collective meetings, or directly to me.
 
@@ -57,18 +57,25 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 The collective's objective for the first three months is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
-Moving forward, we no longer put deadlines on phases but on results. Similarly, people are not grouped on an activity level but on a result level. These results will be ranked using Fabia's Cora's methodology and compensated accordingly (tbd)
+Moving forward, we no longer put deadlines on phases but on results.  We will prioritize and value results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
-We will prioritize results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
+As soon as someone is willing to take accountability for a specific result, it becomes a project, gets a deadline assigned, and is further scoped. Collective member do not commit to activities level or projects, but to specific results/projects. In each project, people can have the following roles:
+
++ Strategist 
++ Contributors
++ Advisors
++ Spectators
+
+The person who is willing to take accountability for a result will be that project's strategist. By default, everyone else will be an advisor on the project. However, you can chose to either bump your commitment (contributor) or lower it (spectator). These projects will be ranked and evaluated using Fabia's Cora's methodology and compensated accordingly (tbd). Voting rights are also based on your engagement status in the project (tbd).
 
 To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete, sufficiently detailed, or properly prioritized. 
 
 For myself, I already marked where I want to: 
 
-+ JH+: be hold accountable
-+ JH: contribute
-+ (default): give advise
-+ JH-: let it be
++ JH+: be hold accountable (strategist)
++ JH: contribute (contributor)
++ (default): give advise (advisor)
++ JH-: let it be (spectator)
 
 
 ### Key Activity 1: Make Rizom's Vision Sustainable
