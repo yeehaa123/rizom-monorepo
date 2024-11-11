@@ -54,11 +54,11 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 ## Objective: Make Rizom Sustainable
 
-The collective’s objective for the first three months is to ensure that the collective can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective should be shared collectively, otherwise our experiment should be considered as failed.
+The collective’s objective for the first three months is to ensure that the collective can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective needs to be proven to be shared collectively, otherwise our experiment should be considered as failed.
 
 Moving forward, we no longer put deadlines on phases but on results. Similarly, people are not grouped on an activity level but on a result level. These results will be ranked using Fabia's Cora's methodology and compensated accordingly (tbd)
 
-We will prioritize results not simply on their perceived importance, but mainly on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far.
+We will prioritize results not simply on their perceived importance, but mainly on the willingness of individual collective members to contribute and commit to them, since this has proven to be the main bottleneck so far.
 
 To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete not properly prioritized. For myself, I already marked where I am willing to be hold accountable (JH+), contribute (JH), give advice (default), and those that I do not want to involved in at all (JH-) moving forward.
 
