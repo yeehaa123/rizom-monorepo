@@ -55,7 +55,7 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 ### Objective: Make Rizom Sustainable
 
-The collective's objective is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
+The collective's objective is to ensure that we can financially and organizationally sustain and grow. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
 Moving forward, we no longer put deadlines on phases but on results.  We will prioritize and value results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
