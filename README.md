@@ -17,7 +17,7 @@ Over the last three months, we have accomplished significant exploratory work in
 
 - Development and population of the Offcourse Platform
 
-- Creation and testing of the Cora Methodology
+- Creation and testing of the CORA Methodology
 
 - Definition of our collective purpose, mission, and vision
 
@@ -55,18 +55,18 @@ Moving forward, our focus must be on creating fertile ground that allows our col
 
 ### Objective: Make Rizom Sustainable
 
-The collective's objective for the first three months is to ensure that we can financially and organizationally sustain and grow in 2025. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
+The collective's objective is to ensure that we can financially and organizationally sustain and grow. The responsibility to reach and define this objective must be proven to be shared collectively; otherwise, our experiment would be unsuccessful and subsequent conclusions should be drawn.
 
 Moving forward, we no longer put deadlines on phases but on results.  We will prioritize and value results not simply on their perceived importance, but primarily on the willingness of collective members to contribute and commit to them, since this has proven to be the main bottleneck so far. It is easy to decide what other people should do, but that is not the way we want to operate.
 
-As soon as someone is willing to take accountability for a specific result, it becomes a project, gets a deadline assigned, and is further scoped. Collective member do not commit to activities level or projects, but to specific results/projects. In each project, people can have the following roles:
+As soon as someone is willing to take accountability for a specific result, it becomes a project, gets a deadline assigned, and is further scoped. Collective member do not commit on a activity or objective, but to specific results/projects. In each project, people can have specific roles. For now, I propose to start with the following:
 
 + Strategist 
 + Contributors
 + Advisors
 + Spectators
 
-The person who is willing to take accountability for a result will be that project's strategist. By default, everyone else will be an advisor on the project. However, you can chose to either bump your commitment (contributor) or lower it (spectator). These projects will be ranked and evaluated using Fabia's Cora's methodology and compensated accordingly (tbd). Voting rights are also based on your engagement status in the project (tbd).
+The person who is willing to take accountability for a result will be that project's strategist. By default, everyone else can be an advisor on the project. However, you can chose to either bump your commitment (contributor) or lower it (spectator). These projects will be ranked and evaluated using Fabia's Cora's methodology and compensated accordingly (tbd). Voting rights are also based on your engagement status in the project (tbd).
 
 To kick things off, I made a list of upcoming results that need to be completed in order to reach our objective. This list is neither complete, sufficiently detailed, or properly prioritized. 
 
@@ -84,7 +84,7 @@ For myself, I already marked where I want to:
 
 + Vision Type Offcourse (JH+)
 + Vision Type Rizom (JH)
-+ Vision Type Cora 
++ Vision Type CORA 
 
 
 ### Key Activity 2: Make Rizom's Business Model Sustainable
@@ -100,11 +100,11 @@ For myself, I already marked where I want to:
 + Validated Compensation Model 
 
 
-### Key Activity 3: Make Rizom's Onboarding Strategy Sustainable
+### Key Activity 3: Make Rizom's Ambassador Strategy Sustainable
 
 + Define Ambassador ICP
 + Onboard 20 new ambassadors
-+ Onboard 1 Investor (JH+)
++ Onboard 1 Investor 
 + Onboard 1 paying customer/partner
 + Share 50 Offcourse Cards Externally (JH)
 + Communicate vision/mission Rizom (JH)
@@ -115,5 +115,5 @@ For myself, I already marked where I want to:
 + Develop and document Rizom Method (JH)
 + Share 100 Offcourse Cards Internally (JH)
 + Develop Offcourse (JH)
-+ Develop and Test Cora 
++ Develop and Test CORA 
 + Determine Shared Tools (JH-)
