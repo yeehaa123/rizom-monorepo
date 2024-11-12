@@ -23,16 +23,21 @@ A navigational aid that helps you better understand your current digital consump
 
 ## (Possible) Features
 
-+ Helps you define your north star (i.e. determines which set of values you would like to work towards)
+### Essential
 
-+ Determines the distance that you are removed from your north star (i.e. desired values) and 
++ Helps you define your north star (i.e. determines which set of values you would like to work towards).
 
-+ Plots out a map towards your destination (i.e. suggests better content)
++ Determines the distance that you are removed from your north star (i.e. desired values).
 
-+ Plots all these things on a map.
++ Visualizes all these things, most likely as a map.
 
-+ Recognizes and filters out content of tech bros squatting in front of green screens with data
+### Nice to Haves
 
++ Recognizes and filters out content of tech bros squatting in front of green screens with data.
+
++ Determines the distance you are removed from others (friends, enemies, family, organization, companies, parties, etc.)
+
++ Determines a route towards your destination (i.e. suggests better content) and plots it on a map.
 
 
 ## Critical Assumptions
