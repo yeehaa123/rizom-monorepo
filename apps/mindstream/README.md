@@ -21,9 +21,9 @@ At the same time, we have to recognize that we live in the post-truth era and ar
 A navigational aid that helps you better understand your current digital consumption, defines your desired state, and coaches you towards it
 
 
-## (Possible) Features
+## Features
 
-### Essential
+### Must Haves
 
 + Determines your current position (i.e. extract im- and explicit values from the content that you consume).
 
@@ -37,9 +37,9 @@ A navigational aid that helps you better understand your current digital consump
 
 + Recognizes and filters out content of tech bros squatting in front of green screens with data.
 
-+ Determines the distance you are removed from others (friends, enemies, family, organization, companies, parties, etc.)
-
 + Determines a route towards your destination (i.e. suggests better content) and plots it on a map.
+
++ Determines the distance you are removed from others (friends, enemies, family, organization, companies, parties, etc.)
 
 
 ## Critical Assumptions

@@ -181,11 +181,17 @@
   {
     "id": "60b3687a0f78924fb19685ba21650e52",
     "author": "yeehaa",
+    "order": 10,
     "title": "Reclaiming The Future",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "b062af21c3e740717d88ec957dcc7f42"
+    "checksum": "b062af21c3e740717d88ec957dcc7f42",
+    "publicationData": {
+      "createdAt": "2024-11-12T08:27:26.648Z",
+      "updatedAt": "2024-11-12T08:27:26.648Z",
+      "publishedAt": "2024-11-12T08:27:26.648Z"
+    }
   },
   {
     "id": "acb4b327c77bf326169b9de3250ddc5a",

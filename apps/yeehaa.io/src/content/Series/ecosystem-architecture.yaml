@@ -1,26 +1,28 @@
-checksum: afd6a9ba4c73438a5ffa288552008e2f
-summary: The Ecosystem Architecture series explores the evolution of ecosystems
-  from biology to digital realms. It discusses fragmentation, decentralization,
-  and regenerative design principles. The series examines concepts like
-  McLuhan's global village, Sloterdijk's foam metaphor, and Shenzhen's shanzhai
-  ecosystem. It proposes ecosystem architecture as a new approach to designing
-  thriving decentralized organizations, emphasizing collaboration,
-  sustainability, and value pluralism. The articles cover topics ranging from
-  internet fragmentation to biomimicry, highlighting the interconnectedness of
-  digital spaces and natural systems.
+checksum: 3e8efb8f7c68fe6e98f2d9eee0006871
+summary: The 'Ecosystem Architecture' series explores the evolution of
+  ecosystems from biology to digital realms. It discusses decentralization,
+  fragmentation, and regenerative design principles. The series examines
+  concepts like McLuhan's global village, Sloterdijk's foam metaphor, and
+  shanzhai innovation. It proposes ecosystem architecture as a new approach to
+  designing thriving decentralized organizations and digital spaces, emphasizing
+  collaboration, sustainability, and value pluralism. The articles cover topics
+  ranging from internet fragmentation to biomimicry, offering insights into
+  creating resilient, adaptive systems across various domains.
 excerpt: Ecosystem Architecture explores the evolution of ecosystems from
   biology to digital realms, proposing new approaches to designing decentralized
-  organizations. It examines concepts like internet fragmentation, regenerative
-  design, and value pluralism in interconnected systems.
+  organizations and digital spaces. It emphasizes collaboration, sustainability,
+  and value pluralism in creating resilient, adaptive systems.
 tags:
   - eco
   - design
-  - web
   - future
+  - web
   - system
   - tech
   - global
-bannerImageURL: ./afd6a9ba4c73438a5ffa288552008e2f-banner.png
+  - digital
+  - renew
+bannerImageURL: ./3e8efb8f7c68fe6e98f2d9eee0006871-banner.png
 articles:
   - across-space-and-time
   - practice-innovation
@@ -32,4 +34,5 @@ articles:
   - learning-from-nature
   - the-good-foot
   - the-practice-of-ecosystem-architecture
+  - reclaiming-the-future
 title: Ecosystem Architecture

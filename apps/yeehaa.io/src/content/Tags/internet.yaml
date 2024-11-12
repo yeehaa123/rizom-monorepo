@@ -1,17 +1,19 @@
-checksum: 59100251e0ace6e0816bd8ceb8fd643d
-summary: Internet encompasses the vast digital landscape that connects people,
-  information, and technologies globally. This concept explores the complexities
-  of online spaces, digital culture, and the impact of interconnectedness on
-  society. It delves into philosophical perspectives, such as Peter Sloterdijk's
-  'foam' metaphor, to understand the fragmentation and multiplicity of modern
-  digital life. The internet's influence extends to various domains, including
-  communication, information sharing, and the formation of online communities,
-  shaping how we interact, learn, and perceive the world around us.
-excerpt: Sloterdijk's foam metaphor offers a framework for understanding our
-  complex world. The internet, with its myriad websites and communities,
-  resembles foam. Each digital space functions as a bubble - self-contained yet
-  linked to others.
+checksum: 4f2b82050f09b9a0faeeb21bae47e091
+summary: Internet encompasses the global network of interconnected computer
+  systems. This collection explores various aspects of the internet, including
+  its impact on society, culture, and future developments. It delves into
+  philosophical concepts like Peter Sloterdijk's foam metaphor to understand
+  internet fragmentation and digital spaces. The resources also discuss the
+  evolution of the decentralized internet, its promise of diverse ownership, and
+  the challenges it faces, such as the drift towards surveillance capitalism.
+  The articles emphasize the importance of shaping desirable futures and
+  aligning needs in the digital ecosystem.
+excerpt: The internet, with its myriad websites and communities, resembles foam.
+  Each digital space functions as a bubble - self-contained yet linked to
+  others. This perspective reframes internet fragmentation positively and
+  encourages investing in desirable futures.
 title: internet
 articles:
   - foam-party
+  - reclaiming-the-future
 courses: []
