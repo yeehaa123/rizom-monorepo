@@ -25,11 +25,13 @@ A navigational aid that helps you better understand your current digital consump
 
 ### Essential
 
++ Determines your current position (i.e. extract im- and explicit values from the content that you consume).
+
 + Helps you define your north star (i.e. determines which set of values you would like to work towards).
 
-+ Determines the distance that you are removed from your north star (i.e. desired values).
++ Determines the distance that you are removed from your north star (i.e. determines how healthy you are).
 
-+ Visualizes all these things, most likely as a map.
++ Visualizes all of these things, most likely as a map.
 
 ### Nice to Haves
 
@@ -60,7 +62,6 @@ A navigational aid that helps you better understand your current digital consump
 ### Commercial
 
 + People are willing to change their media diet
-
 
 
 ## Claude's Opinion
