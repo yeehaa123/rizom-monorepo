@@ -1,18 +1,20 @@
-checksum: 7d068db7030dd37195aba474a5a13883
-summary: Decentralized refers to systems or networks that operate without a
-  central authority, distributing power and control among multiple participants.
-  In technology and innovation, it often involves peer-to-peer collaboration,
-  open sharing of information, and rapid iteration. This approach challenges
-  traditional models of development and intellectual property, fostering
-  resilience and adaptability in markets and ecosystems. While offering numerous
-  benefits, decentralized systems may also face challenges, such as
-  environmental concerns in the context of accelerated production and electronic
-  waste.
-excerpt: Shenzhen's shanzhai ecosystem exemplifies decentralized innovation,
-  surpassing earlier models like ham radio. It's characterized by rapid
-  iteration, peer collaboration, and gongkai (open sharing). While driving
-  technological advancement, it faces environmental challenges.
+checksum: edae6f6e4262f1eee08c1218b88a6193
+summary: Decentralized refers to systems, networks, or approaches that
+  distribute power, control, and decision-making across multiple entities rather
+  than concentrating them in a single central authority. This concept is applied
+  in various contexts, including technology, governance, and innovation. It
+  emphasizes peer-to-peer collaboration, open sharing, and the creation of
+  diverse ecosystems that align with shared values. Decentralization aims to
+  challenge traditional models of centralized control, fostering resilience,
+  adaptability, and user empowerment while addressing concerns about
+  surveillance and misaligned interests in digital spaces.
+excerpt: Ecosystem architecture encourages investing in desirable futures rather
+  than accepting expected ones. The decentralized internet's promise was the
+  multiplication of public and private spaces with unprecedented ownership. We
+  must align interests before connecting the unconnected to prevent a
+  surveillance capitalism future.
 title: decentralized
 articles:
+  - reclaiming-the-future
   - shenzhen-goes-ham
 courses: []

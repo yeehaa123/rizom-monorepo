@@ -1,12 +1,11 @@
-checksum: b77929331ca6c04eeb4fd98860cfe64a
-summary: Freedom is a fundamental concept explored in the context of ecosystems,
-  digital communities, and societal structures. It emphasizes the importance of
-  mobility between different environments, fostering innovation, creativity, and
-  value pluralism. This principle of "voting with your feet" is seen as crucial
-  in both natural and human-made systems, enabling continuous alignment and
-  regenerative practices. The concept extends to discussions about network
-  states and startup societies as potential evolutionary steps beyond
-  traditional nation-states in our increasingly digital world.
+checksum: ad633e0fe29f5aeda4c6cef4f3c5500d
+summary: Freedom encompasses the ability to move between communities,
+  ecosystems, and ideas. It's a fundamental concept in both natural and digital
+  realms, fostering innovation, creativity, and value pluralism. This notion
+  extends to shaping futures by understanding power structures, challenging
+  narratives, and empowering choice. Freedom is crucial in evolving societal
+  models, from traditional nation-states to potential network states and startup
+  societies in the digital age.
 excerpt: Ecosystems facilitate voting with your feet, allowing movement between
   habitats. This principle applies to nature and digital communities, fostering
   innovation and value pluralism. The article explores network states and
@@ -14,4 +13,5 @@ excerpt: Ecosystems facilitate voting with your feet, allowing movement between
 title: freedom
 articles:
   - the-good-foot
-courses: []
+courses:
+  - shape-futures

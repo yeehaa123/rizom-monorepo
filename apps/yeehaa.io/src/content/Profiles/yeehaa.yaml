@@ -19,6 +19,7 @@ courses:
   - keep-the-web-weird
   - practice-innovation
   - set-rules
+  - shape-futures
   - share-openly
   - value-differences
   - vote-with-your-feet
@@ -36,14 +37,15 @@ articles:
   - the-good-foot
   - the-practice-of-ecosystem-architecture
 tags:
-  - eco
   - edu
   - tech
   - phd
   - startup
   - taiwan
+  - eco
   - future
   - design
+  - web
 profile:
   repository: https://yeehaa.io/offcourse
   alias: yeehaa
@@ -81,20 +83,19 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 15443b03c3637efd0322c250b74eb65d
+checksum: f6085c748b55d0ada68474a57397ce00
 description: yeehaa is an ecosystem architect with a PhD in Philosophy, blending
-  academia and tech expertise. As an entrepreneur, he founded Offcourse and
-  created the Superconnectors event format. Based in Taipei, yeehaa focuses on
-  transforming education, knowledge sharing, and fostering inclusive internet
-  ecosystems. His work spans various domains, including decentralization,
-  digital landscapes, and regenerative design. yeehaa's blog posts and curated
-  courses reflect his diverse interests, covering topics like ecosystem
-  architecture, innovation practices, and the evolution of digital spaces. He
-  advocates for aligning technology with nature and human values, emphasizing
-  collaboration and sustainability in his approach to building thriving
-  communities and organizations.
-blurb: yeehaa, an ecosystem architect with a PhD, blends tech and philosophy to
-  transform education and digital spaces. Based in Taipei, he advocates for
-  inclusive internet ecosystems and sustainable innovation practices.
-profileImageURL: ./15443b03c3637efd0322c250b74eb65d-profile.png
+  academia and tech expertise. As the founder of Offcourse and creator of
+  Superconnectors, he's dedicated to transforming education and knowledge
+  sharing. His work spans from exploring ecosystem evolution and internet
+  fragmentation to advocating for decentralized systems and regenerative design.
+  Based in Taipei, yeehaa focuses on uniting people around shared values and
+  translating visions into effective ecosystems. His blog posts and courses
+  reflect a deep interest in innovation, sustainability, and the future of
+  digital landscapes.
+blurb: yeehaa, an ecosystem architect with a PhD, merges philosophy and tech to
+  revolutionize education and knowledge sharing. His work explores digital
+  ecosystems, decentralization, and regenerative design, aiming to create
+  inclusive and sustainable futures in the digital age.
+profileImageURL: ./f6085c748b55d0ada68474a57397ce00-profile.png
 title: Yeehaa

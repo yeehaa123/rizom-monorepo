@@ -1,28 +1,27 @@
-checksum: 3e8efb8f7c68fe6e98f2d9eee0006871
+checksum: 9e573e3da0fe0e0487662b12973f698d
 summary: The 'Ecosystem Architecture' series explores the evolution of
-  ecosystems from biology to digital realms. It discusses decentralization,
-  fragmentation, and regenerative design principles. The series examines
-  concepts like McLuhan's global village, Sloterdijk's foam metaphor, and
-  shanzhai innovation. It proposes ecosystem architecture as a new approach to
-  designing thriving decentralized organizations and digital spaces, emphasizing
-  collaboration, sustainability, and value pluralism. The articles cover topics
-  ranging from internet fragmentation to biomimicry, offering insights into
-  creating resilient, adaptive systems across various domains.
+  ecosystems from biological concepts to digital landscapes. It discusses
+  decentralization, fragmentation, and regenerative design principles. The
+  series examines how these ideas apply to internet culture, innovation, and
+  societal structures. It emphasizes embracing complexity, fostering sustainable
+  communities, and aligning technology with nature. The articles cover topics
+  like Shenzhen's shanzhai ecosystem, McLuhan's global village, and the concept
+  of 'foam' in modern society, offering insights into creating adaptive,
+  self-renewing systems across various domains.
 excerpt: Ecosystem Architecture explores the evolution of ecosystems from
-  biology to digital realms, proposing new approaches to designing decentralized
-  organizations and digital spaces. It emphasizes collaboration, sustainability,
-  and value pluralism in creating resilient, adaptive systems.
+  biology to digital realms, examining decentralization, fragmentation, and
+  regenerative design. It offers insights into creating adaptive, self-renewing
+  systems across various domains, emphasizing sustainability and innovation.
 tags:
   - eco
-  - design
+  - tech
   - future
+  - design
   - web
   - system
-  - tech
-  - global
-  - digital
-  - renew
-bannerImageURL: ./3e8efb8f7c68fe6e98f2d9eee0006871-banner.png
+  - innov
+  - nature
+bannerImageURL: ./9e573e3da0fe0e0487662b12973f698d-banner.png
 articles:
   - across-space-and-time
   - practice-innovation

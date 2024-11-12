@@ -1,0 +1,100 @@
+courseId: fcaa8d6855b20f1b703d89bee7b94aa2
+goal: Shape Futures
+curator:
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+description: >-
+  {
+    "summary": "To shape futures, one must map power structures, identify needs, challenge existing narratives, envision opportunities, and empower choice. This process involves understanding societal dynamics, addressing community requirements, reframing perspectives, imagining possibilities, and fostering autonomy. By following these steps, individuals can actively contribute to creating and influencing future outcomes."
+  }
+habitat: reclaiming-the-future
+createdAt: 2024-11-12T08:59:49.246Z
+updatedAt: 2024-11-12T08:59:49.246Z
+publishedAt: 2024-11-12T08:59:49.246Z
+tags:
+  - power
+  - map
+  - change
+  - system
+  - needs
+  - future
+  - assess
+  - media
+  - bias
+  - think
+  - justice
+  - black
+  - tech
+  - art
+  - choice
+  - respect
+  - freedom
+checkpoints:
+  - task: Map Power
+    href: https://commonslibrary.org/power-and-power-mapping-start-here/
+    checkpointId: 28618a030ddfea65df605a2f9b7ae04e
+    description: Power mapping is a strategic tool for shaping futures by
+      visualizing key players and their relationships in a given issue. It helps
+      identify allies, opponents, and influencers, enabling targeted actions to
+      shift power dynamics and achieve desired outcomes. This approach enhances
+      understanding of complex systems and informs effective strategies for
+      social change.
+    tags:
+      - power
+      - map
+      - change
+      - system
+  - task: Determine Needs
+    href: https://online.hbs.edu/blog/post/effective-methods-for-assessing-customer-needs
+    checkpointId: 08934c472a20f059d4eec5183d639812
+    description: The article outlines effective methods for assessing customer
+      needs, crucial for shaping futures. It covers techniques like surveys,
+      interviews, and data analysis to understand customer preferences and pain
+      points. This knowledge enables businesses to innovate, adapt, and create
+      products or services that meet future market demands.
+    tags:
+      - needs
+      - future
+      - assess
+  - task: Counter the Narrative
+    href: https://www.learningforjustice.org/magazine/summer-2017/countering-the-narrative
+    checkpointId: 8bed231c6971dfda9887fc399d597ae6
+    description: This resource offers strategies to challenge dominant narratives
+      and promote critical thinking. It empowers educators to teach students how
+      to question information sources, analyze media bias, and develop
+      alternative perspectives. By fostering these skills, it helps shape a
+      future where individuals can effectively counter misleading narratives and
+      promote social justice.
+    tags:
+      - media
+      - bias
+      - think
+      - justice
+  - task: Paint Opportunities
+    href: https://bpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/8/17883/files/2020/11/further-considerations-on-afrofuturism-1.pdf
+    checkpointId: e5a78305d14f64c8d116f638a807bef4
+    description: This article explores Afrofuturism, a cultural aesthetic blending
+      African diaspora culture with technology. It challenges traditional
+      narratives, reimagining Black futures and identities. By examining
+      Afrofuturism's themes and impact, readers gain insights into shaping
+      inclusive, diverse futures and painting new opportunities for marginalized
+      communities in science, art, and society.
+    tags:
+      - future
+      - black
+      - tech
+      - art
+  - task: Let Them Choose
+    href: https://www.instagram.com/tinybuddhaofficial/p/CuznZEQMpow/?hl=en
+    checkpointId: b5513b6debcbb7708cadbe58f6940f07
+    description: The Instagram post emphasizes the importance of allowing others to
+      make their own choices, even if we disagree. It encourages respecting
+      others' autonomy and decisions, which aligns with shaping futures by
+      empowering individuals to chart their own paths. This approach fosters
+      personal growth, responsibility, and mutual respect in relationships and
+      society.
+    tags:
+      - choice
+      - respect
+      - freedom
+series: Ecosystem Architecture

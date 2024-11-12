@@ -186,7 +186,7 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "b062af21c3e740717d88ec957dcc7f42",
+    "checksum": "3e554d6e62ec7a1df542fdc8b728ac78",
     "publicationData": {
       "createdAt": "2024-11-12T08:27:26.648Z",
       "updatedAt": "2024-11-12T08:27:26.648Z",
@@ -216,6 +216,21 @@
       "publishedAt": "2024-10-23T10:07:16.526Z"
     },
     "habitat": "The Practice Of Ecosystem Architecture"
+  },
+  {
+    "id": "fcaa8d6855b20f1b703d89bee7b94aa2",
+    "author": "yeehaa",
+    "title": "Shape Futures",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "4bab2293bc940a3e6ca715543c6e47fe",
+    "publicationData": {
+      "createdAt": "2024-11-12T08:59:49.246Z",
+      "updatedAt": "2024-11-12T08:59:49.246Z",
+      "publishedAt": "2024-11-12T08:59:49.246Z"
+    },
+    "habitat": "Reclaiming The Future"
   },
   {
     "id": "f5ac70c3a8acd4e19bfaa48465044e98",

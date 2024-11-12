@@ -1,12 +1,13 @@
-checksum: bcc0f4fa69a94ecd843323c173e557dd
-summary: Media encompasses the various channels and technologies through which
-  information is disseminated globally. It plays a crucial role in shaping our
-  interconnected world, as exemplified by Marshall McLuhan's concept of the
-  global village. This idea suggests that technology connects people worldwide,
-  leading to simultaneous existence and new forms of tribalism. In the digital
-  age, media influences cultural distinctions, creates echo chambers, and sparks
-  debates over communication control. Understanding media's impact is essential
-  for navigating the complexities of our modern, interconnected society.
+checksum: 5fa34e9b4100eb924b5fa420a0b10e22
+summary: Media encompasses various forms of communication and information
+  dissemination. It plays a crucial role in shaping global perspectives,
+  connecting people across distances, and influencing societal dynamics. This
+  concept explores how technology impacts cultural distinctions, creates new
+  tribal affiliations, and affects power structures. It also delves into the
+  challenges of navigating an interconnected world, including echo chambers and
+  the struggle for control over communication channels. Understanding media is
+  essential for shaping futures, challenging narratives, and empowering
+  individuals to make informed choices in an increasingly digital landscape.
 excerpt: Marshall McLuhan's global village concept predicts technology
   connecting the world leads to simultaneous existence and new tribalism. This
   manifests in today's digital landscape, eroding cultural distinctions and
@@ -14,4 +15,5 @@ excerpt: Marshall McLuhan's global village concept predicts technology
 title: media
 articles:
   - global-village-people
-courses: []
+courses:
+  - shape-futures

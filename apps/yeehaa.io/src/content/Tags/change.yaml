@@ -1,18 +1,20 @@
-checksum: 0cbc807871015ade3cc5704adaab0cff
-summary: Vote With Your Feet is a strategic approach to expressing values and
-  making impactful choices. It combines big-picture thinking with practical
-  action, encouraging innovative problem-solving, inclusivity, and
-  collaboration. This concept applies to various aspects of life, including
-  protest, activism, and personal decision-making. By thinking strategically,
-  acting tactically, using tools creatively, generating diversity, and sharing
-  generously, individuals can effectively communicate their beliefs and drive
-  change. This approach empowers people to make meaningful choices in areas such
-  as consumer behavior, social movements, and community engagement.
-excerpt: To Vote With Your Feet, one must think strategically, act tactically,
-  use tools creatively, generate diversity, and share generously. This approach
-  combines big-picture thinking with practical action, encouraging innovative
-  problem-solving.
+checksum: 2ffb4db62b4db6913ba33bf9a8d43c10
+summary: "Change is a powerful concept that encompasses transformation,
+  evolution, and progress. It involves challenging existing structures,
+  identifying needs, and envisioning new possibilities. This theme is explored
+  in courses like Shape Futures, which focuses on mapping power structures and
+  empowering choice, and Vote With Your Feet, which emphasizes strategic
+  thinking and tactical action. Both courses highlight the importance of
+  creativity, diversity, and collaboration in driving meaningful change. Whether
+  through shaping futures or voting with one's feet, the underlying message is
+  clear: individuals have the power to influence outcomes and create positive
+  transformations in various aspects of life and society."
+excerpt: Change is a transformative force that empowers individuals to shape
+  futures and make impactful choices. It involves challenging norms, identifying
+  needs, and envisioning possibilities through strategic thinking and tactical
+  action.
 title: change
 articles: []
 courses:
+  - shape-futures
   - vote-with-your-feet

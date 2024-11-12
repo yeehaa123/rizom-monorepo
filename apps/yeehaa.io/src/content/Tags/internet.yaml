@@ -1,17 +1,15 @@
-checksum: 4f2b82050f09b9a0faeeb21bae47e091
+checksum: c28a3b5cac7ded5a6cee97d177de61fb
 summary: Internet encompasses the global network of interconnected computer
-  systems. This collection explores various aspects of the internet, including
-  its impact on society, culture, and future developments. It delves into
-  philosophical concepts like Peter Sloterdijk's foam metaphor to understand
-  internet fragmentation and digital spaces. The resources also discuss the
-  evolution of the decentralized internet, its promise of diverse ownership, and
-  the challenges it faces, such as the drift towards surveillance capitalism.
-  The articles emphasize the importance of shaping desirable futures and
-  aligning needs in the digital ecosystem.
+  systems, enabling worldwide communication and information exchange. This
+  collection explores various aspects of the internet, including its impact on
+  society, culture, and future developments. Topics range from philosophical
+  metaphors for understanding online spaces to discussions about
+  decentralization, privacy, and ecosystem architecture in shaping the
+  internet's future.
 excerpt: The internet, with its myriad websites and communities, resembles foam.
   Each digital space functions as a bubble - self-contained yet linked to
-  others. This perspective reframes internet fragmentation positively and
-  encourages investing in desirable futures.
+  others. This perspective reframes internet fragmentation positively,
+  encouraging a nuanced view of online ecosystems.
 title: internet
 articles:
   - foam-party
