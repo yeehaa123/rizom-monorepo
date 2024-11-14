@@ -3,10 +3,12 @@ goal: Shape Futures
 curator:
   repository: https://yeehaa.io/offcourse
   alias: yeehaa
-description: >-
-  {
-    "summary": "To shape futures, one must map power structures, identify needs, challenge existing narratives, envision opportunities, and empower choice. This process involves understanding societal dynamics, addressing community requirements, reframing perspectives, imagining possibilities, and fostering autonomy. By following these steps, individuals can actively contribute to creating and influencing future outcomes."
-  }
+description: To shape futures, one must map power structures, identify needs,
+  challenge existing narratives, envision opportunities, and empower choice.
+  This process involves understanding societal dynamics, addressing community
+  requirements, reframing perspectives, imagining possibilities, and fostering
+  autonomy. By following these steps, individuals can actively contribute to
+  creating and influencing future outcomes.
 habitat: reclaiming-the-future
 createdAt: 2024-11-12T08:59:49.246Z
 updatedAt: 2024-11-12T08:59:49.246Z
