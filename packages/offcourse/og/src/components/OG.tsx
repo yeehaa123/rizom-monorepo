@@ -1,4 +1,6 @@
 import type { Checkpoint, Course } from "@offcourse/schema";
+import { readFile } from "fs/promises";
+import path from "path";
 import satori from "satori";
 import sharp from 'sharp';
 import React from "react";
@@ -9,7 +11,33 @@ declare module 'react' {
   }
 }
 
-export const generateOG = async ({ course, fonts }: { course: Course, fonts: any[] }) => {
+export const generateOG = async ({ course }: { course: Course }) => {
+  const thin = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Thin.otf"));
+  const light = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Light.otf"));
+  const regular = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Regular.otf"));
+  const bold = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Bold.otf"));
+  const fonts = [
+    {
+      name: "GT Ultra Standard",
+      data: thin,
+      weight: "200",
+    },
+    {
+      name: "GT Ultra Standard",
+      data: light,
+      weight: "300",
+    },
+    {
+      name: "GT Ultra Standard",
+      data: regular,
+      weight: "500",
+    },
+    {
+      name: "GT Ultra Standard",
+      data: bold,
+      weight: "700",
+    }
+  ];
   // @ts-ignore
   const svg = await satori(<OG {...course} />, { fonts, width: 1200, height: 630 });
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
