@@ -26,7 +26,8 @@ export const querySchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal(QueryType.enum.RENDER_COURSE_IMAGE),
     payload: z.object({
-      course: courseSchema
+      course: courseSchema,
+      fonts: z.array(z.any())
     })
   }),
   z.object({
