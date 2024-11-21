@@ -55,6 +55,7 @@ export async function getStaticPaths() {
 
 export async function GET({ props }: APIContext) {
   const { png } = props;
+  console.log(png);
   // @ts-ignore
   return new Response(png, {
     headers: { 'Content-Type': 'image/png' },
