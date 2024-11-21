@@ -11,50 +11,51 @@ export async function getStaticPaths() {
     payload: CollectionType.enum.ALL
   }, false)
   const courses = (data?.payload || []) as Course[];
-  return courses.map((course) => {
+  const promises = courses.map(async (course) => {
+    const thin = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Thin.otf"));
+    const light = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Light.otf"));
+    const regular = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Regular.otf"));
+    const bold = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Bold.otf"));
+    const fonts = [
+      {
+        name: "GT Ultra Standard",
+        data: thin,
+        weight: 200,
+      },
+      {
+        name: "GT Ultra Standard",
+        data: light,
+        weight: 300,
+      },
+      {
+        name: "GT Ultra Standard",
+        data: regular,
+        weight: 500,
+      },
+      {
+        name: "GT Ultra Standard",
+        data: bold,
+        weight: 700,
+      }
+    ];
+    const data = await handleQuery({
+      type: QueryType.enum.RENDER_COURSE_IMAGE,
+      payload: { course, fonts }
+    }, false)
+    const png = data.payload
     const { courseId } = course;
     return {
       params: { courseId },
       props: {
-        course
+        png
       }
     }
   })
+  return Promise.all(promises);
 }
 
 export async function GET({ props }: APIContext) {
-  const { course } = props;
-  const thin = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Thin.otf"));
-  const light = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Light.otf"));
-  const regular = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Regular.otf"));
-  const bold = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Bold.otf"));
-  const fonts = [
-    {
-      name: "GT Ultra Standard",
-      data: thin,
-      weight: 200,
-    },
-    {
-      name: "GT Ultra Standard",
-      data: light,
-      weight: 300,
-    },
-    {
-      name: "GT Ultra Standard",
-      data: regular,
-      weight: 500,
-    },
-    {
-      name: "GT Ultra Standard",
-      data: bold,
-      weight: 700,
-    }
-  ];
-  const data = await handleQuery({
-    type: QueryType.enum.RENDER_COURSE_IMAGE,
-    payload: { course, fonts }
-  }, false)
-  const png = data.payload
+  const { png } = props;
   // @ts-ignore
   return new Response(png, {
     headers: { 'Content-Type': 'image/png' },
