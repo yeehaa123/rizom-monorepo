@@ -21,7 +21,8 @@ export async function getStaticPaths() {
 }
 
 export async function GET({ props }: APIContext) {
-  const { png } = props;
+  const { courseId, png } = props;
+  console.log(courseId, png);
   return new Response(png, {
     headers: { 'Content-Type': 'image/png' },
   });
