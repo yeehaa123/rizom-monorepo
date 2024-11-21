@@ -1,7 +1,5 @@
 import type { APIContext } from "astro";
 import { readFile } from "fs/promises";
-import path from 'path';
-
 import type { Course } from "@offcourse/schema";
 import { CollectionType, QueryType } from "@offcourse/schema";
 import { handleQuery } from "@offcourse/db/query";
@@ -25,30 +23,30 @@ export async function getStaticPaths() {
 
 export async function GET({ props }: APIContext) {
   const { course } = props;
-  const thin = await readFile(path.join(process.cwd(), "public/fonts", "GT-Ultra-Standard-Thin.otf"))
-  const light = await readFile(path.join(process.cwd(), "public/fonts", "GT-Ultra-Standard-Light.otf"))
-  const regular = await readFile(path.join(process.cwd(), "public/fonts", "GT-Ultra-Standard-Regular.otf"))
-  const bold = await readFile(path.join(process.cwd(), "public/fonts", "GT-Ultra-Standard-Bold.otf"))
-
+  const folderURL = "https://yeehaa.io/fonts";
+  const thin = await fetch(`${folderURL}/GT-Ultra-Standard-Thin.otf`);
+  const light = await fetch(`${folderURL}/GT-Ultra-Standard-Light.otf`);
+  const regular = await fetch(`${folderURL}/GT-Ultra-Standard-Regular.otf`);
+  const bold = await fetch(`${folderURL}/GT-Ultra-Standard-Bold.otf`);
   const fonts = [
     {
       name: "GT Ultra Standard",
-      data: thin,
+      data: await thin.arrayBuffer(),
       weight: 200,
     },
     {
       name: "GT Ultra Standard",
-      data: light,
+      data: await light.arrayBuffer(),
       weight: 300,
     },
     {
       name: "GT Ultra Standard",
-      data: regular,
+      data: await regular.arrayBuffer(),
       weight: 500,
     },
     {
       name: "GT Ultra Standard",
-      data: bold,
+      data: await bold.arrayBuffer(),
       weight: 700,
     }
   ];
