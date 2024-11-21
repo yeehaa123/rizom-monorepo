@@ -7,7 +7,8 @@ export const QueryType = z.enum([
   "GET_REGISTRY_FROM_OAUTH",
   "FETCH_USER_RECORDS",
   "GET_COURSES",
-  "RENDER_COURSE_IMAGE"
+  "RENDER_COURSE_IMAGE",
+  "RENDER_COURSE_IMAGES"
 ])
 
 export const querySchema = z.discriminatedUnion("type", [
@@ -21,6 +22,10 @@ export const querySchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(QueryType.enum.GET_COURSES),
+    payload: CollectionType
+  }),
+  z.object({
+    type: z.literal(QueryType.enum.RENDER_COURSE_IMAGES),
     payload: CollectionType
   }),
   z.object({

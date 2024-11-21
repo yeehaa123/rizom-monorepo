@@ -1,4 +1,4 @@
-import { CollectionType, Query, QueryType } from '@offcourse/schema';
+import { CollectionType, Course, Query, QueryType } from '@offcourse/schema';
 import { ResponseType } from '@offcourse/schema';
 import { generateOG } from "@offcourse/og";
 import { getUserRecords } from './models/userRecord';
@@ -30,6 +30,26 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
       return {
         type: ResponseType.enum.RENDERED_COURSE_IMAGE,
         payload: image
+      }
+    }
+    case QueryType.enum.RENDER_COURSE_IMAGES: {
+      const courses = await {
+        [CollectionType.enum.ALL]: getCourses,
+        [CollectionType.enum.CURATED]: getCuratedCourses,
+        [CollectionType.enum.FOLLOWED]: getFollowedCourses,
+        [CollectionType.enum.BOOKMARKED]: getBookmarkedCourses
+      }[payload]() as Course[];
+
+      const promises = courses.map(async course => {
+        const png = await generateOG({ course });
+        return { courseId: course.courseId, png }
+      });
+
+      const images = await Promise.all(promises);
+
+      return {
+        type: ResponseType.enum.RENDERED_COURSE_IMAGES,
+        payload: images
       }
     }
     case QueryType.enum.GET_COURSES: {

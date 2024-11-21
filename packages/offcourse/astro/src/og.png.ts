@@ -1,22 +1,14 @@
 import type { APIContext } from "astro";
-import type { Course } from "@offcourse/schema";
 import { CollectionType, QueryType } from "@offcourse/schema";
 import { handleQuery } from "@offcourse/db/query";
 
 export async function getStaticPaths() {
   const data = await handleQuery({
-    type: QueryType.enum.GET_COURSES,
+    type: QueryType.enum.RENDER_COURSE_IMAGES,
     payload: CollectionType.enum.ALL
   }, false)
-  const courses = (data?.payload || []) as Course[];
-  const promises = courses.map(async (course) => {
-    const data = await handleQuery({
-      type: QueryType.enum.RENDER_COURSE_IMAGE,
-      payload: { course }
-    }, false)
-    console.log(data);
-    const png = data.payload
-    const { courseId } = course;
+  const courses = (data?.payload || []) as { courseId: string, png: Buffer }[];
+  const promises = courses.map(({ courseId, png }) => {
     return {
       params: { courseId },
       props: {

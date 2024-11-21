@@ -12,6 +12,7 @@ export const ResponseType = z.enum([
   "LOGGED_OUT",
   "FETCHED_USER_RECORDS",
   "RENDERED_COURSE_IMAGE",
+  "RENDERED_COURSE_IMAGES",
   "RETRIEVED_COURSES",
   "RETRIEVED_REGISTRY_ENTRY",
   "RETRIEVED_REPOSITORY_METADATA",
@@ -26,7 +27,11 @@ export const responseSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(ResponseType.enum.RENDERED_COURSE_IMAGE),
-    payload: z.any()
+    payload: z.instanceof(Buffer)
+  }),
+  z.object({
+    type: z.literal(ResponseType.enum.RENDERED_COURSE_IMAGES),
+    payload: z.array(z.object({ courseId: z.string(), png: z.instanceof(Buffer) }))
   }),
   z.object({
     type: z.literal(ResponseType.enum.RETRIEVED_REGISTRY_ENTRY),
