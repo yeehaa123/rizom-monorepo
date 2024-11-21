@@ -14,6 +14,7 @@ export async function getStaticPaths() {
       type: QueryType.enum.RENDER_COURSE_IMAGE,
       payload: { course }
     }, false)
+    console.log(data);
     const png = data.payload
     const { courseId } = course;
     return {
