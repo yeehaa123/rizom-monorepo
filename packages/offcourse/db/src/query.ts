@@ -42,7 +42,6 @@ export async function handleQuery(query: Query, isAuthorized: boolean) {
 
       const promises = courses.map(async course => {
         const png = await generateOG({ course });
-        console.log("PNG", png);
         return { courseId: course.courseId, png }
       });
 

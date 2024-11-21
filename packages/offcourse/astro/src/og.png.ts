@@ -8,7 +8,6 @@ export async function getStaticPaths() {
     payload: CollectionType.enum.ALL
   }, false)
   const courses = (data?.payload || []) as { courseId: string, png: Buffer }[];
-  console.log("XXXX", courses);
   const promises = courses.map(({ courseId, png }) => {
     return {
       params: { courseId },
