@@ -13,6 +13,7 @@ export async function getStaticPaths() {
     return {
       params: { courseId },
       props: {
+        courseId,
         png
       }
     }
