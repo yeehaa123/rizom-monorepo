@@ -5,25 +5,35 @@ export default function offcourse(): AstroIntegration {
     name: "@offcourse/server",
     hooks: {
       'astro:config:setup': async ({ injectRoute }) => {
+        const baseRoute = "/offcourse";
+        const packageName = "@offcourse/astro"
         injectRoute({
-          pattern: '/offcourse/query',
-          entrypoint: '@offcourse/astro/query.json.ts'
+          pattern: `${baseRoute}/query`,
+          entrypoint: `${packageName}/query.json.ts`
         });
         injectRoute({
-          pattern: '/offcourse/command',
-          entrypoint: '@offcourse/astro/command.json.ts'
+          pattern: `${baseRoute}/command`,
+          entrypoint: `${packageName}/command.json.ts`
         });
         injectRoute({
-          pattern: '/offcourse/handshake',
-          entrypoint: '@offcourse/astro/handshake.json.ts',
+          pattern: `${baseRoute}/handshake`,
+          entrypoint: `${packageName}/handshake.json.ts`
         });
         injectRoute({
-          pattern: '/offcourse/callback',
-          entrypoint: '@offcourse/astro/callback.json.ts',
+          pattern: `${baseRoute}/callback`,
+          entrypoint: `${packageName}/callback.json.ts`
         });
         injectRoute({
-          pattern: '/offcourse/register',
-          entrypoint: '@offcourse/astro/register.json.ts',
+          pattern: `${baseRoute}/register`,
+          entrypoint: `${packageName}/register.json.ts`
+        });
+        injectRoute({
+          pattern: `${baseRoute}/[courseId]`,
+          entrypoint: `${packageName}/course.astro`
+        });
+        injectRoute({
+          pattern: `${baseRoute}/[courseId]/og.png`,
+          entrypoint: `${packageName}/og.png.ts`
         });
       }
     }

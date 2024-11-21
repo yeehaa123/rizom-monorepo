@@ -599,6 +599,9 @@ importers:
       '@offcourse/schema':
         specifier: workspace:*
         version: link:../schema
+      '@offcourse/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@rizom/typescript-config':
         specifier: workspace:*
         version: link:../../typescript-config
@@ -682,9 +685,12 @@ importers:
 
   packages/offcourse/og:
     dependencies:
-      '@vercel/og':
-        specifier: ^0.6.3
-        version: 0.6.3
+      satori:
+        specifier: ^0.12.0
+        version: 0.12.0
+      sharp:
+        specifier: ^0.33.4
+        version: 0.33.5
     devDependencies:
       '@offcourse/schema':
         specifier: workspace:*
@@ -5259,6 +5265,11 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /css-gradient-parser@0.0.16:
+    resolution: {integrity: sha512-3O5QdqgFRUbXvK1x5INf1YkBz1UKSWqrd63vWsum8MNHDBYD5urm3QtxZbKU259OrEXNM26lP/MPY3d1IGkBgA==}
+    engines: {node: '>=16'}
+    dev: false
+
   /css-selector-parser@3.0.5:
     resolution: {integrity: sha512-3itoDFbKUNx1eKmVpYMFyqKX04Ww9osZ+dLgrk6GEv6KMVeXUhUnp4I5X+evw+u3ZxVU6RFXSSRxlTeMh8bA+g==}
     dev: true
@@ -8320,6 +8331,23 @@ packages:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
       css-box-shadow: 1.0.0-3
+      css-to-react-native: 3.2.0
+      emoji-regex: 10.4.0
+      escape-html: 1.0.3
+      linebreak: 1.1.0
+      parse-css-color: 0.2.1
+      postcss-value-parser: 4.2.0
+      yoga-wasm-web: 0.3.3
+    dev: false
+
+  /satori@0.12.0:
+    resolution: {integrity: sha512-e0e+qQyeFwEszujN7SpWpRtZgww7Nh8lSO3bUn2spHZ5JpqEl3zJ3P14/JlWruxEwdgREs35ZnavrPrWaRVFDg==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@shuding/opentype.js': 1.4.0-beta.0
+      css-background-parser: 0.1.0
+      css-box-shadow: 1.0.0-3
+      css-gradient-parser: 0.0.16
       css-to-react-native: 3.2.0
       emoji-regex: 10.4.0
       escape-html: 1.0.3

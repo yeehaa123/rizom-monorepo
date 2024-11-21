@@ -1,6 +1,7 @@
 import type { Checkpoint, Course } from "@offcourse/schema";
 import { readFile } from "fs/promises";
-import { ImageResponse } from "@vercel/og";
+import satori from "satori";
+import sharp from 'sharp';
 import React from "react";
 
 declare module 'react' {
@@ -37,8 +38,9 @@ export const generateOG = async ({ course }: { course: Course }) => {
     }
   ];
   // @ts-ignore
-  const og = new ImageResponse(<OG {...course} />, { fonts });
-  return og;
+  const svg = await satori(<OG {...course} />, { fonts, width: 1200, height: 630 });
+  const png = await sharp(Buffer.from(svg)).png().toBuffer();
+  return png;
 };
 
 
