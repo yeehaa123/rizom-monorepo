@@ -51,7 +51,7 @@ export async function getStaticPaths() {
       }
     }
   })
-  return Promise.all(promises);
+  return await Promise.all(promises);
 }
 
 export async function GET({ props }: APIContext) {
