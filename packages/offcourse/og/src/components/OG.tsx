@@ -12,29 +12,31 @@ declare module 'react' {
 }
 
 export const generateOG = async ({ course }: { course: Course }) => {
+  const res = await fetch("https://yeehaa.io/fonts/GT-Ultra-Standard-Thin.otf");
   const thin = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Thin.otf"));
   const light = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Light.otf"));
   const regular = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Regular.otf"));
   const bold = await readFile(path.join(process.cwd(), "/public/fonts/GT-Ultra-Standard-Bold.otf"));
+  const font = await res.arrayBuffer();
   const fonts = [
     {
       name: "GT Ultra Standard",
-      data: thin,
+      data: font,
       weight: "200",
     },
     {
       name: "GT Ultra Standard",
-      data: light,
+      data: font,
       weight: "300",
     },
     {
       name: "GT Ultra Standard",
-      data: regular,
+      data: font,
       weight: "500",
     },
     {
       name: "GT Ultra Standard",
-      data: bold,
+      data: font,
       weight: "700",
     }
   ];
