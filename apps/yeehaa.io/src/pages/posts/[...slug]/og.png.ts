@@ -1,11 +1,15 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import sharp from "sharp";
-
 import fs from 'fs';
+import path from 'path'
 
 async function base64_encode(imageResult: string) {
-  var bitmap = fs.readFileSync(imageResult);
+  var bitmap = fs.readFileSync(process.env.NODE_ENV === 'development'
+    ? path.resolve(
+      imageResult.replace(/\?.*/, '').replace('/@fs', ''),
+    )
+    : path.resolve(imageResult.replace('/', 'dist/server/')))
   const postCover = await sharp(
     bitmap
   ).resize(1200).toBuffer()
@@ -14,14 +18,14 @@ async function base64_encode(imageResult: string) {
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');
-  return blogEntries.map(entry => {
+  const promises = blogEntries.map(async entry => {
     const imageData = entry.data.bannerImageURL;
-    // @ts-ignore
-    const image = base64_encode(imageData.fsPath);
+    const image = await base64_encode(imageData.src);
     return {
       params: { slug: entry.slug }, props: { image },
     }
   });
+  return await Promise.all(promises);
 }
 
 export const GET: APIRoute = async function get({ props }) {

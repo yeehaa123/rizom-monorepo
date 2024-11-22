@@ -42,9 +42,7 @@ export const generateOG = async ({ course }: { course: Course }) => {
   ];
   // @ts-ignore
   const svg = await satori(<OG {...course} />, { fonts, width: 1200, height: 630 });
-  console.log("SVG", svg);
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
-  console.log("PNG", png);
   return png;
 };
 
