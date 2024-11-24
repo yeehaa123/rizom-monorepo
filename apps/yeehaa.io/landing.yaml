@@ -1,0 +1,167 @@
+title: Yeehaa - Ecosystem Architect 
+sections:
+  hero:
+    title: Design Thriving Digital Ecosystems
+    subtitle: Foster collaboration across space and time
+    description: Ecosystem architecture is a regenerative practice that nurtures diverse, resilient communities bound by shared values rather than physical space.
+    cta:
+      text: Embark on Your Ecosystem Journey
+
+  challenges:
+    title: Navigating Contemporary Challenges
+    subtitle: Critical Challenges in Digital Ecosystems
+    description: Traditional organizational models are struggling to adapt to an increasingly fragmented digital landscape while meeting people's growing desire for organic, non-hierarchical structures.
+    items:
+      - title: Value Misalignment
+        icon: Target
+        description: Communities trapped in spaces that don't align with their values and aspirations.
+      - title: Digital Fragmentation
+        icon: PuzzlePiece
+        description: The shattering of our once unified internet into isolated spaces and filter bubbles.
+      - title: Excess Mindset
+        icon: Trash
+        description: Innovation practices that generate waste at the expense of people and planet.
+      - title: False Universality
+        icon: Globe
+        description: The damaging assumption that one set of values should apply to everyone.
+
+  concepts:
+    title: Pioneering Concepts for Future-Ready Organizations
+    items:
+      - title: Regenerative Design
+        icon: Leaf
+        description: Creating systems that not only sustain but revitalize communities and their environments through continuous alignment and renewal.
+      - title: Value Pluralism
+        icon: Heart
+        description: Embracing the coexistence of multiple value systems and fostering spaces where communities can thrive on shared beliefs.
+
+  approach:
+    title: Ecosystem Architecture
+    subtitle: A practice of nurturing diverse, resilient digital spaces
+    description: Ecosystem architecture helps communities design and cultivate spaces that transcend physical boundaries while remaining true to their values. This practice combines decentralization with regenerative design principles.
+    items:
+      - title: Align
+        icon: Compass
+        description: Define the moral challenge and vision that brings your community together.
+        outcome: A vision type that captures your ecosystem's ideal future state
+      - title: Validate
+        icon: Check
+        description: Test community buy-in through concrete initiatives that demonstrate commitment to change.
+        outcome: A vessel of transformation that proves the viability of your vision
+      - title: Scale
+        icon: Network
+        description: Gradually expand while ensuring the ecosystem becomes self-sustaining.
+        outcome: A minimum viable ecosystem that thrives independently
+      - title: Spin Out
+        icon: Send
+        description: Release control and let the ecosystem evolve organically.
+        outcome: A truly decentralized space shaped by its members
+
+  case_study:
+    title: Success in Digital Ecosystems
+    subtitle: "Case Study: Shanzhai Innovation"
+    description: The Shenzhen ecosystem demonstrates how decentralized communities can drive rapid innovation through shared knowledge and resources. Their gongkai practice challenges Western notions of intellectual property while fostering unprecedented technological creativity.
+    key_points:
+      - title: Peer Collaboration
+        description: A network of manufacturers and designers sharing knowledge freely through gongkai
+      - title: Rapid Iteration
+        description: Swift adaptation to changing needs through continuous experimentation
+      - title: Resilient Network
+        description: Decentralized structure enabling flexibility and survival despite challenges
+      - title: Value Creation  
+        description: Innovation that serves diverse global markets often overlooked by mainstream producers
+    testimonial:
+      quote: "The Chinese will stop being simply workers or copiers. They'll take control of their destinies and ultimately, become innovation leaders."
+      author: "Andrew 'bunnie' Huang, The Hardware Hacker"
+    cta:
+      text: Foster An Effective Ecosystem
+
+  services:
+    title: Transformative Services
+    subtitle: Supporting Your Ecosystem Journey
+    description: We help communities design and nurture digital spaces aligned with their values and aspirations.
+    items:
+      - title: Vision Type Development
+        icon: Compass
+        description: Collaborative exploration of your community's ideal future state
+        features:
+          Value Mapping: Identify and articulate your community's shared values and aspirations
+          Future Visioning: Create compelling scenarios of your ecosystem in 5-10 years
+          Challenge Definition: Clarify the moral challenges your ecosystem addresses
+          Alignment Workshop: Build consensus around your vision type
+      - title: Transformation Design
+        icon: Network
+        description: Design and validate vessels of transformation
+        features:
+          Initiative Design: Create concrete projects that demonstrate your vision
+          Stakeholder Engagement: Build commitment through meaningful participation
+          Validation Methods: Measure and verify community buy-in
+          Impact Assessment: Track transformation progress
+      - title: Ecosystem Cultivation
+        icon: Layers
+        description: Support for scaling and sustaining your ecosystem
+        features:
+          Growth Planning: Design organic scaling strategies
+          Capability Building: Develop community self-governance
+          Network Weaving: Foster valuable connections and collaborations
+          Transition Support: Guide the path to independence
+    cta:
+      text: Transform Your Organization Today
+
+  products:
+    title: Ecosystem Design Tools
+    subtitle: Supporting Decentralized Collaboration
+    description: Our tools help communities coordinate and share knowledge across space and time.
+    items:
+      - title: Offcourse
+        icon: Offcourse
+        description: A platform for decentralized knowledge sharing and collective learning
+        features:
+          Distributed Learning: Share knowledge across community boundaries
+          Value Alignment: Match learning paths with community values
+          Organic Growth: Scale education with your ecosystem
+      - title: Rizom
+        icon: Rizom
+        description: Tools for mapping and nurturing ecosystem relationships
+        features:
+          Network Visualization: Understand your ecosystem's connections
+          Health Monitoring: Track ecosystem vitality metrics
+          Growth Planning: Identify opportunities for ecosystem expansion
+    cta:
+      text: Transform Your Organization Today
+
+  recent_content:
+    title: Recent Articles
+    description: Explore our latest thinking on ecosystem architecture, regenerative design, and value pluralism.
+    cta:
+      text: Explore All Articles
+      action: "/posts"
+
+  about:
+    title: About Yeehaa
+    subtitle: Ecosystem Architect | Regenerative Designer
+    description: Yeehaa helps communities design and nurture digital spaces that transcend physical boundaries while remaining true to their values.
+    key_points:
+      - Pioneer in ecosystem architecture and regenerative design
+      - Advocate for value pluralism and decentralized organization
+      - Collaborator with Internet Society, Public Spaces, and Waag Society
+      - Creator of tools for decentralized knowledge sharing
+    cta:
+      text: Learn More About Yeehaa
+      action: "/posts"
+
+  faq:
+    title: Frequently Asked Questions
+    items:
+      - question: What is ecosystem architecture?
+        answer: Ecosystem architecture is a practice that helps communities design and nurture digital spaces aligned with their values. It combines principles of decentralization with regenerative design to create resilient, thriving communities.
+      - question: How does it differ from traditional organization design?
+        answer: Unlike traditional approaches that emphasize hierarchy and control, ecosystem architecture focuses on organic growth, value alignment, and community empowerment. It recognizes that healthy ecosystems emerge through continuous practice rather than top-down planning.
+      - question: Can any community benefit from this approach?
+        answer: Yes, ecosystem architecture can help any group wanting to create purposeful digital spaces. It's particularly valuable for communities seeking to transcend physical boundaries while maintaining strong value alignment.
+
+  main_cta:
+    title: Ready to Start Your Ecosystem Journey?
+    subtitle: Book an Alignment Session to Explore Your Community's Vision
+    cta:
+      text: Schedule Your Free Consultation

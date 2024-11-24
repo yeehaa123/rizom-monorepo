@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { getPosts } from "@/helpers/pages";
 import { getEntry } from "astro:content";
-import type { AstroUserConfig } from 'astro/config';
+import type { AstroUserConfig } from 'astro';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 const parser = new MarkdownIt();
