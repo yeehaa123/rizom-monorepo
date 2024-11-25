@@ -1,0 +1,33 @@
+---
+// src/pages/presentations/index.astro
+import { getCollection } from 'astro:content';
+import Layout from "../layouts/Base.astro"
+
+const presentations = await getCollection('Decks', ({ data }) => {
+  return data;
+});
+---
+
+<Layout title="Presentations">
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl font-bold mb-8">Presentations</h1>
+    <div class="grid gap-4">
+      {presentations.map((presentation) => (
+        <a 
+          href={`/decks/${presentation.slug}`}
+          class="p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
+        >
+          <h2 class="text-2xl font-semibold">{presentation.data.title}</h2>
+          {presentation.data.author && (
+            <p class="text-slate-400">By {presentation.data.author}</p>
+          )}
+          {presentation.data.date && (
+            <p class="text-slate-400">
+              {presentation.data.date.toLocaleDateString()}
+            </p>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

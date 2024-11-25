@@ -1,0 +1,22 @@
+---
+// src/pages/presentations/[...slug].astro
+import { getCollection } from 'astro:content';
+import ContentPresentation from '../../components/Deck.astro';
+import Layout from "../../layouts/Base.astro"
+
+export async function getStaticPaths() {
+  const presentations = await getCollection('Decks', ({ data }) => {
+    return data
+  });
+  return presentations.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { slug } = Astro.params;
+---
+
+<Layout title="Presentation">
+  <ContentPresentation slug={slug} />
+</Layout>

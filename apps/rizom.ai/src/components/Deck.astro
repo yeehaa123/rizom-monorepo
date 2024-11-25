@@ -1,0 +1,138 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+
+const entry = await getEntry('Decks', slug);
+
+if (!entry) {
+  throw new Error(`Presentation not found: ${slug}`);
+}
+
+// Type assertion since we know this exists from the check above
+const presentation = entry as CollectionEntry<'presentations'>;
+---
+
+<div class="reveal ">
+  <div class="slides">
+    <section 
+      data-markdown
+      data-separator="^\n\n\n"
+      data-separator-vertical="^\n\n"
+      data-separator-notes="^Note:"
+    >
+      <textarea data-template>
+        {presentation.body}
+      </textarea>
+    </section>
+  </div>
+</div>
+
+<script>
+  import Reveal from 'reveal.js';
+  import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+  import type { Options as RevealOptions } from 'reveal.js';
+  import 'reveal.js/dist/reveal.css';
+
+  const revealConfig: RevealOptions = {
+    plugins: [Markdown],
+    controls: true,
+    progress: true,
+    center: true,
+    hash: true,
+    margin: 0.1,
+    minScale: 0.2,
+    maxScale: 2.0,
+  };
+
+  // @ts-ignore
+  const deck = new Reveal(revealConfig);
+  deck.initialize();
+</script>
+
+<style is:global>
+  /* Base presentation container */
+  .reveal {
+    @apply font-sans bg-gradient-to-bl from-white via-secondary-light via-80% to-primary-light
+  }
+
+  .reveal .slides {
+  }
+
+  /* Slides */
+  .reveal .slides section {
+    @apply p-8;
+  }
+
+  /* Headers */
+  .reveal h1 {
+    @apply text-8xl font-bold font-sans mb-8 text-primary-dark;
+  }
+
+  .reveal h2 {
+    @apply text-4xl font-semibold mb-6;
+  }
+
+  .reveal h3 {
+    @apply text-3xl font-medium mb-4;
+  }
+
+  /* Lists */
+  .reveal ul {
+    @apply space-y-2 ml-6;
+  }
+
+  .reveal ul li {
+    @apply list-disc list-outside;
+  }
+
+  .reveal ol {
+    @apply space-y-2 ml-6;
+  }
+
+  .reveal ol li {
+    @apply list-decimal list-outside;
+  }
+
+  /* Paragraphs */
+  .reveal p {
+    @apply mb-4 text-lg;
+  }
+
+  /* Code blocks */
+  .reveal pre {
+    @apply bg-slate-800 p-4 rounded-lg text-sm my-4 overflow-x-auto;
+  }
+
+  .reveal code {
+    @apply font-mono text-blue-300;
+  }
+
+  /* Block quotes */
+  .reveal blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic my-4;
+  }
+
+  /* Links */
+  .reveal a {
+    @apply text-blue-400 hover:text-blue-300 underline;
+  }
+
+  /* Controls and progress */
+  .reveal .controls {
+    @apply text-blue-300;
+  }
+
+  .reveal .progress {
+    @apply bg-blue-900;
+  }
+  
+  .reveal .progress span {
+    @apply bg-blue-400;
+  }
+</style>
