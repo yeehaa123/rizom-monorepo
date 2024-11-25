@@ -26,9 +26,9 @@ const presentation = entry as CollectionEntry<'presentations'>;
       data-separator-vertical="^\n\n"
       data-separator-notes="^Note:"
     >
-      <textarea data-template>
+      <div>
         {presentation.body}
-      </textarea>
+      </div>
     </section>
   </div>
 </div>
@@ -43,10 +43,16 @@ const presentation = entry as CollectionEntry<'presentations'>;
     plugins: [Markdown],
     controls: true,
     progress: true,
-    center: true,
+    disableLayout: true,
+    smartypants: true,
+    // Add default classes to all slides
+    display: 'flex',
+    slideAttributes: {
+      class: 'h-full items-center justify-center'
+    },
     hash: true,
     margin: 0.1,
-    minScale: 0.2,
+    minScale: 0.1,
     maxScale: 2.0,
   };
 
@@ -65,17 +71,17 @@ const presentation = entry as CollectionEntry<'presentations'>;
   }
 
   /* Slides */
-  .reveal .slides section {
-    @apply p-8;
+  .reveal .slides section:not(.stack){
+      @apply p-8 h-full items-center justify-center
   }
 
   /* Headers */
   .reveal h1 {
-    @apply text-8xl font-bold font-sans mb-8 text-primary-dark;
+    @apply text-7xl font-bold font-sans mb-8 text-primary-dark;
   }
 
   .reveal h2 {
-    @apply text-4xl font-semibold mb-6;
+    @apply text-8xl font-bold text-primary-dark mb-6 leading-none;
   }
 
   .reveal h3 {
