@@ -1,5 +1,4 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
 
 interface Props {
@@ -14,8 +13,6 @@ if (!entry) {
   throw new Error(`Presentation not found: ${slug}`);
 }
 
-// Type assertion since we know this exists from the check above
-const presentation = entry as CollectionEntry<'presentations'>;
 ---
 
 <div class="reveal ">
@@ -27,7 +24,7 @@ const presentation = entry as CollectionEntry<'presentations'>;
       data-separator-notes="^Note:"
     >
       <div>
-        {presentation.body}
+        {entry.body}
       </div>
     </section>
   </div>
@@ -44,12 +41,8 @@ const presentation = entry as CollectionEntry<'presentations'>;
     controls: true,
     progress: true,
     disableLayout: true,
-    smartypants: true,
     // Add default classes to all slides
     display: 'flex',
-    slideAttributes: {
-      class: 'h-full items-center justify-center'
-    },
     hash: true,
     margin: 0.1,
     minScale: 0.1,
@@ -69,19 +62,22 @@ const presentation = entry as CollectionEntry<'presentations'>;
 
   .reveal .slides {
   }
+  .reveal .slides section.stack{
+      @apply justify-center
+  }
 
   /* Slides */
   .reveal .slides section:not(.stack){
-      @apply p-8 h-full items-center justify-center
+      @apply p-8 sm:p-12 h-full items-start justify-center flex-col max-w-[800px]
   }
 
   /* Headers */
   .reveal h1 {
-    @apply text-7xl font-bold font-sans mb-8 text-primary-dark;
+    @apply text-4xl sm:text-8xl font-bold font-sans text-start mb-2 md:mb-6 text-primary-dark;
   }
 
   .reveal h2 {
-    @apply text-8xl font-bold text-primary-dark mb-6 leading-none;
+    @apply text-4xl md:text-7xl font-sans mb-2 md:mb-6 text-primary-dark;
   }
 
   .reveal h3 {
@@ -107,7 +103,7 @@ const presentation = entry as CollectionEntry<'presentations'>;
 
   /* Paragraphs */
   .reveal p {
-    @apply mb-4 text-lg;
+    @apply mb-4 text-2xl md:text-3xl text-start ml-14 md:ml-28;
   }
 
   /* Code blocks */

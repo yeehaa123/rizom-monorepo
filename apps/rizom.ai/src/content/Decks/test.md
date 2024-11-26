@@ -7,7 +7,9 @@ date: 2024-11-25
 # The future of work is play
 
 
-# The future of work is play
+## 01. **Mission**
+
+Rizom empowers people to thrive by curating meaningful connections, moderating shared spaces, and facilitating personal development - removing barriers to unlock new possibilities for collaboration
 
 
 # The future of work is play

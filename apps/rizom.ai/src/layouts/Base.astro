@@ -27,13 +27,15 @@ const title = "Rizom.ai"
     <title>{title}</title>
   </head>
   <body class="bg-white flex flex-col justify-between font-sans md:text-lg">
-    <!-- <header class="z-10 fixed top-0 w-full"> -->
-    <!-- </header> -->
-  <slot/>
-    <footer class="flex justify-between py-8 px-5 mx-auto w-full bg-gradient-to-tr from-primary via-primary via-65% to-secondary to-95%">
+    <header class="flex justify-between py-3 md:py-4 px-5 mx-auto w-full bg-gradient-to-br from-primary via-primary via-65% to-primary-light to-95%">
 
-      <img class="w-[150px]" src="/Logo.svg" alt="Logo" />
-    </footer>
+      <img class="w-[75px] md:w-[100px]" src="/Logo.svg" alt="Logo" />
+    </header>
+  <slot/>
+    <!-- <footer class="flex justify-between py-4 px-5 mx-auto w-full bg-gradient-to-tr from-primary via-primary via-65% to-secondary to-95%"> -->
+    <!---->
+    <!--   <img class="w-[100px]" src="/Logo.svg" alt="Logo" /> -->
+    <!-- </footer> -->
     </body>
 </html>
 
