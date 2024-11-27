@@ -1,7 +1,7 @@
 ---
 // src/pages/presentations/index.astro
 import { getCollection } from 'astro:content';
-import Layout from "../layouts/Base.astro"
+import Layout from "../../layouts/Base.astro"
 
 const presentations = await getCollection('Decks', ({ data }) => {
   return data;
