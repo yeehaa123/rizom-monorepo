@@ -73,6 +73,7 @@ We empower people and organizations to thrive by removing blockages to **unlock 
 
 ## Can we be more specific?
 
+
 + We offer **consulting services**
 
 + We develop **open-source solutions**
