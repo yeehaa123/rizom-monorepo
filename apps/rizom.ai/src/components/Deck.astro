@@ -77,11 +77,11 @@ if (!entry) {
   }
 
   .reveal h2 {
-    @apply text-5xl md:text-7xl font-sans mb-2 md:mb-6 text-primary-dark;
+    @apply text-5xl md:text-7xl font-sans text-start mb-2 md:mb-6 text-primary-dark;
   }
 
   .reveal h3 {
-    @apply text-3xl font-medium mb-4;
+    @apply text-3xl font-bold mb-4;
   }
 
   /* Lists */
@@ -101,9 +101,13 @@ if (!entry) {
     @apply list-decimal list-outside;
   }
 
+  .reveal li {
+    @apply text-start text-2xl md:text-3xl ;
+  }
+
   /* Paragraphs */
   .reveal p {
-    @apply mb-4 text-2xl md:text-3xl text-start ml-16 md:ml-28;
+    @apply mb-4 text-2xl md:text-3xl text-start ;
   }
 
   /* Code blocks */
