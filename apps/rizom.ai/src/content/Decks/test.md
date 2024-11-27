@@ -13,13 +13,13 @@ date: 2024-11-25
 We are a studio for **ecosystem architecture**. 
 
 
-## What the *%@% is that?
+## What the ★#@☠︎♠︎ does that mean?
 
 
 Ecosystem Architecture is a regenerative practice that creates and fosters diverse, resilient, effective communities and organizations bound by **shared knowledge** rather than physical space.
 
 
-## Again *%@%?
+## Again, what the ★#@☠︎♠︎!
 
 
 We make **communities and organizations** a lot better.
@@ -58,7 +58,7 @@ We are **blocked** by preconceived, outdated, misguided notions, tools and pract
 ## How do we change the game?
 
 
-We empower people and organizations to thrive by removing blockages to **unlock new possibilities for collaboration**.
+We empower people and organizations to thrive by removing blockages to **unlock new possibilities** for collaboration.
 
 
 ## What does that mean concretely?
