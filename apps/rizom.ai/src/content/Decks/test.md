@@ -37,10 +37,10 @@ We are a **gang of misfits** combining our talents, networks, and resources with
 We want to establish a **culture** where every person is empowered to explore their passions and hone their unique strengths, leading to aligned, purpose-driven collaboration that drives positive societal transformation and sustainable financial success. 
 
 
-## Could we summarize all of that in one sentence?
+## In a single sentence, please?
 
 
-Sure, we want to make sure that **the future of work is play**.
+We want to make sure that **the future of work is play**.
 
 
 ## Why is that?
