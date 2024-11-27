@@ -43,7 +43,7 @@ We want to establish a **culture** where every person is empowered to explore th
 We want to make sure that **the future of work is play**.
 
 
-## Why is that?
+## Why do we want that?
 
 
 The future doesn't need to separate work from play. As technology handles the boring stuff, we get to focus on what we do best: **creating, exploring, and solving puzzles together**. 
@@ -69,6 +69,13 @@ We empower people and organizations to thrive by removing blockages to **unlock 
 + We **moderate** shared spaces 
 
 + We **facilitate** personal development
+
+
+## Can we be more specific?
+
++ We offer **consulting services**
+
++ We develop **open-source solutions**
 
 
 ## Can I join us?
