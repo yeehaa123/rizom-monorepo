@@ -123,10 +123,14 @@ if (!entry) {
   .reveal blockquote {
     @apply border-l-4 border-blue-500 pl-4 italic my-4;
   }
+  /* Links */
+  .reveal em, .reveal strong {
+    @apply text-secondary;
+  }
 
   /* Links */
   .reveal a {
-    @apply text-blue-400 hover:text-blue-300 underline;
+    @apply text-secondary font-black hover:text-blue-300 underline;
   }
 
   /* Controls and progress */
