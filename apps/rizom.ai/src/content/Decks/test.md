@@ -28,7 +28,7 @@ We make **communities and organizations** a lot better.
 ## Who are we?
 
 
-We are a **gang of misfits** combining our talents, networks, and resources without giving up our individual quirks, values, and styles that made us such unique, great professionals in the first place.
+We are a **band of misfits** combining our talents, networks, and resources without giving up our individual quirks, values, and styles that made us such unique, great professionals in the first place.
 
 
 ## What is our purpose?
