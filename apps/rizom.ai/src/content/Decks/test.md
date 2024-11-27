@@ -28,7 +28,7 @@ We make communities and organizations a lot better.
 ## Who are we?
 
 
-We are a bunch of misfits combining our talents, networks, and resources without giving up our individual autonomy, quirks, values, and styles that made us such unique, great professionals in the first place.
+We are a bunch of misfits combining our talents, networks, and resources without giving up our individual quirks, values, and styles that made us such unique, great professionals in the first place.
 
 
 ## What is our purpose?
@@ -43,33 +43,36 @@ We want to establish a culture where every person is empowered to explore their 
 Sure, we want to make sure that the future of work is play.
 
 
+## Why is that?
+
+
+The future doesn't need to separate work from play. As technology handles the boring stuff, we get to focus on what we do best: creating, exploring, and solving puzzles together. 
+
+
 ## Why aren't we playing yet?
+
+
+We are blocked by preconceived, outdated notions, tools and practices that tell us what work should look and feel like.
 
 
 ## How do we change the game?
 
 
-We empower people and organizations to thrive by removing barriers to unlock new possibilities for collaboration.
+We empower people and organizations to thrive by removing blockages to unlock new possibilities for collaboration.
 
 
 ## What does that mean concretely?
 
 
-+ Curating meaningful connections
++ We curate meaningful connections
 
-+ Moderating shared spaces 
++ We moderate shared spaces 
 
-+ Facilitating personal development
-
-
-## Can I join Rizom?
++ We facilitate personal development
 
 
-Of course, our collective is open to anyone who is excited to join us in our mission.
+## Can I join us?
 
 
-## How can I join?
-
-
-[https://rizom.ai/join](https://rizom.ai/join)
+Of course, Rizom is open to anyone who is excited to join us in our mission: [https://rizom.ai/join](https://rizom.ai/join)
 
