@@ -13,13 +13,13 @@ date: 2024-11-25
 We are a studio for **ecosystem architecture**. 
 
 
-## What the ★#@☠︎♠︎ does that mean?
+## What the ★#@☠︎♠︎! does that mean?
 
 
 Ecosystem Architecture is a regenerative practice that creates and fosters diverse, resilient, effective communities and organizations bound by **shared knowledge** rather than physical space.
 
 
-## Again, what the ★#@☠︎♠︎!
+## Again, what the ★#@☠︎♠︎! ?
 
 
 We make **communities and organizations** a lot better.

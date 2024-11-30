@@ -10,6 +10,13 @@ const presentations = defineCollection({
   })
 })
 
+const pages = defineCollection({
+  type: 'content',
+  schema: z.object({
+  })
+})
+
 export const collections = {
-  Decks: presentations
+  Decks: presentations,
+  Pages: pages
 };
