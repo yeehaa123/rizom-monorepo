@@ -14,7 +14,7 @@ export default defineConfig({
   site: 'https://rizom.ai/',
   env: {
     schema: {
-      RESEND_API_KEY: envField.string({ context: "server", access: "public"}),
+      PUBLIC_RESEND_API_KEY: envField.string({ context: "server", access: "public"}),
     }
   },
   markdown: {

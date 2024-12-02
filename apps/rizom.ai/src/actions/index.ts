@@ -1,10 +1,10 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { Resend } from 'resend';
-import { RESEND_API_KEY } from "astro:env/server"
+import { PUBLIC_RESEND_API_KEY } from "astro:env/server"
 
 
-const resend = new Resend(RESEND_API_KEY);
+const resend = new Resend(PUBLIC_RESEND_API_KEY);
 
 export const server = {
   rsvp: defineAction({
