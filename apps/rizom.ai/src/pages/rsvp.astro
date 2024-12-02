@@ -6,7 +6,6 @@ import { getEntry } from 'astro:content';
 
 import Layout from "../layouts/Base.astro"
 const entry = await getEntry("Pages", "event")
-console.log(entry);
 const result = Astro.getActionResult(actions.rsvp);
 const { Content } = await entry.render();
 ---
@@ -28,8 +27,9 @@ const { Content } = await entry.render();
         prose-blockquote:border-secondary-light
         prose-a:no-underline prose-a:text-secondary-dark dark:prose-a:text-secondary-light hover:prose-a:text-secondary-light">
     <h1>{ entry.data.title }</h1>
+<div class="flex justify-between"> 
 { !result 
-?  <form method="POST" style="display: grid" action={actions.rsvp}>
+?  <form method="POST" class="grid flex-grow" action={actions.rsvp}>
   <label for="firstName">First Name</label>
   <input id="firstName" name="firstName" />
 
@@ -42,9 +42,11 @@ const { Content } = await entry.render();
   <button class="border border-secondary bg-secondary my-4 w-auto text-white font-bold" type="submit">RSVP</button>
 </form>
 : <div>{result.data.message}</div>}
+</div>
   <Content/>
+<div class="flex justify-between"> 
 { !result 
-?  <form method="POST" style="display: grid" action={actions.rsvp}>
+?  <form method="POST" class="grid flex-grow" action={actions.rsvp}>
   <label for="firstName">First Name</label>
   <input id="firstName" name="firstName" />
 
@@ -58,5 +60,6 @@ const { Content } = await entry.render();
 </form>
 : <div>{result.data.message}</div>}
   </div>
+</div>
 </div>
 </Layout>
