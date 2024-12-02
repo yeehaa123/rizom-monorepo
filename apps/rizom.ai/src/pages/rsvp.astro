@@ -1,10 +1,12 @@
 ---
 export const prerender = false;
+import { Button } from "@/components/ui/button"
 import { actions } from 'astro:actions';
 import { getEntry } from 'astro:content';
 
 import Layout from "../layouts/Base.astro"
 const entry = await getEntry("Pages", "event")
+console.log(entry);
 const result = Astro.getActionResult(actions.rsvp);
 const { Content } = await entry.render();
 ---
@@ -25,8 +27,7 @@ const { Content } = await entry.render();
         prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
         prose-blockquote:border-secondary-light
         prose-a:no-underline prose-a:text-secondary-dark dark:prose-a:text-secondary-light hover:prose-a:text-secondary-light">
-  <Content/>
-  </div>
+    <h1>{ entry.data.title }</h1>
 { !result 
 ?  <form method="POST" style="display: grid" action={actions.rsvp}>
   <label for="firstName">First Name</label>
@@ -38,8 +39,24 @@ const { Content } = await entry.render();
   <label for="email">Email Address</label>
   <input id="email" type="email" name="email" />
 
-  <button type="submit">RSVP</button>
+  <button class="border border-secondary bg-secondary my-4 w-auto text-white font-bold" type="submit">RSVP</button>
 </form>
 : <div>{result.data.message}</div>}
+  <Content/>
+{ !result 
+?  <form method="POST" style="display: grid" action={actions.rsvp}>
+  <label for="firstName">First Name</label>
+  <input id="firstName" name="firstName" />
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" name="lastName" />
+
+  <label for="email">Email Address</label>
+  <input id="email" type="email" name="email" />
+
+  <button class="border border-secondary bg-secondary my-4 w-auto text-white font-bold" type="submit">RSVP</button>
+</form>
+: <div>{result.data.message}</div>}
+  </div>
 </div>
 </Layout>

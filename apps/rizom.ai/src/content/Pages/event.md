@@ -1,4 +1,6 @@
-# Rewriting the Rules of Work
+---
+title: Rewriting the Rules of Work
+---
 
 ## Where Purpose Meets Play
 
@@ -6,7 +8,6 @@ Are you ready to be part of a movement that's transforming how we think about wo
 
 ## When & Where
 
-**Date:** Thursday, December 12, 2024  
 **Time:** 16:00 - 18:00  
 **Location:** 42 Workspace, Rotterdam
 
