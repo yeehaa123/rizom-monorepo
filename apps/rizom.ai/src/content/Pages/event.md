@@ -8,15 +8,16 @@ Are you ready to be part of a movement that's transforming how we think about wo
 
 ## When & Where
 
-**Time:** 16:00 - 18:00  
+**Time:** 15:00 - 17:00  
 **Location:** 42 Workspace, Rotterdam
 
 ## Afternoon Program
-### Session 1: Collective Voices (16:00 - 17:00)
+
+### Session 1: Collective Voices (15:00 - 16:00)
 
 Discover how ecosystem architecture is creating resilient, purpose-driven communities. Our collective members will present their experiences in building diverse organizations bound by shared knowledge, demonstrating how they're turning their professional journeys into playgrounds of innovation and purpose.
 
-### Session 2: Expert Panel Discussion (17:00 - 18:00)
+### Session 2: Expert Panel Discussion (16:00 - 17:00)
 
 Dive deep into why the future of work is play with our panel of industry experts. As technology increasingly handles routine tasks, how do we unlock human potential for creativity, exploration, and collaborative problem-solving? Our panelists will explore how organizations can break free from outdated practices and create environments where work naturally flows into play, leading to both innovation and fulfillment.
 
