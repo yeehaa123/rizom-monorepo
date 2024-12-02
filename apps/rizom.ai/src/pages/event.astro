@@ -1,8 +1,11 @@
 ---
+export const prerender = false;
+import { actions } from 'astro:actions';
 import { getEntry } from 'astro:content';
 
 import Layout from "../layouts/Base.astro"
 const entry = await getEntry("Pages", "event")
+const result = Astro.getActionResult(actions.rsvp);
 const { Content } = await entry.render();
 ---
 
@@ -24,5 +27,19 @@ const { Content } = await entry.render();
         prose-a:no-underline prose-a:text-secondary-dark dark:prose-a:text-secondary-light hover:prose-a:text-secondary-light">
   <Content/>
   </div>
-  </div>
+{ !result 
+?  <form method="POST" style="display: grid" action={actions.rsvp}>
+  <label for="firstName">First Name</label>
+  <input id="firstName" name="firstName" />
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" name="lastName" />
+
+  <label for="email">Email Address</label>
+  <input id="email" type="email" name="email" />
+
+  <button type="submit">RSVP</button>
+</form>
+: <div>{result.data.message}</div>}
+</div>
 </Layout>

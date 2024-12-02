@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField} from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
@@ -12,6 +12,11 @@ import remarkGfm from 'remark-gfm';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rizom.ai/',
+  env: {
+    schema: {
+      RESEND_API_KEY: envField.string({ context: "server", access: "public"}),
+    }
+  },
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
     rehypePlugins: [[classNames, {
