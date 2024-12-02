@@ -82,5 +82,5 @@ We empower people and organizations to thrive by removing blockages to **unlock 
 ## Can I join us?
 
 
-Of course, Rizom is open to anyone who is excited to join us in our mission: [https://rizom.ai/join](https://rizom.ai/rsvp)
+Of course, Rizom is open to anyone who is excited to join us in our mission: [https://rizom.ai/rsvp](https://rizom.ai/rsvp)
 
