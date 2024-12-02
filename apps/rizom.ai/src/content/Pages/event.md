@@ -8,6 +8,7 @@ Are you ready to be part of a movement that's transforming how we think about wo
 
 ## When & Where
 
+**Date:** December 12, 2024
 **Time:** 15:00 - 17:00  
 **Location:** 42 Workspace, Rotterdam
 
