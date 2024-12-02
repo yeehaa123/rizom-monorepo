@@ -9,6 +9,8 @@ import slug from 'rehype-slug';
 import unwrapImages from 'remark-unwrap-images';
 import remarkGfm from 'remark-gfm';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rizom.ai/',
@@ -25,7 +27,7 @@ export default defineConfig({
   },
   integrations: [tailwind({
     applyBaseStyles: false
-  }), sitemap()],
+  }), sitemap(), react()],
   server: { port: 6543},
   adapter: vercel({
     webAnalytics: {

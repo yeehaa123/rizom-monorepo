@@ -2,9 +2,11 @@ import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { Resend } from 'resend';
 import { PUBLIC_RESEND_API_KEY } from "astro:env/server"
+import RSVPEmail from "../components/RSVPEmail"
 
 
 const resend = new Resend(PUBLIC_RESEND_API_KEY);
+
 
 export const server = {
   rsvp: defineAction({
@@ -19,10 +21,11 @@ export const server = {
       try {
 
         const x = await resend.emails.send({
-          from: 'test@rizom.ai',
+          from: 'rsvp@rizom.ai',
+          replyTo: "arjannehoogstad@hotmail.com",
           to: email,
-          subject: 'Welcome to our newsletter!',
-          text: 'Thank you for subscribing to our newsletter!'
+          subject: 'Your registration has been confirmed',
+          react: RSVPEmail()
         });
 
         console.log(x);
