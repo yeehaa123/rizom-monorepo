@@ -17,7 +17,27 @@ const pages = defineCollection({
   })
 })
 
+const baseSection = z.object({
+  title: z.string(),
+  subtitle: z.string().optional(),
+  description: z.string().optional(),
+  cta: z.string().optional(),
+})
+
+const section = baseSection.extend({
+  sections: z.array(baseSection).optional()
+})
+
+
+const content = defineCollection({
+  type: 'data',
+  schema: section.extend({
+    sections: z.array(section)
+  })
+})
+
 export const collections = {
   Decks: presentations,
-  Pages: pages
+  Pages: pages,
+  PageContent: content
 };

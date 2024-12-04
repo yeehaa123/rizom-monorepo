@@ -1,0 +1,20 @@
+---
+export const prerender = false;
+import { getEntry } from 'astro:content';
+import { ValueSection } from "../components/ValueSection.tsx"
+import SignUpForm from "../components/SignUpForm.astro";
+
+import Layout from "../layouts/Base.astro"
+const entry  = await getEntry("PageContent", "join")
+const { title, description, sections } = entry.data
+---
+
+<Layout title="Presentation">
+  <div class="lg:w-11/12 xl:w-9/12 2xl:w-8/12 px-5 sm:px-8 mx-auto py-12 space-y-24">
+    <h1 class="text-primary-dark text-8xl sm:text-9xl font-extrabold">{ title }</h1>
+    <p class="text-2xl">{ description }</p>
+    <SignUpForm/>
+    { sections.map((section, index) => <ValueSection {...section} index={index} /> )}
+    <SignUpForm/>
+  </div>
+</Layout>

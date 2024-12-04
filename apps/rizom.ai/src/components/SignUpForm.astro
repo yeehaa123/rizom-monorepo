@@ -1,0 +1,21 @@
+---
+import { actions } from 'astro:actions';
+const result = Astro.getActionResult(actions.rsvp);
+---
+
+{ result && result.data &&<p>{result.data.message}</p>}
+{ result && result.error && <p>{result.error.message}</p>}
+
+{ !result && <form method="POST" class="flex flex-col flex-grow" action={actions.rsvp}>
+  <label for="firstName">First Name</label>
+  <input id="firstName" name="firstName" />
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" name="lastName" />
+
+  <label for="email">Email Address</label>
+  <input id="email" type="email" name="email" />
+
+  <button class="border border-secondary bg-secondary my-4 w-auto text-white font-bold" type="submit">RSVP</button>
+</form>
+}
