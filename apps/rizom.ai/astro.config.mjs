@@ -8,7 +8,7 @@ import classNames from 'rehype-class-names';
 import slug from 'rehype-slug';
 import unwrapImages from 'remark-unwrap-images';
 import remarkGfm from 'remark-gfm';
-
+import offcourse from "@offcourse/astro"
 import react from '@astrojs/react';
 
 // https://astro.build/config
@@ -25,9 +25,11 @@ export default defineConfig({
       'h1 + p': 'lead'
     }], slug, section]
   },
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), sitemap(), react()],
+  integrations: [
+    offcourse(),
+    tailwind({
+      applyBaseStyles: false
+    }), sitemap(), react()],
   server: { port: 6543},
   adapter: vercel({
     webAnalytics: {

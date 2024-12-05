@@ -27,11 +27,11 @@ export const responseSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(ResponseType.enum.RENDERED_COURSE_IMAGE),
-    payload: z.instanceof(Buffer)
+    payload: z.any()
   }),
   z.object({
     type: z.literal(ResponseType.enum.RENDERED_COURSE_IMAGES),
-    payload: z.array(z.object({ courseId: z.string(), png: z.instanceof(Buffer) }))
+    payload: z.array(z.object({ courseId: z.string(), png: z.any() }))
   }),
   z.object({
     type: z.literal(ResponseType.enum.RETRIEVED_REGISTRY_ENTRY),

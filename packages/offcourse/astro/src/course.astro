@@ -2,9 +2,9 @@
 import type { Course } from "@offcourse/schema";
 import { CollectionType, QueryType } from "@offcourse/schema";
 import { Offcourse } from "@offcourse/ui"
-import { BaseHead, OGType } from "@/components";
+import { BaseHead, OGType } from "./BaseHead";
 import { handleQuery } from "@offcourse/db/query";
-import Layout from "@/layouts/Base.astro"
+import Layout from "./layouts/Base.astro"
 
 export async function getStaticPaths() {
   const data = await handleQuery({

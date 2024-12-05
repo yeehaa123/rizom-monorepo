@@ -22,6 +22,7 @@
     "@offcourse/ui": "workspace:*",
     "@offcourse/schema": "workspace:*",
     "@rizom/typescript-config": "workspace:*",
+    "@rizom/tailwind-config": "workspace:*",
     "@types/node": "^20.14.2",
     "astro": "4.15.11",
     "dotenv": "^16.4.5",

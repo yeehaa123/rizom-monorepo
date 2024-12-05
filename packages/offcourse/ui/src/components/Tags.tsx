@@ -1,5 +1,5 @@
 import { badgeVariants } from "./ui/badge"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 
 export default function Tags({ tags }: { tags: string[] }) {
   return <div

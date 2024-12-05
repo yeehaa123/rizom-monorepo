@@ -11,6 +11,7 @@ import Note from "./Note"
 import Notes from "./Notes"
 import NoteForm from "./NoteForm"
 import OffcourseInfo from "./OffcourseInfo"
+import { RoutesMenu } from "./RoutesMenu"
 import Toolbar from "./Toolbar"
 import Tags from "./Tags"
 import { Socials } from "./Socials"
@@ -31,6 +32,7 @@ export {
   Toolbar,
   NoteForm,
   Checkbox,
+  RoutesMenu,
   CourseCard,
   CourseCollection,
   Tags,

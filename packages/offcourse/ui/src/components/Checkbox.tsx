@@ -1,5 +1,5 @@
-import { Checkbox as CB } from "@/components/ui/checkbox"
-import { cn } from "@/lib/utils"
+import { Checkbox as CB } from "./ui/checkbox"
+import { cn } from "../lib/utils"
 import { SyntheticEvent } from "react";
 
 type Props = {

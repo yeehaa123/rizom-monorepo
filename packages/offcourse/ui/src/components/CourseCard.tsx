@@ -14,7 +14,7 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
-} from "@/components/ui/card"
+} from "./ui/card"
 import {
   CardChrome,
   Checkpoint,
@@ -26,7 +26,7 @@ import {
 } from "./";
 import { CardModes } from "../types";
 import { Input } from "./ui/input";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { Label } from "./ui/label";
 
 
@@ -59,7 +59,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
   } = cardState
 
   return (
-    <CardChrome className="overflow-hidden" {...courseCardState}>
+    <CardChrome className="overflow-hidden bg-white" {...courseCardState}>
       <CardContent className={cn("space-y-8 pt-2 pb-6 invisible opacity-0 transition-all",
         { "visible opacity-100": cardMode === CardModes.NORMAL })}>
         <CardTitle onClick={() => hideOverlay({ courseId })}>{goal}</CardTitle>

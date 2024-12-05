@@ -1,8 +1,8 @@
 import type { Checkpoint } from "@offcourse/schema";
 
-import { Label } from "@/components/ui/label"
+import { Label } from "./ui/label"
 import { Checkbox, ListItem } from "./"
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 
 
 interface Props extends Checkpoint {

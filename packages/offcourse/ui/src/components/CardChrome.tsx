@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import { Card, CardHeader, CardFooter } from "./ui/card"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 import { CourseCardState } from "@/types"
 import {
   Curator,

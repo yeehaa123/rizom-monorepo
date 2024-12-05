@@ -1,6 +1,6 @@
 import type { Curator } from "@offcourse/schema";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { CardDescription } from "@/components/ui/card"
+import { Avatar, AvatarFallback } from "./ui/avatar"
+import { CardDescription } from "./ui/card"
 import { AvatarImage } from "./";
 
 export default function Curator({ alias, showDetails }: Curator & {

@@ -1,12 +1,20 @@
 ---
 export const prerender = false;
 import { getEntry } from 'astro:content';
-import { ValueSection } from "../components/ValueSection.tsx"
+import { QueryType, CollectionType } from '@offcourse/schema';
+import  ValueSection  from "../components/ValueSection.astro"
+import { handleQuery } from "@offcourse/db/query";
 import SignUpForm from "../components/SignUpForm.astro";
 
 import Layout from "../layouts/Base.astro"
 const entry  = await getEntry("PageContent", "join")
 const { title, description, sections } = entry.data
+
+  const data = await handleQuery({
+    type: QueryType.enum.GET_COURSES,
+    payload: CollectionType.enum.ALL
+  }, false)
+  const courses = (data?.payload || []) as Course[];
 ---
 
 <Layout title="Presentation">
@@ -14,7 +22,7 @@ const { title, description, sections } = entry.data
     <h1 class="text-primary-dark text-8xl sm:text-9xl font-extrabold">{ title }</h1>
     <p class="text-2xl">{ description }</p>
     <SignUpForm/>
-    { sections.map((section, index) => <ValueSection {...section} index={index} /> )}
+    { sections.map((section, index) => <ValueSection {...section} index={index} courses={courses}/> )}
     <SignUpForm/>
   </div>
 </Layout>

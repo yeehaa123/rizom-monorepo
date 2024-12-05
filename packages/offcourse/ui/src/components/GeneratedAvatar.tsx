@@ -1,9 +1,9 @@
 import { minidenticon } from 'minidenticons'
 import {
   AvatarImage,
-} from "@/components/ui/avatar"
+} from "./ui/avatar"
 import { useMemo } from 'react'
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 
 export default function GeneratedAvatarImage({ userName, saturation, lightness, className }:
   { userName: string, saturation: number, lightness: number, className?: string }) {

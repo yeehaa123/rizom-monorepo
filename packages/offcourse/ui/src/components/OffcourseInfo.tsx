@@ -3,7 +3,8 @@ import {
 } from "./";
 import {
   CardDescription,
-} from "@/components/ui/card"
+} from "./ui/card"
+
 export default function OffcourseInfo() {
   return <>
     <div className="flex w-full justify-center">
