@@ -19,8 +19,8 @@ const { title, description, sections, call_to_action} = entry.data
 
 <Layout title="Presentation">
   <div class="lg:w-11/12 xl:w-9/12 2xl:w-8/12 px-5 sm:px-8 mx-auto py-12 space-y-24">
-    <h1 class="text-primary-dark text-8xl sm:text-9xl font-extrabold py-72">{ title }</h1>
-    <div class="flex gap-24">
+    <h1 class="text-primary-dark text-7xl sm:text-8xl font-extrabold py-48 max-w-[800px]">{ title }</h1>
+    <div class="flex flex-col md:flex-row gap-x-24 gap-y-8">
       <div class="flex-1">
         <h1 class="text-4xl font-bold text-primary-dark">{call_to_action.title}</h1>
         <p class="text-2xl">{ description }</p>
@@ -30,7 +30,7 @@ const { title, description, sections, call_to_action} = entry.data
       </div>
     </div>
     { sections.map((section, index) => <ValueSection {...section} index={index} courses={courses}/> )}
-    <div class="flex gap-24">
+    <div class="flex flex-col md:flex-row gap-x-24 gap-y-8">
       <div class="flex-1">
         <h1 class="text-4xl font-bold text-primary-dark">{call_to_action.title}</h1>
         <p class="text-2xl">{ call_to_action.description }</p>
