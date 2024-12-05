@@ -19,9 +19,8 @@ const pages = defineCollection({
 
 const baseSection = z.object({
   title: z.string(),
-  subtitle: z.string().optional(),
-  description: z.string().optional(),
-  cta: z.string().optional(),
+  subtitle: z.string(),
+  description: z.string(),
 })
 
 const section = baseSection.extend({
@@ -31,8 +30,18 @@ const section = baseSection.extend({
 
 const content = defineCollection({
   type: 'data',
-  schema: section.extend({
-    sections: z.array(section)
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    sections: z.array(z.object({
+      title: z.string(),
+      sections: z.array(section)
+    })),
+    call_to_action: z.object({
+      title: z.string(),
+      description: z.string(),
+      cta: z.string()
+    })
   })
 })
 

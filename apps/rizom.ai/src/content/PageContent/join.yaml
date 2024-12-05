@@ -49,9 +49,9 @@ sections:
           deliberate practice and continuous improvement, I master my tools 
           and elevate both individual craft and collective capabilities to new 
           heights.
-
-  - title: Ready to Join Us
-    description: >
-      I am reimagining what work can be. I am always excited to connect with 
-      creative souls who share my vision of turning work into play.
-    cta: Join Now
+call_to_action:
+  title: Ready to Join Us
+  description: >
+    I am reimagining what work can be. I am always excited to connect with 
+    creative souls who share my vision of turning work into play.
+  cta: Join Now

@@ -8,7 +8,7 @@ import SignUpForm from "../components/SignUpForm.astro";
 
 import Layout from "../layouts/Base.astro"
 const entry  = await getEntry("PageContent", "join")
-const { title, description, sections } = entry.data
+const { title, description, sections, call_to_action} = entry.data
 
   const data = await handleQuery({
     type: QueryType.enum.GET_COURSES,
@@ -19,10 +19,25 @@ const { title, description, sections } = entry.data
 
 <Layout title="Presentation">
   <div class="lg:w-11/12 xl:w-9/12 2xl:w-8/12 px-5 sm:px-8 mx-auto py-12 space-y-24">
-    <h1 class="text-primary-dark text-8xl sm:text-9xl font-extrabold">{ title }</h1>
-    <p class="text-2xl">{ description }</p>
+    <h1 class="text-primary-dark text-8xl sm:text-9xl font-extrabold py-72">{ title }</h1>
+    <div class="flex gap-24">
+      <div class="flex-1">
+        <h1 class="text-4xl font-bold text-primary-dark">{call_to_action.title}</h1>
+        <p class="text-2xl">{ description }</p>
+      </div>
+      <div class="flex-1">
     <SignUpForm/>
+      </div>
+    </div>
     { sections.map((section, index) => <ValueSection {...section} index={index} courses={courses}/> )}
-    <SignUpForm/>
+    <div class="flex gap-24">
+      <div class="flex-1">
+        <h1 class="text-4xl font-bold text-primary-dark">{call_to_action.title}</h1>
+        <p class="text-2xl">{ call_to_action.description }</p>
+      </div>
+      <div class="flex-1">
+      <SignUpForm/>
+      </div>
+    </div>
   </div>
 </Layout>

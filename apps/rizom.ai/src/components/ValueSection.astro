@@ -5,13 +5,13 @@ import { Offcourse } from "@offcourse/ui"
 const { title, description, courses, sections, index } = Astro.props;
 ---
 <section class="space-y-8">
-  <h1 class="text-6xl font-bold text-primary-dark">{title}</h1>
-  <p>{description}</p>
   <div class={`flex flex-col ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"} justify-start gap-x-24`}>
-    <div class="flex flex-col flex-1 space-y-12 mb-12">
+    <div class="flex flex-col flex-1 space-y-8 mb-12">
+      <h1 class="text-6xl font-bold text-primary-dark">{title}</h1>
+      <p>{description}</p>
       {sections && sections.map((section, index) => <ValueItem key={index} {...section} />)}
     </div>
-    <div class="flex flex-1 ">
+    <div class=`flex flex-1 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`>
       { sections && <Offcourse data={[courses[index]]} client:load/>}
     </div>
   </div>
