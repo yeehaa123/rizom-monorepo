@@ -14,6 +14,9 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rizom.ai/',
+  experimental: {
+    svg: true,
+  },
   env: {
     schema: {
       PUBLIC_RESEND_API_KEY: envField.string({ context: "server", access: "public"}),
