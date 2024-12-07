@@ -81,13 +81,23 @@ if (!entry) {
   }
 
   .reveal h3 {
-    @apply text-3xl font-bold mb-4;
+    @apply text-4xl md:text-5xl font-bold mb-4;
   }
+
+  .reveal h4 {
+    @apply text-3xl font-bold mb-4 mt-8 text-primary-dark;
+  }
+
 
   /* Lists */
   .reveal ul {
     @apply space-y-2 ml-6;
   }
+
+  .reveal ul p, ol p {
+    @apply text-xl;
+  }
+
 
   .reveal ul li {
     @apply list-disc list-outside;

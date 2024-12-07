@@ -40,7 +40,7 @@ We want to establish a **culture** where every person is empowered to explore th
 ## In a single sentence, please?
 
 
-We want to make sure that **the future of work is play**.
+We will make sure that **the future of work is play**.
 
 
 ## Why do we want that?
