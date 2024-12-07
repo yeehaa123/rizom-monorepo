@@ -22,7 +22,7 @@ export default function CardChrome({ className, children, ...courseCardState }: 
 
   return (
     <Card className={cn(
-      "flex flex-col select-none min-w-[360px] max-w-[420px]",
+      "flex flex-col select-none min-w-[300px] max-w-[420px]",
       className)}>
       <CardHeader className="flex flex-row space-y-0 align-middle items-center justify-between">
         <Curator showDetails={() => showCuratorOverlay({ courseId })} {...curator} />

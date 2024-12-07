@@ -2,17 +2,21 @@
 import { ValueItem } from "./ValueItem"
 import { Offcourse } from "@offcourse/ui"
 
-const { title, description, courses, sections, index } = Astro.props;
+const { title, description, courses, sections, index, cta} = Astro.props;
 ---
-<section class="space-y-8">
-  <div class={`flex flex-col ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"} justify-start gap-x-24`}>
-    <div class="flex flex-col flex-1 space-y-8 mb-12">
-      <h1 class="text-6xl font-bold text-primary-dark">{title}</h1>
-      <p>{description}</p>
+<section class="flex flex-col">
+  <div class={`flex flex-col  ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"} justify-start gap-x-12 lg:gap-x-24`}>
+    <div class="flex flex-col flex-1 space-y-8 mb-12 px-4">
+      <h1 class="text-4xl font-bold text-primary-dark">{title}</h1>
+      <p class="text-2xl">{description}</p>
       {sections && sections.map((section, index) => <ValueItem key={index} {...section} />)}
     </div>
+
     <div class=`flex flex-1 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`>
       { sections && <Offcourse data={[courses[index]]} client:load/>}
     </div>
-  </div>
+</div>
+    <div class="py-6 self-center hidden">
+      <a href="#cta" class="border border-secondary bg-secondary px-5 py-4 w-auto text-white font-bold" type="submit">{cta}</a>
+    </div>
 </section>

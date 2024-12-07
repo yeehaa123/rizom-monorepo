@@ -1,10 +1,10 @@
 title: Come play with purpose
-description: >
-  We shape our own adventure while contributing to something bigger than 
-  ourselves. We are creative pioneers who believe the future of work is play.
 
 sections:
   - title: What we offer
+    description: >
+      We shape our own adventure while contributing to something bigger than 
+      ourselves. We are creative pioneers who believe the future of work is play.
     sections:
       - title: Autonomy
         subtitle: We choose our path
@@ -25,6 +25,9 @@ sections:
           learn from others, and push the boundaries of what is possible. Our 
           craftsmanship elevates the collective game.
   - title: How I Contribute
+    description: >
+      I am reimagining what work can be. I am always excited to connect with 
+      creative souls who share my vision of turning work into play.
     sections:
       - title: Ownership
         subtitle: I shape my destiny
@@ -50,8 +53,9 @@ sections:
           and elevate both individual craft and collective capabilities to new 
           heights.
 call_to_action:
-  title: Ready to Join Us
+  title: I am ready to join us
   description: >
-    I am reimagining what work can be. I am always excited to connect with 
-    creative souls who share my vision of turning work into play.
-  cta: Join Now
+    I'm excited to shape the future of work alongside passionate pioneers who 
+    believe in turning purpose into play. Together, we'll craft meaningful 
+    experiences, push boundaries, and create a workplace where everyone thrives.
+  cta: Join Us Now

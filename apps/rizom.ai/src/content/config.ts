@@ -32,9 +32,9 @@ const content = defineCollection({
   type: 'data',
   schema: z.object({
     title: z.string(),
-    description: z.string(),
     sections: z.array(z.object({
       title: z.string(),
+      description: z.string(),
       sections: z.array(section)
     })),
     call_to_action: z.object({
