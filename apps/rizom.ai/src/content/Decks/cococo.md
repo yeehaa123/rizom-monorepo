@@ -126,7 +126,7 @@ Establish a core of **5 owners**
 
 ### December 2025
 
-Exposure to **5000 prospectives**
+Exposure to **5000** prospective **ambassadors**
 
 Complete **3** client and/or partner **projects**
 
