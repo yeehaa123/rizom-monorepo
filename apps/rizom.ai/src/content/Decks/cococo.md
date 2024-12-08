@@ -52,7 +52,7 @@ Our name comes from "rhizome" - a plant stem that grows sideways under the groun
 ## How does this manifest in our way of working?
 
 
-Our organization should be **organic**, **decentralized**, and based on shared, aligned **interest**.
+Our organization is **organic**, **decentralized**, and based on shared, aligned **interest**.
 
 
 ## How do we realize this?
