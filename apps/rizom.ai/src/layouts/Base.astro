@@ -6,7 +6,10 @@ interface Props  {
   title: string
 }
 
-const title = "Rizom.ai"
+const title = "Rizom"
+const description = "Rizom is an ecosystem architecture collective – creating resilient communities bound by shared knowledge rather than physical space. We believe that as technology handles routine tasks, humans can focus on what they do best: creating, exploring, and solving puzzles together."
+const url = Astro.url
+const ogImageURL = '/offcourse/a83550a37981a557b2ae0aaef225a1f6/og.png'
 
 ---
 
@@ -22,8 +25,19 @@ const title = "Rizom.ai"
 />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content={'/offcourse/a83550a37981a557b2ae0aaef225a1f6/og.png'} />
+    <meta name="description" content={description} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:url" content={url.toString()} />
+    <meta property="og:type" content={type} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta name="og:description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content={url.pathname} />
+    <meta property="twitter:url" content={url.toString()} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageURL} />
     <slot name="og:data" />
     <title>{title}</title>
   </head>
