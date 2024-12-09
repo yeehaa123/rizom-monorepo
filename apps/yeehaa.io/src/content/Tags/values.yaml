@@ -1,19 +1,20 @@
-checksum: a21f59ead07701d6562e1f7468950273
-summary: Values are fundamental principles that guide behavior and
-  decision-making. This collection explores various aspects of values, including
-  their role in personal growth, rule-setting, and appreciating differences. It
-  covers topics such as leading with purpose, transforming values into
-  actionable rules, and fostering unity through shared visions. The resources
-  emphasize the importance of values in creating thriving ecosystems, both
-  personal and professional, and in promoting effective communication and
-  understanding among diverse perspectives.
-excerpt: Values form the cornerstone of personal and professional development.
-  They guide our actions, shape our environments, and influence how we interact
-  with others. By understanding and applying values, we can create meaningful
-  rules, appreciate diversity, and cultivate thriving ecosystems.
+checksum: 7e5e312f1c1f908f3b37a4d1e731306e
+summary: Values serve as guiding principles that shape our actions, decisions,
+  and interactions. This collection explores how values influence various
+  aspects of life, from personal growth to professional development. It covers
+  topics such as creating purposeful ecosystems, transforming work into play,
+  setting rules based on values, and appreciating differences. These resources
+  offer insights on aligning personal and organizational values, fostering
+  unity, and creating meaningful impact in both personal and professional
+  spheres.
+excerpt: Values are fundamental principles that guide our lives and shape our
+  interactions. This collection delves into how values influence personal
+  growth, work environments, rule-setting, and interpersonal relationships,
+  offering insights for aligning actions with core beliefs.
 title: values
 articles: []
 courses:
   - groom-your-ecosystem
+  - play-to-work
   - set-rules
   - value-differences

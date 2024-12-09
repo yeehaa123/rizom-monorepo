@@ -1,21 +1,23 @@
-checksum: 895b049b7a8020492cef262604e4eb67
+checksum: 44d15598706ba0fccf6a980ea1d4882a
 summary: Team is a central concept in collaborative work environments, focusing
-  on breaking down silos, fostering sustainable collaboration, and promoting
-  open sharing. It emphasizes the importance of unified vision, diverse
-  perspectives, effective communication, and conflict resolution. The resources
-  associated with this topic highlight strategies for aligning goals,
-  facilitating emergent ideas, and celebrating diversity within teams. Key
-  skills such as active listening, empathy, and adaptability are emphasized to
-  create a resilient and productive team dynamic. The content also addresses
-  common pitfalls in team collaboration and provides guidance on overcoming
-  barriers to achieve shared objectives.
-excerpt: Team-oriented resources focus on breaking silos, sustainable
-  collaboration, and open sharing. They emphasize unified vision, diverse
-  perspectives, and effective communication. Key skills include active
-  listening, empathy, and adaptability to create resilient team dynamics.
+  on effective group dynamics and productivity. It encompasses various aspects
+  such as breaking down silos, sustainable collaboration, transforming work into
+  play, and open sharing. These elements contribute to creating a unified
+  vision, fostering diverse perspectives, encouraging cross-functional
+  understanding, and promoting an integrated organizational culture. Teams that
+  embrace these principles can overcome barriers, enhance communication, and
+  work together more efficiently towards shared goals. The emphasis is on active
+  listening, aligning interests, facilitating innovation, resolving conflicts,
+  and celebrating diversity to create a resilient and productive collaborative
+  environment.
+excerpt: Team-oriented resources focus on enhancing collaboration, breaking down
+  organizational barriers, and fostering a playful work environment. They
+  emphasize skills like active listening, conflict resolution, and open
+  communication to create a more integrated and productive workplace culture.
 title: team
 articles: []
 courses:
   - break-down-silos
   - collaborate-sustainably
+  - play-to-work
   - share-openly

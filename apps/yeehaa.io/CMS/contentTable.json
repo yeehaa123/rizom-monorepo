@@ -150,6 +150,20 @@
     }
   },
   {
+    "id": "758112ebcee1e1cbf64097b7b7bd3657",
+    "author": "yeehaa",
+    "title": "Play To Work",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "37901599c895a0d82eaad9ffd8b443da",
+    "publicationData": {
+      "createdAt": "2024-12-09T08:08:55.330Z",
+      "updatedAt": "2024-12-09T08:08:55.330Z",
+      "publishedAt": "2024-12-09T08:08:55.330Z"
+    }
+  },
+  {
     "id": "9ce5c6ab63030d9255e1d5076a53456e",
     "author": "yeehaa",
     "order": 1,
