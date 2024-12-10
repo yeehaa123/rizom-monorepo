@@ -35,6 +35,7 @@ export default defineConfig({
     }), sitemap(), react()],
   server: { port: 6543},
   adapter: vercel({
+    imageService: true,
     webAnalytics: {
       enabled: true,
     }

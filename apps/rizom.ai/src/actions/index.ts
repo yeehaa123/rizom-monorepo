@@ -20,7 +20,7 @@ export const server = {
       const { email } = args;
       try {
 
-        const x = await resend.emails.send({
+        await resend.emails.send({
           from: 'rsvp@rizom.ai',
           replyTo: "arjannehoogstad@hotmail.com",
           to: email,
@@ -28,7 +28,6 @@ export const server = {
           react: RSVPEmail()
         });
 
-        console.log(x);
 
         await resend.contacts.create({
           ...args,
