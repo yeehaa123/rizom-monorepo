@@ -13,7 +13,7 @@ const { title, description, courses, sections, index, cta} = Astro.props;
     </div>
 
     <div class=`flex flex-1 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`>
-      { sections && <Offcourse data={[courses[index]]} client:load/>}
+      { sections && <Offcourse data={[courses[index]]} />}
     </div>
 </div>
     <div class="py-6 self-center hidden">

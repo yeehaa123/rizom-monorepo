@@ -3,10 +3,12 @@ export const prerender = false;
 import { getEntry, getCollection } from "astro:content";
 import { QueryType, CollectionType } from '@offcourse/schema';
 import  ValueSection  from "../components/ValueSection.astro"
-import SignUpForm from "../components/SignUpForm.astro";
 import Logo from "../components/Logo.svg";
 
 import Layout from "../layouts/Base.astro"
+import { actions } from 'astro:actions';
+const result = Astro.getActionResult(actions.rsvp);
+const { cta } = Astro.props;
 const entry  = await getEntry("PageContent", "join")
 const { title, description, sections, call_to_action} = entry.data
 
@@ -33,8 +35,24 @@ const courses = coursesData.map(({data}) => data);
         <h1 class="text-4xl font-bold text-primary-dark">{call_to_action.title}</h1>
         <p class="text-2xl">{call_to_action.description}</p>
       </div>
-      <div class="flex-1">
-        <SignUpForm cta={call_to_action.cta}/>
+<div class="flex-1">
+{ result && result.data &&<p>{result.data.message}</p>}
+{ result && result.error && <p>{result.error.message}</p>}
+
+{ !result && <form method="POST" class="flex flex-col flex-grow" action={actions.rsvp}>
+  <label for="firstName">First Name</label>
+  <input id="firstName" required name="firstName" />
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" required name="lastName" />
+
+  <label for="email">Email Address</label>
+  <input id="email" type="email" required name="email" />
+
+  <div class="py-4 sm:py-2">
+    <button class="border border-secondary bg-secondary my-4 px-5 py-3 w-auto text-white font-bold" type="submit">{call_to_action.cta}</button>
+  </div>
+</form>}
       </div>
     </div>
   </div>
