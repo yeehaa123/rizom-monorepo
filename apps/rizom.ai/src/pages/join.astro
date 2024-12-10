@@ -1,9 +1,8 @@
 ---
 export const prerender = false;
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from "astro:content";
 import { QueryType, CollectionType } from '@offcourse/schema';
 import  ValueSection  from "../components/ValueSection.astro"
-import { handleQuery } from "@offcourse/db/query";
 import SignUpForm from "../components/SignUpForm.astro";
 import Logo from "../components/Logo.svg";
 
@@ -11,12 +10,9 @@ import Layout from "../layouts/Base.astro"
 const entry  = await getEntry("PageContent", "join")
 const { title, description, sections, call_to_action} = entry.data
 
-const data = await handleQuery({
-  type: QueryType.enum.GET_COURSES,
-  payload: CollectionType.enum.ALL
-}, false)
+const coursesData = await getCollection('Courses') || [];
 
-const courses = (data?.payload || []) as Course[];
+const courses = coursesData.map(({data}) => data);
 ---
 
 <Layout title="Presentation">

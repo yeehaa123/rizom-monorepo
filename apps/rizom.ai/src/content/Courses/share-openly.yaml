@@ -1,0 +1,94 @@
+courseId: f5ac70c3a8acd4e19bfaa48465044e98
+goal: Share Openly
+curator:
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+description: 'The journey to "Share Openly" involves four key steps: sharing a
+  vision, opening up perspectives, discussing effectively, and avoiding
+  pitfalls. These elements work together to foster transparent communication,
+  broaden understanding, facilitate meaningful dialogues, and prevent common
+  communication errors. By mastering these skills, individuals can cultivate an
+  environment of openness, trust, and productive exchange of ideas.'
+habitat: shenzhen-goes-ham
+createdAt: 2024-09-09T08:29:19.208Z
+updatedAt: 2024-09-09T08:29:19.208Z
+publishedAt: 2024-09-09T08:29:19.208Z
+tags:
+  - teardown
+  - gadget
+  - open
+  - share
+  - growth
+  - create
+  - remix
+  - design
+  - tech
+  - team
+checkpoints:
+  - task: Deconstruct a Gadget
+    href: https://www.wired.com/2009/09/teardown-culture/
+    checkpointId: 6712c87566f45c8ee7553793b1c52666
+    description: The article explores teardown culture, where people disassemble
+      gadgets to understand their inner workings. This practice promotes open
+      sharing of knowledge, fostering transparency and innovation. By
+      deconstructing devices, individuals gain insights into technology,
+      encouraging a culture of curiosity and collaborative learning.
+    tags:
+      - teardown
+      - gadget
+      - open
+      - share
+  - task: Publish Work-in-Progress
+    href: https://medium.com/create-make-write/you-wont-know-what-works-unless-you-share-your-wip-fcb509659d21
+    checkpointId: 984c5648ca6365ab85614aac790f5961
+    description: Sharing work-in-progress fosters open communication, invites
+      feedback, and builds connections. It allows others to learn from your
+      process, encourages collaboration, and helps you refine ideas. By
+      publishing unfinished work, you embrace vulnerability, demonstrate growth,
+      and contribute to a culture of transparency and continuous improvement.
+    tags:
+      - share
+      - open
+      - growth
+      - create
+  - task: Remix Existing Designs
+    href: https://bootcamp.uxdesign.cc/how-to-use-remixing-in-creating-a-product-that-stands-out-400e4aa328c4
+    checkpointId: 3119828c28bc7a4df9bc2408ca979803
+    description: Remixing existing designs fosters open sharing by encouraging
+      designers to build upon and transform others' work. This approach promotes
+      collaboration, sparks creativity, and leads to innovative solutions. By
+      remixing, designers openly share their interpretations and improvements,
+      contributing to a culture of knowledge exchange and collective growth in
+      the design community.
+    tags:
+      - remix
+      - design
+      - share
+  - task: Release Blueprints
+    href: https://www.wevolver.com/article/risc-v-architecture
+    checkpointId: dfc8e88707f89d62dc02f3ea19ff85aa
+    description: The article on RISC-V architecture exemplifies open sharing by
+      detailing a freely available, open-source instruction set architecture.
+      This aligns with the goal of sharing openly and the task of releasing
+      blueprints, as RISC-V's open nature allows for collaborative development
+      and widespread adoption in processor design.
+    tags:
+      - open
+      - tech
+      - design
+      - share
+  - task: Build a Product with Strangers
+    href: https://tw.nothing.tech/pages/community-edition
+    checkpointId: 487a28e5e88e1ecbc5a3a7cb5e53bdd8
+    description: Nothing's Community Edition program encourages open collaboration
+      by inviting strangers to co-create products. It fosters transparency, idea
+      sharing, and collective problem-solving. Participants contribute diverse
+      skills and perspectives, embodying the spirit of open innovation. This
+      approach aligns with the goal of sharing openly while building products
+      collaboratively with unfamiliar individuals.
+    tags:
+      - open
+      - team
+      - create
+      - share
+series: Ecosystem Architecture

@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { course } from "@rizom/cms/schema";
 
 const presentations = defineCollection({
   type: 'content',
@@ -28,6 +29,12 @@ const section = baseSection.extend({
 })
 
 
+const courses = defineCollection({
+  type: "data",
+  schema: course.schema
+});
+
+
 const content = defineCollection({
   type: 'data',
   schema: z.object({
@@ -48,5 +55,6 @@ const content = defineCollection({
 export const collections = {
   Decks: presentations,
   Pages: pages,
-  PageContent: content
+  PageContent: content,
+  Courses: courses
 };

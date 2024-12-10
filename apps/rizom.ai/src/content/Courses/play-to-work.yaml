@@ -1,0 +1,101 @@
+courseId: 758112ebcee1e1cbf64097b7b7bd3657
+goal: Play To Work
+curator:
+  repository: https://yeehaa.io/offcourse
+  alias: yeehaa
+description: Play To Work transforms your job into an engaging adventure. Start
+  by defining your purpose, then create a playful environment. Experiment
+  fearlessly, breaking and rebuilding ideas. Track progress like a game, keeping
+  score to boost motivation. Finally, grow together as a team, supporting each
+  other's development. This approach turns work into a fun, collaborative
+  journey of continuous improvement and achievement.
+createdAt: 2024-12-09T08:08:55.330Z
+updatedAt: 2024-12-09T08:08:55.330Z
+publishedAt: 2024-12-09T08:08:55.330Z
+tags:
+  - purpose
+  - values
+  - impact
+  - team
+  - office
+  - play
+  - work
+  - fun
+  - learn
+  - break
+  - create
+  - score
+  - game
+  - focus
+  - growth
+  - safety
+checkpoints:
+  - task: Pick a Purpose
+    href: https://scottmautz.com/these-5-steps-will-create-a-sense-of-purpose-for-your-team/#:~:text=The%20first%20step%20is%20to,to%20do%20what%20they%20do.
+    checkpointId: 09d89fb51afa5202d33a299382dff3c5
+    description: "The article outlines five steps to create purpose: identify core
+      values, connect to a greater cause, show impact, foster autonomy, and
+      promote mastery. These steps help teams understand their work's
+      significance, aligning personal values with organizational goals, which
+      can enhance motivation and engagement in the workplace."
+    tags:
+      - purpose
+      - values
+      - impact
+      - team
+  - task: Create a Playground
+    href: https://www.workdesign.com/2023/08/a-playful-office-doesnt-have-to-look-like-a-playground/
+    checkpointId: 0ff78a2c24b2bfd4759e740cd560c886
+    description: The article explores how to create a playful office environment
+      without resorting to literal playground elements. It discusses
+      incorporating fun, creative spaces that promote collaboration, relaxation,
+      and innovation while maintaining a professional atmosphere. This approach
+      helps achieve a balance between work and play, fostering productivity and
+      employee well-being.
+    tags:
+      - office
+      - play
+      - work
+      - fun
+  - task: Make and Break Things
+    href: https://www.linkedin.com/pulse/best-way-learn-break-things-kurt-yazdizadeh/
+    checkpointId: 6ffbace6a8fdabba3b321b8dfefc3845
+    description: The article emphasizes learning through experimentation and
+      failure, aligning with the "Play To Work" goal. It encourages breaking
+      things to understand how they function, fostering creativity and
+      problem-solving skills. This approach supports the task of "Make and Break
+      Things" by promoting hands-on learning and innovation through controlled
+      destruction and reconstruction.
+    tags:
+      - learn
+      - break
+      - create
+      - play
+  - task: Keep Score
+    href: https://www.livingasaleader.com/Resources/Leadership-Blog/Keeping-Score-A-Productivity-Game-Changer.htm
+    checkpointId: 3cf16fc471d221e08588e2b5496e025d
+    description: The article discusses how keeping score in work tasks can boost
+      productivity and motivation. It explains that tracking progress visually,
+      like in sports, creates a game-like atmosphere, increasing engagement and
+      focus. This approach aligns with the "Play To Work" goal by making work
+      more enjoyable and competitive, while directly addressing the "Keep Score"
+      task to enhance performance and achievement.
+    tags:
+      - score
+      - game
+      - work
+      - focus
+  - task: Level Up Together
+    href: https://medium.com/swlh/how-to-avoid-failure-level-up-your-team-with-three-magic-principles-1a74cadebc94
+    checkpointId: f3aa626d7265c987a49f3243a032860e
+    description: "The article discusses three principles for team success:
+      psychological safety, dependability, and structure/clarity. These
+      principles foster an environment where team members feel safe to take
+      risks, rely on each other, and understand their roles. By implementing
+      these, teams can level up together, turning work into a collaborative and
+      enjoyable experience."
+    tags:
+      - team
+      - growth
+      - safety
+series: Ecosystem Architecture
