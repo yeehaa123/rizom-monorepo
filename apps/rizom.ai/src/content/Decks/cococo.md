@@ -10,52 +10,58 @@ date: 2024-11-25
 ## Who are we?
 
 
-We are a **band of misfits** combining our talents, networks, and resources without giving up our individual quirks, values, and styles that made us such unique, great professionals in the first place.
+A **band of misfits** combining our skills, networks, and resources without giving up our individual quirks, values, and styles that made us such unique, talented professionals in the first place.
 
 
-## Why would you want to work with misfits?
+## What do we want to establish?
 
 
-Every misfit is a potential **innovator**. Yet too often, these creative minds never find the nurturing environment they need to truly flourish.
+A **culture** where every person is empowered to explore their passions and hone their unique strengths. This inspires aligned, purpose-driven collaboration that drives positive societal transformation and sustainable financial success. 
 
 
-## How will you make misfits work together?
+## How do misfits fit in?
 
 
-We will ensure that **the future of work is play**.
+Every misfit is a potential **innovator**. Yet too often, these creative minds never find the nurturing environment they need to truly flourish. 
 
 
-## Can you elaborate?
+## How do we prevent this waste of talent?
 
 
-We want to establish a **culture** where every person is empowered to explore their passions and hone their unique strengths, leading to aligned, purpose-driven collaboration that drives positive societal transformation and sustainable financial success. 
+By ensuring that **the future of work is play**.
 
 
-## So, why do we call ourselves Rizom?
+## Why do we call ourselves Rizom?
 
 
-Our name comes from "rhizome" - a plant stem that grows sideways under the ground, not only sprouting its own roots and shoots, but also connecting to vast fungal networks that link it to other plants and trees, creating an intricate **living ecosystem** beneath our feet.
+Our name comes from "rhizome". These are plant stem that grow sideways under the ground. A rhizome not only sprouts its own roots and shoots, but also connects to vast fungal networks that link it to other plants and trees, thereby creating an intricate **living ecosystem** beneath our feet.
 
 
-## How do they create resilient ecosystems?
+## What benefits does such a structure offer?
 
 
-+ **Sharing** nutrients and resources across the network
++ **Resource sharing** across the network
 
-+ Surviving and **regenerating** even when parts are damaged
++ **Regeneration** of damaged parts
 
-+ **Supporting** new growth from any point in the system
++ Any point in the system can **spur new growth**.
 
-+ **Adapting** quickly to changing environmental conditions
++ **Rapid Adaptation** to changing conditions
 
 
 ## How does this manifest in our way of working?
 
 
-Our organization is **organic**, **decentralized**, and based on shared, aligned **interest**.
+Our organization is **organic**, **decentralized**, and based on aligned **interests**.
 
 
-## How do we realize this?
+## Presentations
+
+
+## Panel
+
+
+## Our Goals
 
 
 1. Grow a **Community**
@@ -112,7 +118,7 @@ Our organization is **organic**, **decentralized**, and based on shared, aligned
 + I ensure work feels like **play** as much as possible to everyone involved
 
 
-## What are our goals?
+## Our Roadmap
 
 
 ### March 2025
