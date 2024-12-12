@@ -34,25 +34,35 @@ By ensuring that **the future of work is play**.
 ## Why do we call ourselves Rizom?
 
 
-Our name comes from "rhizome". These are plant stem that grow sideways under the ground. A rhizome not only sprouts its own roots and shoots, but also connects to vast fungal networks that link it to other plants and trees, thereby creating an intricate **living ecosystem** beneath our feet.
+Our name comes from 'rhizome'. These are plant stem that grow sideways under the ground. A rhizome not only sprouts its own roots and shoots, but also connects to vast fungal networks that link it to other plants and trees, thereby creating an intricate **living ecosystem** beneath our feet.
 
 
-## What benefits does such a structure offer?
+Rhizomes create resilient ecosystems by:
+
++ **Sharing** nutrients and resources across the network
+
++ Surviving and **regenerating** even when parts are damaged
+
++ Supporting new **growth** from any point in the system
+
++ **Adapting** quickly to changing environmental conditions
 
 
-+ **Resource sharing** across the network
-
-+ **Regeneration** of damaged parts
-
-+ Any point in the system can **spur new growth**.
-
-+ **Rapid Adaptation** to changing conditions
-
-
-## How does this manifest in our way of working?
+## How does this translate into our way of working?
 
 
 Our organization is **organic**, **decentralized**, and based on aligned **interests**.
+
+
+We create a resilient ecosystem by:
+
++ **Sharing** expertise, resources, and opportunities across our network of professionals
+
++ **Regenerating** collective value through fair and transparent compensation models
+
++ **Growing** sustainably through curated connections and meaningful collaborations
+
++ **Adapting** together by fostering open communication and continuous learning
 
 
 ## Presentations
@@ -152,4 +162,3 @@ Launched **3** software **tools**
 
 
 Of course, Rizom is open to anyone who is excited to join us in our mission: [https://rizom.ai/join](https://rizom.ai/join)
-
