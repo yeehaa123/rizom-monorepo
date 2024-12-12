@@ -91,7 +91,7 @@ We create a resilient ecosystem by:
 
 #### How I Contribute
 
-+ I announce my community membership on **LinkedIn**
++ I announce my community membership **publicly**
 
 + I share **expertise** and learn from others
 
