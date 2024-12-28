@@ -25,7 +25,7 @@ date: 2024-11-25
 
 #### How I Contribute
 
-+ I announce my community membership on **LinkedIn**
++ I announce my community membership **publicly**
 
 + I share **expertise** and learn from others
 

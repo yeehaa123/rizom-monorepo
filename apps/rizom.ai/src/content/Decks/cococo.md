@@ -22,7 +22,7 @@ A **culture** where every person is empowered to explore their passions and hone
 ## How do misfits fit in?
 
 
-Every misfit is a potential **innovator**. Yet too often, these creative minds never find the nurturing environment they need to truly flourish. 
+Every misfit is a potential **innovator**. Yet too often, these creative minds never find the nourishing environment they need to truly flourish. 
 
 
 ## How do we prevent this waste of talent?
@@ -51,7 +51,7 @@ Rhizomes create resilient ecosystems by:
 ## How does this translate into our way of working?
 
 
-Our organization is **organic**, **decentralized**, and based on aligned **interests**.
+Our organization is **organic**, **decentralized**, and based on **aligned**interests.
 
 
 We create a resilient ecosystem by:
