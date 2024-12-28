@@ -28,8 +28,7 @@ const courses = coursesData.map(({data}) => data);
       </div>
     </div>
     { 
-    sections.map((section, index) => 
-    <ValueSection {...section} cta={call_to_action.cta} index={index} course={courses[index]}/> )
+    sections.map((section, index) => <ValueSection {...section} cta={call_to_action.cta} index={index} course={courses[index]}/> )
     }
     <div id="cta" class="flex flex-col md:flex-row gap-x-24 gap-y-8 px-4 space-y-4 sm:items-center pb-24">
       <div class="flex-1 space-y-8">
