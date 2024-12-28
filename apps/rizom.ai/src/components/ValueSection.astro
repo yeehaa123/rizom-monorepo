@@ -12,9 +12,9 @@ const { title, description, course, sections, index, cta} = Astro.props;
       {sections && sections.map((section, index) => <ValueItem key={index} {...section} />)}
     </div>
 
-    <div class=`flex flex-1 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`>
-      { sections && <Offcourse data={[course]} client:load/>}
-    </div>
+    <!-- <div class=`flex flex-1 ${index % 2 ? "md:flex-row-reverse" : "md:flex-row"}`> -->
+    <!--   { sections && <Offcourse data={[course]} client:load/>} -->
+    <!-- </div> -->
 </div>
     <div class="py-6 self-center hidden">
       <a href="#cta" class="border border-secondary bg-secondary px-5 py-4 w-auto text-white font-bold" type="submit">{cta}</a>
