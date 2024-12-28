@@ -1,17 +1,17 @@
 ---
 export const prerender = false;
+import { actions } from 'astro:actions';
 import { getEntry, getCollection } from "astro:content";
 import { QueryType, CollectionType } from '@offcourse/schema';
 import  ValueSection  from "../components/ValueSection.astro"
 import SignUpForm from "../components/SignUpForm.astro";
 import Logo from "../components/Logo.svg";
 import Layout from "../layouts/Base.astro"
+const result = Astro.getActionResult(actions.rsvp);
+
 const entry  = await getEntry("PageContent", "join")
-
 const { title, description, sections, call_to_action} = entry.data
-
 const coursesData = await getCollection('Courses');
-
 const courses = coursesData.map(({data}) => data);
 ---
 
@@ -36,7 +36,21 @@ const courses = coursesData.map(({data}) => data);
         <p class="text-2xl">{call_to_action.description}</p>
       </div>
       <div class="flex-1">
-        <SignUpForm cta={call_to_action.cta}/>
+
+        { !result 
+?  <form method="POST" class="grid flex-grow" action={actions.rsvp}>
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" />
+
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" />
+
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" />
+
+          <button class="border border-secondary bg-secondary my-4 w-auto text-white font-bold" type="submit">RSVP</button>
+        </form>
+: <div>{result.data.message}</div>}
       </div>
     </div>
   </div>
