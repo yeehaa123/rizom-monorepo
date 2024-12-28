@@ -4,6 +4,7 @@ const result = Astro.getActionResult(actions.rsvp);
 const { cta } = Astro.props;
 ---
 
+<>
 { result && result.data &&<p>{result.data.message}</p>}
 { result && result.error && <p>{result.error.message}</p>}
 
@@ -22,3 +23,4 @@ const { cta } = Astro.props;
   </div>
 </form>
 }
+</>
