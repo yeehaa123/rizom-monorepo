@@ -288,6 +288,9 @@ importers:
       '@hbsnow/rehype-sectionize':
         specifier: ^1.0.7
         version: 1.0.7
+      '@hookform/resolvers':
+        specifier: ^3.6.0
+        version: 3.9.0(react-hook-form@7.54.2)
       '@offcourse/astro':
         specifier: workspace:*
         version: link:../../packages/offcourse/astro
@@ -300,6 +303,9 @@ importers:
       '@radix-ui/react-label':
         specifier: ^2.1.0
         version: 2.1.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-slot':
+        specifier: ^1.1.1
+        version: 1.1.1(@types/react@18.3.12)(react@18.3.1)
       '@react-email/components':
         specifier: ^0.0.28
         version: 0.0.28(react-dom@18.3.1)(react@18.3.1)
@@ -348,6 +354,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.54.2
+        version: 7.54.2(react@18.3.1)
       rehype-class-names:
         specifier: ^1.0.14
         version: 1.0.14
@@ -381,6 +390,9 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
 
   apps/yeehaa.io:
     dependencies:
@@ -3513,6 +3525,14 @@ packages:
       react-hook-form: 7.53.0(react@18.3.1)
     dev: false
 
+  /@hookform/resolvers@3.9.0(react-hook-form@7.54.2):
+    resolution: {integrity: sha512-bU0Gr4EepJ/EQsH/IwEzYLsT/PEj5C0ynLQ4m+GSHS+xKH4TfSelhluTgOaoc4kA5s7eCsQbM4wvZLzELmWzUg==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.54.2(react@18.3.1)
+    dev: false
+
   /@img/sharp-darwin-arm64@0.33.5:
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -4158,6 +4178,19 @@ packages:
       react: 18.3.1
     dev: false
 
+  /@radix-ui/react-compose-refs@1.1.1(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-Y9VzoRDSJtgFMUCoiZBDVo084VQ5hfpXxVE+NgkdNsjiDBByiImMZKKhxMwCbdHvhlENG6a833CbFkOQvTricw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
   /@radix-ui/react-context@1.1.0(@types/react@18.3.11)(react@18.3.1):
     resolution: {integrity: sha512-OKrckBy+sMEgYM/sMmqmErVn0kZqrHPJze+Ql3DzYsDDp0hl0L62nx/2122/Bvps1qz645jlcu2tD9lrRSdf8A==}
     peerDependencies:
@@ -4629,6 +4662,20 @@ packages:
         optional: true
     dependencies:
       '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-slot@1.1.1(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-RApLLOcINYJA+dMVbOju7MYv1Mb2EBp2nH4HdDzXTSyaR5optlm6Otrz1euW3HbdOR8UmmFK06TD+A9frYWv+g==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.1(@types/react@18.3.12)(react@18.3.1)
       '@types/react': 18.3.12
       react: 18.3.1
     dev: false
@@ -9748,6 +9795,15 @@ packages:
 
   /react-hook-form@7.53.0(react@18.3.1):
     resolution: {integrity: sha512-M1n3HhqCww6S2hxLxciEXy2oISPnAzxY7gvwVPrtlczTM/1dDadXgUxDpHMrMTblDOcm/AXtXxHwZ3jpg1mqKQ==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+    dependencies:
+      react: 18.3.1
+    dev: false
+
+  /react-hook-form@7.54.2(react@18.3.1):
+    resolution: {integrity: sha512-eHpAUgUjWbZocoQYUHposymRb4ZP6d0uwUnooL2uOybA9/3tPUvoAKqEWK1WaSiTxxOfTpffNZP7QwlnM3/gEg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19

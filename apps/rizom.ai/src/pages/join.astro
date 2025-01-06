@@ -3,7 +3,7 @@ export const prerender = false;
 import { getEntry, getCollection } from "astro:content";
 import { QueryType, CollectionType } from '@offcourse/schema';
 import ValueSection from "../components/ValueSection.astro"
-import SignUpForm from "../components/SignUpForm.astro";
+import { SignUpForm } from "../components/SignUpForm.tsx";
 import Logo from "../components/Logo.svg";
 import Layout from "../layouts/Base.astro"
 const entry  = await getEntry("PageContent", "join")
@@ -37,7 +37,7 @@ const courses = coursesData.map(({data}) => data);
         <p class="text-2xl">{call_to_action.description}</p>
       </div>
       <div class="flex-1">
-        <SignUpForm cta={call_to_action.cta}/>
+        <SignUpForm cta={call_to_action.cta} client:load/>
       </div>
     </div>
   </div>
