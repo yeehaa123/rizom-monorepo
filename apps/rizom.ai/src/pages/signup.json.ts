@@ -3,7 +3,7 @@ import { z } from 'astro:schema';
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 import { PUBLIC_RESEND_API_KEY } from "astro:env/server"
-import RSVPEmail from "../components/RSVPEmail"
+import OnboardingEmail from "../components/OnboardingEmail"
 
 const resend = new Resend(PUBLIC_RESEND_API_KEY);
 
@@ -28,7 +28,7 @@ async function register(newUser: z.infer<typeof newUserSchema>) {
       replyTo: "arjannehoogstad@hotmail.com",
       to: email,
       subject: 'Your registration has been confirmed',
-      react: RSVPEmail()
+      react: OnboardingEmail()
     });
 
 
