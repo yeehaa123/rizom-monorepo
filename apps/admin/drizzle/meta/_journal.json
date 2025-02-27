@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1740117134982,
+      "tag": "0000_condemned_wrecker",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1740394425490,
+      "tag": "0001_lovely_forgotten_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1740394707688,
+      "tag": "0002_omniscient_luckman",
+      "breakpoints": true
+    }
+  ]
+}

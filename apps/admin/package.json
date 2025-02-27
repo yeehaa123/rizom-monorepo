@@ -1,0 +1,27 @@
+{
+  "name": "@rizom/onboard",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "cli": "bun src/cli.ts",
+    "cli:onboard": "bun src/cli.ts onboard --username $USERNAME --email $EMAIL",
+    "cli:delete": "bun src/cli.ts delete --username $USERNAME",
+    "cli:migrate": "bun src/cli.ts migrate"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.2",
+    "@types/react": "^19.0.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "arg": "^5.0.2",
+    "commander": "^13.1.0",
+    "drizzle-kit": "^0.30.4",
+    "drizzle-orm": "^0.39.3",
+    "enquirer": "^2.4.1",
+    "react": "^19.0.0",
+    "resend": "^4.1.2"
+  }
+}
